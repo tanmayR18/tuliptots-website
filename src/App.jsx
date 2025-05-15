@@ -53,7 +53,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           {router.map((route) => (
             <Route path={route.path} element={route.element} />
