@@ -79,7 +79,7 @@ const Card = ({
         style={{ transformStyle: "preserve-3d" }}
         className={`${
           (currentTapped === title && SCREEN_WIDTH <= 1024) && " rotate-y-180" 
-        } relative w-full h-full duration-500  group-hover:rotate-y-180 origin-center`}
+        } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
       >
         <div className=" w-full h-full absolute rounded-3xl flex flex-col justify-center items-center bg-green-500 overflow-hidden">
           {/* <img
