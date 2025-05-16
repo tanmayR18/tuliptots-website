@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+
+const SCREEN_WIDTH = window.innerWidth;
 
 const BloomCards = () => {
+  const [currentTapped, setCurrentTapped] = useState("");
   return (
-    <div className=" mt-16">
+    <div className=" mt-16 pb-12">
       <p className=" text-lg lg:text-3xl font-semibold text-gray-700 text-center">
         The BLOOM Philosophy{" "}
       </p>
-      <div className="flex flex-col lg:flex-row justify-between items-center mt-12 px-12 space-y-8">
+      <div className="flex flex-col lg:flex-row justify-between items-center mt-12 px-12 gap-y-8">
         <Card
+          setCurrentTapped={setCurrentTapped}
+          currentTapped={currentTapped}
           letter={"B"}
           title={"Balance of Body and Brain"}
           description={
@@ -15,6 +20,8 @@ const BloomCards = () => {
           }
         />
         <Card
+          setCurrentTapped={setCurrentTapped}
+          currentTapped={currentTapped}
           letter={"L"}
           title={"Learning through Living"}
           description={
@@ -22,6 +29,8 @@ const BloomCards = () => {
           }
         />
         <Card
+          setCurrentTapped={setCurrentTapped}
+          currentTapped={currentTapped}
           letter={"O"}
           title={"Open-Ended Wonder"}
           description={
@@ -29,6 +38,8 @@ const BloomCards = () => {
           }
         />
         <Card
+          setCurrentTapped={setCurrentTapped}
+          currentTapped={currentTapped}
           letter={"O"}
           title={"Observing the Whole Child"}
           description={
@@ -36,6 +47,8 @@ const BloomCards = () => {
           }
         />
         <Card
+          setCurrentTapped={setCurrentTapped}
+          currentTapped={currentTapped}
           letter={"M"}
           title={"Meaningful connections"}
           description={
@@ -47,15 +60,26 @@ const BloomCards = () => {
   );
 };
 
-const Card = ({ letter, title, description, image, bgColor }) => {
+const Card = ({
+  letter,
+  title,
+  description,
+  image,
+  bgColor,
+  setCurrentTapped,
+  currentTapped,
+}) => {
   return (
     <div
+      onClick={() => setCurrentTapped(title)}
       style={{ perspective: 1000 }}
       className=" lg:w-[18%] w-full aspect-square bg-transparent cursor-pointer group rounded-3xl"
     >
       <div
         style={{ transformStyle: "preserve-3d" }}
-        className=" relative w-full h-full duration-500  group-hover:rotate-y-180 origin-center"
+        className={`${
+          (currentTapped === title && SCREEN_WIDTH <= 1024) && " rotate-y-180" 
+        } relative w-full h-full duration-500  group-hover:rotate-y-180 origin-center`}
       >
         <div className=" w-full h-full absolute rounded-3xl flex flex-col justify-center items-center bg-green-500 overflow-hidden">
           {/* <img
@@ -63,14 +87,14 @@ const Card = ({ letter, title, description, image, bgColor }) => {
               src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
             /> */}
 
-          <p>{letter}</p>
+          <p className=" text-3xl font-bold">{letter}</p>
           <p>{title}</p>
         </div>
         <div
           style={{ backfaceVisibility: "hidden" }}
           className=" absolute w-full h-full bg-[#0F1823] rotate-y-180 rounded-3xl overflow-hidden p-4 flex justify-center items-center text-neutral-300 space-y-5"
         >
-          <p>{description}</p>
+          <p className=" text-center">{description}</p>
         </div>
       </div>
     </div>
