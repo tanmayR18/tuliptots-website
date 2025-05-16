@@ -7,8 +7,8 @@ const Navbar = () => {
     <nav className=" flex justify-between items-center px-4 lg:px-12 py-4 ">
       <a href="/">
         <img
-          className=" h-[35px]  lg:h-[50px] w-[55px] lg:w-[150px]"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Rln5bTcDxbr9YzdGXU8sraD59tiJJaIQDw&s"
+          className=" h-[55px]  lg:h-[100px] w-[55px] lg:w-[100px]"
+          src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/WhatsApp%20Image%202025-05-15%20at%2015.55.43_922dbfb6.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzM2N2UzYTQ1LTFjMjItNGNhZi1hZjk3LTc1OGRiNWQ3ODJiMSJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL1doYXRzQXBwIEltYWdlIDIwMjUtMDUtMTUgYXQgMTUuNTUuNDNfOTIyZGJmYjYuanBnIiwiaWF0IjoxNzQ3MzkyMTgwLCJleHAiOjIwNjI3NTIxODB9.BMJCfAHYhg7V8ccBCsGFX9i_pAW_zmr6SOi9SiRoXLI"
         />
       </a>
 
@@ -89,7 +89,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div onClick={() => setShowDropDOwn(true)} className=" space-y-1.5 lg:hidden">
+      <div
+        onClick={() => setShowDropDOwn(true)}
+        className=" space-y-1.5 lg:hidden"
+      >
         <div className="h-0.5 bg-white w-8" />
         <div className="h-0.5 bg-white w-8" />
         <div className="h-0.5 bg-white w-6" />
