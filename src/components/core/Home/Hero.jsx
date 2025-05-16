@@ -15,9 +15,13 @@ const Hero = () => {
         <Navbar />
       </div>
       <div className=" text-white flex flex-col h-full justify-center items-center">
-        <p className=" font-bold text-4xl">Tulip Tots International </p>
-        <p className=" font-bold text-4xl">where little minds bloom</p>
-        <p className=" w-1/2 mt-8 font-semibold text-xl leading-8 text-center opacity-60">
+        <p className=" font-bold text-2xl lg:text-4xl">
+          Tulip Tots International{" "}
+        </p>
+        <p className=" font-bold text-2xl lg:text-4xl">
+          where little minds bloom
+        </p>
+        <p className=" lg:w-1/2 mt-8 font-semibold text-base px-6 lg:text-xl leading-8 text-center opacity-60">
           Tucked away in the cozy, green lanes of Punawale, Tulip Tots
           International is a thoughtfully crafted preschool reimagining early
           education—nurturing curious minds, inspiring creativity, and shaping
