@@ -87,7 +87,7 @@ const Card = ({
               src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
             /> */}
 
-          <p>{letter}</p>
+          <p className=" text-3xl font-bold">{letter}</p>
           <p>{title}</p>
         </div>
         <div
