@@ -89,7 +89,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div onClick={() => setShowDropDOwn(true)} className=" space-y-1.5">
+      <div onClick={() => setShowDropDOwn(true)} className=" space-y-1.5 lg:hidden">
         <div className="h-0.5 bg-white w-8" />
         <div className="h-0.5 bg-white w-8" />
         <div className="h-0.5 bg-white w-6" />
