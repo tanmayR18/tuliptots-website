@@ -3,8 +3,8 @@ import Navbar from "../../common/Navbar";
 
 const Hero = () => {
   return (
-    <div className="h-screen w-screen relative">
-      <div className="absolute h-screen w-screen -z-10">
+    <div className="h-screen w-full relative">
+      <div className="absolute h-screen w-full -z-10">
         <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" />
         <img
           className=" w-full h-full"
