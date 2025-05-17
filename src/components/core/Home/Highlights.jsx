@@ -36,34 +36,34 @@ const Highlights = () => {
       </div>
 
       <div className=" flex mt-16 justify-center gap-10">
-        <div className=" border-2 border-blue-600 rounded-md py-1 w-32 flex justify-center">
+        <div className=" border-2 border-blue-600 rounded-md py-1 w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
             to={"/about"}
           >
-            About
+            <p>About</p>
           </NavLink>
         </div>
-        <div className=" border-2 border-blue-600 rounded-md py-1  w-32 flex justify-center">
+        <div className=" border-2 border-blue-600 rounded-md py-1  w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
             to={"/academics"}
           >
-            The School
+            <p className=" text-center">The School</p>
           </NavLink>
         </div>
-        <div className=" border-2 border-blue-600 rounded-md py-1  w-32 flex justify-center">
+        <div className=" border-2 border-blue-600 rounded-md py-1  w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
             to={"/academics"}
           >
-            Course
+            <p>Course</p>
           </NavLink>
         </div>
       </div>
