@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
+import emailjs from "@emailjs/browser";
 
 const Enquiry = () => {
   const date = new Date();
+  const [status, setStatus] = useState("");
   const [data, setData] = useState({
     name: "",
     dob: "",
@@ -28,8 +30,29 @@ const Enquiry = () => {
     message: "",
   });
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
+    setError({
+      name: "",
+      dob: "",
+      parentName: "",
+      occupation: "",
+      email: "",
+      number: "",
+      address: "",
+      program: "",
+      message: "",
+    });
+
+    const YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
+    const YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
+    const OPTIONS = {
+      publicKey: import.meta.env.VITE_PUBLIC_KEY,
+    };
+
+    console.log(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, OPTIONS);
+
+    //validations
 
     if (data.name === "") {
       setError((prev) => {
@@ -38,12 +61,110 @@ const Enquiry = () => {
           name: "Enter the children name",
         };
       });
+      return;
+    }
+
+    if (data.dob === "") {
+      setError((prev) => {
+        return {
+          ...prev,
+          dob: "Enter the Date of Birth",
+        };
+      });
+      return;
+    }
+
+    if (data.parentName === "") {
+      setError((prev) => {
+        return {
+          ...prev,
+          parentName: "Enter the Parent's Name",
+        };
+      });
+      return;
+    }
+
+    if (data.occupation === "") {
+      setError((prev) => {
+        return {
+          ...prev,
+          occupation: "Enter the Parent's occupation",
+        };
+      });
+      return;
+    }
+
+    if (data.email === "") {
+      setError((prev) => {
+        return {
+          ...prev,
+          email: "Enter your email",
+        };
+      });
+      return;
+    }
+
+    if (
+      !/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/.test(
+        data.email
+      )
+    ) {
+      setError((prev) => {
+        return {
+          ...prev,
+          email: "Invalid email",
+        };
+      });
+      return;
+    }
+
+    if (data.number.length !== 10) {
+      setError((prev) => {
+        return {
+          ...prev,
+          number: "Invalid Phone number",
+        };
+      });
+      return;
+    }
+
+    if (data.address === "") {
+      setError((prev) => {
+        return {
+          ...prev,
+          address: "Enter your address",
+        };
+      });
+      return;
     }
 
     try {
       console.log(data);
+
+      const response = await emailjs.send(
+        YOUR_SERVICE_ID,
+        YOUR_TEMPLATE_ID,
+        {
+          parentName: data.parentName,
+          childName: data.name,
+          dob: data.dob,
+          occupation: data.occupation,
+          email: data.email,
+          number: data.number,
+          address: data.address,
+          program: data.program,
+          message: data.message,
+        },
+        OPTIONS
+      );
+
+      console.log("response of emailjs ", response);
+      if (response?.status === 200) {
+        setStatus("success");
+      }
     } catch (error) {
-      console.log(error);
+      console.log("error of email js ", error);
+      setStatus("error");
     }
   };
 
@@ -60,19 +181,19 @@ const Enquiry = () => {
         <div className=" absolute top-0 right-0 left-0 bottom-0">
           <Navbar />
         </div>
-        <p className=" text-white font-semibold text-4xl z-10">
+        <p className=" text-white font-semibold text-xl text-center lg:text-4xl z-10">
           Come Experience the Bloom
         </p>
-        <p className=" text-white font-semibold text-2xl z-10 mt-7">
+        <p className=" text-white font-semibold text-base text-center lg:text-2xl z-10 mt-4 lg:mt-7">
           Let us show you around and answer your questions.
         </p>
       </div>
       <form className=" w-[85%] mx-auto mb-10">
-        <div className=" flex gap-8 mt-10 ">
+        <div className=" flex flex-col lg:flex-row gap-8 mt-10 ">
           <div className=" w-full">
             <p className=" text-black font-semibold text-2xl">Details</p>
 
-            <div>
+            <div className=" mt-6">
               <p>Name of the Child</p>
               <input
                 value={data.name}
@@ -91,7 +212,7 @@ const Enquiry = () => {
                 <p className=" text-red-500 text-sm">{error.name}</p>
               )}
             </div>
-            <div>
+            <div className=" mt-3">
               <p>Date of Birth</p>
               <input
                 type="date"
@@ -117,7 +238,7 @@ const Enquiry = () => {
                 <p className=" text-red-500 text-sm">{error.dob}</p>
               )}
             </div>
-            <div>
+            <div className=" mt-3">
               <p>Parents Name</p>
               <input
                 value={data.parentName}
@@ -136,7 +257,7 @@ const Enquiry = () => {
                 <p className=" text-red-500 text-sm">{error.parentName}</p>
               )}
             </div>
-            <div>
+            <div className=" mt-3">
               <p>Occupation</p>
               <input
                 value={data.occupation}
@@ -161,7 +282,7 @@ const Enquiry = () => {
               Contact Details
             </p>
 
-            <div>
+            <div className=" mt-6">
               <p>Email</p>
               <input
                 value={data.email}
@@ -180,7 +301,7 @@ const Enquiry = () => {
                 <p className=" text-red-500 text-sm">{error.email}</p>
               )}
             </div>
-            <div>
+            <div className=" mt-3">
               <p>Contact Number</p>
               <input
                 maxLength={10}
@@ -202,7 +323,7 @@ const Enquiry = () => {
                 <p className=" text-red-500 text-sm">{error.number}</p>
               )}
             </div>
-            <div>
+            <div className=" mt-3">
               <p>Address</p>
               <input
                 value={data.address}
@@ -214,7 +335,7 @@ const Enquiry = () => {
                     };
                   });
                 }}
-                maxLength={60}
+                maxLength={400}
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {error.address && (
@@ -222,7 +343,7 @@ const Enquiry = () => {
               )}
             </div>
             <DropDown setData={setData} data={data} />
-            <div>
+            <div className=" mt-3">
               <p>Message / Questions</p>
               <textarea
                 value={data.message}
@@ -240,12 +361,38 @@ const Enquiry = () => {
             </div>
           </div>
         </div>
-        <div
-          onClick={submitHandler}
-          className=" mt-5 bg-blue-400 text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
-        >
-          Send
-        </div>
+        {!status && (
+          <div
+            onClick={submitHandler}
+            className=" mt-5 bg-blue-400 text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
+          >
+            Send
+          </div>
+        )}
+
+        {status === "success" && (
+          <div className=" mt-10 flex flex-col items-center justify-center">
+            <p className=" text-green-500 font-bold text-2xl">
+              Thank You for Reaching Out!{" "}
+            </p>
+            <p className=" text-blue-500 text-center font-semibold w-1/2 mt-2">
+              Your enquiry has been received. We can’t wait to welcome you into
+              our Tulip Tots family, where little seeds grow into confident
+              blooms!{" "}
+            </p>
+          </div>
+        )}
+        {status === "error" && (
+          <div className=" mt-10 flex flex-col items-center justify-center">
+            <p className=" text-red-500 font-bold text-2xl">
+              Unable to send your enquiry at this point{" "}
+            </p>
+            <p className=" text-gray-500 text-center font-semibold w-1/2 mt-2">
+              Sorry for the inconvenience, please contact as 1234567890 for the
+              enquiry
+            </p>
+          </div>
+        )}
       </form>
       <Footer />
     </div>
@@ -254,7 +401,7 @@ const Enquiry = () => {
 
 const DropDown = ({ setData, data }) => {
   return (
-    <div className=" relative">
+    <div className=" relative mt-3">
       <p>Select Program</p>
       <select
         className=" focus:outline-none w-full bg-blue-100 rounded-md py-2 px-3"
