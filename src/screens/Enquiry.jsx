@@ -44,10 +44,10 @@ const Enquiry = () => {
       message: "",
     });
 
-    const YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID;
-    const YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID;
+    const YOUR_SERVICE_ID = import.meta.env.VITE_YOUR_SERVICE_ID1;
+    const YOUR_TEMPLATE_ID = import.meta.env.VITE_YOUR_TEMPLATE_ID1;
     const OPTIONS = {
-      publicKey: import.meta.env.VITE_PUBLIC_KEY,
+      publicKey: import.meta.env.VITE_PUBLIC_KEY1,
     };
 
     console.log(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, OPTIONS);
