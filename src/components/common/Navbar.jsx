@@ -1,190 +1,329 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
+import image from "../../assets/bgremoved.png";
+import Logo from "../../assets/tuliptotsOgLogo.jpg";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { MdArrowDropDown } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
-  const [showDropDOwn, setShowDropDOwn] = useState(false);
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const location = useLocation();
+  console.log(location.pathname);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (showDropdown) {
+      return;
+    }
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <nav className=" flex justify-between items-center px-4 lg:px-12 py-4 ">
-      <a href="/">
-        <img
-          className=" h-[55px]  lg:h-[100px] w-[55px] lg:w-[100px]"
-          src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/WhatsApp%20Image%202025-05-15%20at%2015.55.43_922dbfb6.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzM2N2UzYTQ1LTFjMjItNGNhZi1hZjk3LTc1OGRiNWQ3ODJiMSJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL1doYXRzQXBwIEltYWdlIDIwMjUtMDUtMTUgYXQgMTUuNTUuNDNfOTIyZGJmYjYuanBnIiwiaWF0IjoxNzQ3MzkyMTgwLCJleHAiOjIwNjI3NTIxODB9.BMJCfAHYhg7V8ccBCsGFX9i_pAW_zmr6SOi9SiRoXLI"
-        />
-      </a>
-
-      {/* Laptop Navbar */}
-      <div className=" hidden  lg:flex items-center gap-12">
-        <div className=" flex justify-center gap-4">
-          <NavLink
-            className={({ isActive }) =>
-              `${isActive ? "underline font-bold" : ""} text-white`
-            }
-            to={"/"}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `${isActive ? "underline font-bold" : ""} text-white`
-            }
-            to={"/about"}
-          >
-            About
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `${isActive ? "underline font-bold" : ""} text-white`
-            }
-            to={"/academics"}
-          >
-            The School
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `${isActive ? "underline font-bold" : ""} text-white`
-            }
-            to={"/gallery"}
-          >
-            Gallery
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              `${isActive ? "underline font-bold" : ""} text-white`
-            }
-            to={"/contactUs"}
-          >
-            Contact Us
-          </NavLink>
-        </div>
-        <div className=" flex items-center gap-4">
-          <a>
-            <img
-              width={24}
-              height={24}
-              src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid"
-            />
-          </a>
-          <a>
-            <img
-              width={24}
-              height={24}
-              src="https://www.svgrepo.com/show/157006/linkedin.svg"
-            />
-          </a>
-          <a>
-            <img
-              width={24}
-              height={24}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png"
-            />
-          </a>
-          <a>
-            <img
-              width={24}
-              height={24}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-            />
-          </a>
-        </div>
-      </div>
-
-      {/* Mobile Navbar */}
-      <div
-        onClick={() => setShowDropDOwn(true)}
-        className=" space-y-1.5 lg:hidden"
+    <>
+      {/* Laptop View */}
+      <motion.nav
+        variants={{
+          visible: { y: 0, opacity: 1 },
+          hidden: { y: "-100%", opacity: 0 },
+        }}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className=" bg-[#F7EEE9] w-11/12 left-1/2 -translate-x-1/2 py-1 top-10  fixed  rounded-2xl z-[1000] hidden lg:flex"
       >
-        <div className="h-0.5 bg-white w-8" />
-        <div className="h-0.5 bg-white w-8" />
-        <div className="h-0.5 bg-white w-6" />
-      </div>
+        <div className=" w-full h-full px-8 flex justify-between items-center">
+          <Link to={"/"}>
+            <img src={Logo} height={90} width={90} />
+          </Link>
+          <div className=" flex items-center gap-10">
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/"
+            >
+              <p className=" ">Home</p>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/school"
+            >
+              <div className=" flex gap-x-1.5 items-center">
+                <p className=" ">Schools</p>
+                <MdArrowDropDown />
+              </div>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+              <div className=" hidden group-hover:flex  p-3 absolute">
+                <div className=" p-2 px-4 bg-white rounded-md flex flex-col">
+                  <Link
+                    className=" border-b pb-1 border-b-gray-200"
+                    to={"playground"}
+                  >
+                    <div className=" flex items-center hover:text-orange-400 relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Playground</p>
+                    </div>
+                  </Link>
+                  <Link
+                    className=" mt-1 border-b pb-1 border-b-gray-200"
+                    to={"nursery"}
+                  >
+                    <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Nursery</p>
+                    </div>
+                  </Link>
+                  <Link
+                    className=" mt-1 border-b pb-1 border-b-gray-200"
+                    to={"lkg"}
+                  >
+                    <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">LKG</p>
+                    </div>
+                  </Link>
+                  <Link
+                    className=" mt-1 border-b pb-1 border-b-gray-200"
+                    to={"ukg"}
+                  >
+                    <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">UKG</p>
+                    </div>
+                  </Link>
+                  <Link className="hover:text-orange-400 mt-1" to={"daycare"}>
+                    <div className=" flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Daycare</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/admission"
+            >
+              <p className=" ">Admission</p>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/aboutUs"
+            >
+              <p className=" ">About Us</p>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/contactUs"
+            >
+              <p className=" ">Contact Us</p>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/enquiry"
+            >
+              <p className=" ">Enquiry</p>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? " font-bold group relative"
+                  : " font-semibold group relative"
+              }
+              to="/blogs"
+            >
+              <p className=" ">Blogs</p>
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+            </NavLink>
+          </div>
+        </div>
+      </motion.nav>
 
-      {showDropDOwn && <DropDown setShowDropDOwn={setShowDropDOwn} />}
-    </nav>
+      {/* Tablet and Laptop */}
+      <motion.nav
+        variants={{
+          visible: { y: 0, opacity: 1 },
+          hidden: { y: "-100%", opacity: 0 },
+        }}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className={`w-full ${
+          showDropdown && "h-screen "
+        } left-1/2  -translate-x-1/2 top-0 fixed z-[1000] flex flex-col lg:hidden`}
+      >
+        <div className="bg-[#F7EEE9]  w-full h-20 flex flex-row items-center  justify-between px-2 pr-3">
+          <NavLink to={"/"}>
+            <img src={image} height={75} width={75} />
+          </NavLink>
+
+          <div onClick={() => setShowDropdown((prev) => !prev)} className="">
+            {!showDropdown ? (
+              <div className=" flex flex-col gap-y-1">
+                <div className="h-[3px] w-8 bg-black rounded-full" />
+                <div className="h-[3px] w-6 bg-black rounded-full" />
+                <div className="h-[3px] w-3 bg-black rounded-full" />
+              </div>
+            ) : (
+              <RxCross2 size={35} />
+            )}
+          </div>
+        </div>
+        {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
+      </motion.nav>
+    </>
   );
 };
 
-const DropDown = ({ setShowDropDOwn }) => {
+const DropDown = ({ setShowDropdown }) => {
   return (
-    <div className=" fixed top-0 right-0 left-0 bottom-0 bg-black z-50">
-      <div
-        onClick={() => setShowDropDOwn(false)}
-        className=" absolute top-10 right-10"
-      >
-        <div className=" bg-white h-0.5 w-10 rotate-45 origin-center " />
-        <div className=" absolute top-0 bg-white h-0.5 w-10 -rotate-45 origin-center" />
-      </div>
+    <div
+      onClick={() => setShowDropdown(false)}
+      className=" bg-black/40  flex-1 flex justify-center items-center w-full h-full backdrop-blur-sm "
+    >
+      <div onClick={() => {}} className=" p-5 flex flex-col justify-center items-center gap-6">
+        <NavLink
+          onClick={() => setShowDropdown(false)}
+          className={({ isActive }) =>
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
+          }
+          to="/"
+        >
+          <p className=" text-2xl text-white tracking-wider">Home</p>
+          {location.pathname === "/" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setShowDropdown(false)}
+          className={({ isActive }) =>
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
+          }
+          to="/school"
+        >
+          <p className=" text-2xl text-white tracking-wider">School</p>
+          {location.pathname === "/school" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setShowDropdown(false)}
+          className={({ isActive }) =>
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
+          }
+          to="/admission"
+        >
+          <p className=" text-2xl text-white tracking-wider">Admission</p>
+          {location.pathname === "/admission" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setShowDropdown(false)}
+          className={({ isActive }) =>
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
+          }
+          to="/aboutUs"
+        >
+          <p className=" text-2xl text-white tracking-wider">About Us</p>
+          {location.pathname === "/aboutUs" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setShowDropdown(false)}
+          className={({ isActive }) =>
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
+          }
+          to="/contactUs"
+        >
+          <p className=" text-2xl text-white tracking-wider">Contact Us</p>
+          {location.pathname === "/contactUs" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setShowDropdown(false)}
+          className={({ isActive }) =>
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
+          }
+          to="/enquiry"
+        >
+          <p className=" text-2xl text-white tracking-wider">Enquiry</p>
+          {location.pathname === "/enquiry" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
+        </NavLink>
 
-      <div className=" flex flex-col justify-center items-center h-full space-y-6">
         <NavLink
+          onClick={() => setShowDropdown(false)}
           className={({ isActive }) =>
-            `${isActive ? "underline font-bold" : ""} text-white text-lg`
+            isActive
+              ? " font-bold group relative"
+              : " font-semibold group relative"
           }
-          to={"/"}
+          to="/blogs"
         >
-          Home
+          <p className=" text-2xl text-white tracking-wider">Blogs</p>
+          {location.pathname === "/blogs" && (
+            <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+          )}
         </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            `${isActive ? "underline font-bold" : ""} text-white text-lg`
-          }
-          to={"/about"}
-        >
-          About
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            `${isActive ? "underline font-bold" : ""} text-white text-lg`
-          }
-          to={"/academics"}
-        >
-          The School
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            `${isActive ? "underline font-bold" : ""} text-white text-lg`
-          }
-          to={"/gallery"}
-        >
-          Gallery
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            `${isActive ? "underline font-bold" : ""} text-white text-lg`
-          }
-          to={"/contactUs"}
-        >
-          Contact Us
-        </NavLink>
-      </div>
-      <div className=" flex items-center gap-6 absolute bottom-5 justify-center w-full">
-        <a>
-          <img
-            width={24}
-            height={24}
-            src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid"
-          />
-        </a>
-        <a>
-          <img
-            width={24}
-            height={24}
-            src="https://www.svgrepo.com/show/157006/linkedin.svg"
-          />
-        </a>
-        <a>
-          <img
-            width={24}
-            height={24}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png"
-          />
-        </a>
-        <a>
-          <img
-            width={24}
-            height={24}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-          />
-        </a>
       </div>
     </div>
   );
