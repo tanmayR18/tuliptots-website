@@ -33,7 +33,7 @@ function App() {
       element: <About />,
     },
     {
-      path: "/academics",
+      path: "/school",
       element: <Academics />,
     },
     {
@@ -109,7 +109,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Navbar /> */}
+        <Navbar />
         <ScrollToTop>
           <Routes>
             {router.map((route) => (

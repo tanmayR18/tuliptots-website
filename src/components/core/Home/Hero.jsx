@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../common/Navbar";
 
 const Hero = () => {
   return (
@@ -10,9 +9,6 @@ const Hero = () => {
           className=" w-full h-full"
           src="https://static.toiimg.com/thumb/msid-52685364,width-1280,height-720,resizemode-4/52685364.jpg"
         />
-      </div>
-      <div className=" absolute top-0 left-0 right-0">
-        <Navbar />
       </div>
       <div className=" text-white flex flex-col h-full justify-center items-center">
         <p className=" font-bold text-2xl lg:text-4xl">
