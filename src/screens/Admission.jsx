@@ -26,12 +26,13 @@ const Admission = () => {
   const residenceProofRef = useRef(null);
   const medicalCertificateRef = useRef(null);
 
-  const [showDocument, setshowDocument] = useState(false);
+  //   const [showDocument, setshowDocument] = useState(false);
   //   const [admissionData, setAdmissionData] = useState({});
 
   const {
     register,
     handleSubmit,
+    getValues,
     // watch,
     formState: { errors },
   } = useForm({
@@ -112,21 +113,53 @@ const Admission = () => {
     },
   });
   const onSubmit = (data) => {
-    console.log(data);
-    return;
+    // console.log(data);
     const file = fileRef.current?.files?.[0];
+    console.log("file", file);
+    const childBirthDoc = getValues("childBirthDoc")[0];
+    const childAadhaar = getValues("childAadhaar")[0];
+    const childPhoto = getValues("childPhoto")[0];
+    const parentPhoto = getValues("parentPhoto")[0];
+    const parentAadhaar = getValues("parentAadhaar")[0];
+    const residenceProof = getValues("residenceProof")[0];
+    const medicalCertificate = getValues("medicalCertificate")[0];
+
+    const documentsKeys = [
+      "childBirthDoc",
+      "childAadhaar",
+      "childPhoto",
+      "parentPhoto",
+      "parentAadhaar",
+      "residenceProof",
+      "medicalCertificate",
+    ];
+
+    // const childAadhaar = ChildAadhaarRef.current?.files?.[0];
+    // const childPhoto = childPhotoRef.current?.files?.[0];
+    // const parentPhoto = parentPhotoRef.current?.files?.[0];
+    // const parentAadhaar = parentAadhaarRef.current?.files?.[0];
+    // const residenceProof = residenceProofRef.current?.files?.[0];
+    // const medicalCertificate = medicalCertificateRef.current?.files?.[0];
+
+    const keys = Object.keys(data);
+    const result = keys.filter((item) => !documentsKeys.includes(item));
+    // console.log(result);
 
     try {
       const formData = new FormData();
-      formData.append("childName", data.childName);
-      formData.append("nickName", data.nickName);
-      formData.append("dob", data.dob);
-      formData.append("age", data.age);
       formData.append("to", "tanmayrane51@gmail.com");
       formData.append("subject", "Admission FormF");
-      formData.append("file", file);
-      formData.append("file", file);
-      //   formData.append("file", file);
+      formData.append("file", childBirthDoc);
+      formData.append("file", childPhoto);
+      formData.append("file", parentPhoto);
+      formData.append("file", parentAadhaar);
+      formData.append("file", childAadhaar);
+      formData.append("file", residenceProof);
+      formData.append("file", medicalCertificate);
+
+      for (const key of result) {
+        formData.append(key, data[key]);
+      }
 
       const response = axios.post("http://localhost:3000/email", formData, {
         headers: {
@@ -1436,7 +1469,7 @@ const Admission = () => {
           </div>
 
           <p className=" text-black text-base font-semibold mt-6">
-            Preferences & Personality
+            Media Exposure
           </p>
 
           {/* screen type and type of content */}
