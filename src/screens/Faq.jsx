@@ -161,22 +161,22 @@ const Faq = () => {
         <div className=" flex justify-center items-center gap-5 mt-6">
           <Link
           to={'contactUs'}
-            className=" group border-2 border-blue-400 rounded-xl w-32 py-2
-            hover:bg-blue-400 hover:border-white transition-all duration-500 cursor-pointer
+            className=" group border-2 border-blue-400  rounded-xl w-32 py-2
+            hover:bg-blue-400  transition-all duration-500 cursor-pointer
           "
           >
-            <p className=" text-black text-center group-hover:text-white font-semibold transition-all duration-500">
+            <p className=" text-blue-400 text-center group-hover:text-white font-semibold transition-all duration-500">
               Contact us
             </p>
           </Link>
 
           <Link
           to={'/enquiry'}
-            className=" group border-2 border-blue-400 rounded-xl w-32 py-2
-            hover:bg-blue-400 hover:border-white transition-all duration-500 cursor-pointer
+            className=" group border-2 border-orange-400 rounded-xl w-32 py-2
+            hover:bg-orange-400  transition-all duration-500 cursor-pointer
           "
           >
-            <p className=" text-center text-black group-hover:text-white font-semibold transition-all duration-500">
+            <p className=" text-center text-orange-400 group-hover:text-white font-semibold transition-all duration-500">
               Enquiry
             </p>
           </Link>
