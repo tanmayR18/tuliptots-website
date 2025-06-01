@@ -1,7 +1,92 @@
 import Footer from "@/components/common/Footer";
-import React from "react";
+import React, { useState } from "react";
+
+const SCREEN_WIDTH = window.innerWidth;
+
+const data = [
+  {
+    name: "Maria Montessori ",
+    country: "Italy",
+    quote:
+      "The greatest gifts we can give our children are the roots of responsibility and the wings of independence.",
+    mainIdea:
+      "Children learn best through hands-on experiences in a well-prepared environment.",
+    howToApply: [
+      "Practical life areas with pouring, scooping, and real tasks like baking.",
+      "Child-led exploration in organized, inviting learning spaces.",
+      "Mixed-age interactions to foster collaboration and leadership.",
+    ],
+  },
+  {
+    name: "Emmi Pikler",
+    country: "Hungary",
+    quote:
+      "Let the child be the scriptwriter, the director, and the actor in his own play.”",
+    mainIdea:
+      "Respectful care and free movement build trust and physical confidence",
+    howToApply: [
+      "Gross motor zones with climbing structures and balance boards",
+      "Calm, observant caregiving and unhurried transitions",
+      "Trusting children’s pace and choices to guide their day.",
+    ],
+  },
+  {
+    name: "Glenn Doman",
+    country: "United States",
+    quote: "The brain grows by use",
+    mainIdea: "Early learning thrives on rich, joyful input.",
+    howToApply: [
+      "Daily dot cards, word flashcards, and early math play.",
+      "Brief, exciting lessons based on interest—not pressure.",
+      "A joyful environment that values knowledge and fun equally.",
+    ],
+  },
+  {
+    name: "Reggio Emilia",
+    country: "Italy",
+    quote: "The child has a hundred languages",
+    mainIdea:
+      "Children express themselves in countless ways—art, play, movement, words",
+    howToApply: [
+      "Art corners, loose parts play, and pretend zones for self-expression",
+      "Curriculum that follows the child’s questions and interests",
+      "Displays of children’s work and thoughts to honor their voices",
+    ],
+  },
+  {
+    name: "Howard Gardner's Multiple Intelligences",
+    country: "United States",
+    quote: "",
+    mainIdea:
+      "We celebrate each child’s unique strengths and ways of learning.",
+    howToApply: [
+      "Word Smart: Language play, phonics, storytelling",
+      "Logic Smart: Math games, puzzles, cause-effect play",
+      "Body Smart: Movement zones, obstacle courses, dance",
+      "Music Smart: Singing, rhythm games, instruments",
+      "Picture Smart: Drawing, shape play, visual schedules",
+      "Nature Smart: Gardening, weather tracking, nature walks",
+      "People Smart: Group activities, SEL games, puppet shows.",
+      "Self Smart: Emotion check-ins, mindfulness, mood corners",
+    ],
+  },
+  {
+    name: "Erin Kenny",
+    country: "United Kingdom",
+    quote: "Children cannot bounce off the walls if we take away the walls",
+    mainIdea:
+      "Nature is a teacher, a classroom, and a friend. Outdoor play fosters resilience, confidence, and a deep bond with the earth",
+    howToApply: [
+      "Mud kitchen, sandpit, and gardening time",
+      "Nature-based crafts using leaves, seeds, and sticks",
+      "Gentle risk-taking with climbing, balancing, and exploring",
+      "Natural loose part play, weather journaling, and nature storytelling",
+    ],
+  },
+];
 
 const About = () => {
+  const [currentTapped, setCurrentTapped] = useState("");
   return (
     <div className=" pt-44 bg-purple-200">
       {/* Hero section */}
@@ -119,9 +204,88 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* philosophies */}
+      <div className=" px-12">
+        <h1 className=" text-3xl font-bold text-center mt-16">
+          Our Core Philosophies
+        </h1>
+        <div
+          className=" grid grid-cols-3 gap-8 mt-10
+        "
+        >
+          {data.map((item, index) => (
+            <Card
+              key={index}
+              setCurrentTapped={setCurrentTapped}
+              currentTapped={currentTapped}
+              name={item.name}
+              country={item.country}
+              quote={item.quote}
+              howToApply={item.howToApply}
+              mainIdea={item.mainIdea}
+            />
+          ))}
+          {/* <div className=" bg-white p-5">
+            <p>Maria Montessori ( Italy )</p>
+            <blockquote className=" italic">
+              "The greatest gifts we can give our children are the roots of
+              responsibility and the wings of independence."
+            </blockquote>
+
+            <p>
+              Children learn best through hands-on experiences in a
+              well-prepared environment.
+            </p>
+          </div> */}
+        </div>
+      </div>
       <Footer />
     </div>
   );
 };
 
 export default About;
+
+const Card = ({
+  name,
+  country,
+  quote,
+  mainIdea,
+  howToApply,
+  currentTapped,
+  setCurrentTapped,
+}) => {
+  return (
+    <div
+      onClick={() => setCurrentTapped(name)}
+      style={{ perspective: 1000 }}
+      className="  w-full aspect-square bg-transparent cursor-pointer group rounded-3xl"
+    >
+      <div
+        style={{ transformStyle: "preserve-3d" }}
+        className={`${
+          currentTapped === name && SCREEN_WIDTH <= 1024 && " rotate-y-180"
+        } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
+      >
+        <div className=" w-full h-full absolute rounded-3xl flex flex-col justify-center items-center p-7 bg-green-500 overflow-hidden">
+          {/* front */}
+          <div className=" flex justify-between items-center w-full">
+            <p className=" font-semibold text-2xl">{name}</p>
+            <p className=" uppercase font-semibold">{country}</p>
+          </div>
+
+          <blockquote className=" text-center">"{quote}"</blockquote>
+
+          <p>{mainIdea}</p>
+        </div>
+        <div
+          style={{ backfaceVisibility: "hidden" }}
+          className=" absolute w-full h-full bg-[#0F1823] rotate-y-180 rounded-3xl overflow-hidden p-4 flex flex-col justify-center items-center text-neutral-300 space-y-5"
+        >
+          {/* back */}
+        </div>
+      </div>
+    </div>
+  );
+};
