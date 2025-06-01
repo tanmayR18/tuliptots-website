@@ -21,6 +21,7 @@ import Blog10 from "./screens/Blogs/Blog10";
 import Blog11 from "./screens/Blogs/Blog11";
 import Blog12 from "./screens/Blogs/Blog12";
 import ScrollToTop from "./components/common/ScrollToTop";
+import Faq from "./screens/Faq";
 
 function App() {
   const router = [
@@ -55,6 +56,10 @@ function App() {
     {
       path: "/gallery",
       element: <Gallery />,
+    },
+    {
+        path: '/faq',
+        element: <Faq/>
     },
     {
       path: "/blog1",

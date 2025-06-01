@@ -36,7 +36,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className=" bg-[#F7EEE9] w-11/12 left-1/2 -translate-x-1/2 py-1 top-10  fixed  rounded-2xl z-[1000] hidden lg:flex"
+        className=" bg-[#F7EEE9] w-11/12 left-1/2 -translate-x-1/2 py-1 top-10  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
@@ -224,7 +224,7 @@ const DropDown = ({ setShowDropdown }) => {
       onClick={() => setShowDropdown(false)}
       className=" bg-black/40  flex-1 flex justify-center items-center w-full h-full backdrop-blur-sm "
     >
-      <div onClick={() => {}} className=" p-5 flex flex-col justify-center items-center gap-6">
+      <div onClick={() => {}} className=" p-5 flex flex-col justify-center items-center gap-6 shadow-2xl">
         <NavLink
           onClick={() => setShowDropdown(false)}
           className={({ isActive }) =>
