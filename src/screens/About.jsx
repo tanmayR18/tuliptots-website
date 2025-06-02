@@ -85,8 +85,39 @@ const data = [
   },
 ];
 
+const data2 = [
+  "Imaginative Free Play",
+  "Multi-Sensory Exploration",
+  "Hands-On Experiential Learning",
+  "360° Holistic Learning",
+  "Gardening & Nature Play",
+  "Sandpit & Mud Kitchen",
+  "Splash Play Pool",
+  "Limitless Play Zones",
+  "Adventure Climbing Frames",
+  "Magnetic Building Station",
+  "Practical Life Skills Learning",
+  "Global Best Practices",
+  "In-House Library",
+  "Cozy calm corner",
+  "Heartfelt Educators",
+  "Innovative Play Structures",
+  "Bright, Air-conditioned Classrooms",
+  "Child-Centric Spaces",
+  "Parent-School Partnership",
+  "On-Call Paediatric Support",
+  "Secure CCTV Monitoring",
+  "Fire safety",
+];
+
 const About = () => {
   const [currentTapped, setCurrentTapped] = useState("");
+
+  function getRandomHexColor() {
+    const hex = Math.floor(Math.random() * 0xffffff).toString(16);
+    return `#${hex.padStart(6, "0")}`;
+  }
+
   return (
     <div className=" pt-44 bg-purple-200">
       {/* Hero section */}
@@ -226,18 +257,27 @@ const About = () => {
               mainIdea={item.mainIdea}
             />
           ))}
-          {/* <div className=" bg-white p-5">
-            <p>Maria Montessori ( Italy )</p>
-            <blockquote className=" italic">
-              "The greatest gifts we can give our children are the roots of
-              responsibility and the wings of independence."
-            </blockquote>
+        </div>
+      </div>
 
-            <p>
-              Children learn best through hands-on experiences in a
-              well-prepared environment.
-            </p>
-          </div> */}
+      {/* Why choose us */}
+      <div className=" mt-12">
+        <div className=" bg-[rgba(0,0,0,0.75)] py-12">
+          <h1 className=" text-3xl font-semibold text-center text-white">
+            Why choose Tulip tots international?
+          </h1>
+
+          <div className=" w-[80%] mx-auto mt-12 grid gap-10 grid-cols-6">
+            {data2.map((item, index) => (
+              <div
+                style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
+                className=" w-40 h-40 hover:scale-105 transition-all duration-500 rounded-full flex justify-center items-center bg-white"
+                key={index}
+              >
+                <p className=" text-center font-semibold text-lg">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
