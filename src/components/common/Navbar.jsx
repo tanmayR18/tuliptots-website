@@ -36,11 +36,11 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className=" bg-[#F7EEE9] w-11/12 left-1/2 -translate-x-1/2 py-1 top-10  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
+        className=" bg-[#fff] w-11/12 left-1/2 -translate-x-1/2 py-1 top-10  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
-            <img src={Logo} height={90} width={90} />
+            <img src={image} height={90} width={90} />
           </Link>
           <div className=" flex items-center gap-10">
             <NavLink
@@ -51,7 +51,7 @@ const Navbar = () => {
               }
               to="/"
             >
-              <p className=" ">Home</p>
+              <p className=" text-[#228B22]">Home</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -63,8 +63,8 @@ const Navbar = () => {
               to="/school"
             >
               <div className=" flex gap-x-1.5 items-center">
-                <p className=" ">Schools</p>
-                <MdArrowDropDown />
+                <p className=" text-[#800080]">Schools</p>
+                <MdArrowDropDown color="#800080" />
               </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
               <div className=" hidden group-hover:flex  p-3 absolute">
@@ -113,7 +113,7 @@ const Navbar = () => {
                       <p className=" font-semibold">UKG</p>
                     </div>
                   </Link>
-                  <Link className="hover:text-orange-400 mt-1" to={"daycare"}>
+                  <Link className="hover:text-orange-400  mt-1" to={"daycare"}>
                     <div className=" flex items-center group relative gap-x-1">
                       <div className=" ">
                         <IoIosArrowForward />
@@ -132,7 +132,7 @@ const Navbar = () => {
               }
               to="/admission"
             >
-              <p className=" ">Admission</p>
+              <p className=" text-orange-600">Admission</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -143,7 +143,7 @@ const Navbar = () => {
               }
               to="/aboutUs"
             >
-              <p className=" ">About Us</p>
+              <p className=" text-blue-600">About Us</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -154,7 +154,7 @@ const Navbar = () => {
               }
               to="/contactUs"
             >
-              <p className=" ">Contact Us</p>
+              <p className=" text-red-600">Contact Us</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -165,7 +165,7 @@ const Navbar = () => {
               }
               to="/enquiry"
             >
-              <p className=" ">Enquiry</p>
+              <p className=" text-blue-950">Enquiry</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -176,7 +176,7 @@ const Navbar = () => {
               }
               to="/blogs"
             >
-              <p className=" ">Blogs</p>
+              <p className=" text-amber-700">Blogs</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
           </div>
@@ -195,9 +195,9 @@ const Navbar = () => {
           showDropdown && "h-screen "
         } left-1/2  -translate-x-1/2 top-0 fixed z-[1000] flex flex-col lg:hidden`}
       >
-        <div className="bg-[#F7EEE9]  w-full h-20 flex flex-row items-center  justify-between px-2 pr-3">
+        <div className="bg-[#fff]  w-full h-20 flex flex-row items-center  justify-between px-2 pr-3">
           <NavLink to={"/"}>
-            <img src={image} height={75} width={75} />
+            <img src={image} height={70} width={70} />
           </NavLink>
 
           <div onClick={() => setShowDropdown((prev) => !prev)} className="">
@@ -224,7 +224,7 @@ const DropDown = ({ setShowDropdown }) => {
       onClick={() => setShowDropdown(false)}
       className=" bg-black/40  flex-1 flex justify-center items-center w-full h-full backdrop-blur-sm "
     >
-      <div onClick={() => {}} className=" p-5 flex flex-col justify-center items-center gap-6 shadow-2xl">
+      <div onClick={() => {}} className=" p-5 flex flex-col justify-center items-center gap-6 shadow-2xl bg-gray-400/30">
         <NavLink
           onClick={() => setShowDropdown(false)}
           className={({ isActive }) =>

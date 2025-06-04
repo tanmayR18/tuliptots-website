@@ -2,14 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="h-screen w-full relative">
-      <div className="absolute h-screen w-full -z-10">
-        <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" />
-        <img
-          className=" w-full h-full"
-          src="https://static.toiimg.com/thumb/msid-52685364,width-1280,height-720,resizemode-4/52685364.jpg"
-        />
-      </div>
+    <div className="min-h-screen w-full relative bg-[#F7EEE9]">
       <div className=" text-white flex flex-col h-full justify-center items-center">
         <p className=" font-bold text-2xl lg:text-4xl">
           Tulip Tots International{" "}
