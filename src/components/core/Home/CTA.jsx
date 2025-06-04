@@ -17,14 +17,20 @@ const CTA = () => {
             <p className=" self-end mt-1">- Naruto Uzumaki</p>
           </div>
         </div>
-        <div className=" shadow-2xl translate-y-1/2 absolute w-[90%] translate-x-1/2 right-1/2 bg-blue-400 py-20 px-5 rounded-4xl flex flex-col justify-center items-center">
+        <div
+          style={{
+            
+            boxShadow: "4 20px 20px rgba(0, 0, 0, 0.6)",
+          }}
+          className=" translate-y-1/2 absolute w-[90%] translate-x-1/2 right-1/2 bg-purple-600 py-20 px-5 rounded-4xl flex flex-col justify-center items-center"
+        >
           <p className=" text-white text-lg lg:text-3xl text-center mb-10">
             From Little Seeds to Mighty Blossoms <br className=" lg:hidden" /> —
             Join the Tulip Tots Family!
           </p>
           <NavLink to={"enquiry"}>
-            <div className={" px-4 py-2 border rounded-md border-white "}>
-              <p className=" text-white">Book a Visit</p>
+            <div className={" px-4 py-2 border rounded-md border-white hover:bg-white transition-all duration-300 hover:scale-105 text-white hover:text-purple-600 font-semibold"}>
+              <p className=" ">Book a Visit</p>
             </div>
           </NavLink>
         </div>

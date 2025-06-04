@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
 const SCREEN_WIDTH = window.innerWidth;
+import image2 from "../../../assets/home/homeHero2.png";
 
 const BloomCards = () => {
   const [currentTapped, setCurrentTapped] = useState("");
   return (
-    <div className=" mt-16 pb-12">
-      <p className=" text-lg lg:text-3xl font-semibold text-gray-700 text-center">
+    <div className=" pt-16 pb-16 ">
+      <p className=" text-lg lg:text-3xl font-bold text-gray-700 text-center">
         The BLOOM Philosophy{" "}
       </p>
       <div className="flex flex-col lg:flex-row justify-between items-center mt-12 px-12 gap-y-8">
         <Card
           setCurrentTapped={setCurrentTapped}
+          bgColor={"#BAE6FD"}
           currentTapped={currentTapped}
           letter={"B"}
           title={"Balance of Body and Brain"}
@@ -20,6 +22,7 @@ const BloomCards = () => {
           }
         />
         <Card
+          bgColor={"#D9F99D"}
           setCurrentTapped={setCurrentTapped}
           currentTapped={currentTapped}
           letter={"L"}
@@ -29,6 +32,7 @@ const BloomCards = () => {
           }
         />
         <Card
+          bgColor={"#E9D5FF"}
           setCurrentTapped={setCurrentTapped}
           currentTapped={currentTapped}
           letter={"O"}
@@ -38,6 +42,7 @@ const BloomCards = () => {
           }
         />
         <Card
+          bgColor={"#FED7AA"}
           setCurrentTapped={setCurrentTapped}
           currentTapped={currentTapped}
           letter={"O"}
@@ -47,6 +52,7 @@ const BloomCards = () => {
           }
         />
         <Card
+          bgColor={"#FECDD3"}
           setCurrentTapped={setCurrentTapped}
           currentTapped={currentTapped}
           letter={"M"}
@@ -78,23 +84,25 @@ const Card = ({
       <div
         style={{ transformStyle: "preserve-3d" }}
         className={`${
-          (currentTapped === title && SCREEN_WIDTH <= 1024) && " rotate-y-180" 
+          currentTapped === title && SCREEN_WIDTH <= 1024 && " rotate-y-180"
         } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
       >
-        <div className=" w-full h-full absolute rounded-3xl flex flex-col justify-center items-center bg-green-500 overflow-hidden">
+        <div style={{backgroundColor: bgColor}} className=" w-full h-full absolute rounded-3xl flex flex-col justify-center items-center overflow-hidden">
           {/* <img
               className=" h-full w-full"
               src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
             /> */}
 
-          <p className=" text-3xl font-bold">{letter}</p>
-          <p>{title}</p>
+          <p className=" text-5xl text-black font-bold">{letter}</p>
+          <p className=" text-xl text-center mt-3">{title}</p>
         </div>
         <div
           style={{ backfaceVisibility: "hidden" }}
-          className=" absolute w-full h-full bg-[#0F1823] rotate-y-180 rounded-3xl overflow-hidden p-4 flex justify-center items-center text-neutral-300 space-y-5"
+          className=" absolute w-full h-full rotate-y-180 rounded-3xl overflow-hidden p-4 flex justify-center items-center text-neutral-300 space-y-5"
         >
-          <p className=" text-center">{description}</p>
+          <img src={image2}/>
+          <div className=" absolute top-0 right-0 left-0 bottom-0 bg-black/60" />
+          <p className=" text-center absolute font-semibold ">{description}</p>
         </div>
       </div>
     </div>

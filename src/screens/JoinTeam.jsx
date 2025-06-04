@@ -29,7 +29,7 @@ const JoinTeam = () => {
   };
 
   return (
-    <div>
+    <div className=" bg-[#f3f3f3]">
       <h1 className=" text-3xl font-black text-center pt-40">Join Our team</h1>
 
       <h3 className=" text-center font-semibold mt-12">
