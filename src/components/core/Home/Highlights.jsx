@@ -36,34 +36,40 @@ const Highlights = () => {
       </div>
 
       <div className=" flex mt-16 justify-center gap-10">
-        <div className=" border-2 border-blue-600 rounded-md py-1 w-32 flex justify-center items-center">
+        <div className=" border-2 border-green-500 hover:scale-105 group hover:bg-green-500 cursor-pointer transition-all duration-300   rounded-md py-1 w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
-            to={"/about"}
+            to={"/aboutUs"}
           >
-            <p>About</p>
+            <p className="text-green-500 group-hover:text-white transition-all duration-300">
+              About
+            </p>
           </NavLink>
         </div>
-        <div className=" border-2 border-blue-600 rounded-md py-1  w-32 flex justify-center items-center">
+        <div className=" border-2 border-orange-400 group hover:scale-105 hover:bg-orange-400 cursor-pointer transition-all duration-300   rounded-md py-1  w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
-            to={"/academics"}
+            to={"/blogs"}
           >
-            <p className=" text-center">The School</p>
+            <p className="text-orange-400 group-hover:text-white transition-all duration-300 text-center">
+              Blogs
+            </p>
           </NavLink>
         </div>
-        <div className=" border-2 border-blue-600 rounded-md py-1  w-32 flex justify-center items-center">
+        <div className=" border-2 border-blue-400 group hover:scale-105 hover:bg-blue-400 cursor-pointer transition-all duration-300  rounded-md py-1  w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
-            to={"/academics"}
+            to={"/gallery"}
           >
-            <p>Course</p>
+            <p className="text-blue-400 group-hover:text-white transition-all duration-300 text-center">
+              Gallery
+            </p>
           </NavLink>
         </div>
       </div>

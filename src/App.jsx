@@ -22,6 +22,8 @@ import Blog11 from "./screens/Blogs/Blog11";
 import Blog12 from "./screens/Blogs/Blog12";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Faq from "./screens/Faq";
+import JoinTeam from "./screens/JoinTeam";
+import AdmissionForm from "./screens/AdmissionForm";
 
 function App() {
   const router = [
@@ -42,6 +44,10 @@ function App() {
       element: <Admission />,
     },
     {
+      path: "/admissionForm",
+      element: <AdmissionForm />,
+    },
+    {
       path: "/blogs",
       element: <Blogs />,
     },
@@ -56,6 +62,10 @@ function App() {
     {
       path: "/gallery",
       element: <Gallery />,
+    },
+    {
+        path: '/careers',
+        element: <JoinTeam/>
     },
     {
         path: '/faq',

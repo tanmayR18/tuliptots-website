@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 const Enquiry = () => {
   const date = new Date();
@@ -141,28 +142,40 @@ const Enquiry = () => {
     try {
       console.log(data);
 
-      const response = await emailjs.send(
-        YOUR_SERVICE_ID,
-        YOUR_TEMPLATE_ID,
-        {
-          parentName: data.parentName,
-          childName: data.name,
-          dob: data.dob,
-          occupation: data.occupation,
-          email: data.email,
-          number: data.number,
-          address: data.address,
-          program: data.program,
-          message: data.message,
-        },
-        OPTIONS
-      );
-
-      console.log("response of emailjs ", response);
-      if (response?.status === 200) {
-        setStatus("success");
-      }
+      const response = axios.post("http://localhost:3000/enquiry", {
+        parentName: data.parentName,
+        childName: data.name,
+        dob: data.dob,
+        occupation: data.occupation,
+        email: data.email,
+        number: data.number,
+        address: data.address,
+        program: data.program,
+        message: data.message,
+      });
     } catch (error) {
+      //   const response = await emailjs.send(
+      //     YOUR_SERVICE_ID,
+      //     YOUR_TEMPLATE_ID,
+      //     {
+      //       parentName: data.parentName,
+      //       childName: data.name,
+      //       dob: data.dob,
+      //       occupation: data.occupation,
+      //       email: data.email,
+      //       number: data.number,
+      //       address: data.address,
+      //       program: data.program,
+      //       message: data.message,
+      //     },
+      //     OPTIONS
+      //   );
+
+      //   console.log("response of emailjs ", response);
+      //   if (response?.status === 200) {
+      //     setStatus("success");
+      //   }
+      // }
       console.log("error of email js ", error);
       setStatus("error");
     }
