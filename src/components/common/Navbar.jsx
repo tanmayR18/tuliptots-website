@@ -163,9 +163,9 @@ const Navbar = () => {
                   ? " font-bold group relative"
                   : " font-semibold group relative"
               }
-              to="/enquiry"
+              to="/gallery"
             >
-              <p className=" text-blue-950">Enquiry</p>
+              <p className=" text-blue-950">Gallery</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -302,10 +302,10 @@ const DropDown = ({ setShowDropdown }) => {
               ? " font-bold group relative"
               : " font-semibold group relative"
           }
-          to="/enquiry"
+          to="/gallery"
         >
-          <p className=" text-2xl text-white tracking-wider">Enquiry</p>
-          {location.pathname === "/enquiry" && (
+          <p className=" text-2xl text-white tracking-wider">Gallery</p>
+          {location.pathname === "/gallery" && (
             <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
           )}
         </NavLink>

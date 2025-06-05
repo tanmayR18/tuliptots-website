@@ -9,15 +9,15 @@ import Footer from "@/components/common/Footer";
 const ContactUs = () => {
   return (
     <>
-      <div className=" pt-44 pb-12 px-12 bg-[#f3f3f3]">
+      <div className=" pt-44 pb-12 px-12 bg-[#f7eee9]">
         <h1 className=" text-3xl tracking-wide font-bold text-center">
           Need some more discussions ?
         </h1>
-        <div className=" mt-8">
+        <div className=" mt-16">
           {/* Map and Contact */}
           <div className=" grid grid-cols-2 gap-12">
             <Link
-              className=" rounded-[64px] overflow-hidden relative"
+              className=" rounded-[64px] overflow-hidden relative border-2"
               to={"https://www.google.com/maps?q=37.7749,-122.4194"}
               target="_blank"
             >
@@ -73,8 +73,8 @@ const ContactUs = () => {
 
           {/* FOllow and Join */}
           <div className=" grid grid-cols-2 gap-12 mt-12">
-            <div className=" p-12 rounded-[64px] bg-blue-300">
-              <p className=" text-white text-3xl tracking-wide font-bold">
+            <div className=" p-12 rounded-[64px] bg-[#FED7AA]">
+              <p className=" text-black text-3xl tracking-wide font-bold">
                 Follow us on
               </p>
               <div className=" mt-5">
@@ -134,15 +134,17 @@ const ContactUs = () => {
               </p>
 
               <p className=" mt-5">
-                Be a part of tuliptots international school where the kjndnjjn
-                lkdmelm ejdnedne erreffd gjkendkejnd kdnendnded frggrgr
+                Be a part of TulipTots International School, where passion meets
+                purpose and every day is a step toward shaping young minds.
               </p>
 
               <p className=" mt-3">somethin@gmail.com</p>
 
-              <button className=" bg-red-400 px-4 py-3 rounded-xl mt-5">
-                <p className=" text-white font-semibold">Apply Now</p>
-              </button>
+              <Link to={"/careers"}>
+                <button className=" bg-red-400 px-4 cursor-pointer py-3 rounded-xl mt-5">
+                  <p className=" text-white font-semibold">Apply Now</p>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

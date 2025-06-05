@@ -12,10 +12,10 @@ const CTA = () => {
         />
         <div className=" absolute top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.8)] flex flex-col justify-center items-center">
           <div className=" text-white flex flex-col px-10 -translate-y-8">
-            <p className=" text-xl">
-              Hard work is worthless for those that don't believe in themselves.
+            <p className=" text-3xl font-semibold">
+              “Children see magic because they look for it.”
             </p>
-            <p className=" self-end mt-1">- Naruto Uzumaki</p>
+            <p className=" self-end mt-1">- Chirstopher Moore</p>
           </div>
         </div>
         <div
