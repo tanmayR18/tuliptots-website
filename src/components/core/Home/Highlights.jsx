@@ -24,7 +24,7 @@ const points = [
     color: "#f34f6a",
   },
   {
-    text: "Nature-based learning",
+    text: "Nature-based  learning",
     image: image4,
     color: "#008000",
   },
@@ -81,14 +81,14 @@ const Highlights = () => {
             </p>
           </NavLink>
         </div>
-        <div className=" border-2 border-orange-400 group hover:scale-105 hover:bg-orange-400 cursor-pointer transition-all duration-300   rounded-md py-1  w-32 flex justify-center items-center">
+        <div className=" border-2 border-amber-700 group hover:scale-105 hover:bg-amber-700 cursor-pointer transition-all duration-300   rounded-md py-1  w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
               `${isActive ? "underline font-bold" : ""} text-black text-lg`
             }
             to={"/blogs"}
           >
-            <p className="text-orange-400 group-hover:text-white transition-all duration-300 text-center">
+            <p className="text-amber-700 group-hover:text-white transition-all duration-300 text-center">
               Blogs
             </p>
           </NavLink>

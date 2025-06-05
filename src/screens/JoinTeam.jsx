@@ -1,6 +1,8 @@
+import Footer from "@/components/common/Footer";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import image from "../assets/joinOurTeam/joinOurTeam.jpg";
 
 const JoinTeam = () => {
   const {
@@ -30,18 +32,23 @@ const JoinTeam = () => {
 
   return (
     <div className=" bg-[#f3f3f3]">
-      <h1 className=" text-3xl font-black text-center pt-40">Join Our team</h1>
+      <div className=" flex justify-between items-center  pt-40 w-[80%] mx-auto">
+        <div className=" w-[50%]">
+          <h1 className=" text-4xl font-bold ">Join Our team</h1>
 
-      <h3 className=" text-center font-semibold mt-12">
-        Currently there are no vacancies in the schools{" "}
-      </h3>
+          <h4 className=" text-xl  mt-8">
+            At TulipTots International School, we believe in nurturing not just
+            young minds, but also the careers of passionate educators. Join a
+            collaborative environment where your ideas matter and your
+            growth is a priority.
+          </h4>
+        </div>
+        <div className="">
+          <img src={image} className=" w-[290px] h-[290px] rounded-full" />
+        </div>
+      </div>
 
-
-      <h4 className=" text-xl text-center mt-12">
-        Send us your information and we will let you know about opening suitable for you
-      </h4>
-
-      <div className=" w-10/12 mx-auto mt-4">
+      <div className=" w-10/12 mx-auto my-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Name and age */}
           <div className=" flex gap-5">
@@ -184,13 +191,15 @@ const JoinTeam = () => {
           </div>
 
           <button
-            className=" mt-5 bg-blue-500 text-white font-semibold"
+            className=" mt-5 bg-blue-500 px-3 py-2 rounded-lg text-white font-semibold"
             type="submit"
           >
             Submit
           </button>
         </form>
       </div>
+
+      <Footer />
     </div>
   );
 };
