@@ -7,22 +7,22 @@ import image2 from "../../../assets/home/homeHero2.png";
 const Hero = () => {
   return (
     <div
-      className="min-h-screen w-full relative bg-[#F7EEE9] overflow-x-hidden pt-44"
+      className=" pb-12 lg:min-h-screen w-full relative bg-[#F7EEE9] overflow-x-hidden pt-32 lg:pt-44"
     >
-      <div className=" absolute bottom-0 -left-8">
+      <div className=" absolute bottom-0 hidden lg:flex -left-8">
         <img className=" w-full h-full " src={image1} />
       </div>
-      <div className=" absolute bottom-0 -right-8 h-[400px]">
+      <div className=" absolute bottom-0 -right-8 h-[400px] hidden lg:flex">
         <img className=" w-full h-full" src={image2} />
       </div>
       <div className=" text-white flex flex-col h-full justify-center items-center">
-        <p className=" font-bold text-xl lg:text-5xl text-slate-700">
+        <p className=" font-bold text-2xl lg:text-5xl text-pink-700">
           Tulip Tots International{" "}
         </p>
-        <p className=" font-bold text-xl lg:text-5xl text-slate-700">
+        <p className=" font-bold text-2xl lg:text-5xl text-green-700">
           where little minds bloom
         </p>
-        <p className=" lg:w-1/2 mt-12 font-semibold text-base px-6 lg:text-xl leading-8 text-center text-slate-700 opacity-60">
+        <p className=" lg:w-1/2 mt-8 lg:mt-12 font-semibold text-lg px-4 md:px-6 lg:text-xl lg:leading-8 text-center text-slate-900 opacity-60">
           Tucked away in the cozy, green lanes of Punawale, Tulip Tots
           International is a thoughtfully crafted preschool reimagining early
           education—nurturing curious minds, inspiring creativity, and shaping

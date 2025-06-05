@@ -36,7 +36,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className=" bg-[#fff] w-11/12 left-1/2 -translate-x-1/2 py-1 top-10  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
+        className=" bg-[#fff] w-11/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
