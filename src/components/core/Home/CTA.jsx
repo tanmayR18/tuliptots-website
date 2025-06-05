@@ -5,13 +5,13 @@ import image from '../../../assets/home/homeCta.jpg'
 const CTA = () => {
   return (
     <>
-      <div className=" h-[90vh] w-full relative flex items-end">
+      <div className=" h-[70vh] md:h-[90vh] w-full relative flex items-end">
         <img
           className=" w-full h-full"
           src={image}
         />
         <div className=" absolute top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.8)] flex flex-col justify-center items-center">
-          <div className=" text-white flex flex-col px-10">
+          <div className=" text-white flex flex-col px-10 -translate-y-8">
             <p className=" text-xl">
               Hard work is worthless for those that don't believe in themselves.
             </p>

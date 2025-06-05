@@ -21,7 +21,7 @@ const points = [
   {
     text: "Mindfulness & yoga",
     image: image3,
-    color: '#f34f6a',
+    color: "#f34f6a",
   },
   {
     text: "Nature-based learning",
@@ -46,20 +46,20 @@ const Highlights = () => {
       <p className=" text-center text-2xl md:text-3xl text-gray-800 font-bold">
         What Makes Us Unique
       </p>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:mt-12 md:w-[90%] xl:w-[80%] mx-auto">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 md:w-[90%] xl:w-[80%] mx-auto">
         {points.map((point, index) => (
           <div
-            className={` aspect-square  flex justify-center items-center `}
+            className={` h-[250px]  flex justify-center items-center mt-12`}
             key={index}
           >
             <div className=" flex flex-col justify-center items-center relative">
               <img
-                className=" h-44 w-44 rounded-full -translate-y-2"
+                className=" h-44 w-44 rounded-full md:-translate-y-2"
                 src={point?.image}
               />
               <p
                 style={{ color: point.color }}
-                className=" absolute font-semibold tracking-wide text-lg leading-6 mt-6 text-center bottom-0 translate-y-full"
+                className=" md:absolute font-semibold tracking-wide text-lg leading-6 mt-6 text-center md:bottom-0 md:translate-y-full"
               >
                 {point.text}
               </p>
