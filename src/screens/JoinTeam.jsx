@@ -32,26 +32,26 @@ const JoinTeam = () => {
 
   return (
     <div className=" bg-[#f3f3f3]">
-      <div className=" flex justify-between items-center  pt-40 w-[80%] mx-auto">
-        <div className=" w-[50%]">
+      <div className=" flex justify-between items-center pt-32 lg:pt-40 px-4 md:px-0 md:w-[80%] mx-auto">
+        <div className=" md:w-[50%]">
           <h1 className=" text-4xl font-bold ">Join Our team</h1>
 
-          <h4 className=" text-xl  mt-8">
+          <h4 className=" text-xl mt-5 lg:mt-8">
             At TulipTots International School, we believe in nurturing not just
             young minds, but also the careers of passionate educators. Join a
             collaborative environment where your ideas matter and your
             growth is a priority.
           </h4>
         </div>
-        <div className="">
+        <div className=" hidden md:flex">
           <img src={image} className=" w-[290px] h-[290px] rounded-full" />
         </div>
       </div>
 
-      <div className=" w-10/12 mx-auto my-12">
+      <div className=" w-[90%] md:w-10/12 mx-auto my-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Name and age */}
-          <div className=" flex gap-5">
+          <div className=" flex flex-col md:flex-row gap-5">
             <div className=" mt-3 w-full">
               <p>
                 Full Name<span className=" text-red-500"> *</span>
@@ -97,7 +97,7 @@ const JoinTeam = () => {
           </div>
 
           {/* role and education */}
-          <div className=" flex gap-5">
+          <div className=" flex flex-col md:flex-row gap-5">
             <div className=" mt-3 w-full">
               <p>
                 Any Specific role you want to apply
@@ -144,7 +144,7 @@ const JoinTeam = () => {
           </div>
 
           {/* role and education */}
-          <div className=" flex gap-5">
+          <div className=" flex flex-col md:flex-row gap-5">
             <div className=" mt-3 w-full">
               <p>
                 Email

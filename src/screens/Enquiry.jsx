@@ -183,7 +183,7 @@ const Enquiry = () => {
 
   return (
     <div className="bg-[#F7EEE9]">
-      <div className=" relative pt-44 pb-20  bg-[#F7EEE9]">
+      <div className=" relative pt-44 pb-20 px-4  bg-[#F7EEE9]">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
             className=" w-full h-full"
@@ -191,15 +191,15 @@ const Enquiry = () => {
           />
         </div>
         <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" /> */}
-        <p className="  font-semibold text-xl text-center lg:text-4xl lg:font-bold z-10 text-pink-500">
+        <p className="   text-2xl text-center lg:text-4xl font-bold z-10 text-pink-500">
           Come Experience the Bloom
         </p>
-        <p className=" text-green-500 font-semibold text-base text-center lg:text-2xl lg:font-bold z-10 mt-4 lg:mt-5">
+        <p className=" text-green-500 font-semibold text-lg text-center lg:text-2xl lg:font-bold z-10 mt-4 lg:mt-5">
           Let us show you around and answer your questions.
         </p>
       </div>
-      <form className="  py-10 rounded-t-[64px] bg-white">
-        <div className="w-[85%] mx-auto">
+      <form className="  py-10 rounded-t-[32px] lg:rounded-t-[64px] bg-white">
+        <div className=" w-[90%] md:w-[85%] mx-auto">
           <div className=" flex flex-col lg:flex-row gap-8  ">
             <div className=" w-full">
               <p className=" text-black font-semibold text-2xl">Details</p>

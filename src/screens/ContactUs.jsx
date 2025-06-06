@@ -9,31 +9,31 @@ import Footer from "@/components/common/Footer";
 const ContactUs = () => {
   return (
     <>
-      <div className=" pt-44 pb-12 px-12 bg-[#f7eee9]">
-        <h1 className=" text-3xl tracking-wide font-bold text-center">
+      <div className=" pt-44 pb-12 lg:px-12 bg-[#f7eee9]">
+        <h1 className=" text-2xl mx-3 lg:text-3xl tracking-wide font-bold text-center">
           Need some more discussions ?
         </h1>
         <div className=" mt-16">
           {/* Map and Contact */}
-          <div className=" grid grid-cols-2 gap-12">
+          <div className=" grid lg:grid-cols-2  gap-12">
             <Link
-              className=" rounded-[64px] overflow-hidden relative border-2"
+              className=" lg:rounded-[64px] overflow-hidden relative order-2 lg:order-1 "
               to={"https://www.google.com/maps?q=37.7749,-122.4194"}
               target="_blank"
             >
-              <div className=" w-full h-full ">
+              <div className=" w-full h-full border-2 ">
                 <img
-                  className=" w-full h-full"
+                  className=" w-full h-full aspect-square border-2"
                   src="https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png"
                 />
               </div>
               <div className=" pb-12 flex items-end justify-center absolute  bottom-0 w-full z-20 bg-linear-to-t h-[30%]  from-[rgba(0,0,0,0.5)] to-transparent">
-                <p className=" text-center text-white font-bold text-2xl">
+                <p className=" text-center text-white font-bold text-lg lg:text-2xl">
                   Click to see live on Google Map
                 </p>
               </div>
             </Link>
-            <div className=" bg-white p-12 rounded-[64px] ">
+            <div className=" bg-white  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[64px] ">
               <p className=" font-semibold text-xl tracking-wide">Contact</p>
               <p className="  mt-2 text-slate-600">
                 We at IGPS believe in an open-door policy and are happy to
@@ -72,9 +72,9 @@ const ContactUs = () => {
           </div>
 
           {/* FOllow and Join */}
-          <div className=" grid grid-cols-2 gap-12 mt-12">
-            <div className=" p-12 rounded-[64px] bg-[#FED7AA]">
-              <p className=" text-black text-3xl tracking-wide font-bold">
+          <div className=" grid lg:grid-cols-2 gap-12 mt-12 px-4">
+            <div className=" p-10 lg:p-12 rounded-[64px] bg-[#FED7AA]">
+              <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
                 Follow us on
               </p>
               <div className=" mt-5">
@@ -86,7 +86,7 @@ const ContactUs = () => {
                       src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                     />
                   </div>
-                  <p className=" text-lg text-white font-semibold">
+                  <p className=" lg:text-lg text-white font-semibold">
                     tuliptots something
                   </p>
                 </Link>
@@ -98,7 +98,7 @@ const ContactUs = () => {
                       src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                     />
                   </div>
-                  <p className=" text-lg text-white font-semibold">
+                  <p className=" lg:text-lg text-white font-semibold">
                     tuliptots something
                   </p>
                 </Link>
@@ -110,7 +110,7 @@ const ContactUs = () => {
                       src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                     />
                   </div>
-                  <p className=" text-lg text-white font-semibold">
+                  <p className=" lg:text-lg text-white font-semibold">
                     tuliptots something
                   </p>
                 </Link>
@@ -122,14 +122,14 @@ const ContactUs = () => {
                       src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                     />
                   </div>
-                  <p className=" text-lg text-white font-semibold">
+                  <p className=" lg:text-lg text-white font-semibold">
                     tuliptots something
                   </p>
                 </Link>
               </div>
             </div>
-            <div className=" p-12 rounded-[64px] bg-green-300">
-              <p className=" text-black text-3xl tracking-wide font-bold">
+            <div className=" p-10 lg:p-12 rounded-[64px] bg-green-300">
+              <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
                 Join Our Team ?
               </p>
 
