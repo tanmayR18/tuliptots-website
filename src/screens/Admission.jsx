@@ -184,7 +184,7 @@ const Admission = () => {
 
   return (
     <div className=" bg-[#E9D5FF]">
-      <div className=" relative pb-20 pt-44 bg-[#E9D5FF] flex flex-col justify-center items-center">
+      <div className=" relative pb-20 pt-44 px-4 bg-[#E9D5FF] flex flex-col justify-center items-center">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
             className=" w-full h-full"
@@ -195,19 +195,19 @@ const Admission = () => {
         <div className=" absolute top-0 right-0 left-0 bottom-0">
           <Navbar />
         </div> */}
-        <p className=" text-black font-bold text-xl text-center lg:text-5xl z-10">
+        <p className=" text-black font-bold text-3xl text-center lg:text-5xl z-10">
           Admissions
         </p>
-        <p className=" text-gray-600 font-semibold text-base text-center lg:text-2xl z-10 mt-4 lg:mt-7 lg:w-[60%]">
+        <p className=" text-gray-600 font-semibold text-lg text-center lg:text-2xl z-10 mt-4 lg:mt-7 lg:w-[60%]">
           Admissions are open throughout the year for families who resonate with
           our joyful, child-led approach to early learning.
         </p>
       </div>
-      <div className=" bg-white pt-20 rounded-t-[64px] pb-8">
-        <div className="  w-[80%] mx-auto">
-          <div className=" flex justify-center items-center gap-5">
-            <div className=" w-1/2 text-xl flex flex-col  gap-6">
-              <p className=" text-4xl font-semibold mb-7">
+      <div className=" bg-white pt-14 md:pt-20  rounded-t-[32px] lg:rounded-t-[64px] pb-8">
+        <div className="  md:w-[80%] mx-auto">
+          <div className=" flex flex-col md:flex-row justify-center items-center gap-5">
+            <div className=" md:w-1/2 text-base lg:text-xl flex flex-col px-5 md:px-0 gap-3  md:gap-6">
+              <p className=" text-2xl md:text-4xl font-semibold md:mb-7">
                 Here's how to begin:
               </p>
               <p>
@@ -224,7 +224,7 @@ const Admission = () => {
               <p>✻ Join us for an interaction session</p>
               <p>✻ Receive an update on available spots and next steps</p>
             </div>
-            <div className=" w-1/2 flex justify-end">
+            <div className=" mt-5 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
               <img className=" w-[70%] aspect-[9/11] rounded-3xl" src={image} />
             </div>
           </div>
@@ -259,8 +259,8 @@ const Admission = () => {
         </div> */}
         </div>
 
-        <div className=" mt-12 w-[80%] mx-auto h-0.5 bg-slate-400"/>
-        <p className=" text-3xl text-black font-bold text-center mt-16 ">
+        <div className=" mt-12 w-[95%] md:w-[80%] mx-auto h-0.5 bg-slate-400"/>
+        <p className=" text-2xl tracking-wide md:text-3xl text-black font-bold text-center mt-16 ">
           FORM
         </p>
 
@@ -277,7 +277,7 @@ const Admission = () => {
             {/* {errors.exampleRequired && <span>This field is required</span>} */}
 
             {/* child name and nickname */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Full Name<span className=" text-red-500"> *</span>
@@ -326,7 +326,7 @@ const Admission = () => {
 
             {/* dob and age */}
             {/* validation for the age to be added  */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Date of Birth <span className=" text-red-500"> *</span>
@@ -373,7 +373,7 @@ const Admission = () => {
             </div>
 
             {/* Gender and nationality */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Gender <span className=" text-red-500"> *</span>
@@ -459,7 +459,7 @@ const Admission = () => {
             </div>
 
             {/* Mother tongue and Home language */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Mother Tongue<span className=" text-red-500"> *</span>
@@ -520,7 +520,7 @@ const Admission = () => {
             </div>
 
             {/* Current and permanent address */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Current Address<span className=" text-red-500"> *</span>
@@ -674,7 +674,7 @@ const Admission = () => {
             </p>
 
             {/* Potty and self feeding */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Is your child potty trained?{" "}
@@ -790,7 +790,7 @@ const Admission = () => {
             </div>
 
             {/* sleep routine and nap during time ?  */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Sleep/Nap Routine <span className=" text-red-500"> *</span>
@@ -863,7 +863,7 @@ const Admission = () => {
             </div>
 
             {/* Nap timing and duration */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Nap Timing</p>
                 <input
@@ -992,7 +992,7 @@ const Admission = () => {
             </p>
 
             {/* Food preference and comfort foood */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Food Preferences / Allergies / Dietary Restrictions</p>
                 <input
@@ -1079,7 +1079,7 @@ const Admission = () => {
             </p>
 
             {/* Keeping clam and specific word */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   What helps calm your child when upset? (e.g. hugs, songs,
@@ -1140,7 +1140,7 @@ const Admission = () => {
             </div>
 
             {/* seperatoin axiety and ease transition */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Does your child experience separation anxiety?{" "}
@@ -1225,7 +1225,7 @@ const Admission = () => {
             </div>
 
             {/* disress triggers and comfort */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>
                   Common triggers for distress (e.g. loud noise, crowd, specific
@@ -1286,7 +1286,7 @@ const Admission = () => {
             </p>
 
             {/* favourite activity or interest */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Favourite Activities or Interests</p>
                 <input
@@ -1340,7 +1340,7 @@ const Admission = () => {
             </div>
 
             {/* free time and dislikes */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>How does your child prefer to spend free time?</p>
                 <input
@@ -1394,7 +1394,7 @@ const Admission = () => {
             </div>
 
             {/* conform object and social style */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Comfort object (e.g. soft toy, blanket)</p>
                 <input
@@ -1497,7 +1497,7 @@ const Admission = () => {
             </p>
 
             {/* screen type and type of content */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Approximate screen time per day</p>
                 <input
@@ -1620,7 +1620,7 @@ const Admission = () => {
             </p>
 
             {/* name and dob */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Full Name</p>
                 <input
@@ -1672,7 +1672,7 @@ const Admission = () => {
             </div>
 
             {/* occupation and mobile number */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Occupation</p>
                 <input
@@ -1726,7 +1726,7 @@ const Admission = () => {
             </div>
 
             {/* Email id and aadhar number  */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Email ID</p>
                 <input
@@ -1784,7 +1784,7 @@ const Admission = () => {
             </p>
 
             {/* name and dob */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Full Name</p>
                 <input
@@ -1836,7 +1836,7 @@ const Admission = () => {
             </div>
 
             {/* occupation and mobile number */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Occupation</p>
                 <input
@@ -1890,7 +1890,7 @@ const Admission = () => {
             </div>
 
             {/* Email id and aadhar number  */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Email ID</p>
                 <input
@@ -1948,7 +1948,7 @@ const Admission = () => {
             </p>
 
             {/* emergency name and relation */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Name</p>
                 <input
@@ -2002,7 +2002,7 @@ const Admission = () => {
             </div>
 
             {/* emergency number and alternate number */}
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
                 <p>Mobile Number</p>
                 <input
@@ -2059,7 +2059,7 @@ const Admission = () => {
               Required Documents (to be attached)
             </p>
 
-            <div className=" flex  gap-5">
+            <div className=" flex flex-col md:flex-row  gap-5">
               <div className=" flex flex-col w-full">
                 <label htmlFor="childBirthDoc">Child's Birth Certificate</label>
                 <input
@@ -2105,7 +2105,7 @@ const Admission = () => {
               </div>
             </div>
 
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" flex flex-col mt-3 w-full">
                 <label htmlFor="childPhoto">
                   Passport-size photographs of child
@@ -2155,7 +2155,7 @@ const Admission = () => {
               </div>
             </div>
 
-            <div className=" flex gap-5">
+            <div className=" flex flex-col md:flex-row gap-5">
               <div className=" flex flex-col mt-3 w-full">
                 <label htmlFor="parentAadhaar">
                   Aadhaar Card of Parents/Guardian
@@ -2205,7 +2205,7 @@ const Admission = () => {
               </div>
             </div>
 
-            <div className=" flex flex-col mt-3 w-[calc(50%-10px)]">
+            <div className=" flex flex-col mt-3 md:w-[calc(50%-10px)]">
               <label htmlFor="medicalCertificate">
                 Medical Certificate (if applicable - allergies, special needs,
                 etc.)
