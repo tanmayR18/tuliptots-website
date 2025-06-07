@@ -183,8 +183,8 @@ const Admission = () => {
   }
 
   return (
-    <div className=" bg-[#E9D5FF]">
-      <div className=" relative pb-20 pt-44 px-4 bg-[#E9D5FF] flex flex-col justify-center items-center">
+    <div className=" bg-[#f7eee9]">
+      <div className=" relative pb-20 pt-44 px-4 bg-[#f7eee9] flex flex-col justify-center items-center">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
             className=" w-full h-full"
