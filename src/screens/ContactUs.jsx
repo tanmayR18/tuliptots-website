@@ -18,7 +18,7 @@ const ContactUs = () => {
           <div className=" grid lg:grid-cols-2  gap-12">
             <Link
               className=" lg:rounded-[64px] overflow-hidden relative order-2 lg:order-1 "
-              to={"https://www.google.com/maps?q=37.7749,-122.4194"}
+              to={"https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"}
               target="_blank"
             >
               <div className=" w-full h-full border-2 ">
@@ -34,24 +34,34 @@ const ContactUs = () => {
               </div>
             </Link>
             <div className=" bg-white  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[64px] ">
-              <p className=" font-semibold text-xl tracking-wide">Contact</p>
-              <p className="  mt-2 text-slate-600">
+              <p className=" font-semibold text-xl xl:text-2xl tracking-wide">
+                Contact
+              </p>
+              <p className="  mt-2 xl:mt-8 text-slate-600">
                 We at IGPS believe in an open-door policy and are happy to
                 respond to any queries. Should you have any questions, feel free
                 to get in touch and we will be happy to respond!
               </p>
-              <div className=" flex gap-8 mt-6 justify-evenly items-center">
-                <div className=" flex flex-col justify-center items-center">
-                  <div className="  bg-blue-100 w-24 h-24 flex justify-center items-center rounded-full">
+              <div className=" flex flex-col sm:flex-row gap-8 mt-6 xl:mt-12 justify-evenly items-center">
+                <div className=" flex flex-col justify-center items-center w-1/2">
+                  <div className=" hidden  bg-blue-100 w-24 h-24 lg:flex justify-center items-center rounded-full">
                     <AiTwotoneMail size={36} />
                   </div>
+                  <div className=" flex  bg-blue-100 w-20 h-20 lg:hidden justify-center items-center rounded-full">
+                    <AiTwotoneMail size={30} />
+                  </div>
                   <p className=" text-lg font-semibold mt-5">Email Us</p>
-                  <p className=" text-slate-700">info@ikigaiglobal.in</p>
+                  <p className=" text-slate-700">
+                    tuliptotsinternational@gmail.com
+                  </p>
                 </div>
 
-                <div className=" flex flex-col justify-center items-center">
-                  <div className="  bg-pink-100 w-24 h-24 flex justify-center items-center rounded-full">
+                <div className=" flex flex-col justify-center items-center w-1/2">
+                  <div className="  bg-pink-100 w-24 h-24 hidden lg:flex justify-center items-center rounded-full">
                     <IoCallOutline size={36} />
+                  </div>
+                  <div className="  bg-pink-100 w-20 h-20 flex lg:hidden justify-center items-center rounded-full">
+                    <IoCallOutline size={30} />
                   </div>
                   <p className=" text-lg font-semibold mt-5">Call Us</p>
                   <p className=" text-slate-700">+91 93264 46240</p>
@@ -59,13 +69,12 @@ const ContactUs = () => {
               </div>
 
               <div>
-                <div className=" flex items-center gap-3 mt-7">
+                <div className=" flex items-center gap-3 mt-12 lg:mt-7 xl:mt-14">
                   <IoLocationSharp size={20} />
                   <p className=" text-xl font-semibold">Address</p>
                 </div>
                 <p className=" mt-3 text-gray-500 font-semibold tracking-wide">
-                  Ikigai Global Prep School, 101- 71, Raintree 71, Rd Number 2,
-                  Dadar East, Dadar, Mumbai, Maharashtra 400014
+                  Punawala, Pune
                 </p>
               </div>
             </div>
@@ -78,7 +87,10 @@ const ContactUs = () => {
                 Follow us on
               </p>
               <div className=" mt-5">
-                <Link to={"#"} className=" flex items-center gap-4">
+                <Link
+                  to={"https://www.instagram.com/tuliptotsinternational/"}
+                  className=" flex items-center gap-4"
+                >
                   <div className="">
                     <img
                       height={30}
@@ -87,43 +99,7 @@ const ContactUs = () => {
                     />
                   </div>
                   <p className=" lg:text-lg text-white font-semibold">
-                    tuliptots something
-                  </p>
-                </Link>
-                <Link to={"#"} className=" mt-4 flex items-center gap-4">
-                  <div className="">
-                    <img
-                      height={30}
-                      width={30}
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                    />
-                  </div>
-                  <p className=" lg:text-lg text-white font-semibold">
-                    tuliptots something
-                  </p>
-                </Link>
-                <Link to={"#"} className=" mt-4 flex items-center gap-4">
-                  <div className="">
-                    <img
-                      height={30}
-                      width={30}
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                    />
-                  </div>
-                  <p className=" lg:text-lg text-white font-semibold">
-                    tuliptots something
-                  </p>
-                </Link>
-                <Link to={"#"} className=" mt-4 flex items-center gap-4">
-                  <div className="">
-                    <img
-                      height={30}
-                      width={30}
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                    />
-                  </div>
-                  <p className=" lg:text-lg text-white font-semibold">
-                    tuliptots something
+                    tuliptotsinternational
                   </p>
                 </Link>
               </div>
@@ -138,7 +114,7 @@ const ContactUs = () => {
                 purpose and every day is a step toward shaping young minds.
               </p>
 
-              <p className=" mt-3">somethin@gmail.com</p>
+              <p className=" mt-3">tuliptotsinternational@gmail.com</p>
 
               <Link to={"/careers"}>
                 <button className=" bg-red-400 px-4 cursor-pointer py-3 rounded-xl mt-5">
