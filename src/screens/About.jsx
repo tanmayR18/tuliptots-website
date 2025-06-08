@@ -18,13 +18,20 @@ import image14 from "../assets/about/whychooseus/14.png";
 import image15 from "../assets/about/whychooseus/15.png";
 import image16 from "../assets/about/whychooseus/16.png";
 import image17 from "../assets/about/whychooseus/17.png";
+import image18 from "../assets/about/whychooseus/18.png";
 import image19 from "../assets/about/whychooseus/19.png";
+import image20 from "../assets/about/whychooseus/20.png";
+import image21 from "../assets/about/whychooseus/21.jpg";
+import image22 from "../assets/about/whychooseus/22.jpg";
+import image23 from "../assets/about/whychooseus/23.jpg";
+import image24 from "../assets/about/whychooseus/24.jpg";
 
 import bgImage from "../assets/about/philosopherBack.jpg";
 import Vision from "@/components/core/about/Vision";
 import Mission from "@/components/core/about/Mission";
 import Pedagogy from "@/components/core/about/Pedagogy";
 import { Link } from "react-router";
+import Assessment from "@/components/core/about/Assessment";
 
 const SCREEN_WIDTH = window.innerWidth;
 
@@ -202,8 +209,32 @@ const data3 = [
     image: image17,
   },
   {
+    text: "Gentle Transition",
+    image: image18,
+  },
+  {
     text: "Bright, Air-conditioned Classrooms",
     image: image19,
+  },
+  {
+    text: "School Parent Partnership",
+    image: image20,
+  },
+  {
+    text: "Fire Safety",
+    image: image21,
+  },
+  {
+    text: "Global best practices",
+    image: image22,
+  },
+  {
+    text: "Continuous assessment",
+    image: image23,
+  },
+  {
+    text: "Life size building structure",
+    image: image24,
   },
 ];
 
@@ -260,6 +291,8 @@ const About = () => {
       {/* Curriculum & Pedagogy */}
       <Pedagogy />
 
+      
+
       {/* philosophies */}
       <div className=" max-w-6xl mx-auto">
         <h1 className=" text-3xl font-bold text-center mt-16">
@@ -284,6 +317,8 @@ const About = () => {
         </div>
       </div>
 
+      <Assessment />
+
       {/* Why choose us */}
       <div className=" mt-12">
         <div className=" bg-gray-700 py-12">
@@ -295,7 +330,7 @@ const About = () => {
             {data3.map((item, index) => (
               <div
                 style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
-                className=" w-40 h-40 relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-full flex justify-center items-center bg-white"
+                className=" w-40 h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-full flex justify-center items-center bg-white"
                 key={index}
               >
                 <div className=" absolute right-0 left-0 bottom-0 top-0">
