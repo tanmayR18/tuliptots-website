@@ -61,7 +61,7 @@ const SubSectionCard = ({
   return (
     <Link
       to={navigate}
-      className=" flex justify-center border-4 relative overflow-hidden items-center w-[200px]  aspect-square rounded-full"
+      className=" flex justify-center border-4 relative overflow-hidden items-center w-[160px] sm:w-[200px]  aspect-square rounded-full"
       style={{ backgroundColor: bgColor, borderColor: borderColor }}
     >
       <img src={image} />
@@ -82,7 +82,7 @@ const Academics = () => {
         Tulip's Programs
       </p>
 
-      <div className=" grid grid-cols-4 px-5 max-w-[85rem] mt-8 mx-auto gap-8">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 mx-auto gap-8">
         <ProgramCard
           programName={"Playground"}
           programIdea={"Nurturing Early Explorers"}
@@ -133,7 +133,49 @@ const Academics = () => {
         A Peek Into Our World
       </p>
 
-      <div className="flex justify-center mx-auto gap-8 mt-10">
+      <div className=" hidden md:flex flex-col">
+        <div className="flex justify-center mx-auto gap-8 mt-10">
+          <SubSectionCard
+            facilityName={"A Living, Breathing Classroom"}
+            bgColor={"#ccc"}
+            borderColor={"#007BFF"}
+            navigate={"/classroom"}
+            image={classroom}
+          />
+          <SubSectionCard
+            facilityName={"In-House Library"}
+            bgColor={"#ccc"}
+            borderColor={"#FFFF00"}
+            navigate={"/library"}
+            image={library}
+          />
+          <SubSectionCard
+            facilityName={"Our Gardeners of Growth"}
+            bgColor={"#ccc"}
+            borderColor={"#00BCD4"}
+            navigate={"/growth"}
+            image={gardening}
+          />
+        </div>
+        <div className=" flex justify-center mx-auto gap-8 mt-8">
+          <SubSectionCard
+            facilityName={"Health, hygiene & Safety"}
+            bgColor={"#ccc"}
+            borderColor={"#2ecc71"}
+            navigate={"/health"}
+            image={health}
+          />
+          <SubSectionCard
+            facilityName={"Daycare"}
+            bgColor={"#ccc"}
+            borderColor={"#FF6F61"}
+            navigate={"/daycare"}
+            image={daycare}
+          />
+        </div>
+      </div>
+
+      <div className="  grid grid-cols-2 place-items-center gap-5 mt-6 md:hidden">
         <SubSectionCard
           facilityName={"A Living, Breathing Classroom"}
           bgColor={"#ccc"}
@@ -155,8 +197,6 @@ const Academics = () => {
           navigate={"/growth"}
           image={gardening}
         />
-      </div>
-      <div className=" flex justify-center mx-auto gap-8 mt-8">
         <SubSectionCard
           facilityName={"Health, hygiene & Safety"}
           bgColor={"#ccc"}

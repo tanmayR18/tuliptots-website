@@ -6,11 +6,11 @@ import image4 from "../../../assets/about/mission/4.png";
 
 const Mission = () => {
   return (
-    <div className=" bg-[#ccebfa] p-12 flex   items-center gap-8 rounded-4xl">
+    <div className=" bg-[#ccebfa] p-5 md:p-8 lg:p-12 flex   items-center lg:gap-8 rounded-4xl">
       <div className="">
         <div>
-          <p className=" text-4xl font-bold text-black text-center">MISSION</p>
-          <div className=" grid grid-cols-4 gap-8 mt-12">
+          <p className=" text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center">MISSION</p>
+          <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6 lg:mt-12">
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image1} />
               <p className=" mt-3 text-center leading-5 tracking-wide text-lg font-bold text-slate-600">

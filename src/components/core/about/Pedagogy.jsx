@@ -60,13 +60,13 @@ const Pedagogy = () => {
   const [currentSkill, setCurrentSkill] = useState("");
   return (
     <div className="mt-26">
-      <div className=" w-[80%] mx-auto">
+      <div className=" px-4 lg:w-[80%] mx-auto">
         <div className=" ">
-          <p className="text-3xl tracking-wide text-center font-bold text-black">
+          <p className=" text-2xl sm:text-3xl tracking-wide text-center font-bold text-black">
             How We Nurture young Minds
           </p>
-          <div className=" bg-orange-200 p-10 rounded-4xl mt-12">
-            <p className="  font-semibold text-slate-800 text-lg">
+          <div className=" bg-orange-200 p-5 sm:p-10 rounded-4xl mt-12">
+            <p className="  font-semibold text-slate-800 text-base sm:text-lg">
               Our curriculum is thoughtfully designed, combining global best
               practices with the nurturing spirit of play-based learning. We
               draw inspiration from renowned educational philosophies and align
@@ -89,12 +89,12 @@ const Pedagogy = () => {
             </p>
           </div>
 
-          <div className=" mt-16 gap-10 grid grid-cols-2">
+          <div className=" mt-16 gap-10 grid lg:grid-cols-2 place-items-center grid-cols-1">
             <div>
               <img className="" src={image} />
             </div>
             <div>
-              <p className=" text-2xl font-bold text-purple-800 ">
+              <p className=" text-center lg:text-start text-2xl font-bold text-purple-800 ">
                 Our Innovative 5x4 Skill-Based Framework
               </p>
               <div className=" space-y-5 mt-7">
@@ -130,18 +130,18 @@ const Card = ({ bgColor, setCurrentSkill, currentSkill, skill, subSkills }) => {
         currentSkill === skill ? "h-50" : "h-16"
       } transition-all duration-500 bg-white overflow-hidden cursor-pointer shadow-sm`}
     >
-      <div className=" h-16 px-4 flex items-center">
+      <div className=" h-16 px-2 sm:px-4 flex items-center">
         <div
-          className=" h-9 w-9 rounded-full flex justify-center items-center"
+          className=" h-6 w-6 sm:h-9 sm:w-9 rounded-full shrink-0 flex justify-center items-center"
           style={{ backgroundColor: bgColor }}
         >
-          <p className=" text-xl text-white font-bold">
+          <p className=" text-white font-bold ">
             {currentSkill === skill ? <HiMinus size={14} color="#fff" /> : <IoMdAdd size={14} color="#fff" />}
           </p>
         </div>
         <p
           style={{ color: currentSkill === skill ? bgColor : "#000" }}
-          className=" text-lg ml-3 font-bold"
+          className=" sm:text-lg ml-2 sm:ml-3 font-bold"
         >
           {skill}
         </p>

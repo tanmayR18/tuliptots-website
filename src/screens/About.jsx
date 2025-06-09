@@ -249,13 +249,13 @@ const About = () => {
   return (
     <div className=" bg-[#f7eee9]">
       {/* Hero section */}
-      <div className=" px-12  ">
-        <div className=" grid grid-cols-2 items-center gap-10  pt-44 min-h-screen">
+      <div className=" px-5 lg:px-12  ">
+        <div className=" grid lg:grid-cols-2 items-center gap-10 pt-32 lg:pt-44 min-h-screen">
           <div>
-            <p className=" ml-10 text-5xl tracking-wider font-black text-black">
+            <p className=" lg:ml-10  text-3xl lg:text-5xl tracking-wider font-black text-black">
               About Us
             </p>
-            <div className="  p-10 rounded-4xl flex flex-col justify-center items-center">
+            <div className="  lg:p-10 mt-6 lg:mt-5 rounded-4xl flex flex-col justify-center items-center">
               <p className=" text-slate-800 font-semibold">
                 Our tagline “Where Little Minds Bloom” beautifully reflects our
                 vision. We are dedicated to creating a free-flowing, nurturing
@@ -270,7 +270,7 @@ const About = () => {
               </p>
               <Link
                 to={"/story"}
-                className=" self-start border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md mt-28 lg:mt-16"
+                className=" self-start border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md  mt-16"
               >
                 <p>Our Story</p>
               </Link>
@@ -291,15 +291,13 @@ const About = () => {
       {/* Curriculum & Pedagogy */}
       <Pedagogy />
 
-      
-
       {/* philosophies */}
-      <div className=" max-w-6xl mx-auto">
-        <h1 className=" text-3xl font-bold text-center mt-16">
+      <div className=" max-w-6xl mx-auto px-4">
+        <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold text-center mt-16">
           Our Core Philosophies
         </h1>
         <div
-          className=" grid grid-cols-3 gap-8 mt-10
+          className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10
         "
         >
           {data.map((item, index) => (
@@ -326,21 +324,22 @@ const About = () => {
             Why choose Tulip tots international?
           </h1>
 
-          <div className=" w-[80%] mx-auto mt-12 grid gap-10 grid-cols-6">
+          <div className=" w-[90%] xl:w-[90%] mx-auto mt-12 grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {data3.map((item, index) => (
-              <div
-                style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
-                className=" w-40 h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-full flex justify-center items-center bg-white"
-                key={index}
-              >
-                <div className=" absolute right-0 left-0 bottom-0 top-0">
-                  <img src={item.image} />
-                  <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/50 w-full h-full" />
-                </div>
-                <div className=" absolute right-0 left-0 bottom-0 top-0 flex p-1 justify-center items-center">
-                  <p className=" text-center text-white  font-semibold text-base">
-                    {item.text}
-                  </p>
+              <div key={index} className=" flex justify-center items-center">
+                <div
+                  style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
+                  className=" w-32  md:w-36 md:h-36 xl:w-40  h-32 xl:h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-full flex justify-center items-center bg-white"
+                >
+                  <div className=" absolute right-0 left-0 bottom-0 top-0">
+                    <img src={item.image} />
+                    <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/50 w-full h-full" />
+                  </div>
+                  <div className=" absolute right-0 left-0 bottom-0 top-0 flex p-1 justify-center items-center">
+                    <p className=" text-center text-white  font-semibold text-base">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -377,14 +376,14 @@ const Card = ({
       >
         <div
           className=" w-full h-full absolute rounded-3xl
-         flex flex-col justify-between items-center p-7 bg-white border-3 border-amber-200 overflow-hidden"
+         flex flex-col justify-between items-center p-5 lg:p-7 bg-white border-3 border-amber-200 overflow-hidden"
         >
           {/* front */}
           <div className=" w-full">
             <div className=" flex justify-end items-center w-full">
               <p className=" uppercase font-semibold text-sm">{country}</p>
             </div>
-            <p className=" w-full font-semibold tracking-wide text-2xl self-start mt-1">
+            <p className=" w-full font-semibold tracking-wide text-xl sm:text-2xl self-start mt-2 lg:mt-1">
               {name}
             </p>
 

@@ -78,12 +78,12 @@ const Card = ({ title, points, bgColor }) => {
 
 const Classroom = () => {
   return (
-    <div className=" pt-44 bg-[#f7eee9]">
-      <p className=" text-black font-bold text-center text-3xl tracking-wide">
+    <div className=" pt-32 lg:pt-44 px-5 bg-[#f7eee9]">
+      <p className=" text-black font-bold md:text-center text-3xl tracking-wide">
         A Living, Breathing Classroom
       </p>
 
-      <p className=" w-10/12 mx-auto mt-8 text-lg text-slate-700 font-semibold text-center">
+      <p className=" md:w-10/12 mx-auto mt-8 text-lg text-slate-700 font-semibold md:text-center">
         At Tulip Tots International, we believe the environment is the third
         teacher—a space designed not just to house, but to move, grow, and play
         alongside your child. Every element of our classroom invites
@@ -91,7 +91,7 @@ const Classroom = () => {
         and flexible learning environment.
       </p>
 
-      <div className=" my-16 px-5 grid grid-cols-3 gap-6">
+      <div className=" my-16  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.map((item, index) => (
           <Card
             key={index}

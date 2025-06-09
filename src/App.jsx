@@ -29,6 +29,7 @@ import Growth from "./screens/Growth";
 import Library from "./screens/Library";
 import Classroom from "./screens/Classroom";
 import DayCare from "./screens/DayCare";
+import Footer from "./components/common/Footer";
 
 function App() {
   const router = [
@@ -157,6 +158,7 @@ function App() {
             ))}
           </Routes>
         </ScrollToTop>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
