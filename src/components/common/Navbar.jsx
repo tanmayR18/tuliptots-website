@@ -68,52 +68,52 @@ const Navbar = () => {
               </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
               <div className=" hidden group-hover:flex  p-3 absolute">
-                <div className=" p-2 px-4 bg-white rounded-md flex flex-col">
+                <div className=" p-2 px-4 bg-white border rounded-md flex flex-col">
                   <Link
                     className=" border-b pb-1 border-b-gray-200"
-                    to={"playground"}
+                    to={"/classroom"}
                   >
                     <div className=" flex items-center hover:text-orange-400 relative gap-x-1">
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Playground</p>
+                      <p className=" font-semibold">Classroom</p>
                     </div>
                   </Link>
                   <Link
                     className=" mt-1 border-b pb-1 border-b-gray-200"
-                    to={"nursery"}
+                    to={"/library"}
                   >
                     <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Nursery</p>
+                      <p className=" font-semibold">Library</p>
                     </div>
                   </Link>
                   <Link
                     className=" mt-1 border-b pb-1 border-b-gray-200"
-                    to={"lkg"}
+                    to={"/growth"}
                   >
                     <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">LKG</p>
+                      <p className=" font-semibold">Caretakers</p>
                     </div>
                   </Link>
                   <Link
                     className=" mt-1 border-b pb-1 border-b-gray-200"
-                    to={"ukg"}
+                    to={"health"}
                   >
                     <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">UKG</p>
+                      <p className=" font-semibold">Hygenie</p>
                     </div>
                   </Link>
-                  <Link className="hover:text-orange-400  mt-1" to={"daycare"}>
+                  <Link className="hover:text-orange-400  mt-1" to={"/daycare"}>
                     <div className=" flex items-center group relative gap-x-1">
                       <div className=" ">
                         <IoIosArrowForward />

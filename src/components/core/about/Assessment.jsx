@@ -20,12 +20,12 @@ const data = [
 
 const Assessment = () => {
   return (
-    <div className=" mt-16">
-      <p className=" text-3xl font-bold text-slate-700 text-center">
+    <div className=" mt-16 px-4">
+      <p className=" text-xl md:text-2xl lg:text-3xl font-bold text-slate-700 text-center">
         Continuous Assessment: Nurturing Individual Growth
       </p>
 
-      <div className=" grid grid-cols-3 mt-12 gap-8 max-w-5xl mx-auto">
+      <div className=" grid md:grid-cols-2 lg:grid-cols-3 mt-12 gap-8 max-w-5xl mx-auto">
         {data.map((item) => (
           <div
             style={{ backgroundColor: item.bgColor }}

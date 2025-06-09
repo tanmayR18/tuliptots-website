@@ -24,6 +24,12 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import Faq from "./screens/Faq";
 import JoinTeam from "./screens/JoinTeam";
 import AdmissionForm from "./screens/AdmissionForm";
+import Health from "./screens/Health";
+import Growth from "./screens/Growth";
+import Library from "./screens/Library";
+import Classroom from "./screens/Classroom";
+import DayCare from "./screens/DayCare";
+import Footer from "./components/common/Footer";
 
 function App() {
   const router = [
@@ -64,12 +70,32 @@ function App() {
       element: <Gallery />,
     },
     {
-        path: '/careers',
-        element: <JoinTeam/>
+      path: "/careers",
+      element: <JoinTeam />,
     },
     {
-        path: '/faq',
-        element: <Faq/>
+      path: "/faq",
+      element: <Faq />,
+    },
+    {
+      path: "/classroom",
+      element: <Classroom />,
+    },
+    {
+      path: "/library",
+      element: <Library />,
+    },
+    {
+      path: "/growth",
+      element: <Growth />,
+    },
+    {
+      path: "/health",
+      element: <Health />,
+    },
+    {
+      path: "/daycare",
+      element: <DayCare />,
     },
     {
       path: "/blog1",
@@ -132,6 +158,7 @@ function App() {
             ))}
           </Routes>
         </ScrollToTop>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
