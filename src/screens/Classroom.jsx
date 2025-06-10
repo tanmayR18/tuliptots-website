@@ -1,6 +1,8 @@
 import Footer from "@/components/common/Footer";
 import React from "react";
 
+import image from "../assets/school/classroom/classroomHero.jpg";
+
 const data = [
   {
     title: "Furniture-Free, Open Layout",
@@ -69,7 +71,9 @@ const Card = ({ title, points, bgColor }) => {
 
       <div className="">
         {points.map((item, index) => (
-          <li className=" mt-1 text-base text-white font-semibold" key={index}>{item}</li>
+          <li className=" mt-1 text-base text-white font-semibold" key={index}>
+            {item}
+          </li>
         ))}
       </div>
     </div>
@@ -83,9 +87,11 @@ const Classroom = () => {
         A Living, Breathing Classroom
       </p>
 
+      <img src={image} className=" mx-auto scale-105 mt-4" />
       <p className=" md:w-10/12 mx-auto mt-8 text-lg text-slate-700 font-semibold md:text-center">
         At Tulip Tots International, we believe the environment is the third
-        teacher—a space designed not just to house, but to move, grow, and play
+        teacher—a space designed not just to house, but to{" "}
+        <strong className=" tracking-wider"> move, grow, and play </strong>
         alongside your child. Every element of our classroom invites
         imagination, independence, and holistic development, fostering a dynamic
         and flexible learning environment.
@@ -102,7 +108,7 @@ const Classroom = () => {
         ))}
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
