@@ -99,7 +99,7 @@ const Navbar = () => {
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Caretakers</p>
+                      <p className=" font-semibold">Our Team</p>
                     </div>
                   </Link>
                   <Link

@@ -1,6 +1,7 @@
 import Footer from "@/components/common/Footer";
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import image from "../assets/school/library/libraryHero.jpg";
 
 const data = [
   {
@@ -35,6 +36,7 @@ const Library = () => {
       <p className=" text-black font-bold text-center text-xl md:text-2xl lg:text-3xl tracking-wide">
         Our In-House Library - Where Lifelong Readers Begin
       </p>
+      <img src={image} className=" mx-auto mt-5" />
 
       <p className=" lg:w-10/12 mx-auto mt-5 lg:mt-8 text-base lg:text-lg text-slate-700 font-semibold text-center">
         At Tulip Tots International, we nurture the love for reading from the

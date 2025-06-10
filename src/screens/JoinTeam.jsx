@@ -1,6 +1,6 @@
 import Footer from "@/components/common/Footer";
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import image from "../assets/joinOurTeam/joinOurTeam.jpg";
 
@@ -8,7 +8,7 @@ const JoinTeam = () => {
   const {
     register,
     handleSubmit,
-    getValues,
+    reset,
     // watch,
     formState: { errors },
   } = useForm({
@@ -22,12 +22,25 @@ const JoinTeam = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const [status, setStatus] = useState("");
+
+  const onSubmit = async (data) => {
+    // console.log(data);
+
+    setStatus("loading");
 
     try {
-      const response = axios.post("http://localhost:3000/joinTeam", data);
-    } catch (error) {}
+      const response = await axios.post("http://localhost:3000/joinTeam", data);
+      if (response.status === 200) {
+        setStatus("success");
+        reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (e) {
+      console.log(e);
+      setStatus("error");
+    }
   };
 
   return (
@@ -39,8 +52,8 @@ const JoinTeam = () => {
           <h4 className=" text-xl mt-5 lg:mt-8">
             At TulipTots International School, we believe in nurturing not just
             young minds, but also the careers of passionate educators. Join a
-            collaborative environment where your ideas matter and your
-            growth is a priority.
+            collaborative environment where your ideas matter and your growth is
+            a priority.
           </h4>
         </div>
         <div className=" hidden md:flex">
@@ -77,13 +90,18 @@ const JoinTeam = () => {
               )}
             </div>
             <div className=" mt-3 w-full">
-              <p>Age</p>
+              <p>Age<span className=" text-red-500"> *</span></p>
               <input
+                maxLength={10}
                 {...register("age", {
                   required: { value: true, message: "age is required" },
+                  pattern: {
+                    value: /^[0-9]*$/,
+                    message: "only number allowed",
+                  },
                   maxLength: {
-                    value: 3,
-                    message: "age shouldn't exceed 3 characters",
+                    value: 2,
+                    message: "age shouldn't exceed 2 characters",
                   },
                 })}
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -124,13 +142,13 @@ const JoinTeam = () => {
               )}
             </div>
             <div className=" mt-3 w-full">
-              <p>Education</p>
+              <p>Education <span className=" text-red-500"> *</span></p>
               <input
                 {...register("education", {
                   required: { value: true, message: "edication is required" },
                   maxLength: {
-                    value: 3,
-                    message: "education shouldn't exceed 3 characters",
+                    value: 40,
+                    message: "education shouldn't exceed 40 characters",
                   },
                 })}
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -143,7 +161,7 @@ const JoinTeam = () => {
             </div>
           </div>
 
-          {/* role and education */}
+          {/* email and number */}
           <div className=" flex flex-col md:flex-row gap-5">
             <div className=" mt-3 w-full">
               <p>
@@ -152,14 +170,11 @@ const JoinTeam = () => {
               </p>
               <input
                 {...register("email", {
-                  required: { value: true, message: "Emaul is required" },
-                  minLength: {
-                    value: 3,
-                    message: "Email should be minimum of 3 letters",
-                  },
-                  maxLength: {
-                    value: 60,
-                    message: "Email shouldn't exceed 60 characters",
+                  required: { value: true, message: "Email is required" },
+                  pattern: {
+                    value:
+                      /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/,
+                    message: "invalid email address",
                   },
                 })}
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -171,13 +186,13 @@ const JoinTeam = () => {
               )}
             </div>
             <div className=" mt-3 w-full">
-              <p>Contact Number</p>
+              <p>Contact Number<span className=" text-red-500"> *</span></p>
               <input
                 {...register("contactNumber", {
                   required: { value: true, message: "Number is required" },
-                  maxLength: {
-                    value: 3,
-                    message: "Number shouldn't exceed 3 characters",
+                  pattern: {
+                    value: /^[0-9]{10}$/,
+                    message: "invalid phonenumber",
                   },
                 })}
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -190,12 +205,40 @@ const JoinTeam = () => {
             </div>
           </div>
 
-          <button
-            className=" mt-5 bg-blue-500 px-3 py-2 rounded-lg text-white font-semibold"
-            type="submit"
-          >
-            Submit
-          </button>
+          {(!status || status === "loading") && (
+            <button
+              disabled={status === "loading"}
+              //   onClick={submitHandler}
+              className=" mt-5 bg-blue-400 text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
+            >
+              <p>{status === "loading" ? "Sending..." : "Send"}</p>
+            </button>
+          )}
+
+          {status === "success" && (
+            <div className=" mt-10 flex flex-col items-center justify-center">
+              <p className=" text-green-500 font-bold text-2xl">
+                Thank You for Showing Interest!
+              </p>
+              <p className=" text-blue-500 text-center font-semibold w-1/2 mt-2">
+                We've received your application. We’re excited to connect with
+                passionate individuals like you who want to grow with the Tulip
+                Tots family. Stay tuned — your journey with us may be about to
+                bloom!
+              </p>
+            </div>
+          )}
+          {status === "error" && (
+            <div className=" mt-10 flex flex-col items-center justify-center">
+              <p className=" text-red-500 font-bold text-2xl">
+                Unable to send your enquiry at this point{" "}
+              </p>
+              <p className=" text-gray-500 text-center font-semibold w-1/2 mt-2">
+                Sorry for the inconvenience, please contact as 1234567890 for
+                the enquiry
+              </p>
+            </div>
+          )}
         </form>
       </div>
 
