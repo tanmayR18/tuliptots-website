@@ -140,9 +140,11 @@ const Enquiry = () => {
     }
 
     try {
-      console.log(data);
+      //   console.log(data);
 
-      const response = axios.post("http://localhost:3000/enquiry", {
+      setStatus("loading");
+
+      const response = await axios.post("http://localhost:3000/enquiry", {
         parentName: data.parentName,
         childName: data.name,
         dob: data.dob,
@@ -153,6 +155,23 @@ const Enquiry = () => {
         program: data.program,
         message: data.message,
       });
+
+      if (response.status === 200) {
+        setStatus("success");
+        setData({
+          name: "",
+          dob: "",
+          parentName: "",
+          occupation: "",
+          email: "",
+          number: "",
+          address: "",
+          program: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+      }
     } catch (error) {
       //   const response = await emailjs.send(
       //     YOUR_SERVICE_ID,
@@ -205,7 +224,7 @@ const Enquiry = () => {
               <p className=" text-black font-semibold text-2xl">Details</p>
 
               <div className=" mt-6">
-                <p>Name of the Child</p>
+                <p>Name of the Child <span className=" text-red-500"> *</span></p>
                 <input
                   value={data.name}
                   onChange={(e) => {
@@ -224,7 +243,7 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Date of Birth</p>
+                <p>Date of Birth <span className=" text-red-500"> *</span></p>
                 <input
                   type="date"
                   max={`${date.getFullYear()}-${(date.getMonth() + 1)
@@ -250,7 +269,7 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Parents Name</p>
+                <p>Parents Name<span className=" text-red-500"> *</span></p>
                 <input
                   value={data.parentName}
                   onChange={(e) => {
@@ -269,7 +288,7 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Occupation</p>
+                <p>Occupation<span className=" text-red-500"> *</span></p>
                 <input
                   value={data.occupation}
                   onChange={(e) => {
@@ -294,7 +313,7 @@ const Enquiry = () => {
               </p>
 
               <div className=" mt-6">
-                <p>Email</p>
+                <p>Email<span className=" text-red-500"> *</span></p>
                 <input
                   value={data.email}
                   onChange={(e) => {
@@ -313,7 +332,7 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Contact Number</p>
+                <p>Contact Number<span className=" text-red-500"> *</span></p>
                 <input
                   maxLength={10}
                   value={data.number}
@@ -335,7 +354,7 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Address</p>
+                <p>Address<span className=" text-red-500"> *</span></p>
                 <input
                   value={data.address}
                   onChange={(e) => {
@@ -372,13 +391,14 @@ const Enquiry = () => {
               </div>
             </div>
           </div>
-          {!status && (
-            <div
+          {(!status || status === "loading") && (
+            <button
+              disabled={status === "loading"}
               onClick={submitHandler}
               className=" mt-5 bg-blue-400 text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
             >
-              Send
-            </div>
+              <p>{status === "loading" ? "Sending..." : "Send"}</p>
+            </button>
           )}
 
           {status === "success" && (
@@ -414,7 +434,7 @@ const Enquiry = () => {
 const DropDown = ({ setData, data }) => {
   return (
     <div className=" relative mt-3">
-      <p>Select Program</p>
+      <p>Select Program<span className=" text-red-500"> *</span></p>
       <select
         className=" focus:outline-none w-full bg-blue-100 rounded-md py-2 px-3"
         name="program"

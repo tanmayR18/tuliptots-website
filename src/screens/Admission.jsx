@@ -31,6 +31,8 @@ const Admission = () => {
   //   const [showDocument, setshowDocument] = useState(false);
   //   const [admissionData, setAdmissionData] = useState({});
 
+  const [status, setStatus] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -114,7 +116,7 @@ const Admission = () => {
       medicalCertificate: "",
     },
   });
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     // console.log(data);
     const file = fileRef.current?.files?.[0];
     console.log("file", file);
@@ -163,14 +165,25 @@ const Admission = () => {
         formData.append(key, data[key]);
       }
 
-      const response = axios.post("http://localhost:3000/email", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      setStatus("loading");
+
+      const response = await axios.post(
+        "http://localhost:3000/email",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       console.log("response", response);
+      if (response.status === 200) {
+        setStatus("success");
+        // navigate to the pdf page
+      }
     } catch (error) {
       console.log("error", error);
+      setStatus("error");
     }
   };
 
@@ -259,7 +272,7 @@ const Admission = () => {
         </div> */}
         </div>
 
-        <div className=" mt-12 w-[95%] md:w-[80%] mx-auto h-0.5 bg-slate-400"/>
+        <div className=" mt-12 w-[95%] md:w-[80%] mx-auto h-0.5 bg-slate-400" />
         <p className=" text-2xl tracking-wide md:text-3xl text-black font-bold text-center mt-16 ">
           FORM
         </p>
@@ -356,10 +369,15 @@ const Admission = () => {
                   <span className=" text-red-500"> *</span>
                 </p>
                 <input
+                  maxLength={10}
                   {...register("age", {
                     required: {
                       value: true,
                       message: "Child name is required",
+                    },
+                    pattern: {
+                      value: /^[0-9]{2}$/,
+                      message: "invalid age",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -994,7 +1012,10 @@ const Admission = () => {
             {/* Food preference and comfort foood */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Food Preferences / Allergies / Dietary Restrictions</p>
+                <p>
+                  Food Preferences / Allergies / Dietary Restrictions{" "}
+                  <span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("foodPreference", {
                     required: {
@@ -1023,10 +1044,6 @@ const Admission = () => {
                 <p>Favourite snacks or comfort foods</p>
                 <input
                   {...register("favouriteSnacks", {
-                    required: {
-                      value: true,
-                      message: "Favourite Snack is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "Favourite Snack should be minimum of 3 letters",
@@ -1052,10 +1069,6 @@ const Admission = () => {
               <p>Feeding routine (if any)</p>
               <input
                 {...register("feedingRoutine", {
-                  required: {
-                    value: true,
-                    message: "Feeding routine is required",
-                  },
                   minLength: {
                     value: 3,
                     message: "Feeding routine should be minimum of 3 letters",
@@ -1087,10 +1100,6 @@ const Admission = () => {
                 </p>
                 <input
                   {...register("thingsToClamWhenUpset", {
-                    required: {
-                      value: true,
-                      message: "Food Preference is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "Food Preference should be minimum of 3 letters",
@@ -1116,10 +1125,6 @@ const Admission = () => {
                 </p>
                 <input
                   {...register("specificWordsUsed", {
-                    required: {
-                      value: true,
-                      message: "Specific word is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "Specific word should be minimum of 3 letters",
@@ -1201,10 +1206,6 @@ const Admission = () => {
                 <p>If yes, what helps ease transitions?</p>
                 <input
                   {...register("easeTransitionForSeperationAnxiety", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1233,10 +1234,6 @@ const Admission = () => {
                 </p>
                 <input
                   {...register("distressTiggers", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1258,10 +1255,6 @@ const Admission = () => {
                 <p>Phrases/rituals used at home to reassure or comfort:</p>
                 <input
                   {...register("ritualsToComfort", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1291,10 +1284,6 @@ const Admission = () => {
                 <p>Favourite Activities or Interests</p>
                 <input
                   {...register("interest", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1316,10 +1305,6 @@ const Admission = () => {
                 <p>Hobbies (Art, Music, Dance, Outdoor Play, etc.):</p>
                 <input
                   {...register("hobbies", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1345,10 +1330,6 @@ const Admission = () => {
                 <p>How does your child prefer to spend free time?</p>
                 <input
                   {...register("howFreeTimeSpent", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1370,10 +1351,6 @@ const Admission = () => {
                 <p>Things your child dislikes or fears:</p>
                 <input
                   {...register("dislikes", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1399,10 +1376,6 @@ const Admission = () => {
                 <p>Comfort object (e.g. soft toy, blanket)</p>
                 <input
                   {...register("comfortObject", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
                     minLength: {
                       value: 3,
                       message: "This field should be minimum of 3 letters",
@@ -1499,7 +1472,10 @@ const Admission = () => {
             {/* screen type and type of content */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Approximate screen time per day</p>
+                <p>
+                  Approximate screen time per day{" "}
+                  <span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("screenTimePerDay", {
                     required: {
@@ -1524,7 +1500,10 @@ const Admission = () => {
                 )}
               </div>
               <div className=" mt-3 w-full">
-                <p>Type of content (Shows/Apps/Games)</p>
+                <p>
+                  Type of content (Shows/Apps/Games){" "}
+                  <span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("typeOfContent", {
                     required: {
@@ -1555,10 +1534,6 @@ const Admission = () => {
               <p>Favourite characters/songs/shows</p>
               <input
                 {...register("favouriteCharacterSongShow", {
-                  required: {
-                    value: true,
-                    message: "This field is required",
-                  },
                   minLength: {
                     value: 3,
                     message: "This field should be minimum of 3 letters",
@@ -1589,10 +1564,6 @@ const Admission = () => {
               </p>
               <input
                 {...register("otherNotes", {
-                  required: {
-                    value: true,
-                    message: "This field is required",
-                  },
                   minLength: {
                     value: 3,
                     message: "This field should be minimum of 3 letters",
@@ -1622,7 +1593,9 @@ const Admission = () => {
             {/* name and dob */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Full Name</p>
+                <p>
+                  Full Name<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("motherName", {
                     required: {
@@ -1674,7 +1647,9 @@ const Admission = () => {
             {/* occupation and mobile number */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Occupation</p>
+                <p>
+                  Occupation<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("motherOccupation", {
                     required: {
@@ -1699,20 +1674,19 @@ const Admission = () => {
                 )}
               </div>
               <div className=" mt-3 w-full">
-                <p>Mobile Number</p>
+                <p>
+                  Mobile Number<span className=" text-red-500"> *</span>
+                </p>
                 <input
+                  maxLength={10}
                   {...register("motherNumber", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
-                      value: 3,
-                      message: "This field should be minimum of 3 letters",
-                    },
-                    maxLength: {
-                      value: 300,
-                      message: "This field shouldn't exceed 300 characters",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "invalid phone number",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -1743,6 +1717,11 @@ const Admission = () => {
                       value: 300,
                       message: "This field shouldn't exceed 300 characters",
                     },
+                    pattern: {
+                      value:
+                        /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/,
+                      message: "invalid email address",
+                    },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
@@ -1755,6 +1734,7 @@ const Admission = () => {
               <div className=" mt-3 w-full">
                 <p>Aadhaar Number</p>
                 <input
+                  maxLength={12}
                   {...register("motherAadharNumber", {
                     required: {
                       value: true,
@@ -1767,6 +1747,10 @@ const Admission = () => {
                     maxLength: {
                       value: 300,
                       message: "This field shouldn't exceed 300 characters",
+                    },
+                    pattern: {
+                      value: /^[0-9]{12}$/,
+                      message: "invalid aadhaar number",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -1786,7 +1770,9 @@ const Admission = () => {
             {/* name and dob */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Full Name</p>
+                <p>
+                  Full Name<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("fatherName", {
                     required: {
@@ -1838,7 +1824,9 @@ const Admission = () => {
             {/* occupation and mobile number */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Occupation</p>
+                <p>
+                  Occupation<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("fatherOccupation", {
                     required: {
@@ -1863,20 +1851,19 @@ const Admission = () => {
                 )}
               </div>
               <div className=" mt-3 w-full">
-                <p>Mobile Number</p>
+                <p>
+                  Mobile Number<span className=" text-red-500"> *</span>
+                </p>
                 <input
+                  maxLength={10}
                   {...register("fatherNumber", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
-                      value: 3,
-                      message: "This field should be minimum of 3 letters",
-                    },
-                    maxLength: {
-                      value: 300,
-                      message: "This field shouldn't exceed 300 characters",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "invalid phone number",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -1892,16 +1879,19 @@ const Admission = () => {
             {/* Email id and aadhar number  */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Email ID</p>
+                <p>
+                  Email ID<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("fatherEmail", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
-                      value: 3,
-                      message: "This field should be minimum of 3 letters",
+                    pattern: {
+                      value:
+                        /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/,
+                      message: "invalid email address",
                     },
                     maxLength: {
                       value: 300,
@@ -1917,20 +1907,19 @@ const Admission = () => {
                 )}
               </div>
               <div className=" mt-3 w-full">
-                <p>Aadhaar Number</p>
+                <p>
+                  Aadhaar Number<span className=" text-red-500"> *</span>
+                </p>
                 <input
+                  maxLength={12}
                   {...register("fatherAadharNumber", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
-                      value: 3,
-                      message: "This field should be minimum of 3 letters",
-                    },
-                    maxLength: {
-                      value: 300,
-                      message: "This field shouldn't exceed 300 characters",
+                    pattern: {
+                      value: /^[0-9]{12}$/,
+                      message: "invalid aadhar number",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -1950,7 +1939,9 @@ const Admission = () => {
             {/* emergency name and relation */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Name</p>
+                <p>
+                  Name<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("emergencyName", {
                     required: {
@@ -1975,20 +1966,22 @@ const Admission = () => {
                 )}
               </div>
               <div className=" mt-3 w-full">
-                <p>Relation to child</p>
+                <p>
+                  Relation to child<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   {...register("emergencyRelation", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
+                    min: {
                       value: 3,
-                      message: "This field should be minimum of 3 letters",
+                      message: "min 3 characters required",
                     },
-                    maxLength: {
-                      value: 300,
-                      message: "This field shouldn't exceed 300 characters",
+                    max: {
+                      value: 60,
+                      message: "max 60 characters",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -2004,20 +1997,19 @@ const Admission = () => {
             {/* emergency number and alternate number */}
             <div className=" flex flex-col md:flex-row gap-5">
               <div className=" mt-3 w-full">
-                <p>Mobile Number</p>
+                <p>
+                  Mobile Number<span className=" text-red-500"> *</span>
+                </p>
                 <input
+                  maxLength={10}
                   {...register("emergencyNumber", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
-                      value: 3,
-                      message: "This field should be minimum of 3 letters",
-                    },
-                    maxLength: {
-                      value: 300,
-                      message: "This field shouldn't exceed 300 characters",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "invalid phone number",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -2029,20 +2021,19 @@ const Admission = () => {
                 )}
               </div>
               <div className=" mt-3 w-full">
-                <p>Alternate Number</p>
+                <p>
+                  Alternate Number<span className=" text-red-500"> *</span>
+                </p>
                 <input
+                  maxLength={10}
                   {...register("emergencyAlternateNumber", {
                     required: {
                       value: true,
                       message: "This field is required",
                     },
-                    minLength: {
-                      value: 3,
-                      message: "This field should be minimum of 3 letters",
-                    },
-                    maxLength: {
-                      value: 300,
-                      message: "This field shouldn't exceed 300 characters",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "invalid phonenumber",
                     },
                   })}
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
@@ -2061,7 +2052,10 @@ const Admission = () => {
 
             <div className=" flex flex-col md:flex-row  gap-5">
               <div className=" flex flex-col w-full">
-                <label htmlFor="childBirthDoc">Child's Birth Certificate</label>
+                <label htmlFor="childBirthDoc">
+                  Child's Birth Certificate
+                  <span className=" text-red-500"> *</span>
+                </label>
                 <input
                   id="childBirthDoc"
                   ref={childBirthRef}
@@ -2083,7 +2077,9 @@ const Admission = () => {
               </div>
 
               <div className=" flex flex-col w-full">
-                <label htmlFor="childAadhaar">Child's Aadhaar Card</label>
+                <label htmlFor="childAadhaar">
+                  Child's Aadhaar Card<span className=" text-red-500"> *</span>
+                </label>
                 <input
                   id="childAadhaar"
                   ref={ChildAadhaarRef}
@@ -2109,6 +2105,7 @@ const Admission = () => {
               <div className=" flex flex-col mt-3 w-full">
                 <label htmlFor="childPhoto">
                   Passport-size photographs of child
+                  <span className=" text-red-500"> *</span>
                 </label>
                 <input
                   id="childPhoto"
@@ -2133,6 +2130,7 @@ const Admission = () => {
               <div className=" flex flex-col mt-3 w-full">
                 <label htmlFor="parentPhoto">
                   Passport-size photographs of parents/guardian
+                  <span className=" text-red-500"> *</span>
                 </label>
                 <input
                   id="parentPhoto"
@@ -2159,6 +2157,7 @@ const Admission = () => {
               <div className=" flex flex-col mt-3 w-full">
                 <label htmlFor="parentAadhaar">
                   Aadhaar Card of Parents/Guardian
+                  <span className=" text-red-500"> *</span>
                 </label>
                 <input
                   id="parentAadhaar"
@@ -2183,6 +2182,7 @@ const Admission = () => {
               <div className=" flex flex-col mt-3 w-full">
                 <label htmlFor="residenceProof">
                   Proof of Residence (utility bill/rental agreement)
+                  <span className=" text-red-500"> *</span>
                 </label>
                 <input
                   id="residenceProof"
@@ -2208,7 +2208,7 @@ const Admission = () => {
             <div className=" flex flex-col mt-3 md:w-[calc(50%-10px)]">
               <label htmlFor="medicalCertificate">
                 Medical Certificate (if applicable - allergies, special needs,
-                etc.)
+                etc.)<span className=" text-red-500"> *</span>
               </label>
               <input
                 id="medicalCertificate"
@@ -2230,12 +2230,27 @@ const Admission = () => {
               )}
             </div>
 
-            <div className=" w-full flex justify-end">
-              <input
-                className=" bg-blue-400 hover:bg-blue-500 hover:text-white hover:cursor-pointer mt-8  duration-300 px-3 py-1.5 rounded-lg font-semibold text-whiteF"
-                type="submit"
-              />
-            </div>
+            {(!status || status === "loading" || status === "error" || status === 'success') && (
+              <button
+                disabled={status === "loading"}
+                //   onClick={submitHandler}
+                className=" mt-5 bg-blue-400 justify-end text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
+              >
+                <p>{status === "loading" ? "Sending..." : "Send"}</p>
+              </button>
+            )}
+
+            {status === "error" && (
+              <div className=" mt-10 flex flex-col items-center justify-center">
+                <p className=" text-red-500 font-bold text-2xl">
+                  Unable to send your enquiry at this point{" "}
+                </p>
+                <p className=" text-gray-500 text-center font-semibold w-1/2 mt-2">
+                  Sorry for the inconvenience, please contact as 1234567890 for
+                  the enquiry
+                </p>
+              </div>
+            )}
           </form>
 
           {/* <input ref={fileRef} type="file" /> */}
@@ -2259,7 +2274,7 @@ const Admission = () => {
         </PDFDownloadLink> */}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
