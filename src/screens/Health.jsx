@@ -20,7 +20,7 @@ const Health = () => {
         their peers.
       </p>
 
-      <div className=" grid grid-cols-2 gap-10 w-10/12 mx-auto py-12">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-10/12 mx-auto py-12">
         <div className=" bg-white rounded-[32px] overflow-hidden">
           <img
             className=" h-24 w-24  translate-y-14 mx-auto "
