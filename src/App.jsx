@@ -31,6 +31,7 @@ import Classroom from "./screens/Classroom";
 import DayCare from "./screens/DayCare";
 import Footer from "./components/common/Footer";
 import AddmissionPdf from "./screens/AddmissionPdf";
+import OurStory from "./screens/OurStory";
 
 function App() {
   const router = [
@@ -149,6 +150,10 @@ function App() {
     {
       path: "/blog12",
       element: <Blog12 />,
+    },
+    {
+      path: "/story",
+      element: <OurStory />,
     },
   ];
 
