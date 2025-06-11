@@ -1,4 +1,4 @@
-import Footer from "@/components/common/Footer";
+
 import React, { useState } from "react";
 import heroImage from "../assets/about/aboutHero2.png";
 import image1 from "../assets/about/whychooseus/1.png";
@@ -346,7 +346,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 };

@@ -14,7 +14,6 @@ import {
   View,
 } from "@react-pdf/renderer";
 import axios from "axios";
-import Footer from "@/components/common/Footer";
 
 const Admission = () => {
   const date = new Date();
@@ -2274,32 +2273,31 @@ const Admission = () => {
         </PDFDownloadLink> */}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
 
-const MyDocument = () => (
-  <Document style={{}}>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Tanmay #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Rane #2</Text>
-      </View>
-      <Image
-        src={
-          "https://static-00.iconduck.com/assets.00/checkbox-icon-512x512-kv3qo5ui.png"
-        }
-        style={{
-          height: 15,
-          width: 15,
-        }}
-      />
-    </Page>
-  </Document>
-);
+// const MyDocument = () => (
+//   <Document style={{}}>
+//     <Page size="A4" style={styles.page}>
+//       <View style={styles.section}>
+//         <Text>Tanmay #1</Text>
+//       </View>
+//       <View style={styles.section}>
+//         <Text>Rane #2</Text>
+//       </View>
+//       <Image
+//         src={
+//           "https://static-00.iconduck.com/assets.00/checkbox-icon-512x512-kv3qo5ui.png"
+//         }
+//         style={{
+//           height: 15,
+//           width: 15,
+//         }}
+//       />
+//     </Page>
+//   </Document>
+// );
 
 // Create styles
 const styles = StyleSheet.create({

@@ -1,4 +1,4 @@
-import Footer from "@/components/common/Footer";
+
 import React from "react";
 
 import image from "../assets/school/classroom/classroomHero.jpg";
@@ -108,7 +108,6 @@ const Classroom = () => {
         ))}
       </div>
 
-      <Footer />
     </div>
   );
 };

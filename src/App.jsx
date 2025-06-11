@@ -30,6 +30,7 @@ import Library from "./screens/Library";
 import Classroom from "./screens/Classroom";
 import DayCare from "./screens/DayCare";
 import Footer from "./components/common/Footer";
+import AddmissionPdf from "./screens/AddmissionPdf";
 
 function App() {
   const router = [
@@ -96,6 +97,10 @@ function App() {
     {
       path: "/daycare",
       element: <DayCare />,
+    },
+    {
+      path: "/admissionPdf",
+      element: <AddmissionPdf />,
     },
     {
       path: "/blog1",

@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Footer from "@/components/common/Footer";
 import { Link } from "react-router";
 
 const data = [
@@ -182,7 +181,7 @@ const Faq = () => {
           </Link>
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 };
