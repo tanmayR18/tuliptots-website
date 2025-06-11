@@ -364,7 +364,13 @@ const Card = ({
 }) => {
   return (
     <div
-      onClick={() => setCurrentTapped(name)}
+      onClick={() => {
+        if (currentTapped === name) {
+          setCurrentTapped("");
+          return;
+        }
+        setCurrentTapped(name);
+      }}
       style={{ perspective: 1000 }}
       className="  w-full aspect-square bg-transparent cursor-pointer group rounded-3xl"
     >
