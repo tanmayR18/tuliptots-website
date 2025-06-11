@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const data = [
   {
@@ -19,6 +19,8 @@ const data = [
 ];
 
 const Assessment = () => {
+  const [currentTap, setCurrentTap] = useState("");
+
   return (
     <div className=" mt-16 px-4">
       <p className=" text-xl md:text-2xl lg:text-3xl font-bold text-slate-700 text-center">
@@ -28,6 +30,14 @@ const Assessment = () => {
       <div className=" grid md:grid-cols-2 lg:grid-cols-3 mt-12 gap-8 max-w-5xl mx-auto">
         {data.map((item) => (
           <div
+            onClick={() => {
+              if (currentTap === item.title) {
+                setCurrentTap("");
+                return;
+              }
+
+              setCurrentTap(item.title);
+            }}
             style={{ backgroundColor: item.bgColor }}
             className=" flex justify-center items-center aspect-square cursor-pointer rounded-2xl relative group overflow-hidden"
             key={item.title}
@@ -35,7 +45,12 @@ const Assessment = () => {
             <p className=" text-white text-2xl font-semibold text-center ">
               {item.title}
             </p>
-            <div className=" flex justify-center items-center p-5 absolute top-0 right-0 left-0 bottom-0 group-hover:translate-y-5 translate-y-full transition-all duration-500 bg-slate-700 rounded-t-2xl">
+            <div
+              //   onClick={() => setCurrentTap("")}
+              className={`lg:translate-y-full ${
+                currentTap === item.title ? "translate-y-5" : "translate-y-full"
+              } flex justify-center items-center p-5 absolute top-0 right-0 left-0 bottom-0 group-hover:translate-y-5  transition-all duration-500 bg-slate-700 rounded-t-2xl`}
+            >
               <p className=" text-white text-lg font-semibold text-center -translate-y-5">
                 {item.text}
               </p>
