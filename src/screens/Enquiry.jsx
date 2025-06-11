@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../components/common/Navbar";
-import Footer from "../components/common/Footer";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
 
@@ -426,7 +425,7 @@ const Enquiry = () => {
           )}
         </div>
       </form>
-      <Footer />
+
     </div>
   );
 };

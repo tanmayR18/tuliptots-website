@@ -5,7 +5,6 @@ import daycare from "../assets/school/daycare.jpg";
 import gardening from "../assets/school/gardening.jpg";
 import health from "../assets/school/health.jpg";
 import library from "../assets/school/library.jpg";
-import Footer from "@/components/common/Footer";
 import Activity from "@/components/core/school/Activity";
 
 const ProgramCard = ({
@@ -215,7 +214,6 @@ const Academics = () => {
 
       <Activity />
 
-      <Footer />
     </div>
   );
 };

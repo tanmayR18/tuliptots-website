@@ -4,7 +4,6 @@ import { IoCallOutline } from "react-icons/io5";
 import { Link } from "react-router";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
-import Footer from "@/components/common/Footer";
 
 const ContactUs = () => {
   return (
@@ -125,7 +124,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer />
+
     </>
   );
 };

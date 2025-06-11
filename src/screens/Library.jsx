@@ -1,4 +1,4 @@
-import Footer from "@/components/common/Footer";
+
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import image from "../assets/school/library/libraryHero.jpg";

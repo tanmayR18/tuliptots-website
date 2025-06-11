@@ -1,4 +1,4 @@
-import Footer from "@/components/common/Footer";
+
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -242,7 +242,7 @@ const JoinTeam = () => {
         </form>
       </div>
 
-      <Footer />
+      
     </div>
   );
 };
