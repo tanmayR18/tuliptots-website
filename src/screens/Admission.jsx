@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import Navbar from "../components/common/Navbar";
 import image1 from "../assets/admissionForm.jpg";
 import image from "../assets/admission/admission.jpg";
+import hero from "../assets/admission/admissionHeroChild.png";
+import hero1 from "../assets/admission/admissionHeroChild1.png";
 import { useForm } from "react-hook-form";
 import {
   Document,
@@ -215,7 +217,9 @@ const Admission = () => {
           our joyful, child-led approach to early learning.
         </p>
       </div>
-      <div className=" bg-white pt-14 md:pt-20  rounded-t-[32px] lg:rounded-t-[64px] pb-8">
+      <div className="  bg-white pt-14 md:pt-20  rounded-t-[32px] lg:rounded-t-[64px] pb-8 relative">
+        <img className=" absolute -top-[85px] lg:-top-[180px]  left-5 lg:left-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]" src={hero} />
+        <img className=" absolute -top-[85px] lg:-top-[170px]  right-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]" src={hero1} />
         <div className="  md:w-[80%] mx-auto">
           <div className=" flex flex-col md:flex-row justify-center items-center gap-5">
             <div className=" md:w-1/2 text-base lg:text-xl flex flex-col px-5 md:px-0 gap-3  md:gap-6">
@@ -2229,7 +2233,10 @@ const Admission = () => {
               )}
             </div>
 
-            {(!status || status === "loading" || status === "error" || status === 'success') && (
+            {(!status ||
+              status === "loading" ||
+              status === "error" ||
+              status === "success") && (
               <button
                 disabled={status === "loading"}
                 //   onClick={submitHandler}

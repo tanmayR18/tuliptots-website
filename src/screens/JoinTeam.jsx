@@ -1,8 +1,8 @@
-
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import image from "../assets/joinOurTeam/joinOurTeam.jpg";
+import hero1 from "../assets/joinOurTeam/joinHeroChild.png";
 
 const JoinTeam = () => {
   const {
@@ -90,7 +90,9 @@ const JoinTeam = () => {
               )}
             </div>
             <div className=" mt-3 w-full">
-              <p>Age<span className=" text-red-500"> *</span></p>
+              <p>
+                Age<span className=" text-red-500"> *</span>
+              </p>
               <input
                 maxLength={10}
                 {...register("age", {
@@ -142,7 +144,9 @@ const JoinTeam = () => {
               )}
             </div>
             <div className=" mt-3 w-full">
-              <p>Education <span className=" text-red-500"> *</span></p>
+              <p>
+                Education <span className=" text-red-500"> *</span>
+              </p>
               <input
                 {...register("education", {
                   required: { value: true, message: "edication is required" },
@@ -186,7 +190,9 @@ const JoinTeam = () => {
               )}
             </div>
             <div className=" mt-3 w-full">
-              <p>Contact Number<span className=" text-red-500"> *</span></p>
+              <p>
+                Contact Number<span className=" text-red-500"> *</span>
+              </p>
               <input
                 {...register("contactNumber", {
                   required: { value: true, message: "Number is required" },
@@ -241,8 +247,6 @@ const JoinTeam = () => {
           )}
         </form>
       </div>
-
-      
     </div>
   );
 };
