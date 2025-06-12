@@ -7,9 +7,7 @@ import image2 from "../../../assets/home/homeHero2.png";
 
 const Hero = () => {
   return (
-    <div
-      className=" pb-12 min-h-screen w-full relative bg-[#F7EEE9] overflow-x-hidden pt-32 lg:pt-44"
-    >
+    <div className=" pb-12 min-h-screen w-full relative bg-[#F7EEE9] overflow-x-hidden pt-32 lg:pt-44">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -54,18 +52,16 @@ const Hero = () => {
           education—nurturing curious minds, inspiring creativity, and shaping
           confident global citizens for the 21st century.
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <Link
-            to={"/story"}
+        <Link to={"/story"}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             className="border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md mt-28 lg:mt-16"
           >
             <p>Our Story</p>
-          </Link>
-        </motion.div>
+          </motion.div>
+        </Link>
       </div>
     </div>
   );
