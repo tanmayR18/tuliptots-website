@@ -45,7 +45,9 @@ const Growth = () => {
         >
           <motion.p
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            animate={
+              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
             transition={{ duration: 0.4, delay: 0.8 }}
             className="text-xl md:text-2xl font-bold"
           >
@@ -64,7 +66,9 @@ const Growth = () => {
 
         <motion.img
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+          animate={
+            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+          }
           transition={{ duration: 0.8, delay: 0.6 }}
           whileHover={{ scale: 1.02 }}
           className="rounded-2xl md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]"
@@ -80,22 +84,38 @@ const Growth = () => {
       >
         <motion.img
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          whileHover={{ scale: 1.02 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="rounded-2xl md:w-[300px] md:h-[300px] w-[400px] h-[400px]"
           src={image2}
         />
 
         <motion.div
           initial={{ opacity: 0, x: 20 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="md:w-1/2"
         >
           <motion.p
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            animate={
+              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
             transition={{ duration: 0.4, delay: 1.4 }}
             className="text-xl md:text-2xl font-bold"
           >
@@ -107,32 +127,70 @@ const Growth = () => {
             transition={{ duration: 0.6, delay: 1.6 }}
             className="text-slate-800 font-semibold tracking-wide mt-4 md:mt-8 text-base md:text-lg"
           >
-            <p>Every educator undergoes a thoughtful selection process including:</p>
+            <p>
+              Every educator undergoes a thoughtful selection process including:
+            </p>
             <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.4, delay: 1.8 }}
+              initial={{ opacity: 0, x: -10, y: 15 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
             >
               A values-aligned face-to-face conversation
             </motion.li>
             <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.4, delay: 2.0 }}
+              initial={{ opacity: 0, x: -10, y: 15 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8, delay: 0.2 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
             >
               A creative written reflection
             </motion.li>
             <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.4, delay: 2.2 }}
+              initial={{ opacity: 0, x: -10, y: 15 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8, delay: 0.4 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
             >
               A psychometric evaluation
             </motion.li>
             <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.4, delay: 2.4 }}
+              initial={{ opacity: 0, x: -10, y: 15 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8, delay: 0.6 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
             >
               A thorough background check
             </motion.li>
@@ -141,24 +199,51 @@ const Growth = () => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.6, delay: 2.6 }}
+        initial={{ opacity: 0, x: 0, y: 0, scale: 0.95 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          y: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
         className="p-6 bg-[#FECDD3] rounded-[32px] md:w-10/12 mx-auto mt-12"
       >
         <motion.p
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.4, delay: 2.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="text-xl md:text-2xl font-bold tracking-wide text-center"
         >
           Lifelong Learners at Heart
         </motion.p>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 3.0 }}
+          initial={{ opacity: 0,  y: 25 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="text-slate-800 text-center text-base md:text-lg font-semibold mt-5"
         >
           Our educators are encouraged to continuously reflect, grow, and

@@ -6,6 +6,7 @@ import image3 from "../../../assets/home/unique/yoga.jpg";
 import image4 from "../../../assets/home/unique/natureBasedLearning.jpg";
 import image5 from "../../../assets/home/unique/trainedEducator.jpg";
 import image6 from "../../../assets/home/unique/creative.jpg";
+import { motion } from "motion/react";
 
 const points = [
   {
@@ -43,12 +44,34 @@ const points = [
 const Highlights = () => {
   return (
     <div className=" bg-blue-100 py-12 px-4 lg:px-20">
-      <p className=" text-center text-2xl md:text-3xl text-gray-800 font-bold">
+      <motion.p
+        initial={{ opacity: 0, translateY: 30 }}
+        whileInView={{
+          opacity: 1,
+          translateY: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
+        className=" text-center text-2xl md:text-3xl text-gray-800 font-bold"
+      >
         What Makes Us Unique
-      </p>
+      </motion.p>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 md:w-[90%] xl:w-[80%] mx-auto">
         {points.map((point, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, translateY: 30 }}
+            whileInView={{
+              opacity: 1,
+              translateY: 0,
+              transition: { duration: 0.8 },
+            }}
+            viewport={{
+              once: true,
+              margin: "-100px",
+            }}
             className={` h-[250px]  flex justify-center items-center mt-12`}
             key={index}
           >
@@ -64,11 +87,22 @@ const Highlights = () => {
                 {point.text}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      <div className=" flex mt-16 justify-center gap-10">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
+        className=" flex mt-16 justify-center gap-10"
+      >
         <div className=" border-2 border-green-500 hover:scale-105 group hover:bg-green-500 cursor-pointer transition-all duration-300   rounded-md py-1 w-32 flex justify-center items-center">
           <NavLink
             className={({ isActive }) =>
@@ -105,7 +139,7 @@ const Highlights = () => {
             </p>
           </NavLink>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
