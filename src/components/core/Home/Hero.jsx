@@ -45,23 +45,53 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="lg:w-1/2 mt-12 font-semibold text-lg px-4 md:px-6 lg:text-xl lg:leading-8 text-center text-slate-900 opacity-60"
+          className="lg:w-1/2 mt-12 z-40 font-semibold text-lg px-4 md:px-6 lg:text-xl lg:leading-8 text-center text-slate-900 opacity-60"
         >
           Tucked away in the cozy, green lanes of Punawale, Tulip Tots
           International is a thoughtfully crafted preschool reimagining early
           education—nurturing curious minds, inspiring creativity, and shaping
           confident global citizens for the 21st century.
         </motion.p>
-        <Link to={"/story"}>
+        <Link className=" hidden md:flex" to={"/story"}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md mt-28 lg:mt-16"
+            className="border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all  duration-300 cursor-pointer px-5 py-2 rounded-md mt-28 lg:mt-16"
           >
             <p>Our Story</p>
           </motion.div>
         </Link>
+
+        {/* For mobile view */}
+        <div className=" relative flex justify-center items-center w-full  mt-28 lg:mt-16">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="absolute h-[200px] sm:h-[300px] -bottom-16 flex lg:hidden -left-8"
+          >
+            <img className=" w-full h-full " src={image1} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="absolute -bottom-16 -right-8 h-[180px] sm:h-[300px] flex lg:hidden"
+          >
+            <img className=" w-full h-full" src={image2} />
+          </motion.div>
+          <Link className=" flex md:hidden" to={"/story"}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all  duration-300 cursor-pointer px-5 py-2 rounded-md"
+            >
+              <p>Our Story</p>
+            </motion.div>
+          </Link>
+        </div>
       </div>
     </div>
   );

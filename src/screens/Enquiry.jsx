@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/common/Navbar";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
+import hero1 from "../assets/enquiry/enquiryHeroChild.png";
 
 const Enquiry = () => {
   const date = new Date();
@@ -216,14 +217,20 @@ const Enquiry = () => {
           Let us show you around and answer your questions.
         </p>
       </div>
-      <form className="  py-10 rounded-t-[32px] lg:rounded-t-[64px] bg-white">
+      <form className="  py-10 rounded-t-[32px] lg:rounded-t-[64px] bg-white relative">
+        <img
+          className=" absolute -top-[95px] md:-top-[195px] right-10 md:right-20 w-[100px] h-[100px] md:w-[200px] md:h-[200px]"
+          src={hero1}
+        />
         <div className=" w-[90%] md:w-[85%] mx-auto">
           <div className=" flex flex-col lg:flex-row gap-8  ">
             <div className=" w-full">
               <p className=" text-black font-semibold text-2xl">Details</p>
 
               <div className=" mt-6">
-                <p>Name of the Child <span className=" text-red-500"> *</span></p>
+                <p>
+                  Name of the Child <span className=" text-red-500"> *</span>
+                </p>
                 <input
                   value={data.name}
                   onChange={(e) => {
@@ -242,7 +249,9 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Date of Birth <span className=" text-red-500"> *</span></p>
+                <p>
+                  Date of Birth <span className=" text-red-500"> *</span>
+                </p>
                 <input
                   type="date"
                   max={`${date.getFullYear()}-${(date.getMonth() + 1)
@@ -268,7 +277,9 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Parents Name<span className=" text-red-500"> *</span></p>
+                <p>
+                  Parents Name<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   value={data.parentName}
                   onChange={(e) => {
@@ -287,7 +298,9 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Occupation<span className=" text-red-500"> *</span></p>
+                <p>
+                  Occupation<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   value={data.occupation}
                   onChange={(e) => {
@@ -312,7 +325,9 @@ const Enquiry = () => {
               </p>
 
               <div className=" mt-6">
-                <p>Email<span className=" text-red-500"> *</span></p>
+                <p>
+                  Email<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   value={data.email}
                   onChange={(e) => {
@@ -331,7 +346,9 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Contact Number<span className=" text-red-500"> *</span></p>
+                <p>
+                  Contact Number<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   maxLength={10}
                   value={data.number}
@@ -353,7 +370,9 @@ const Enquiry = () => {
                 )}
               </div>
               <div className=" mt-3">
-                <p>Address<span className=" text-red-500"> *</span></p>
+                <p>
+                  Address<span className=" text-red-500"> *</span>
+                </p>
                 <input
                   value={data.address}
                   onChange={(e) => {
@@ -425,7 +444,6 @@ const Enquiry = () => {
           )}
         </div>
       </form>
-
     </div>
   );
 };
@@ -433,7 +451,9 @@ const Enquiry = () => {
 const DropDown = ({ setData, data }) => {
   return (
     <div className=" relative mt-3">
-      <p>Select Program<span className=" text-red-500"> *</span></p>
+      <p>
+        Select Program<span className=" text-red-500"> *</span>
+      </p>
       <select
         className=" focus:outline-none w-full bg-blue-100 rounded-md py-2 px-3"
         name="program"

@@ -65,9 +65,11 @@ const Growth = () => {
         </motion.div>
 
         <motion.img
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, x: 100, scale: 0.95 }}
           animate={
-            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+            isInView
+              ? { opacity: 1, scale: 1, x: 0 }
+              : { opacity: 0, scale: 0.95, x: 100 }
           }
           transition={{ duration: 0.8, delay: 0.6 }}
           whileHover={{ scale: 1.02 }}
@@ -83,17 +85,18 @@ const Growth = () => {
         className="md:w-10/12 mx-auto flex flex-col md:flex-row justify-between gap-4 md:gap-10 items-center mt-16"
       >
         <motion.img
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, x: -70, scale: 0.95 }}
           whileInView={{
             opacity: 1,
             scale: 1,
+            x: 0,
             transition: { duration: 0.8 },
           }}
           viewport={{
             once: true,
             margin: "-100px",
           }}
-          className="rounded-2xl md:w-[300px] md:h-[300px] w-[400px] h-[400px]"
+          className="rounded-2xl md:w-[400px] md:h-[400px] w-[400px] h-[400px]"
           src={image2}
         />
 
@@ -232,7 +235,7 @@ const Growth = () => {
         </motion.p>
 
         <motion.p
-          initial={{ opacity: 0,  y: 25 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{
             opacity: 1,
             scale: 1,

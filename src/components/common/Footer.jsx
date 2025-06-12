@@ -121,12 +121,12 @@ const Footer = () => {
               © {currentYear} TulipTots International. All Rights Reserved.
             </p>
             <div className="flex gap-6">
-              <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
+              {/* <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-gray-300 hover:text-white transition-colors">
                 Terms of Service
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
