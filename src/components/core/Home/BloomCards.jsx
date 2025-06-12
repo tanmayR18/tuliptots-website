@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 const SCREEN_WIDTH = window.innerWidth;
 // import image2 from "../../../assets/home/homeHero2.png";
@@ -8,13 +9,49 @@ import image3 from "../../../assets/home/bloom/3.jpg";
 import image4 from "../../../assets/home/bloom/4.jpg";
 import image5 from "../../../assets/home/bloom/5.jpg";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 const BloomCards = () => {
   const [currentTapped, setCurrentTapped] = useState("");
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div className=" pt-16 pb-16 ">
-      <p className=" text-2xl lg:text-3xl font-bold text-gray-700 text-center">
+    <div className=" pt-16 pb-16 " ref={ref}>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+        className=" text-2xl lg:text-3xl font-bold text-gray-700 text-center"
+      >
         The{" "}
-        <span className=" text-pink-500 relative">
+        <motion.span
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className=" text-pink-500 relative"
+        >
           BLOOM
           <svg
             className=" absolute w-32 border-0 -right-5"
@@ -26,10 +63,15 @@ const BloomCards = () => {
               fill="#000"
             ></path>
           </svg>
-        </span>{" "}
+        </motion.span>{" "}
         Philosophy{" "}
-      </p>
-      <div className=" grid grid-cols-1 md:hidden lg:flex lg:grid-cols-5 mx-auto justify-between items-center mt-12 px-12 gap-x-5 gap-y-8">
+      </motion.p>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className=" grid grid-cols-1 md:hidden lg:flex lg:grid-cols-5 mx-auto justify-between items-center mt-12 px-12 gap-x-5 gap-y-8"
+      >
         <Card
           setCurrentTapped={setCurrentTapped}
           bgColor={"#BAE6FD"}
@@ -70,7 +112,7 @@ const BloomCards = () => {
           letter={"O"}
           title={"Observing the Whole Child"}
           description={
-            "We celebrate and support every child’s unique learning style and intelligence—from music and movement to numbers and nature"
+            "We celebrate and support every child's unique learning style and intelligence—from music and movement to numbers and nature"
           }
           image={image4}
         />
@@ -85,8 +127,12 @@ const BloomCards = () => {
           }
           image={image5}
         />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
         <div className=" hidden md:flex lg:hidden px-12 flex-wrap justify-center items-center gap-8 mt-8 ">
           <Card
             setCurrentTapped={setCurrentTapped}
@@ -131,7 +177,7 @@ const BloomCards = () => {
             letter={"O"}
             title={"Observing the Whole Child"}
             description={
-              "We celebrate and support every child’s unique learning style and intelligence—from music and movement to numbers and nature"
+              "We celebrate and support every child's unique learning style and intelligence—from music and movement to numbers and nature"
             }
             className={"w-[30%]"}
             image={image4}
@@ -149,7 +195,7 @@ const BloomCards = () => {
             image={image5}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -165,13 +211,15 @@ const Card = ({
   className,
 }) => {
   return (
-    <div
+    <motion.div
+      variants={itemVariants}
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.3 }}
       onClick={() => {
         if (currentTapped === title) {
           setCurrentTapped("");
           return;
         }
-
         setCurrentTapped(title);
       }}
       style={{ perspective: 1000 }}
@@ -194,7 +242,12 @@ const Card = ({
               src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
             /> */}
 
-          <div className=" -translate-y-8 relative w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="-translate-y-8 relative w-full"
+          >
             <p className=" text-5xl text-black font-bold text-center">
               {letter}
             </p>
@@ -203,21 +256,34 @@ const Card = ({
                 {title}
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div
-          onClick={() => setCurrentTapped("")}
           style={{ backfaceVisibility: "hidden", backgroundColor: bgColor }}
           className=" absolute w-full h-full rotate-y-180 rounded-3xl overflow-hidden  flex justify-center items-center text-neutral-300 "
         >
-          <img src={image} />
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
           <div className=" absolute top-0 right-0 left-0 bottom-0 bg-black/70" />
-          <p className=" text-center text-white absolute font-semibold p-2">
-            {description}
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="absolute inset-0 bg-black/50 flex items-center justify-center p-6"
+          >
+            <p className=" text-center text-white absolute font-semibold p-2">
+              {description}
+            </p>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

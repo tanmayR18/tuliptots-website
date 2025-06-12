@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useInView } from "framer-motion";
 
 const data = [
   {
@@ -44,41 +45,74 @@ const data = [
 ];
 
 const Activity = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div>
-      <p className=" mt-16 text-3xl font-bold text-center">
+    <div ref={ref}>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+        className="mt-16 text-3xl font-bold text-center"
+      >
         Tulip Trail Activity Centre
-      </p>
+      </motion.p>
 
-      <p className=" text-center font-semibold text-gray-700 mt-2">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-center font-semibold text-gray-700 mt-2"
+      >
         ( Where every child finds their own way to grow )
-      </p>
+      </motion.p>
 
-      <div className="bg-orange-200 mt-8 w-[90%] mx-auto p-10 text-black font-semibold text-lg rounded-[32px]">
-        <p className=" text-slate-800">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="bg-orange-200 mt-8 w-[90%] mx-auto p-10 text-black font-semibold text-lg rounded-[32px]"
+      >
+        <p className="text-slate-800">
           At Tulip Tots International, we believe children bloom best when
-          they’re free to explore beyond curriculum, beyond comparison—and
-          beyond the clock. That’s why we created Tulip Trail: a joyful,
+          they're free to explore beyond curriculum, beyond comparison—and
+          beyond the clock. That's why we created Tulip Trail: a joyful,
           hands-on activity center for children up to 14 years, where every path
           leads to purpose, discovery, and delight.
         </p>
-      </div>
-      <p className=" text-center font-bold text-2xl mt-20">What Awaits Your Child</p>
+      </motion.div>
 
-      <div className=" w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 my-10">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="text-center font-bold text-2xl mt-20"
+      >
+        What Awaits Your Child
+      </motion.p>
+
+      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 my-10">
         {data.map((item, index) => (
-          <Card key={index} bgColor={item.bgColor} text={item.text} />
+          <Card key={index} bgColor={item.bgColor} text={item.text} index={index} isInView={isInView} />
         ))}
       </div>
     </div>
   );
 };
 
-const Card = ({ bgColor, text }) => {
+const Card = ({ bgColor, text, index, isInView }) => {
   return (
-    <div className=" p-3 rounded-lg border border-gray-300" style={{ backgroundColor: bgColor }}>
-      <p className=" text-black font-semibold text-center">{text}</p>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      className="p-3 rounded-lg border border-gray-300"
+      style={{ backgroundColor: bgColor }}
+    >
+      <p className="text-black font-semibold text-center">{text}</p>
+    </motion.div>
   );
 };
 
