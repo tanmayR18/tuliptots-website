@@ -84,9 +84,16 @@ const Activity = () => {
       </motion.div>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
+        initial={{ opacity: 0, translateY: 30 }}
+        whileInView={{
+          opacity: 1,
+          translateY: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
         className="text-center font-bold text-2xl mt-20"
       >
         What Awaits Your Child
@@ -94,7 +101,13 @@ const Activity = () => {
 
       <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 my-10">
         {data.map((item, index) => (
-          <Card key={index} bgColor={item.bgColor} text={item.text} index={index} isInView={isInView} />
+          <Card
+            key={index}
+            bgColor={item.bgColor}
+            text={item.text}
+            index={index}
+            isInView={isInView}
+          />
         ))}
       </div>
     </div>
@@ -104,14 +117,35 @@ const Activity = () => {
 const Card = ({ bgColor, text, index, isInView }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{ scale: 1.02 }}
+      initial={{ opacity: 0, translateY: 0, scale: 1.1 }}
+      whileInView={{
+        opacity: 1,
+        translateY: 0,
+        scale: 1,
+        transition: { duration: 0.8, delay: index * 0.1 },
+      }}
+      viewport={{
+        once: true,
+        margin: "-100px",
+      }}
       className="p-3 rounded-lg border border-gray-300"
       style={{ backgroundColor: bgColor }}
     >
-      <p className="text-black font-semibold text-center">{text}</p>
+      <motion.p
+        initial={{ opacity: 0, translateY: 30 }}
+        whileInView={{
+          opacity: 1,
+          translateY: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
+        className="text-black font-semibold text-center"
+      >
+        {text}
+      </motion.p>
     </motion.div>
   );
 };

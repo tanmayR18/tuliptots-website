@@ -21,10 +21,16 @@ const data = [
 const Card = ({ bgColor, text, index, isInView }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
-      whileHover={{ scale: 1.02 }}
+      initial={{ opacity: 0, translateX: -200 }}
+      whileInView={{
+        opacity: 1,
+        translateX: 0,
+        transition: { duration: 2 - index * 0.6,  },
+      }}
+      viewport={{
+        once: true,
+        margin: "-100px",
+      }}
       className="p-2 md:p-3 gap-3 rounded-lg flex items-center"
       style={{ backgroundColor: bgColor }}
     >
@@ -51,7 +57,9 @@ const Library = () => {
 
       <motion.img
         initial={{ opacity: 0, scale: 0.95 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        animate={
+          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+        }
         transition={{ duration: 0.8, delay: 0.2 }}
         src={image}
         className="mx-auto mt-12 scale-110"
@@ -71,23 +79,44 @@ const Library = () => {
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
+        initial={{ opacity: 0, translateY: 20, scale: 1.05 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          translateY: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
         className="bg-blue-200 my-16 lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
       >
         <motion.p
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.4, delay: 0.8 }}
+          initial={{ opacity: 0, translateY: 20 }}
+          whileInView={{
+            opacity: 1,
+            translateY: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="text-xl md:text-2xl font-bold tracking-wide text-slate-900 text-center"
         >
           Why It Matters ?
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mx-auto overflow-x-hidden">
           {data.map((item, index) => (
-            <Card key={index} text={item.text} bgColor={item.bgColor} index={index} isInView={isInView} />
+            <Card
+              key={index}
+              text={item.text}
+              bgColor={item.bgColor}
+              index={index}
+              isInView={isInView}
+            />
           ))}
         </div>
 

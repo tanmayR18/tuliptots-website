@@ -21,16 +21,27 @@ const Health = () => {
 
       <motion.img
         initial={{ opacity: 0, scale: 0.95 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        animate={
+          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+        }
         transition={{ duration: 0.8, delay: 0.2 }}
         src={image}
         className="mx-auto mt-5"
       />
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        initial={{ opacity: 0, x: 0, y: 15 }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          y: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
         className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-base lg:text-lg text-slate-700 font-semibold text-center"
       >
         At Tulip Tots, your child's well-being is our highest priority. While
@@ -43,15 +54,33 @@ const Health = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-10/12 mx-auto py-12">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0, x: -20, y: 25 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="bg-white rounded-[32px] overflow-hidden"
         >
           <motion.img
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={{ opacity: 0, x: 0, y: 20 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              y: 0,
+              transition: { duration: 0.8, delay: 0.8 },
+            }}
+            viewport={{
+              once: true,
+              margin: "-100px",
+            }}
             className="h-24 w-24 translate-y-14 mx-auto"
             src={safetyIcon}
           />
@@ -74,25 +103,38 @@ const Health = () => {
               ></path>
             </svg>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="bg-linear-to-b h-full from-[#bfea6e] to-[#ddfaa6] px-6 pb-6"
-          >
+          <motion.div className="bg-linear-to-b h-full from-[#bfea6e] to-[#ddfaa6] px-6 pb-6">
             <motion.p
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: 1.2 }}
+              initial={{ opacity: 0, x: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
               className="text-2xl text-white -translate-y-8 font-semibold tracking-wider text-center"
             >
               Safe Spaces, Always
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
+              initial={{ opacity: 0, x: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
               className="mt-5 h-full text-slate-800 font-semibold text-center"
             >
               <div>
@@ -109,15 +151,33 @@ const Health = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0, x: 20, y: 20 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
           className="bg-white rounded-[32px] overflow-hidden"
         >
           <motion.img
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={{ opacity: 0, x: 0, y: 20 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              y: 0,
+              transition: { duration: 0.8, delay: 0.8 },
+            }}
+            viewport={{
+              once: true,
+              margin: "-100px",
+            }}
             className="h-32 w-32 translate-y-12 mx-auto"
             src={hygieneIcon}
           />
@@ -140,25 +200,38 @@ const Health = () => {
               ></path>
             </svg>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="bg-linear-to-b h-full from-[#78c9f3] to-[#b7e3fa] px-6 pb-6"
-          >
+          <motion.div className="bg-linear-to-b h-full from-[#78c9f3] to-[#b7e3fa] px-6 pb-6">
             <motion.p
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: 1.2 }}
+              initial={{ opacity: 0, x: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
               className="text-2xl text-white -translate-y-8 font-semibold tracking-wider text-center"
             >
               Everyday Hygiene Habits
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
+              initial={{ opacity: 0, x: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.8 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
               className="mt-5 h-full text-slate-800 font-semibold text-center"
             >
               <div>

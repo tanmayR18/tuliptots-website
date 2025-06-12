@@ -65,16 +65,24 @@ const data = [
 const Card = ({ title, points, bgColor, index, isInView }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{ scale: 1.02 }}
+      initial={{ opacity: 0, translateY: 30 }}
+      whileInView={{
+        opacity: 1,
+        translateY: 0,
+        transition: { duration: 0.8 , delay: index * 0.1 },
+      }}
+      viewport={{
+        once: true,
+        margin: "-100px",
+      }}
       style={{ backgroundColor: bgColor }}
       className="p-5 rounded-3xl"
     >
       <motion.p
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+        animate={
+          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+        }
         transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
         className="text-2xl font-bold text-center text-white"
       >
@@ -88,7 +96,10 @@ const Card = ({ title, points, bgColor, index, isInView }) => {
           <motion.li
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.4, delay: index * 0.1 + 0.3 + pointIndex * 0.1 }}
+            transition={{
+              duration: 0.4,
+              delay: index * 0.1 + 0.3 + pointIndex * 0.1,
+            }}
             className="mt-1 text-base text-white font-semibold"
             key={pointIndex}
           >
@@ -117,7 +128,9 @@ const Classroom = () => {
 
       <motion.img
         initial={{ opacity: 0, scale: 0.95 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        animate={
+          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
+        }
         transition={{ duration: 0.8, delay: 0.2 }}
         src={image}
         className="mx-auto scale-105 mt-4"

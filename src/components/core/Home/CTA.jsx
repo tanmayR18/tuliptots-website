@@ -9,10 +9,10 @@ const CTA = () => {
 
   return (
     <>
-      <div className="h-[70vh] md:h-[90vh] w-full relative flex items-end" ref={ref}>
+      <div className="h-[70vh] md:h-[90vh] w-full relative flex items-end " ref={ref}>
         <motion.img
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1 }}
           transition={{ duration: 1 }}
           className="w-full h-full object-cover"
           src={image}

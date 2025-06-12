@@ -70,10 +70,16 @@ const SubSectionCard = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{ scale: 1.05 }}
+      initial={{ opacity: 0, translateY: 30 }}
+      whileInView={{
+        opacity: 1,
+        translateY: 0,
+        transition: { duration: 0.8, delay: index * 0.1 },
+      }}
+      viewport={{
+        once: true,
+        margin: "-100px",
+      }}
     >
       <Link
         to={navigate}
@@ -167,9 +173,16 @@ const Academics = () => {
       </div>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        initial={{ opacity: 0, translateY: 10 }}
+        whileInView={{
+          opacity: 1,
+          translateY: 0,
+          transition: { duration: 0.8 },
+        }}
+        viewport={{
+          once: true,
+          margin: "-100px",
+        }}
         className="mt-12 text-3xl font-bold text-center tracking-wide"
       >
         A Peek Into Our World
