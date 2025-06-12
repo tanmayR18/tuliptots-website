@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { motion, useInView } from "framer-motion";
 import classroom from "../assets/school/classroom.jpg";
 import daycare from "../assets/school/daycare.jpg";
 import gardening from "../assets/school/gardening.jpg";
@@ -15,38 +16,46 @@ const ProgramCard = ({
   bgColor,
   borderColor,
   eligibily,
+  index,
+  isInView,
 }) => {
   return (
-    <div className="  bg-white flex flex-col rounded-2xl overflow-hidden">
-      <div className=" p-2" style={{ backgroundColor: bgColor }}>
-        <p className=" text-white  text-lg font-bold text-center tracking-wider">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      className="bg-white flex flex-col rounded-2xl overflow-hidden"
+    >
+      <div className="p-2" style={{ backgroundColor: bgColor }}>
+        <p className="text-white text-lg font-bold text-center tracking-wider">
           {programName}
         </p>
       </div>
-      <div className=" grow p-4 flex flex-col justify-between">
+      <div className="grow p-4 flex flex-col justify-between">
         <div>
-          <p className=" text-center text-base text-slate-800 font-semibold">
+          <p className="text-center text-base text-slate-800 font-semibold">
             {programIdea}
           </p>
 
-          <div className=" h-px w-full bg-slate-600 my-3 " />
-          <p className=" text-center text-gray-600 font-semibold">{content}</p>
+          <div className="h-px w-full bg-slate-600 my-3" />
+          <p className="text-center text-gray-600 font-semibold">{content}</p>
         </div>
 
         <div>
-          <div className=" w-full border-t border-dashed border-black my-2" />
+          <div className="w-full border-t border-dashed border-black my-2" />
 
-          <p className=" text-center text-black font-semibold">
+          <p className="text-center text-black font-semibold">
             Eligibily - {eligibily}
           </p>
         </div>
       </div>
       <div style={{ backgroundColor: bgColor }}>
-        <p className=" text-white  font-bold text-center tracking-wider p-2">
+        <p className="text-white font-bold text-center tracking-wider p-2">
           {programPetName}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -56,32 +65,53 @@ const SubSectionCard = ({
   bgColor,
   borderColor,
   image,
+  index,
+  isInView,
 }) => {
   return (
-    <Link
-      to={navigate}
-      className=" flex justify-center border-4 relative overflow-hidden items-center w-[160px] sm:w-[200px]  aspect-square rounded-full"
-      style={{ backgroundColor: bgColor, borderColor: borderColor }}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.05 }}
     >
-      <img src={image} />
-      <div className=" absolute top-0 right-0 left-0 bottom-0 bg-black/50" />
-      <div className=" absolute top-0 right-0 left-0 bottom-0 bg-black/50 flex justify-center items-center">
-        <p className=" text-white text-center text-lg p-3 font-semibold tracking-wide">
-          {facilityName}
-        </p>
-      </div>
-    </Link>
+      <Link
+        to={navigate}
+        className="flex justify-center border-4 relative overflow-hidden items-center w-[160px] sm:w-[200px] aspect-square rounded-full"
+        style={{ backgroundColor: bgColor, borderColor: borderColor }}
+      >
+        <motion.img
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+          src={image}
+        />
+        <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/50" />
+        <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/50 flex justify-center items-center">
+          <p className="text-white text-center text-lg p-3 font-semibold tracking-wide">
+            {facilityName}
+          </p>
+        </div>
+      </Link>
+    </motion.div>
   );
 };
 
 const Academics = () => {
-  return (
-    <div className=" pt-44 bg-[#f7eee9]">
-      <p className=" text-3xl font-bold text-center tracking-wide">
-        Tulip's Programs
-      </p>
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 mx-auto gap-8">
+  return (
+    <div className="pt-44 bg-[#f7eee9]" ref={ref}>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl font-bold text-center tracking-wide"
+      >
+        Tulip's Programs
+      </motion.p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 mx-auto gap-8">
         <ProgramCard
           programName={"Playground"}
           programIdea={"Nurturing Early Explorers"}
@@ -92,6 +122,8 @@ const Academics = () => {
           bgColor={"#9B59B6"}
           borderColor={"#000"}
           eligibily={"2 to 3 years"}
+          index={0}
+          isInView={isInView}
         />
         <ProgramCard
           programName={"Nursery"}
@@ -103,6 +135,8 @@ const Academics = () => {
           bgColor={"#FF5722"}
           borderColor={"#000"}
           eligibily={"3 to 4 years"}
+          index={1}
+          isInView={isInView}
         />
         <ProgramCard
           programName={"LKG"}
@@ -114,6 +148,8 @@ const Academics = () => {
           bgColor={"#1ABC9C"}
           borderColor={"#000"}
           eligibily={"4 to 5 years"}
+          index={2}
+          isInView={isInView}
         />
         <ProgramCard
           programName={"UKG"}
@@ -125,14 +161,21 @@ const Academics = () => {
           bgColor={"#e91e63"}
           borderColor={"#000"}
           eligibily={"5 to 6 years"}
+          index={3}
+          isInView={isInView}
         />
       </div>
 
-      <p className=" mt-12 text-3xl font-bold text-center tracking-wide">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-12 text-3xl font-bold text-center tracking-wide"
+      >
         A Peek Into Our World
-      </p>
+      </motion.p>
 
-      <div className=" hidden md:flex flex-col">
+      <div className="hidden md:flex flex-col">
         <div className="flex justify-center mx-auto gap-8 mt-10">
           <SubSectionCard
             facilityName={"A Living, Breathing Classroom"}
@@ -140,6 +183,8 @@ const Academics = () => {
             borderColor={"#007BFF"}
             navigate={"/classroom"}
             image={classroom}
+            index={0}
+            isInView={isInView}
           />
           <SubSectionCard
             facilityName={"In-House Library"}
@@ -147,6 +192,8 @@ const Academics = () => {
             borderColor={"#FFFF00"}
             navigate={"/library"}
             image={library}
+            index={1}
+            isInView={isInView}
           />
           <SubSectionCard
             facilityName={"Our Gardeners of Growth"}
@@ -154,15 +201,19 @@ const Academics = () => {
             borderColor={"#00BCD4"}
             navigate={"/growth"}
             image={gardening}
+            index={2}
+            isInView={isInView}
           />
         </div>
-        <div className=" flex justify-center mx-auto gap-8 mt-8">
+        <div className="flex justify-center mx-auto gap-8 mt-8">
           <SubSectionCard
             facilityName={"Health, hygiene & Safety"}
             bgColor={"#ccc"}
             borderColor={"#2ecc71"}
             navigate={"/health"}
             image={health}
+            index={3}
+            isInView={isInView}
           />
           <SubSectionCard
             facilityName={"Daycare"}
@@ -170,17 +221,21 @@ const Academics = () => {
             borderColor={"#FF6F61"}
             navigate={"/daycare"}
             image={daycare}
+            index={4}
+            isInView={isInView}
           />
         </div>
       </div>
 
-      <div className="  grid grid-cols-2 place-items-center gap-5 mt-6 md:hidden">
+      <div className="grid grid-cols-2 place-items-center gap-5 mt-6 md:hidden">
         <SubSectionCard
           facilityName={"A Living, Breathing Classroom"}
           bgColor={"#ccc"}
           borderColor={"#007BFF"}
           navigate={"/classroom"}
           image={classroom}
+          index={0}
+          isInView={isInView}
         />
         <SubSectionCard
           facilityName={"In-House Library"}
@@ -188,6 +243,8 @@ const Academics = () => {
           borderColor={"#FFFF00"}
           navigate={"/library"}
           image={library}
+          index={1}
+          isInView={isInView}
         />
         <SubSectionCard
           facilityName={"Our Gardeners of Growth"}
@@ -195,6 +252,8 @@ const Academics = () => {
           borderColor={"#00BCD4"}
           navigate={"/growth"}
           image={gardening}
+          index={2}
+          isInView={isInView}
         />
         <SubSectionCard
           facilityName={"Health, hygiene & Safety"}
@@ -202,6 +261,8 @@ const Academics = () => {
           borderColor={"#2ecc71"}
           navigate={"/health"}
           image={health}
+          index={3}
+          isInView={isInView}
         />
         <SubSectionCard
           facilityName={"Daycare"}
@@ -209,11 +270,12 @@ const Academics = () => {
           borderColor={"#FF6F61"}
           navigate={"/daycare"}
           image={daycare}
+          index={4}
+          isInView={isInView}
         />
       </div>
 
       <Activity />
-
     </div>
   );
 };

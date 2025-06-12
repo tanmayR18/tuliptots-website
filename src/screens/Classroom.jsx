@@ -1,5 +1,5 @@
-
 import React from "react";
+import { motion, useInView } from "framer-motion";
 
 import image from "../assets/school/classroom/classroomHero.jpg";
 
@@ -62,52 +62,93 @@ const data = [
   },
 ];
 
-const Card = ({ title, points, bgColor }) => {
+const Card = ({ title, points, bgColor, index, isInView }) => {
   return (
-    <div style={{ backgroundColor: bgColor }} className=" p-5 rounded-3xl">
-      <p className=" text-2xl font-bold text-center text-white">{title}</p>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      style={{ backgroundColor: bgColor }}
+      className="p-5 rounded-3xl"
+    >
+      <motion.p
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+        transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+        className="text-2xl font-bold text-center text-white"
+      >
+        {title}
+      </motion.p>
 
-      <div className=" border-t border-dashed my-5" />
+      <div className="border-t border-dashed my-5" />
 
-      <div className="">
-        {points.map((item, index) => (
-          <li className=" mt-1 text-base text-white font-semibold" key={index}>
+      <div>
+        {points.map((item, pointIndex) => (
+          <motion.li
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.4, delay: index * 0.1 + 0.3 + pointIndex * 0.1 }}
+            className="mt-1 text-base text-white font-semibold"
+            key={pointIndex}
+          >
             {item}
-          </li>
+          </motion.li>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Classroom = () => {
-  return (
-    <div className=" pt-32 lg:pt-44 px-5 bg-[#f7eee9]">
-      <p className=" text-black font-bold md:text-center text-3xl tracking-wide">
-        A Living, Breathing Classroom
-      </p>
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-      <img src={image} className=" mx-auto scale-105 mt-4" />
-      <p className=" md:w-10/12 mx-auto mt-8 text-lg text-slate-700 font-semibold md:text-center">
+  return (
+    <div ref={ref} className="pt-32 lg:pt-44 px-5 bg-[#f7eee9]">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+        className="text-black font-bold md:text-center text-3xl tracking-wide"
+      >
+        A Living, Breathing Classroom
+      </motion.p>
+
+      <motion.img
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        src={image}
+        className="mx-auto scale-105 mt-4"
+      />
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="md:w-10/12 mx-auto mt-8 text-lg text-slate-700 font-semibold md:text-center"
+      >
         At Tulip Tots International, we believe the environment is the third
         teacher—a space designed not just to house, but to{" "}
-        <strong className=" tracking-wider"> move, grow, and play </strong>
+        <strong className="tracking-wider"> move, grow, and play </strong>
         alongside your child. Every element of our classroom invites
         imagination, independence, and holistic development, fostering a dynamic
         and flexible learning environment.
-      </p>
+      </motion.p>
 
-      <div className=" my-16  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="my-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.map((item, index) => (
           <Card
             key={index}
             title={item.title}
             points={item.points}
             bgColor={item.bgColor}
+            index={index}
+            isInView={isInView}
           />
         ))}
       </div>
-
     </div>
   );
 };
