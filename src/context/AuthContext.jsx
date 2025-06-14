@@ -92,7 +92,6 @@ export const AuthContextProvider = ({ children }) => {
   // upload images to supabase
   const uploadImages = async (file) => {
     try {
-      const userId = session?.user?.id;
 
       if (!file) {
         console.error("No file provided");

@@ -163,12 +163,8 @@ function App() {
       element: <OurStory />,
     },
     {
-      path: "/signin",
+      path: "/admin",
       element: <Signin />,
-    },
-    {
-      path: "/signup",
-      element: <Signup />,
     },
     {
       path: "/dashboard",
