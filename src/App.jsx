@@ -32,6 +32,13 @@ import DayCare from "./screens/DayCare";
 import Footer from "./components/common/Footer";
 import AddmissionPdf from "./screens/AddmissionPdf";
 import OurStory from "./screens/OurStory";
+import Signin from "./screens/Auth/Signin";
+import Signup from "./screens/Auth/Signup";
+import Dashboard from "./screens/Auth/Dashboard";
+import { AuthContextProvider } from "./context/AuthContext";
+import PrivateRoute from "./components/common/PrivateRoute";
+import GalleryUpload from "./screens/Auth/GalleryUpload";
+import BlogUpload from "./screens/Auth/ImageUpload";
 
 function App() {
   const router = [
@@ -155,21 +162,55 @@ function App() {
       path: "/story",
       element: <OurStory />,
     },
+    {
+      path: "/signin",
+      element: <Signin />,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>
+      ),
+    },
+    {
+      path: "/galleryUpload",
+      element: (
+        <PrivateRoute>
+          <GalleryUpload />
+        </PrivateRoute>
+      ),
+    },
+    {
+      path: "/blogUpload",
+      element: (
+        <PrivateRoute>
+          <BlogUpload />
+        </PrivateRoute>
+      ),
+    },
   ];
 
   return (
     <div>
-      <BrowserRouter>
-        <Navbar />
-        <ScrollToTop>
-          <Routes>
-            {router.map((route) => (
-              <Route path={route.path} element={route.element} />
-            ))}
-          </Routes>
-        </ScrollToTop>
-        <Footer/>
-      </BrowserRouter>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <Navbar />
+          <ScrollToTop>
+            <Routes>
+              {router.map((route) => (
+                <Route path={route.path} element={route.element} />
+              ))}
+            </Routes>
+          </ScrollToTop>
+          <Footer />
+        </BrowserRouter>
+      </AuthContextProvider>
     </div>
   );
 }
