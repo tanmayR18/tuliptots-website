@@ -28,9 +28,9 @@ const JoinTeam = () => {
     // console.log(data);
 
     setStatus("loading");
-
+    const url = import.meta.env.VITE_BACKEND_URL;
     try {
-      const response = await axios.post("http://localhost:3000/joinTeam", data);
+      const response = await axios.post(`${url}/joinTeam`, data);
       if (response.status === 200) {
         setStatus("success");
         reset();

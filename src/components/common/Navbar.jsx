@@ -6,9 +6,12 @@ import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { MdArrowDropDown } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import { UserAuth } from "@/context/AuthContext";
+import { MdOutlineDashboard } from "react-icons/md";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
+  const { session } = UserAuth();
   const [hidden, setHidden] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const location = useLocation();
@@ -179,6 +182,11 @@ const Navbar = () => {
               <p className=" text-amber-700">Blogs</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
+            {session && (
+              <NavLink to={"/dashboard"}>
+                <MdOutlineDashboard size={22} />
+              </NavLink>
+            )}
           </div>
         </div>
       </motion.nav>
@@ -200,16 +208,23 @@ const Navbar = () => {
             <img src={image} height={70} width={70} />
           </NavLink>
 
-          <div onClick={() => setShowDropdown((prev) => !prev)} className="">
-            {!showDropdown ? (
-              <div className=" flex flex-col gap-y-1">
-                <div className="h-[3px] w-8 bg-black rounded-full" />
-                <div className="h-[3px] w-6 bg-black rounded-full" />
-                <div className="h-[3px] w-3 bg-black rounded-full" />
-              </div>
-            ) : (
-              <RxCross2 size={35} />
+          <div className=" flex items-center gap-8">
+            {session && (
+              <NavLink to={"/dashboard"}>
+                <MdOutlineDashboard size={22} />
+              </NavLink>
             )}
+            <div onClick={() => setShowDropdown((prev) => !prev)} className="">
+              {!showDropdown ? (
+                <div className=" flex flex-col gap-y-1">
+                  <div className="h-[3px] w-8 bg-black rounded-full" />
+                  <div className="h-[3px] w-6 bg-black rounded-full" />
+                  <div className="h-[3px] w-3 bg-black rounded-full" />
+                </div>
+              ) : (
+                <RxCross2 size={35} />
+              )}
+            </div>
           </div>
         </div>
         {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
@@ -224,7 +239,10 @@ const DropDown = ({ setShowDropdown }) => {
       onClick={() => setShowDropdown(false)}
       className=" bg-black/40  flex-1 flex justify-center items-center w-full h-full backdrop-blur-sm "
     >
-      <div onClick={() => {}} className=" p-5 flex flex-col justify-center items-center gap-6 shadow-2xl bg-gray-400/30">
+      <div
+        onClick={() => {}}
+        className=" p-5 flex flex-col justify-center items-center gap-6 shadow-2xl bg-gray-400/30"
+      >
         <NavLink
           onClick={() => setShowDropdown(false)}
           className={({ isActive }) =>
