@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, RouterProvider, Routes } from "react-router";
+import toast, { Toaster } from "react-hot-toast";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import Academics from "./screens/Academics";
@@ -205,6 +206,7 @@ function App() {
             </Routes>
           </ScrollToTop>
           <Footer />
+          <Toaster />
         </BrowserRouter>
       </AuthContextProvider>
     </div>

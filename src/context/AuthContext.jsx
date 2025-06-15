@@ -92,7 +92,6 @@ export const AuthContextProvider = ({ children }) => {
   // upload images to supabase
   const uploadImages = async (file) => {
     try {
-
       if (!file) {
         console.error("No file provided");
         return;
@@ -101,7 +100,7 @@ export const AuthContextProvider = ({ children }) => {
       const fileExt = file.name.split(".").pop();
       const filePath = `${Date.now()}.${fileExt}`;
 
-      const { error } = await supabase.storage
+      const { data, error } = await supabase.storage
         .from("gallery")
         .upload(filePath, file, {
           contentType: file.type,
@@ -112,7 +111,11 @@ export const AuthContextProvider = ({ children }) => {
         console.error("Upload error:", error.message);
       }
 
-      return filePath;
+      if (data) {
+        return true;
+      }
+
+      return false;
     } catch (err) {
       console.error(err);
     }

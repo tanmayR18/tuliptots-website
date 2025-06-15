@@ -167,16 +167,13 @@ const Admission = () => {
       }
 
       setStatus("loading");
+      const url = import.meta.env.VITE_BACKEND_URL;
 
-      const response = await axios.post(
-        "http://localhost:3000/email",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      const response = await axios.post(`${url}/email`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       console.log("response", response);
       if (response.status === 200) {
         setStatus("success");
@@ -218,8 +215,14 @@ const Admission = () => {
         </p>
       </div>
       <div className="  bg-white pt-14 md:pt-20  rounded-t-[32px] lg:rounded-t-[64px] pb-8 relative">
-        <img className=" absolute -top-[85px] lg:-top-[180px]  left-5 lg:left-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]" src={hero} />
-        <img className=" absolute -top-[85px] lg:-top-[170px]  right-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]" src={hero1} />
+        <img
+          className=" absolute -top-[85px] lg:-top-[180px]  left-5 lg:left-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]"
+          src={hero}
+        />
+        <img
+          className=" absolute -top-[85px] lg:-top-[170px]  right-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]"
+          src={hero1}
+        />
         <div className="  md:w-[80%] mx-auto">
           <div className=" flex flex-col md:flex-row justify-center items-center gap-5">
             <div className=" md:w-1/2 text-base lg:text-xl flex flex-col px-5 md:px-0 gap-3  md:gap-6">

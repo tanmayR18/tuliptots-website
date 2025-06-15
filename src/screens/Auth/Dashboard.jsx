@@ -3,10 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
 const Dashboard = () => {
-  const { signOut, session, checkIsAdmin } = UserAuth();
+  const { signOut, checkIsAdmin } = UserAuth();
   const [isUserAdmin, setIsUserAdmin] = useState(false);
 
-  console.log(session);
   const navigate = useNavigate();
   const handleLogout = async (e) => {
     e.preventDefault();
@@ -30,29 +29,32 @@ const Dashboard = () => {
   }, [checkIsAdmin]);
 
   return (
-    <div className=" py-44">
-      <div className=" w-10/12 max-w-md mx-auto grid grid-cols-2 gap-10">
+    <div className=" py-44 bg-[#f7eee9]">
+      <h1 className=" text-3xl font-semibold text-center">Dashboard</h1>
+      <div className="w-10/12 max-w-md bg-white border shadow p-4 md:p-7 rounded-2xl flex flex-col gap-7 mx-auto mt-12">
+        <div className=" grid grid-cols-2  gap-3 md:gap-10">
+          <button
+            disabled={!isUserAdmin}
+            onClick={() => navigate("/galleryUpload")}
+            className=" aspect-square rounded-2xl border border-black cursor-pointer p-4 flex justify-center items-center"
+          >
+            <p className=" font-semibold">Upload Gallery Images</p>
+          </button>
+          <button
+            disabled={!isUserAdmin}
+            onClick={() => navigate("/blogUpload")}
+            className=" rounded-2xl border border-black cursor-pointer aspect-square flex justify-center items-center"
+          >
+            <p className=" font-semibold">Upload blog</p>
+          </button>
+        </div>
         <button
-          disabled={!isUserAdmin}
-          onClick={() => navigate("/galleryUpload")}
-          className=" bg-amber-200 aspect-square flex justify-center items-center"
+          className=" text-white self-end bg-blue-600 px-3 py-1.5 rounded-md cursor-pointer"
+          onClick={handleLogout}
         >
-          <p className=" font-semibold">Upload Gallery Images</p>
-        </button>
-        <button
-          disabled={!isUserAdmin}
-          onClick={() => navigate("/blogUpload")}
-          className=" bg-green-200 aspect-square flex justify-center items-center"
-        >
-          <p className=" font-semibold">Upload blog</p>
+          Log Out
         </button>
       </div>
-      <button
-        className=" text-white bg-blue-600 px-4 py-2 mt-20"
-        onClick={handleLogout}
-      >
-        Log Out
-      </button>
     </div>
   );
 };

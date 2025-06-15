@@ -1,30 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import motherChild1 from "../assets/story/motherChild1.jpg";
 import nurtureStory from "../assets/story/nurtureStory.jpeg";
 import logo from "../assets/bgremoved.png";
+import { supabase } from "@/supabaseClient";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [images, setImages] = useState([]);
 
-  const images = [
-    {
-      src: motherChild1,
-      alt: "Mother and child bonding",
-      category: "Family",
-    },
-    {
-      src: nurtureStory,
-      alt: "Nurturing environment",
-      category: "Environment",
-    },
-    {
-      src: logo,
-      alt: "Tulip Tots Logo",
-      category: "School",
-    },
-    // Add more images as they become available
-  ];
+  const fetchGalleryImages = async () => {
+    const { data, error } = await supabase.storage
+      .from("gallery")
+      .list("", { limit: 100 });
+
+    if (error) {
+      console.error("Error listing gallery files:", error);
+      return [];
+    }
+
+    // Replace this with your actual Supabase project ID
+    const projectID = import.meta.env.VITE_PROJECT_ID;
+    const publicBaseUrl = `https://${projectID}.supabase.co/storage/v1/object/public/gallery`;
+
+    const urls = data.map(
+      (file) => `${publicBaseUrl}/${encodeURIComponent(file.name)}`
+    );
+
+    setImages(urls);
+  };
+
+  useEffect(() => {
+    fetchGalleryImages();
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -61,7 +69,8 @@ const Gallery = () => {
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Take a glimpse into our vibrant learning environment where every moment is an opportunity for growth and discovery.
+            Take a glimpse into our vibrant learning environment where every
+            moment is an opportunity for growth and discovery.
           </p>
         </motion.div>
 
@@ -80,16 +89,20 @@ const Gallery = () => {
             >
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={image.src}
-                  alt={image.alt}
+                  src={image}
+                  alt={'gallery image'}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-white text-lg font-semibold">{image.alt}</p>
-                    <p className="text-white/80 text-sm mt-1">{image.category}</p>
+                    <p className="text-white text-lg font-semibold">
+                      {image.alt}
+                    </p>
+                    <p className="text-white/80 text-sm mt-1">
+                      {image.category}
+                    </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
@@ -98,8 +111,8 @@ const Gallery = () => {
         {/* Image Modal */}
         {selectedImage && (
           <div
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-black/80 z-[1000] flex items-center justify-center p-4"
+            onClick={() => setSelectedImage('')}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -109,13 +122,13 @@ const Gallery = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={selectedImage.src}
-                alt={selectedImage.alt}
+                src={selectedImage}
+                alt={'selected image'}
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
               <button
                 className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors"
-                onClick={() => setSelectedImage(null)}
+                onClick={() => setSelectedImage('')}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

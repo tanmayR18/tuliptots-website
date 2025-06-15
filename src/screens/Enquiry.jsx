@@ -144,7 +144,9 @@ const Enquiry = () => {
 
       setStatus("loading");
 
-      const response = await axios.post("http://localhost:3000/enquiry", {
+      const url = import.meta.env.VITE_BACKEND_URL;
+
+      const response = await axios.post(`${url}/enquiry`, {
         parentName: data.parentName,
         childName: data.name,
         dob: data.dob,
