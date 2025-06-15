@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router";
-// import image1 from "../assets/blogs/1.jpg";
-// import image2 from "../assets/blogs/2.jpg";
-// import image3 from "../assets/blogs/3.jpg";
-// import image4 from "../assets/blogs/4.jpg";
-// import image5 from "../assets/blogs/5.jpg";
-// import image6 from "../assets/blogs/6.jpg";
-// import image7 from "../assets/blogs/7.jpg";
-// import image8 from "../assets/blogs/8.jpg";
-// import image9 from "../assets/blogs/9.jpg";
+import image1 from "../assets/blogs/1.avif";
+import image2 from "../assets/blogs/2.jpg";
+import image3 from "../assets/blogs/3.jpg";
+import image4 from "../assets/blogs/4.jpg";
+import image5 from "../assets/blogs/5.jpg";
+import image6 from "../assets/blogs/6.jpg";
+import image7 from "../assets/blogs/7.jpg";
+import image8 from "../assets/blogs/8.jpg";
+import image9 from "../assets/blogs/9.jpg";
 // import image10 from "../assets/blogs/10.jpg";
 // import image11 from "../assets/blogs/11.jpg";
 // import image12 from "../assets/blogs/12.jpg";
@@ -19,55 +19,55 @@ const Blogs = () => {
       text: "Transitioning from Home to Playgroup: How to Make It Smooth and Happy",
       route: "/blog1",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image1,
     },
     {
       text: "Building Confidence in Toddlers Before They Start Nursery",
       route: "/blog2",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image2,
     },
     {
       text: "The Magic of Open-Ended Toys: Why Less Is More in Early Childhood Play",
       route: "/blog3",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image3,
     },
     {
       text: "From Sandbox to Boardroom: How Early Play Builds Leadership Skills",
       route: "/blog4",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image4,
     },
     {
       text: "Roots Before Branches: Why Emotional Safety Comes Before Academic Success",
       route: "/blog5",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image5,
     },
     {
       text: "Tiny Scientists: How Messy Play Lays the Foundation for Scientific Thinking",
       route: "/blog6",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+       image6,
     },
     {
       text: "Building Bravery: How Pretend Play Grows Real-World Courage",
       route: "/blog7",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image7,
     },
     {
       text: "How Risky Play Builds Safe Decision-Makers: The Surprising Link Between Adventure and Caution",
       route: "/blog8",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image8,
     },
     {
       text: "How Free Play Builds Resilience for Life: The Power of Letting Children Lead",
       route: "/blog9",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        image9,
     },
     {
       text: "How Sensory Play Builds Strong Thinkers: Why Messy Hands Lead to Sharp Minds",
