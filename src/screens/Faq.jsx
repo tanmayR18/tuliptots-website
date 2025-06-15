@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router";
+import { motion } from "motion/react";
 
 const data = [
   {
@@ -16,12 +17,12 @@ const data = [
   {
     question: "What safety measures are in place?",
     answer:
-      "Your child’s safety is our priority. Our premises have CCTV surveillance, child-friendly facilities, regular fire drills, a doctor-on-call, and staff trained in first aid and emergency protocols.",
+      "Your child's safety is our priority. Our premises have CCTV surveillance, child-friendly facilities, regular fire drills, a doctor-on-call, and staff trained in first aid and emergency protocols.",
   },
   {
     question: "What are the daily routines like?",
     answer:
-      "Our days balance purposeful play, sensory exploration, creative expression, outdoor learning, and quiet reflection. We follow a rhythm of “Morning Moments,” “Learning & Exploration,” and “Gentle Closings” to support children’s emotional and physical well-being.",
+      'Our days balance purposeful play, sensory exploration, creative expression, outdoor learning, and quiet reflection. We follow a rhythm of "Morning Moments," "Learning & Exploration," and "Gentle Closings" to support children\'s emotional and physical well-being.',
   },
   {
     question: "How can I enroll my child?",
@@ -36,7 +37,7 @@ const data = [
   {
     question: "What is the teaching philosophy at Tulip Tots?",
     answer:
-      "Our approach blends globally respected methods—Montessori, Emmi Pikler, Glenn Doman, Reggio Emilia, and Forest Schools—to create a nurturing, play-based environment that honors each child’s unique pace and interests.",
+      "Our approach blends globally respected methods—Montessori, Emmi Pikler, Glenn Doman, Reggio Emilia, and Forest Schools—to create a nurturing, play-based environment that honors each child's unique pace and interests.",
   },
   {
     question: "How is the curriculum structured?",
@@ -44,9 +45,9 @@ const data = [
       "We follow a skill-based curriculum aligned with the ECCE framework, NCERT guidelines, and NEP 2020. The curriculum focuses on holistic development across language, cognitive skills, social-emotional learning, physical growth, and environmental awareness.",
   },
   {
-    question: "How do you assess my child’s progress?",
+    question: "How do you assess my child's progress?",
     answer:
-      "Assessment is ongoing, gentle, and observational. We conduct initial, monthly, and annual evaluations that focus on your child’s individual growth—not grades or tests. Parents receive warm, detailed reports highlighting progress and areas for support.",
+      "Assessment is ongoing, gentle, and observational. We conduct initial, monthly, and annual evaluations that focus on your child's individual growth—not grades or tests. Parents receive warm, detailed reports highlighting progress and areas for support.",
   },
   {
     question:
@@ -68,7 +69,7 @@ const data = [
   {
     question: "Why is sensory play so emphasized in your program?",
     answer:
-      "Sensory play isn’t just fun—it’s foundational. It helps develop fine motor skills, cognitive growth, language, and self-regulation. Activities like pouring, scooping, kneading, and splashing are deeply connected to brain development, especially in the early years",
+      "Sensory play isn't just fun—it's foundational. It helps develop fine motor skills, cognitive growth, language, and self-regulation. Activities like pouring, scooping, kneading, and splashing are deeply connected to brain development, especially in the early years",
   },
   {
     question:
@@ -94,9 +95,9 @@ const data = [
       "Through obstacle play, story sequencing, nature journaling, and games that involve taking turns, remembering rules, or solving problems, children practice core executive skills. These activities lay the groundwork for lifelong learning and adaptability",
   },
   {
-    question: "What does ‘learning through play’ really mean?",
+    question: "What does 'learning through play' really mean?",
     answer:
-      "Play is the child’s natural language and the most effective way to learn. In our setting, play is purposeful—it involves challenges, cooperation, imagination, and real-world relevance. Whether it’s building a tower, mixing colors, or role-playing a doctor’s visit, children are making sense of the world while developing vital skills.",
+      "Play is the child's natural language and the most effective way to learn. In our setting, play is purposeful—it involves challenges, cooperation, imagination, and real-world relevance. Whether it's building a tower, mixing colors, or role-playing a doctor's visit, children are making sense of the world while developing vital skills.",
   },
   {
     question: "Is there homework or worksheet practice at home?",
@@ -127,61 +128,91 @@ const data = [
 
 const Faq = () => {
   return (
-    <div className=" bg-blue-100">
-      <h1 className=" pt-52 font-semibold text-3xl text-center">
-        Frequently Asked Questions (FAQs)
-      </h1>
+    <div className="min-h-screen bg-[#f7eee9] py-32 lg:py-44">
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-gray-600 text-lg">
+            Find answers to common questions about Tulip Tots International
+            Preschool
+          </p>
+        </motion.div>
 
-      <Accordion
-        type="single"
-        collapsible
-        className=" w-[70%] mx-auto mt-8"
-        defaultValue="item-1"
-      >
-        {data.map((faq, i) => (
-          <div key={i.toString()} className="flex ">
-            <div className=" mt-6 w-6 h-6 flex justify-center items-center rounded-full bg-blue-900  mr-3">
-              <p className=" text-white text-sm font-semibold">{i}</p>
-            </div>
-            <AccordionItem className=" w-full mt-3 " value={i.toString()}>
-              <AccordionTrigger className=" bg-blue-400 w-full px-4">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="flex flex-col bg-blue-200 gap-4 p-4 rounded-b-xl">
-                <p>{faq.answer}</p>
-              </AccordionContent>
-            </AccordionItem>
+        <Accordion
+          type="single"
+          collapsible
+          className="space-y-4"
+          defaultValue="item-1"
+        >
+          {data.map((faq, i) => (
+            <motion.div
+              initial={{ opacity: 0, translateY: 10 }}
+              whileInView={{
+                opacity: 1,
+                translateY: 0,
+                transition: { duration: 0.8 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
+              className="flex items-start"
+            >
+              <div className="mt-6 w-8 h-8 flex justify-center items-center rounded-full bg-gradient-to-r from-blue-600 to-blue-400 mr-4 shadow-md">
+                <p className="text-white text-sm font-semibold">{i + 1}</p>
+              </div>
+              <AccordionItem
+                value={i.toString()}
+                className="w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <AccordionTrigger className="px-6 cursor-pointer py-4 bg-white hover:bg-gray-50 transition-colors duration-200">
+                  <span className="text-left text-gray-800 font-medium">
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 py-4 bg-gray-50">
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
+          ))}
+        </Accordion>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-16 text-center"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            Still have questions?
+          </h2>
+          <div className="flex justify-center items-center gap-6">
+            <Link
+              to={"/contactUs"}
+              className="group relative overflow-hidden rounded-lg px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <span className="relative z-10">Contact Us</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
+
+            <Link
+              to={"/enquiry"}
+              className="group relative overflow-hidden rounded-lg px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-400 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <span className="relative z-10">Make an Enquiry</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
           </div>
-        ))}
-      </Accordion>
-
-      <div className=" my-12 w-[70%] mx-auto">
-        <p className=" font-semibold text-xl text-center">Still got query ? </p>
-        <div className=" flex justify-center items-center gap-5 mt-6">
-          <Link
-          to={'contactUs'}
-            className=" group border-2 border-blue-400  rounded-xl w-32 py-2
-            hover:bg-blue-400  transition-all duration-500 cursor-pointer
-          "
-          >
-            <p className=" text-blue-400 text-center group-hover:text-white font-semibold transition-all duration-500">
-              Contact us
-            </p>
-          </Link>
-
-          <Link
-          to={'/enquiry'}
-            className=" group border-2 border-orange-400 rounded-xl w-32 py-2
-            hover:bg-orange-400  transition-all duration-500 cursor-pointer
-          "
-          >
-            <p className=" text-center text-orange-400 group-hover:text-white font-semibold transition-all duration-500">
-              Enquiry
-            </p>
-          </Link>
-        </div>
+        </motion.div>
       </div>
-      
     </div>
   );
 };

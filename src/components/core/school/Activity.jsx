@@ -54,7 +54,7 @@ const Activity = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="mt-16 text-3xl font-bold text-center"
+        className="mt-16 lg:mt-44 text-3xl font-bold text-center"
       >
         Tulip Trail Activity Centre
       </motion.p>
@@ -94,7 +94,7 @@ const Activity = () => {
           once: true,
           margin: "-100px",
         }}
-        className="text-center font-bold text-2xl mt-20"
+        className="text-center font-bold text-2xl mt-20 lg:mt-44"
       >
         What Awaits Your Child
       </motion.p>

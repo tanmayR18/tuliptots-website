@@ -19,6 +19,10 @@ const explore = [
     name: "Our Story",
     navigate: "/story",
   },
+  {
+    name: "FAQ",
+    navigate: "/faq",
+  },
 ];
 
 const impLinks = [
