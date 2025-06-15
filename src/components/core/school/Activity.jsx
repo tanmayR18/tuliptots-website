@@ -99,7 +99,7 @@ const Activity = () => {
         What Awaits Your Child
       </motion.p>
 
-      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 my-10">
+      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 mt-16 pb-16">
         {data.map((item, index) => (
           <Card
             key={index}
