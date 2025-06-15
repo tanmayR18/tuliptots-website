@@ -16,7 +16,7 @@ const ContactUs = () => {
           {/* Map and Contact */}
           <div className=" grid lg:grid-cols-2  gap-12">
             <Link
-              className=" lg:rounded-[64px] overflow-hidden relative order-2 lg:order-1 "
+              className=" lg:rounded-[40px] overflow-hidden relative order-2 lg:order-1 "
               to={"https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"}
               target="_blank"
             >
@@ -32,7 +32,7 @@ const ContactUs = () => {
                 </p>
               </div>
             </Link>
-            <div className=" bg-white  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[64px] ">
+            <div className=" bg-white  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
               <p className=" font-semibold text-xl xl:text-2xl tracking-wide">
                 Contact
               </p>
@@ -81,7 +81,7 @@ const ContactUs = () => {
 
           {/* FOllow and Join */}
           <div className=" grid lg:grid-cols-2 gap-12 mt-12 px-4">
-            <div className=" p-10 lg:p-12 rounded-[64px] bg-[#FED7AA]">
+            <div className=" p-10 lg:p-12 rounded-[40px] bg-[#FED7AA]">
               <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
                 Follow us on
               </p>
@@ -103,7 +103,7 @@ const ContactUs = () => {
                 </Link>
               </div>
             </div>
-            <div className=" p-10 lg:p-12 rounded-[64px] bg-green-300">
+            <div className=" p-10 lg:p-12 rounded-[40px] bg-green-300">
               <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
                 Join Our Team ?
               </p>

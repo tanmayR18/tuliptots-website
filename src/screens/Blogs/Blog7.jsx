@@ -4,7 +4,7 @@ const Blog7 = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-pink-100 to-purple-100 py-16 px-4 lg:px-12">
+      <div className="bg-gradient-to-r from-pink-100 to-purple-100 py-16 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800 leading-tight">
             Building Bravery: How Pretend Play Grows Real-World Courage

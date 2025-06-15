@@ -112,12 +112,12 @@ const Academics = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-center tracking-wide"
+        className="text-4xl font-bold text-center tracking-wide"
       >
         Tulip's Programs
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 mx-auto gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8">
         <ProgramCard
           programName={"Playground"}
           programIdea={"Nurturing Early Explorers"}
@@ -183,7 +183,7 @@ const Academics = () => {
           once: true,
           margin: "-100px",
         }}
-        className="mt-12 text-3xl font-bold text-center tracking-wide"
+        className="mt-12 lg:mt-44 text-3xl font-bold text-center tracking-wide"
       >
         A Peek Into Our World
       </motion.p>
