@@ -49,11 +49,17 @@ const JoinTeam = () => {
         <div className=" md:w-[50%]">
           <h1 className=" text-4xl font-bold ">Join Our team</h1>
 
-          <h4 className=" text-xl mt-5 lg:mt-8">
-            At TulipTots International School, we believe in nurturing not just
-            young minds, but also the careers of passionate educators. Join a
-            collaborative environment where your ideas matter and your growth is
-            a priority.
+          <h4 className=" text-base font-semibold mt-5 lg:mt-8">
+            At Tulip Tots, we believe that passionate educators shape lifelong
+            learners. If you’re someone who finds joy in working with young
+            children, values play-based and child-led learning, and wants to
+            make a real difference in early childhood education—we’d love to
+            hear from you!
+          </h4>
+          <h4 className=" text-base font-semibold mt-2 lg:mt-4">
+            Whether you’re a seasoned teacher, a budding early years educator,
+            or someone with unique skills to share, we welcome enthusiastic
+            individuals who are aligned with our nurturing, joyful philosophy.
           </h4>
         </div>
         <div className=" hidden md:flex">
@@ -61,7 +67,7 @@ const JoinTeam = () => {
         </div>
       </div>
 
-      <div className=" w-[90%] md:w-10/12 mx-auto my-12">
+      <div className=" w-[90%] md:w-10/12 mx-auto mt-12 pb-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Name and age */}
           <div className=" flex flex-col md:flex-row gap-5">

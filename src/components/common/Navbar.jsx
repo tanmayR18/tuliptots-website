@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router";
 import image from "../../assets/bgremoved.png";
 import Logo from "../../assets/tuliptotsOgLogo.jpg";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
-import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { UserAuth } from "@/context/AuthContext";
@@ -13,6 +13,7 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const { session } = UserAuth();
   const [hidden, setHidden] = useState(false);
+  const [showSchoolDropDown, setShowSchoolDropDown] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const location = useLocation();
   console.log(location.pathname);
@@ -63,15 +64,60 @@ const Navbar = () => {
                   ? " font-bold group relative"
                   : " font-semibold group relative"
               }
-              to="/school"
+              to="/aboutUs"
             >
-              <div className=" flex gap-x-1.5 items-center">
-                <p className=" text-[#800080]">Schools</p>
-                <MdArrowDropDown color="#800080" />
-              </div>
+              <p className=" text-blue-600">About Us</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
-              <div className=" hidden group-hover:flex  p-3 absolute">
-                <div className=" p-2 px-4 bg-white border rounded-md flex flex-col">
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "font-bold group relative"
+                  : "font-semibold group relative"
+              }
+              to="/school"
+              onMouseEnter={() => setShowSchoolDropDown(true)}
+              onMouseLeave={() => setShowSchoolDropDown(false)}
+            >
+              <div className="flex gap-x-1.5 items-center">
+                <p className="text-[#800080]">Schools</p>
+                {showSchoolDropDown ? (
+                  <button
+                    type="button"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent NavLink navigation
+                      e.stopPropagation();
+                      setShowSchoolDropDown(false);
+                    }}
+                  >
+                    <MdArrowDropUp color="#800080" />
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent NavLink navigation
+                      e.stopPropagation();
+                      setShowSchoolDropDown(true);
+                    }}
+                  >
+                    <MdArrowDropDown color="#800080" />
+                  </button>
+                )}
+              </div>
+
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+
+              <div
+                onMouseEnter={() => setShowSchoolDropDown(true)}
+                onMouseLeave={() => setShowSchoolDropDown(false)}
+                className={`${
+                  showSchoolDropDown ? "flex" : "hidden"
+                } absolute p-3 bg-white shadow-lg z-50`}
+              >
+                <div className=" p-2 px-2 bg-white rounded-md flex flex-col">
                   <Link
                     className=" border-b pb-1 border-b-gray-200"
                     to={"/classroom"}
@@ -133,20 +179,9 @@ const Navbar = () => {
                   ? " font-bold group relative"
                   : " font-semibold group relative"
               }
-              to="/admission"
+              to="/gallery"
             >
-              <p className=" text-orange-600">Admission</p>
-              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? " font-bold group relative"
-                  : " font-semibold group relative"
-              }
-              to="/aboutUs"
-            >
-              <p className=" text-blue-600">About Us</p>
+              <p className=" text-blue-950">Gallery</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -166,11 +201,12 @@ const Navbar = () => {
                   ? " font-bold group relative"
                   : " font-semibold group relative"
               }
-              to="/gallery"
+              to="/admission"
             >
-              <p className=" text-blue-950">Gallery</p>
+              <p className=" text-orange-600">Admission</p>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
+
             <NavLink
               className={({ isActive }) =>
                 isActive

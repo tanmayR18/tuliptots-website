@@ -39,7 +39,7 @@ const data = [
   {
     title: "Vertical and Hands-On Learning Walls",
     points: [
-      "With over 12+ interactive wall zones, children explore a world of movement, magnets, puzzles, gears, and visual challenges—designed to develop fine motor skills, spatial logic, and creative confidence.",
+      "With our interactive wall zones, children explore a world of movement, magnets, puzzles, gears, and visual challenges—designed to develop fine motor skills, spatial logic, and creative confidence.",
       "Magnetic walls, vertical drawing boards, and logic-based puzzles engage both body and brain—making learning truly multi-sensory and fun.",
     ],
     bgColor: "#6610f2",

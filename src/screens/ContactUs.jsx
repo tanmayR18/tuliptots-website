@@ -17,7 +17,9 @@ const ContactUs = () => {
           <div className=" grid lg:grid-cols-2  gap-12">
             <Link
               className=" lg:rounded-[40px] overflow-hidden relative order-2 lg:order-1 "
-              to={"https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"}
+              to={
+                "https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"
+              }
               target="_blank"
             >
               <div className=" w-full h-full border-2 ">
@@ -37,9 +39,10 @@ const ContactUs = () => {
                 Contact
               </p>
               <p className="  mt-2 xl:mt-8 text-slate-600">
-                We at IGPS believe in an open-door policy and are happy to
-                respond to any queries. Should you have any questions, feel free
-                to get in touch and we will be happy to respond!
+                At Tulip Tots Preschool, we embrace an open-door philosophy
+                and value every question. If you’d like to know more about our
+                programs, philosophy, or admissions, we’re always happy to
+                connect—feel free to reach out anytime!
               </p>
               <div className=" flex flex-col sm:flex-row gap-8 mt-6 xl:mt-12 justify-evenly items-center">
                 <div className=" flex flex-col justify-center items-center w-1/2">
@@ -85,9 +88,41 @@ const ContactUs = () => {
               <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
                 Follow us on
               </p>
-              <div className=" mt-5">
+              <div className=" mt-5 space-y-4">
                 <Link
                   to={"https://www.instagram.com/tuliptotsinternational/"}
+                  className=" flex items-center gap-4"
+                >
+                  <div className="">
+                    <img
+                      height={30}
+                      width={30}
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    />
+                  </div>
+                  <p className=" lg:text-lg text-white font-semibold">
+                    tuliptotsinternational
+                  </p>
+                </Link>
+                <Link
+                  to={
+                    "https://www.facebook.com/profile.php?id=61577004178106&rdid=ldZ4ru8rKpLpv0zY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1P6xWooKrH%2F#"
+                  }
+                  className=" flex items-center gap-4"
+                >
+                  <div className="">
+                    <img
+                      height={30}
+                      width={30}
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    />
+                  </div>
+                  <p className=" lg:text-lg text-white font-semibold">
+                    tuliptotsinternational
+                  </p>
+                </Link>
+                <Link
+                  to={"https://www.youtube.com/@tuliptotsinternational"}
                   className=" flex items-center gap-4"
                 >
                   <div className="">
@@ -105,15 +140,16 @@ const ContactUs = () => {
             </div>
             <div className=" p-10 lg:p-12 rounded-[40px] bg-green-300">
               <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
-                Join Our Team ?
+                Join Our Team
               </p>
 
               <p className=" mt-5">
-                Be a part of TulipTots International School, where passion meets
-                purpose and every day is a step toward shaping young minds.
+                At Tulip Tots Preschool, we’re more than a school — we’re a
+                family of passionate educators. If you’re ready to inspire young
+                minds and grow your career, we’d love to hear from you!
               </p>
 
-              <p className=" mt-3">tuliptotsinternational@gmail.com</p>
+              {/* <p className=" mt-3">tuliptotsinternational@gmail.com</p> */}
 
               <Link to={"/careers"}>
                 <button className=" bg-red-400 px-4 cursor-pointer py-3 rounded-xl mt-5">
@@ -124,7 +160,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };

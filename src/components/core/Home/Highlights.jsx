@@ -20,7 +20,7 @@ const points = [
     color: "#008000",
   },
   {
-    text: "Mindfulness & yoga",
+    text: "holistic child-led growth",
     image: image3,
     color: "#f34f6a",
   },
@@ -30,7 +30,7 @@ const points = [
     color: "#008000",
   },
   {
-    text: "Trained educators",
+    text: "In-house library",
     image: image5,
     color: "#f34f6a",
   },

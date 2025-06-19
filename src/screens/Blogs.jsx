@@ -18,56 +18,47 @@ const Blogs = () => {
     {
       text: "Transitioning from Home to Playgroup: How to Make It Smooth and Happy",
       route: "/blog1",
-      image:
-        image1,
+      image: image1,
     },
     {
       text: "Building Confidence in Toddlers Before They Start Nursery",
       route: "/blog2",
-      image:
-        image2,
+      image: image2,
     },
     {
       text: "The Magic of Open-Ended Toys: Why Less Is More in Early Childhood Play",
       route: "/blog3",
-      image:
-        image3,
+      image: image3,
     },
     {
       text: "From Sandbox to Boardroom: How Early Play Builds Leadership Skills",
       route: "/blog4",
-      image:
-        image4,
+      image: image4,
     },
     {
       text: "Roots Before Branches: Why Emotional Safety Comes Before Academic Success",
       route: "/blog5",
-      image:
-        image5,
+      image: image5,
     },
     {
       text: "Tiny Scientists: How Messy Play Lays the Foundation for Scientific Thinking",
       route: "/blog6",
-      image:
-       image6,
+      image: image6,
     },
     {
       text: "Building Bravery: How Pretend Play Grows Real-World Courage",
       route: "/blog7",
-      image:
-        image7,
+      image: image7,
     },
     {
       text: "How Risky Play Builds Safe Decision-Makers: The Surprising Link Between Adventure and Caution",
       route: "/blog8",
-      image:
-        image8,
+      image: image8,
     },
     {
       text: "How Free Play Builds Resilience for Life: The Power of Letting Children Lead",
       route: "/blog9",
-      image:
-        image9,
+      image: image9,
     },
     {
       text: "How Sensory Play Builds Strong Thinkers: Why Messy Hands Lead to Sharp Minds",
@@ -95,13 +86,15 @@ const Blogs = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Tulip Tots Blog
+            Tulip Talks Welcome to Tulip Talks
           </h1>
           <div className="w-24 h-1 bg-pink-400 rounded-full mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Welcome to our collection of insights and stories about early
-            childhood development, play-based learning, and nurturing young
-            minds.
+            a warm corner of our world where we share stories, reflections,
+            ideas, and gentle guidance for parents walking alongside their
+            little ones. From classroom moments to parenting insights, this
+            space is a celebration of the beautiful journey we’re all
+            on—together
           </p>
         </div>
 
