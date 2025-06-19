@@ -56,6 +56,33 @@ const data = [
   },
 ];
 
+const data2 = [
+  {
+    skill: "L - Learn through Living",
+    subSkills:
+      "Children absorb knowledge best through experience. From real-life tasks to storytelling, songs, and sensory exploration, our learning is grounded in what children do—not just what they’re told.",
+    bgColor: "#1E3A8A",
+  },
+  {
+    skill: "E - Explore with Wonder",
+    subSkills:
+      "Curiosity is our compass. We invite children to explore their world through nature walks, loose parts, discovery corners, and open-ended materials that spark questions and ideas.",
+    bgColor: "#047857",
+  },
+  {
+    skill: "A - Act with Purpose",
+    subSkills:
+      "Every action matters—from planting a seed to helping a friend. Children engage in meaningful tasks, build independence, and develop a sense of responsibility, empathy, and initiative.",
+    bgColor: "#7C3AED",
+  },
+  {
+    skill: "P - Play as Learning",
+    subSkills:
+      "Play is the heartbeat of childhood. Through imaginative, constructive, and social play, children build skills in language, problem-solving, collaboration, and emotional expression.",
+    bgColor: "#B91C1C",
+  },
+];
+
 const Pedagogy = () => {
   const [currentSkill, setCurrentSkill] = useState("");
   return (
@@ -67,25 +94,56 @@ const Pedagogy = () => {
           </p>
           <div className=" bg-orange-200 p-5 sm:p-10 rounded-4xl mt-12">
             <p className="  font-semibold text-slate-800 text-base sm:text-lg">
-              Our curriculum is thoughtfully designed, combining global best
-              practices with the nurturing spirit of play-based learning. We
-              draw inspiration from renowned educational philosophies and align
-              closely with the{" "}
-              <strong>National Education Policy (NEP) 2020</strong>, which
-              emphasizes the importance of the{" "}
-              <strong>Foundational Stage (ages 3–8)</strong>—a period that lays
-              the cornerstone for lifelong learning.
+              At Tulip Tots International, we believe the early years are a
+              magical time of discovery, growth, and endless possibility. Our
+              curriculum is thoughtfully designed to nurture the whole
+              child—combining global best practices with the play-based,
+              child-led approach at the heart of early learning.
             </p>
             <p className=" mt-4 font-semibold text-slate-800 text-lg">
-              Our approach follows the developmental and pedagogical guidelines
-              set by the Early{" "}
-              <strong>Childhood Care and Education (ECCE) framework</strong> and
-              the
+              Our curriculum is closely aligned with the{" "}
+              <strong>National Education Policy (NEP) 2020</strong>, with a
+              strong focus on the <strong>Foundational Stage (ages 3–8)</strong>
+              , and is guided by the{" "}
+              <strong>Early Childhood Care and Education (ECCE)</strong>
+              framework and{" "}
               <strong>
-                {" "}
+                the National Curriculum Framework for the Foundational Stage
+                (NCF-FS)
+              </strong>{" "}
+              developed by the{" "}
+              <strong>
                 National Council of Educational Research and Training (NCERT)
               </strong>
-              .
+              , which together outline the principles for high-quality,
+              developmentally appropriate early education.
+            </p>
+
+            <p className=" mt-4 font-semibold text-slate-800 text-lg">
+              These frameworks emphasize:
+            </p>
+            <div className=" mt-2 font-semibold text-slate-800 text-lg">
+              <li>A flexible, multi-level, activity-based learning model</li>
+              <li>
+                A strong foundation in language, early numeracy,
+                problem-solving, and emotional wellbeing
+              </li>
+              <li>
+                Hands-on exploration, creative expression, and a connection with
+                nature
+              </li>
+              <li>
+                Learning through stories, songs, art, movement, and real-world
+                experiences
+              </li>
+            </div>
+
+            <p className=" mt-4 font-semibold text-slate-800 text-lg">
+              Every learning moment at Tulip Tots is filled with wonder,
+              purpose, and joy. Whether indoors or outdoors, our children are
+              encouraged to ask questions, explore freely, and express
+              themselves—building not just knowledge, but also confidence,
+              empathy, and resilience
             </p>
           </div>
 
@@ -94,11 +152,12 @@ const Pedagogy = () => {
               <img className="" src={image} />
             </div>
             <div>
-              <p className=" text-center lg:text-start text-2xl font-bold text-purple-800 ">
-                Our Innovative 5x4 Skill-Based Framework
+              <p className=" text-center  lg:text-start text-3xl font-bold text-purple-800 ">
+                Introducing the LEAP Curriculum
               </p>
+
               <div className=" space-y-5 mt-7">
-                {data.map((item) => (
+                {data2.map((item) => (
                   <Card
                     setCurrentSkill={setCurrentSkill}
                     currentSkill={currentSkill}
@@ -110,6 +169,13 @@ const Pedagogy = () => {
               </div>
             </div>
           </div>
+          <p className=" mt-10 text-slate-800 font-semibold text-center text-lg ">
+            Our LEAP Curriculum (Learn, Explore, Act, Play) brings our
+            educational philosophy to life. It is a hands-on, experiential, and
+            holistic framework designed especially for young children—supporting
+            their cognitive, physical, social-emotional, and creative
+            development.
+          </p>
         </div>
       </div>
     </div>
@@ -136,25 +202,30 @@ const Card = ({ bgColor, setCurrentSkill, currentSkill, skill, subSkills }) => {
           style={{ backgroundColor: bgColor }}
         >
           <p className=" text-white font-bold ">
-            {currentSkill === skill ? <HiMinus size={14} color="#fff" /> : <IoMdAdd size={14} color="#fff" />}
+            {currentSkill === skill ? (
+              <HiMinus size={14} color="#fff" />
+            ) : (
+              <IoMdAdd size={14} color="#fff" />
+            )}
           </p>
         </div>
         <p
           style={{ color: currentSkill === skill ? bgColor : "#000" }}
-          className=" sm:text-lg ml-2 sm:ml-3 font-bold"
+          className=" sm:text-lg ml-2 sm:ml-3 font-bold tracking-wide"
         >
           {skill}
         </p>
       </div>
       <div className="p-4 px-8 pt-2">
-        {subSkills.map((sub) => (
-          <li key={sub} className=" text-slate-700 font-semibold">
-            {sub}
-          </li>
-        ))}
+        <p className=" text-slate-700 font-semibold">{subSkills}</p>
       </div>
     </div>
   );
 };
 
+// {subSkills.map((sub) => (
+//           <li key={sub} className=" text-slate-700 font-semibold">
+//             {sub}
+//           </li>
+//         ))}
 export default Pedagogy;

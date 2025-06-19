@@ -45,7 +45,7 @@ const Library = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="pt-32 lg:pt-44 px-4 bg-[#f7eee9]">
+    <div ref={ref} className="pt-32 pb-16 lg:pt-44 px-4 bg-[#f7eee9]">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ const Library = () => {
           once: true,
           margin: "-100px",
         }}
-        className="bg-blue-200 my-16 lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
+        className="bg-blue-200 mt-16  lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
       >
         <motion.p
           initial={{ opacity: 0, translateY: 20 }}

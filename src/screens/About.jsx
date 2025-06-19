@@ -228,10 +228,10 @@ const data3 = [
     text: "Global best practices",
     image: image22,
   },
-  {
-    text: "Continuous assessment",
-    image: image23,
-  },
+//   {
+//     text: "Continuous assessment",
+//     image: image23,
+//   },
   {
     text: "Life size building structure",
     image: image24,

@@ -188,7 +188,7 @@ const Academics = () => {
         A Peek Into Our World
       </motion.p>
 
-      <div className="hidden md:flex flex-col">
+      {/* <div className="hidden md:flex flex-col">
         <div className="flex justify-center mx-auto gap-8 mt-10">
           <SubSectionCard
             facilityName={"A Living, Breathing Classroom"}
@@ -238,9 +238,9 @@ const Academics = () => {
             isInView={isInView}
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="grid grid-cols-2 place-items-center gap-5 mt-6 md:hidden">
+      <div className="grid grid-cols-2 lg:grid-cols-4 place-items-center gap-5 mt-12 w-10/12 mx-auto ">
         <SubSectionCard
           facilityName={"A Living, Breathing Classroom"}
           bgColor={"#ccc"}
@@ -275,15 +275,6 @@ const Academics = () => {
           navigate={"/health"}
           image={health}
           index={3}
-          isInView={isInView}
-        />
-        <SubSectionCard
-          facilityName={"Daycare"}
-          bgColor={"#ccc"}
-          borderColor={"#FF6F61"}
-          navigate={"/daycare"}
-          image={daycare}
-          index={4}
           isInView={isInView}
         />
       </div>
