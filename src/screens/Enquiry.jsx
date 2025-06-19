@@ -213,10 +213,11 @@ const Enquiry = () => {
         </div>
         <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" /> */}
         <p className="   text-2xl text-center lg:text-4xl font-bold z-10 text-pink-500">
-          Come Experience the Bloom
+          Let’s Begin Your Journey with Tulip Tots
         </p>
         <p className=" text-green-500 font-semibold text-lg text-center lg:text-2xl lg:font-bold z-10 mt-4 lg:mt-5">
-          Let us show you around and answer your questions.
+          Schedule a visit, meet our team, and explore the joyful world of early
+          learning.
         </p>
       </div>
       <form className="  py-10 rounded-t-[32px] lg:rounded-t-[64px] bg-white relative">

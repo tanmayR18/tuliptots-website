@@ -65,12 +65,12 @@ const Gallery = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-            Our Gallery
+            Tulip Tales
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Take a glimpse into our vibrant learning environment where every
-            moment is an opportunity for growth and discovery.
+            A window into our world—where learning is led by wonder, guided with
+            love, and captured in the quiet beauty of everyday moments
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ const Gallery = () => {
               <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src={image}
-                  alt={'gallery image'}
+                  alt={"gallery image"}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -112,7 +112,7 @@ const Gallery = () => {
         {selectedImage && (
           <div
             className="fixed inset-0 bg-black/80 z-[1000] flex items-center justify-center p-4"
-            onClick={() => setSelectedImage('')}
+            onClick={() => setSelectedImage("")}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -123,12 +123,12 @@ const Gallery = () => {
             >
               <img
                 src={selectedImage}
-                alt={'selected image'}
+                alt={"selected image"}
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
               <button
                 className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors"
-                onClick={() => setSelectedImage('')}
+                onClick={() => setSelectedImage("")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -173,7 +173,7 @@ const data3 = [
     image: image8,
   },
   {
-    text: "12+ interactive walls",
+    text: "Interactive walls zones",
     image: image9,
   },
   {
@@ -228,10 +228,10 @@ const data3 = [
     text: "Global best practices",
     image: image22,
   },
-  {
-    text: "Continuous assessment",
-    image: image23,
-  },
+//   {
+//     text: "Continuous assessment",
+//     image: image23,
+//   },
   {
     text: "Life size building structure",
     image: image24,
@@ -284,8 +284,8 @@ const About = () => {
 
         {/* Vision and Mission */}
         <div className=" grid grid-cols-1 gap-10 mt-12">
-          <Mission />
           <Vision />
+          <Mission />
         </div>
       </div>
       {/* Curriculum & Pedagogy */}
@@ -377,7 +377,7 @@ const Card = ({
       <div
         style={{ transformStyle: "preserve-3d" }}
         className={`${
-          currentTapped === name && SCREEN_WIDTH <= 1024 && " rotate-y-180"
+          currentTapped === name && " rotate-y-180"
         } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
       >
         <div

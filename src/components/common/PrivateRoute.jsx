@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
   if (session) {
     return children;
   } else {
-    navigate("/signup");
+    navigate("/");
     return;
   }
 };

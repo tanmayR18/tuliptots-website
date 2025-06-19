@@ -8,6 +8,7 @@ import image2 from "../../../assets/home/bloom/2.jpg";
 import image3 from "../../../assets/home/bloom/3.jpg";
 import image4 from "../../../assets/home/bloom/4.jpg";
 import image5 from "../../../assets/home/bloom/5.jpg";
+import bgImage from "../../../assets/home/bloom/bloomBgImage.jpg";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,7 +39,11 @@ const BloomCards = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className=" pt-16 pb-16 " ref={ref}>
+    <div
+      // style={{backgroundImage: `url(${bgImage})`}}
+      className="  relative py-20 pb-24"
+      ref={ref}
+    >
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -48,7 +53,9 @@ const BloomCards = () => {
         The{" "}
         <motion.span
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          animate={
+            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+          }
           transition={{ duration: 0.6, delay: 0.2 }}
           className=" text-pink-500 relative"
         >
@@ -77,9 +84,11 @@ const BloomCards = () => {
           bgColor={"#BAE6FD"}
           currentTapped={currentTapped}
           letter={"B"}
-          title={"Balance of Body and Brain"}
+          title={"Balance of Body & Brain"}
+          color1={"#a1c4fd"}
+          color2={"#c2e9fb"}
           description={
-            "From barefoot sensory paths and climbing structures to puzzles and early logic games"
+            "From balance beams and climbing structures to puzzles and early logic games, we nurture coordination, focus, and cognitive flexibility—building the foundation for whole-child development."
           }
           image={image1}
         />
@@ -89,8 +98,10 @@ const BloomCards = () => {
           currentTapped={currentTapped}
           letter={"L"}
           title={"Learning through Living"}
+          color1={"#d4fc79"}
+          color2={"#96e6a1"}
           description={
-            "Children learn best by doing. Our days are filled with real-life activities, Montessori materials, open-ended toys, and hands-on learning experiences"
+            "Children learn best by doing. Our days are rich with real-life activities, hands-on exploration, and multidisciplinary materials that connect learning to life in meaningful ways."
           }
           image={image2}
         />
@@ -100,8 +111,10 @@ const BloomCards = () => {
           currentTapped={currentTapped}
           letter={"O"}
           title={"Open-Ended Wonder"}
+          color1={"#e0c3fc"}
+          color2={"#8ec5fc"}
           description={
-            "Vertical learning spaces and flexible play zones offer children endless possibilities to imagine, create, and explore without limits."
+            "Vertical learning spaces, flexible play zones, and thoughtfully curated open-ended toys invite children to imagine, experiment, and create—fostering innovation without boundaries."
           }
           image={image3}
         />
@@ -111,8 +124,10 @@ const BloomCards = () => {
           currentTapped={currentTapped}
           letter={"O"}
           title={"Observing the Whole Child"}
+          color1={"#fbc2eb"}
+          color2={"#a6c1ee"}
           description={
-            "We celebrate and support every child's unique learning style and intelligence—from music and movement to numbers and nature"
+            "We celebrate every child’s unique learning rhythm and intelligence—whether they thrive through numbers, nature, music, or movement—honoring the diversity of how children grow."
           }
           image={image4}
         />
@@ -123,8 +138,10 @@ const BloomCards = () => {
           letter={"M"}
           title={"Meaningful connections"}
           description={
-            "We foster strong bonds and emotional growth through daily interactions, nurturing empathy, belonging, and self-awareness."
+            "Daily interactions are filled with warmth, trust, and joy. We foster emotional resilience, empathy, and a sense of belonging that supports children for life."
           }
+          color1={"#fda085"}
+          color2={"#f6d365"}
           image={image5}
         />
       </motion.div>
@@ -139,9 +156,11 @@ const BloomCards = () => {
             bgColor={"#BAE6FD"}
             currentTapped={currentTapped}
             letter={"B"}
-            title={"Balance of Body and Brain"}
+            title={"Balance of Body & Brain"}
+            color1={"#a1c4fd"}
+            color2={"#c2e9fb"}
             description={
-              "From barefoot sensory paths and climbing structures to puzzles and early logic games"
+              "From balance beams and climbing structures to puzzles and early logic games, we nurture coordination, focus, and cognitive flexibility—building the foundation for whole-child development."
             }
             className={"w-[30%]"}
             image={image1}
@@ -153,8 +172,10 @@ const BloomCards = () => {
             letter={"L"}
             title={"Learning through Living"}
             description={
-              "Children learn best by doing. Our days are filled with real-life activities, Montessori materials, open-ended toys, and hands-on learning experiences"
+              "Children learn best by doing. Our days are rich with real-life activities, hands-on exploration, and multidisciplinary materials that connect learning to life in meaningful ways."
             }
+            color1={"#d4fc79"}
+            color2={"#96e6a1"}
             className={"w-[30%]"}
             image={image2}
           />
@@ -165,8 +186,10 @@ const BloomCards = () => {
             letter={"O"}
             title={"Open-Ended Wonder"}
             description={
-              "Vertical learning spaces and flexible play zones offer children endless possibilities to imagine, create, and explore without limits."
+              "Vertical learning spaces, flexible play zones, and thoughtfully curated open-ended toys invite children to imagine, experiment, and create—fostering innovation without boundaries."
             }
+            color1={"#e0c3fc"}
+            color2={"#8ec5fc"}
             className={"w-[30%]"}
             image={image3}
           />
@@ -177,8 +200,10 @@ const BloomCards = () => {
             letter={"O"}
             title={"Observing the Whole Child"}
             description={
-              "We celebrate and support every child's unique learning style and intelligence—from music and movement to numbers and nature"
+              "We celebrate every child’s unique learning rhythm and intelligence—whether they thrive through numbers, nature, music, or movement—honoring the diversity of how children grow."
             }
+            color1={"#fbc2eb"}
+            color2={"#a6c1ee"}
             className={"w-[30%]"}
             image={image4}
           />
@@ -189,8 +214,10 @@ const BloomCards = () => {
             letter={"M"}
             title={"Meaningful connections"}
             description={
-              "We foster strong bonds and emotional growth through daily interactions, nurturing empathy, belonging, and self-awareness."
+              "Daily interactions are filled with warmth, trust, and joy. We foster emotional resilience, empathy, and a sense of belonging that supports children for life."
             }
+            color1={"#fda085"}
+            color2={"#f6d365"}
             className={"w-[30%]"}
             image={image5}
           />
@@ -206,6 +233,8 @@ const Card = ({
   description,
   image,
   bgColor,
+  color1,
+  color2,
   setCurrentTapped,
   currentTapped,
   className,
@@ -223,19 +252,23 @@ const Card = ({
         setCurrentTapped(title);
       }}
       style={{ perspective: 1000 }}
-      className={` aspect-square bg-transparent cursor-pointer group rounded-3xl ${
+      className={` aspect-square bg-transparent  cursor-pointer group rounded-3xl ${
         className ? className : "w-full"
       }`}
     >
+      {/* && SCREEN_WIDTH <= 1024  */}
       <div
         style={{ transformStyle: "preserve-3d" }}
         className={`${
-          currentTapped === title && SCREEN_WIDTH <= 1024 && " rotate-y-180"
+          currentTapped === title && " rotate-y-180"
         } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
       >
         <div
-          style={{ backgroundColor: bgColor }}
-          className=" w-full h-full absolute rounded-3xl flex flex-col justify-center items-center overflow-hidden"
+          //   style={{ backgroundColor: bgColor }}
+          style={{
+            background: `linear-gradient(135deg, ${color1}, ${color2})`,
+          }}
+          className=" w-full h-full  absolute rounded-3xl flex flex-col justify-center items-center overflow-hidden"
         >
           {/* <img
               className=" h-full w-full"
@@ -259,7 +292,7 @@ const Card = ({
           </motion.div>
         </div>
         <div
-          style={{ backfaceVisibility: "hidden", backgroundColor: bgColor }}
+          style={{ backfaceVisibility: "hidden", backgroundColor: "#ccc" }}
           className=" absolute w-full h-full rotate-y-180 rounded-3xl overflow-hidden  flex justify-center items-center text-neutral-300 "
         >
           <motion.img
@@ -275,11 +308,15 @@ const Card = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="absolute inset-0 bg-black/50 flex items-center justify-center p-6"
+            className="absolute inset-0 bg-black/10 flex justify-center items-center"
           >
-            <p className=" text-center text-white absolute font-semibold p-2">
-              {description}
-            </p>
+            <div className="w-full h-full overflow-y-auto hide-scrollbar p-4">
+              <div className="min-h-full flex items-center justify-center">
+                <p className="text-center text-white text-sm tracking-wider font-semibold">
+                  {description}
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

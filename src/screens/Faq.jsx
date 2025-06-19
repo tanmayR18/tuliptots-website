@@ -12,7 +12,7 @@ const data = [
   {
     question: "What age groups does Tulip Tots International Preschool serve?",
     answer:
-      "We welcome children from Playgroup (around 2 years old) through UKG (up to 6 years). Our Activity Center offers programs and activities for children up to 14 years of age.",
+      "We welcome children from Playgroup (around 2 years old) through UKG (up to 6 years). Our day care centre cares for children above 6 months of age. Our Activity Center offers programs and activities for children up to 14 years of age.",
   },
   {
     question: "What safety measures are in place?",
@@ -42,12 +42,12 @@ const data = [
   {
     question: "How is the curriculum structured?",
     answer:
-      "We follow a skill-based curriculum aligned with the ECCE framework, NCERT guidelines, and NEP 2020. The curriculum focuses on holistic development across language, cognitive skills, social-emotional learning, physical growth, and environmental awareness.",
+      "We follow the holistic LEAP curriculum aligned with the NEP 2020, ECCE framework, and NCF-FS",
   },
   {
-    question: "How do you assess my child's progress?",
+    question: " How do you assess my child’s learning and development?",
     answer:
-      "Assessment is ongoing, gentle, and observational. We conduct initial, monthly, and annual evaluations that focus on your child's individual growth—not grades or tests. Parents receive warm, detailed reports highlighting progress and areas for support.",
+      "We don’t use exams or tests. At Tulip Tots, we assess children through natural observation, play, and everyday interactions. Our educators gently document milestones in key areas such as language, motor skills, social-emotional development, cognitive thinking, and creativity. We use simple checklists, anecdotal notes, and reflective summaries to understand each child’s progress. Parents receive a growth reflection, highlighting how their child is learning, playing, and connecting—because we believe in nurturing growth, not grading it.",
   },
   {
     question:
@@ -105,11 +105,6 @@ const data = [
       "No, we do not assign formal worksheets or homework. At Tulip Tots, we believe that early childhood is a time for exploration, imagination, and joyful learning—not academic pressure. Instead of homework, we encourage families to engage in screen-free bonding activities, outdoor play, shared reading, storytelling, and meaningful conversations. Everyday routines like cooking, nature walks, or grocery shopping offer rich opportunities for learning. We believe that when children are free to wonder, move, and connect in their own time, learning happens naturally—and joyfully.",
   },
   {
-    question: "What is your policy on screen time?",
-    answer:
-      "Tulip Tots follows a screen-free philosophy during school hours to encourage active, sensory-rich learning. Any necessary digital interactions (like virtual meetings) are carefully limited and age-appropriate",
-  },
-  {
     question: "Do you organize field trips or outdoor learning experiences?",
     answer:
       "Absolutely! Field trips are integral to our experiential learning. We also partner with parents to encourage everyday explorations like visits to markets and local places, enriching classroom discussions and hands-on learning.",
@@ -122,7 +117,7 @@ const data = [
   {
     question: "How do you handle illness or health concerns?",
     answer:
-      "If your child is unwell, we ask parents to keep them at home and consult a pediatrician. We follow strict hygiene routines and have policies to protect the health of all children and staff.",
+      "At Tulip Tots, your child’s health and safety are our top priority. If a child feels unwell during school hours, our on-call doctor is available to assess the situation. We immediately inform parents or guardians. In case of an emergency, first aid is promptly administered while we contact the family. If your child is unwell at home, we kindly request that you keep them home and consult a pediatrician. This helps us prevent the spread of illness and maintain a safe environment for all. We follow strict hygiene and sanitation protocols every day to ensure the well-being of all children and staff."
   },
 ];
 
@@ -140,7 +135,7 @@ const Faq = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 text-lg">
-            Find answers to common questions about Tulip Tots International
+            Find answers to common questions about Tulip Tots
             Preschool
           </p>
         </motion.div>
@@ -165,7 +160,7 @@ const Faq = () => {
               }}
               className="flex items-start"
             >
-              <div className="mt-6 w-8 h-8 flex justify-center items-center rounded-full bg-gradient-to-r from-blue-600 to-blue-400 mr-4 shadow-md">
+              <div className=" w-8 h-8 mt-2 flex justify-center items-center rounded-full bg-gradient-to-r from-blue-600 to-blue-400 mr-4 shadow-md">
                 <p className="text-white text-sm font-semibold">{i + 1}</p>
               </div>
               <AccordionItem

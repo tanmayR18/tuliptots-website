@@ -31,13 +31,13 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-bold text-2xl lg:text-5xl text-pink-700"
         >
-          Tulip Tots International{" "}
+          Tulip Tots Preschool{" "}
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-bold text-2xl lg:text-5xl text-green-700"
+          className="font-bold text-xl lg:text-4xl mt-1 text-green-700"
         >
           where little minds bloom
         </motion.p>
@@ -47,9 +47,9 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="lg:w-1/2 mt-12 z-40 font-semibold text-lg px-4 md:px-6 lg:text-xl lg:leading-8 text-center text-slate-900 opacity-60"
         >
-          Tucked away in the cozy, green lanes of Punawale, Tulip Tots
-          International is a thoughtfully crafted preschool reimagining early
-          education—nurturing curious minds, inspiring creativity, and shaping
+          Rooted in love and led by research, Tulip Tots International is a
+          thoughtfully designed early learning space where every child’s wonder
+          is honored, voices are heard, and play leads the way—gently shaping
           confident global citizens for the 21st century.
         </motion.p>
         <Link className=" hidden md:flex" to={"/story"}>

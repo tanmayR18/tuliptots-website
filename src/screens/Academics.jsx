@@ -46,7 +46,7 @@ const ProgramCard = ({
           <div className="w-full border-t border-dashed border-black my-2" />
 
           <p className="text-center text-black font-semibold">
-            Eligibily - {eligibily}
+            Eligibility - {eligibily}
           </p>
         </div>
       </div>
@@ -114,12 +114,12 @@ const Academics = () => {
         transition={{ duration: 0.6 }}
         className="text-4xl font-bold text-center tracking-wide"
       >
-        Tulip's Programs
+        Our Preschool Programs
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8">
         <ProgramCard
-          programName={"Playground"}
+          programName={"PlayGROUP"}
           programIdea={"Nurturing Early Explorers"}
           programPetName={"Sprouts"}
           content={
@@ -160,7 +160,7 @@ const Academics = () => {
         <ProgramCard
           programName={"UKG"}
           programIdea={"Preparing for Primary School"}
-          programPetName={"Bloomers"}
+          programPetName={"Blooms"}
           content={
             "Fully bloomed and ready to face the world—our Bloomers demonstrate leadership, empathy, and advanced skills across literacy, numeracy, and life learning. This stage focuses on preparing them for the next leap, helping them carry the confidence and joy of learning into primary school and beyond"
           }
@@ -188,7 +188,7 @@ const Academics = () => {
         A Peek Into Our World
       </motion.p>
 
-      <div className="hidden md:flex flex-col">
+      {/* <div className="hidden md:flex flex-col">
         <div className="flex justify-center mx-auto gap-8 mt-10">
           <SubSectionCard
             facilityName={"A Living, Breathing Classroom"}
@@ -238,9 +238,9 @@ const Academics = () => {
             isInView={isInView}
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="grid grid-cols-2 place-items-center gap-5 mt-6 md:hidden">
+      <div className="grid grid-cols-2 lg:grid-cols-4 place-items-center gap-5 mt-12 w-10/12 mx-auto ">
         <SubSectionCard
           facilityName={"A Living, Breathing Classroom"}
           bgColor={"#ccc"}
@@ -275,15 +275,6 @@ const Academics = () => {
           navigate={"/health"}
           image={health}
           index={3}
-          isInView={isInView}
-        />
-        <SubSectionCard
-          facilityName={"Daycare"}
-          bgColor={"#ccc"}
-          borderColor={"#FF6F61"}
-          navigate={"/daycare"}
-          image={daycare}
-          index={4}
           isInView={isInView}
         />
       </div>
