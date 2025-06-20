@@ -116,7 +116,7 @@ const Footer = () => {
                 href="https://www.instagram.com/tuliptotsinternational/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                className=" h-12 w-12 text-gray-200 flex justify-center items-center hover:text-black border border-gray-200 hover:bg-gray-200  rounded-full  "
               >
                 <FaInstagram size={26} />
               </motion.a>
@@ -126,7 +126,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@tuliptotsinternational"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                className=" h-12 w-12 text-gray-200 flex justify-center items-center hover:text-black border border-gray-200 hover:bg-gray-200  rounded-full  "
               >
                 <FiYoutube size={24} />
               </motion.a>
@@ -136,7 +136,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61577004178106&rdid=ldZ4ru8rKpLpv0zY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1P6xWooKrH%2F#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                className=" h-12 w-12 text-gray-200 flex justify-center items-center hover:text-black border border-gray-200 hover:bg-gray-200  rounded-full  "
               >
                 <FaFacebookSquare size={24} />
               </motion.a>
