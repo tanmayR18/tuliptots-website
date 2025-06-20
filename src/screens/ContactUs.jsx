@@ -3,7 +3,8 @@ import { AiTwotoneMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
 import { Link } from "react-router";
 import { IoLocationSharp } from "react-icons/io5";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { FiYoutube } from "react-icons/fi";
 
 const ContactUs = () => {
   return (
@@ -39,8 +40,8 @@ const ContactUs = () => {
                 Contact
               </p>
               <p className="  mt-2 xl:mt-8 text-slate-600">
-                At Tulip Tots Preschool, we embrace an open-door philosophy
-                and value every question. If you’d like to know more about our
+                At Tulip Tots Preschool, we embrace an open-door philosophy and
+                value every question. If you’d like to know more about our
                 programs, philosophy, or admissions, we’re always happy to
                 connect—feel free to reach out anytime!
               </p>
@@ -93,12 +94,15 @@ const ContactUs = () => {
                   to={"https://www.instagram.com/tuliptotsinternational/"}
                   className=" flex items-center gap-4"
                 >
-                  <div className="">
-                    <img
-                      height={30}
-                      width={30}
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                    />
+                  <div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    href="https://www.instagram.com/tuliptotsinternational/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                  >
+                    <FaInstagram size={26} />
                   </div>
                   <p className=" lg:text-lg text-white font-semibold">
                     tuliptotsinternational
@@ -110,12 +114,15 @@ const ContactUs = () => {
                   }
                   className=" flex items-center gap-4"
                 >
-                  <div className="">
-                    <img
-                      height={30}
-                      width={30}
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                    />
+                  <div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    href="https://www.facebook.com/profile.php?id=61577004178106&rdid=ldZ4ru8rKpLpv0zY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1P6xWooKrH%2F#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                  >
+                    <FaFacebookSquare size={24} />
                   </div>
                   <p className=" lg:text-lg text-white font-semibold">
                     tuliptotsinternational
@@ -125,12 +132,15 @@ const ContactUs = () => {
                   to={"https://www.youtube.com/@tuliptotsinternational"}
                   className=" flex items-center gap-4"
                 >
-                  <div className="">
-                    <img
-                      height={30}
-                      width={30}
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                    />
+                  <div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    href="https://www.youtube.com/@tuliptotsinternational"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                  >
+                    <FiYoutube size={24} />
                   </div>
                   <p className=" lg:text-lg text-white font-semibold">
                     tuliptotsinternational

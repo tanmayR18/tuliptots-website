@@ -119,7 +119,7 @@ const Academics = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8">
         <ProgramCard
-          programName={"PlayGROUP"}
+          programName={"Playgroup"}
           programIdea={"Nurturing Early Explorers"}
           programPetName={"Sprouts"}
           content={

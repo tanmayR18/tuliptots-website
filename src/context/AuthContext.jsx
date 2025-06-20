@@ -112,7 +112,7 @@ export const AuthContextProvider = ({ children }) => {
       }
 
       if (data) {
-        return true;
+        return { data, success: true };
       }
 
       return false;
