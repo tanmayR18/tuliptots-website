@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import motherChild1 from "../assets/story/motherChild1.jpg";
-import nurtureStory from "../assets/story/nurtureStory.jpeg";
-import logo from "../assets/bgremoved.png";
 import { supabase } from "@/supabaseClient";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [images, setImages] = useState([]);
+  const [videos, setVideos] = useState([]);
+  const videoRefs = useRef({});
 
   const fetchGalleryImages = async () => {
     const { data, error } = await supabase.storage
@@ -30,9 +34,48 @@ const Gallery = () => {
     setImages(urls);
   };
 
+  const fetchVideos = async () => {
+    const { data, error } = await supabase.storage.from("video").list("", {
+      limit: 100,
+      offset: 0,
+      sortBy: { column: "created_at", order: "desc" },
+    });
+
+    if (error) {
+      console.error("Error listing videos:", error.message);
+      return;
+    }
+
+    const videosWithUrls = data.map((file) => ({
+      name: file.name,
+      url: supabase.storage.from("video").getPublicUrl(file.name).data
+        .publicUrl,
+    }));
+
+    setVideos(videosWithUrls);
+  };
+
   useEffect(() => {
     fetchGalleryImages();
+    fetchVideos();
   }, []);
+
+  const handleSlideChange = (swiper) => {
+    // Pause all videos
+    Object.values(videoRefs.current).forEach((video) => {
+      if (video) {
+        video.pause();
+      }
+    });
+
+    // Play the current video
+    const currentVideo = videoRefs.current[swiper.activeIndex];
+    if (currentVideo) {
+      currentVideo.play().catch((error) => {
+        console.log("Autoplay prevented:", error);
+      });
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,6 +117,78 @@ const Gallery = () => {
           </p>
         </motion.div>
 
+        {/* Video Carousel Section */}
+        {videos.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-20"
+          >
+            <div className="relative w-10/12 mx-auto aspect-video">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={30}
+                slidesPerView={1}
+                allowTouchMove={true}
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                }}
+                pagination={{
+                  clickable: true,
+                  dynamicBullets: true,
+                }}
+                onSlideChange={handleSlideChange}
+                className="video-swiper"
+                style={{
+                  "--swiper-navigation-color": "#8b5cf6",
+                  "--swiper-pagination-color": "#8b5cf6",
+                }}
+              >
+                {videos.map((video, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative group h-[600px] flex items-center justify-center">
+                      <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-900 w-full h-full flex justify-center items-center">
+                        <video
+                          ref={(el) => (videoRefs.current[index] = el)}
+                          className="max-w-full max-h-full object-contain"
+                          controls
+                          controlsList="nodownload"
+                          disablePictureInPicture
+                          onLoadedMetadata={() => {
+                            if (index === 0) {
+                              videoRefs.current[index]
+                                ?.play()
+                                .catch((error) => {
+                                  console.log("Autoplay prevented:", error);
+                                });
+                            }
+                          }}
+                        >
+                          <source src={video.url} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                      </div>
+                      <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
+                        <h3 className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {video.name.replace(/\.[^/.]+$/, "")}
+                        </h3>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Custom Navigation Buttons */}
+              <div className="swiper-button-prev !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+              <div className="swiper-button-next !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+            </div>
+          </motion.div>
+        )}
+
+        {/* Images Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -83,7 +198,17 @@ const Gallery = () => {
           {images.map((image, index) => (
             <motion.div
               key={index}
-              variants={itemVariants}
+              initial={{ opacity: 0, translateY: 0, scale: 1 }}
+              whileInView={{
+                opacity: 1,
+                translateY: 0,
+                scale: 1,
+                transition: { duration: 0.8, delay: 0.3 },
+              }}
+              viewport={{
+                once: true,
+                margin: "-100px",
+              }}
               className="relative group cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
@@ -93,16 +218,6 @@ const Gallery = () => {
                   alt={"gallery image"}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-white text-lg font-semibold">
-                      {image.alt}
-                    </p>
-                    <p className="text-white/80 text-sm mt-1">
-                      {image.category}
-                    </p>
-                  </div>
-                </div> */}
               </div>
             </motion.div>
           ))}
@@ -149,6 +264,22 @@ const Gallery = () => {
           </div>
         )}
       </div>
+
+      <style jsx>{`
+        .video-swiper {
+          padding-bottom: 60px;
+        }
+        .video-swiper .swiper-pagination {
+          bottom: 0;
+        }
+        .video-swiper .swiper-pagination-bullet {
+          background: #8b5cf6;
+          opacity: 0.5;
+        }
+        .video-swiper .swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      `}</style>
     </div>
   );
 };
