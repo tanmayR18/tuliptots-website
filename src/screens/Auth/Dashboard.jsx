@@ -38,14 +38,14 @@ const Dashboard = () => {
             onClick={() => navigate("/galleryUpload")}
             className=" aspect-square rounded-2xl border border-black cursor-pointer p-4 flex justify-center items-center"
           >
-            <p className=" font-semibold">Upload Gallery Images</p>
+            <p className=" font-semibold">Upload Image</p>
           </button>
           <button
             disabled={!isUserAdmin}
-            onClick={() => navigate("/blogUpload")}
+            onClick={() => navigate("/videoUpload")}
             className=" rounded-2xl border border-black cursor-pointer aspect-square flex justify-center items-center"
           >
-            <p className=" font-semibold">Upload blog</p>
+            <p className=" font-semibold">Upload Video</p>
           </button>
         </div>
         <button
