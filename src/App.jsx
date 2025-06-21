@@ -40,6 +40,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 import PrivateRoute from "./components/common/PrivateRoute";
 import GalleryUpload from "./screens/Auth/GalleryUpload";
 import BlogUpload from "./screens/Auth/ImageUpload";
+import VideoUpload from "./screens/Auth/VideoUpload";
 
 function App() {
   const router = [
@@ -180,6 +181,14 @@ function App() {
       element: (
         <PrivateRoute>
           <GalleryUpload />
+        </PrivateRoute>
+      ),
+    },
+    {
+      path: "/videoUpload",
+      element: (
+        <PrivateRoute>
+          <VideoUpload />
         </PrivateRoute>
       ),
     },
