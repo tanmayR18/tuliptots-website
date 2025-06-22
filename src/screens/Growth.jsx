@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import image1 from "../assets/school/ourTeam/ourTeam.jpg";
-import image2 from "../assets/school/ourTeam/ourTeam2.jpg";
+import image1 from "../assets/school/ourTeam/ourTeam.png";
+import image2 from "../assets/school/ourTeam/ourTeam2.png";
 
 const Growth = () => {
   const ref = React.useRef(null);
@@ -96,7 +96,7 @@ const Growth = () => {
             once: true,
             margin: "-100px",
           }}
-          className="rounded-2xl md:w-[400px] md:h-[400px] w-[400px] h-[400px]"
+          className="rounded-2xl md:w-[400px] md:h-[500px] w-[400px] h-[500px]"
           src={image2}
         />
 

@@ -9,39 +9,39 @@ import { FiYoutube } from "react-icons/fi";
 const ContactUs = () => {
   return (
     <>
-      <div className=" pt-44 pb-12 lg:px-12 bg-[#f7eee9]">
-        <h1 className=" text-2xl mx-3 lg:text-3xl tracking-wide font-bold text-center">
+      <div className=" pt-44 pb-12 lg:px-12 bg-[#FAFAFA] font-fredoka">
+        <h1 className=" text-2xl mx-3 font-chewy lg:text-4xl tracking-wider  text-center">
           Need some more discussions ?
         </h1>
         <div className=" mt-16">
           {/* Map and Contact */}
           <div className=" grid lg:grid-cols-2  gap-12">
             <Link
-              className=" lg:rounded-[40px] overflow-hidden relative order-2 lg:order-1 "
+              className=" lg:rounded-[40px] border border-slate-300 overflow-hidden relative order-2 lg:order-1 "
               to={
                 "https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"
               }
               target="_blank"
             >
-              <div className=" w-full h-full border-2 ">
+              <div className=" w-full h-full ">
                 <img
-                  className=" w-full h-full aspect-square border-2"
+                  className=" w-full h-full aspect-square"
                   src="https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png"
                 />
               </div>
               <div className=" pb-12 flex items-end justify-center absolute  bottom-0 w-full z-20 bg-linear-to-t h-[30%]  from-[rgba(0,0,0,0.5)] to-transparent">
-                <p className=" text-center text-white font-bold text-lg lg:text-2xl">
+                <p className=" text-center text-white font-semibold tracking-wide text-lg lg:text-2xl">
                   Click to see live on Google Map
                 </p>
               </div>
             </Link>
-            <div className=" bg-white  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
-              <p className=" font-semibold text-xl xl:text-2xl tracking-wide">
+            <div className=" bg-white border border-slate-200  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
+              <p className=" font-semibold font-patrickHand text-xl xl:text-3xl tracking-wider">
                 Contact
               </p>
-              <p className="  mt-2 xl:mt-8 text-slate-600">
-                At Tulip Tots Preschool, we embrace an open-door philosophy and
-                value every question. If you’d like to know more about our
+              <p className="  mt-2 xl:mt-8 text-slate-600 font-fredoka">
+                At Tulip Tots International, we embrace an open-door philosophy
+                and value every question. If you’d like to know more about our
                 programs, philosophy, or admissions, we’re always happy to
                 connect—feel free to reach out anytime!
               </p>
@@ -85,14 +85,15 @@ const ContactUs = () => {
 
           {/* FOllow and Join */}
           <div className=" grid lg:grid-cols-2 gap-12 mt-12 px-4">
-            <div className=" p-10 lg:p-12 rounded-[40px] bg-[#FED7AA]">
-              <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
+            <div className=" p-10 lg:p-12 rounded-[40px] bg-[#85e9e5]">
+              <p className=" text-black text-lg lg:text-3xl tracking-wider font-bold font-patrickHand">
                 Follow us on
               </p>
-              <div className=" mt-5 space-y-4">
+              <div className=" mt-5 space-y-4 text-[#333333]">
                 <Link
                   to={"https://www.instagram.com/tuliptotsinternational/"}
-                  className=" flex items-center gap-4"
+                  className=" flex items-center gap-4 group"
+                  target="_blank"
                 >
                   <div
                     whileHover={{ scale: 1.1 }}
@@ -100,11 +101,11 @@ const ContactUs = () => {
                     href="https://www.instagram.com/tuliptotsinternational/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                    className=" h-11 w-11 text-black flex justify-center items-center group-hover:text-white border border-black group-hover:border-pink-600 group-hover:bg-pink-600  rounded-full transition-all duration-300 "
                   >
-                    <FaInstagram size={26} />
+                    <FaInstagram size={24} />
                   </div>
-                  <p className=" lg:text-lg text-white font-semibold">
+                  <p className=" lg:text-lg  font-semibold group-hover:text-pink-600 transition-all duration-300">
                     tuliptotsinternational
                   </p>
                 </Link>
@@ -112,7 +113,8 @@ const ContactUs = () => {
                   to={
                     "https://www.facebook.com/profile.php?id=61577004178106&rdid=ldZ4ru8rKpLpv0zY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1P6xWooKrH%2F#"
                   }
-                  className=" flex items-center gap-4"
+                  className=" flex items-center gap-4 group"
+                  target="_blank"
                 >
                   <div
                     whileHover={{ scale: 1.1 }}
@@ -120,17 +122,18 @@ const ContactUs = () => {
                     href="https://www.facebook.com/profile.php?id=61577004178106&rdid=ldZ4ru8rKpLpv0zY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1P6xWooKrH%2F#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                    className=" h-11 w-11 text-black flex justify-center items-center group-hover:text-white border border-black group-hover:border-blue-600 group-hover:bg-blue-600  rounded-full transition-all duration-300 "
                   >
-                    <FaFacebookSquare size={24} />
+                    <FaFacebookSquare size={22} />
                   </div>
-                  <p className=" lg:text-lg text-white font-semibold">
-                    tuliptotsinternational
+                  <p className=" lg:text-lg  font-semibold group-hover:text-blue-600 transition-all duration-300">
+                    Tulip Tots
                   </p>
                 </Link>
                 <Link
                   to={"https://www.youtube.com/@tuliptotsinternational"}
-                  className=" flex items-center gap-4"
+                  className=" flex items-center gap-4 group"
+                  target="_blank"
                 >
                   <div
                     whileHover={{ scale: 1.1 }}
@@ -138,23 +141,23 @@ const ContactUs = () => {
                     href="https://www.youtube.com/@tuliptotsinternational"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className=" h-12 w-12 text-white flex justify-center items-center hover:text-black border border-white hover:bg-white  rounded-full  "
+                    className=" h-11 w-11 text-black flex justify-center items-center group-hover:text-white transition-all duration-300 border border-black group-hover:border-red-600 group-hover:bg-red-600  rounded-full  "
                   >
-                    <FiYoutube size={24} />
+                    <FiYoutube size={22} />
                   </div>
-                  <p className=" lg:text-lg text-white font-semibold">
-                    tuliptotsinternational
+                  <p className=" lg:text-lg  font-semibold group-hover:text-red-600 transition-all duration-300">
+                    Tulip Tots International
                   </p>
                 </Link>
               </div>
             </div>
             <div className=" p-10 lg:p-12 rounded-[40px] bg-green-300">
-              <p className=" text-black text-lg lg:text-3xl tracking-wide font-bold">
+              <p className=" text-black text-lg lg:text-3xl tracking-wider font-bold font-patrickHand">
                 Join Our Team
               </p>
 
               <p className=" mt-5">
-                At Tulip Tots Preschool, we’re more than a school — we’re a
+                At Tulip Tots International, we’re more than a school — we’re a
                 family of passionate educators. If you’re ready to inspire young
                 minds and grow your career, we’d love to hear from you!
               </p>

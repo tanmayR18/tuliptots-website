@@ -34,7 +34,7 @@ const CTA = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-white flex flex-col px-10 -translate-y-8 w-9/12 mx-auto"
           >
-            <p className="text-xl  font-semibold italic">
+            <p className="text-xl   font-semibold italic">
               "We’ve been underestimating children for far too long. Every child
               holds immense potential—far greater than we imagine. When we stop
               trying to control their learning and start guiding with trust and

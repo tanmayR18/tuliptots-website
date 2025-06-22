@@ -8,6 +8,19 @@ import { IoIosArrowForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { UserAuth } from "@/context/AuthContext";
 import { MdOutlineDashboard } from "react-icons/md";
+import {
+  Contact,
+  HandHeart,
+  Home,
+  Images,
+  NotebookText,
+  Pencil,
+  Phone,
+  School,
+} from "lucide-react";
+import { RiProfileFill } from "react-icons/ri";
+import { AiFillProfile } from "react-icons/ai";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -40,7 +53,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className=" bg-[#fff] w-11/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
+        className=" bg-[#fff] font-patrickHand tracking-wide text-lg w-11/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
@@ -50,12 +63,15 @@ const Navbar = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? " font-bold group relative"
+                  ? " font-bold group relative "
                   : " font-semibold group relative"
               }
               to="/"
             >
-              <p className=" text-[#228B22]">Home</p>
+              <div className=" flex items-center gap-0.5">
+                <Home color="#228B22" size={18} />
+                <p className=" text-[#228B22]">Home</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -66,7 +82,10 @@ const Navbar = () => {
               }
               to="/aboutUs"
             >
-              <p className=" text-blue-600">About Us</p>
+              <div className=" flex items-center gap-0.5">
+                <FaUser color="#155dfc" size={15} />
+                <p className=" text-blue-600">About Us</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -80,7 +99,10 @@ const Navbar = () => {
               onMouseLeave={() => setShowSchoolDropDown(false)}
             >
               <div className="flex gap-x-1.5 items-center">
-                <p className="text-[#800080]">Pre School</p>
+                <div className=" flex items-center gap-0.5">
+                  <School color="#800080" size={18} />
+                  <p className="text-[#800080]">Pre School</p>
+                </div>
                 {showSchoolDropDown ? (
                   <button
                     type="button"
@@ -170,7 +192,10 @@ const Navbar = () => {
               }
               to="/daycare"
             >
-              <p className=" text-orange-400">Daycare</p>
+              <div className=" flex items-center gap-0.5">
+                <HandHeart color="#fb923c" size={22} />
+                <p className=" text-orange-400">Daycare</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
@@ -181,7 +206,10 @@ const Navbar = () => {
               }
               to="/gallery"
             >
-              <p className=" text-blue-950">Gallery</p>
+              <div className=" flex justify-center items-center gap-0.5">
+                <Images color="#162456" size={18} />
+                <p className=" text-blue-950">Gallery</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
 
@@ -193,7 +221,10 @@ const Navbar = () => {
               }
               to="/admission"
             >
-              <p className=" text-orange-600">Admission</p>
+              <div className="flex items-center justify-center gap-0.5">
+                <NotebookText color="#ea580c"  size={18} />
+                <p className=" text-orange-600">Admission</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
 
@@ -205,22 +236,28 @@ const Navbar = () => {
               }
               to="/blogs"
             >
-              <p className=" text-amber-700">Blogs</p>
+              <div className=" flex items-center gap-0.5">
+                <Pencil color="#b45309" size={18} />
+                <p className=" text-amber-700">Blogs</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? " font-bold group relative"
+                  ? " font-bold group relative "
                   : " font-semibold group relative"
               }
               to="/contactUs"
             >
-              <p className=" text-red-600">Contact Us</p>
+              <div className=" flex items-center gap-0.5">
+                <Phone size={16} color="#dc2626" />
+                <p className=" text-red-600">Contact Us</p>
+              </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
-            <NavLink
-            target="_blank"
+            {/* <NavLink
+              target="_blank"
               className={" hover:scale-110 transition-transform duration-300"}
               to="https://www.instagram.com/tuliptotsinternational/"
             >
@@ -229,7 +266,7 @@ const Navbar = () => {
                 width={30}
                 src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/instagramIcon.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2luc3RhZ3JhbUljb24uc3ZnIiwiaWF0IjoxNzUwNTc0MDk0LCJleHAiOjIwNjU5MzQwOTR9.6zs481B0_ScUqgJmaYISHVazGaD2BPOsbbMdWtaZqLs"
               />
-            </NavLink>
+            </NavLink> */}
 
             {session && (
               <NavLink to={"/dashboard"}>

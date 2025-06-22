@@ -1,5 +1,43 @@
+@font-face {
+  font-family: "Chewy";
+  src: url("../src/assets/fonts/Chewy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("../src/assets/fonts/Fredoka-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../src/assets/fonts/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Patrick Hand";
+  src: url("../src/assets/fonts/PatrickHand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../src/assets/fonts/Poppins-Regular.ttf");
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@theme {
+    /* Page heading */
+  --font-chewy: "Chewy", sans-serif;
+  /* Para */
+  --font-fredoka: "Fredoka", sans-serif;
+  /* Cancel */
+  --font-pacifico: "Pacifico", sans-serif;
+  /* Sub headings */
+  --font-patrickHand: "Patrick Hand", sans-serif;
+  /* Backup */
+  --font-poppins: "Poppins", sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 

@@ -3,11 +3,11 @@ import { motion, useInView } from "framer-motion";
 
 const SCREEN_WIDTH = window.innerWidth;
 // import image2 from "../../../assets/home/homeHero2.png";
-import image1 from "../../../assets/home/bloom/1.jpg";
-import image2 from "../../../assets/home/bloom/2.jpg";
-import image3 from "../../../assets/home/bloom/3.jpg";
-import image4 from "../../../assets/home/bloom/4.jpg";
-import image5 from "../../../assets/home/bloom/5.jpg";
+import image1 from "../../../assets/home/bloom/b.png";
+import image2 from "../../../assets/home/bloom/l.png";
+import image3 from "../../../assets/home/bloom/o.png";
+import image4 from "../../../assets/home/bloom/o2.png";
+import image5 from "../../../assets/home/bloom/m.png";
 import bgImage from "../../../assets/home/bloom/bloomBgImage.jpg";
 
 const containerVariants = {
@@ -303,7 +303,7 @@ const Card = ({
             alt={title}
             className="w-full h-full object-cover"
           />
-          <div className=" absolute top-0 right-0 left-0 bottom-0 bg-black/70" />
+          <div className=" absolute top-0 right-0 left-0 bottom-0 bg-black/50" />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
