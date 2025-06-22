@@ -4,7 +4,7 @@ const Blog1 = () => {
   return (
     <div className="min-h-screen  font-fredoka tracking-wide">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-pink-100 to-purple-100 py-32 lg:pt-44 px-4 lg:px-12">
+      <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl  text-center font-chewy tracking-[3px] text-gray-800 leading-tight">
             Transitioning from Home to Playgroup: How to Make It Smooth and Happy

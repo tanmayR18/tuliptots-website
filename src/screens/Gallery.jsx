@@ -99,7 +99,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7eee9] py-20 pt-44 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#fafafa] py-20 pt-44 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -107,11 +107,11 @@ const Gallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          <h1 className="text-5xl font-chewy tracking-[3px]  mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
             Tulip Tales
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-6 text-xl tracking-wider text-gray-600 font-patrickHand max-w-2xl mx-auto">
             A window into our world—where learning is led by wonder, guided with
             love, and captured in the quiet beauty of everyday moments
           </p>
@@ -172,9 +172,9 @@ const Gallery = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                       </div>
                       <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
-                        <h3 className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {/* <h3 className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           {video.name.replace(/\.[^/.]+$/, "")}
-                        </h3>
+                        </h3> */}
                       </div>
                     </div>
                   </SwiperSlide>

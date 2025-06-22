@@ -48,8 +48,8 @@ const Navbar = () => {
       {/* Laptop View */}
       <motion.nav
         variants={{
-          visible: { y: 0, opacity: 1 },
-          hidden: { y: "-100%", opacity: 0 },
+          visible: { y: 0, opacity: 1, scale: 1, },
+          hidden: { y: "-100%", opacity: 0, scale: 0.95 },
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}

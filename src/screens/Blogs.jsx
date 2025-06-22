@@ -90,7 +90,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50 py-16 lg:pt-44 px-4 lg:px-12">
+    <div className="min-h-screen bg-[#fafafa] py-16 lg:pt-44 px-4 lg:px-12">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
