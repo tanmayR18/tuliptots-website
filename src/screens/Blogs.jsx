@@ -94,11 +94,11 @@ const Blogs = () => {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Tulip Talks Welcome to Tulip Talks
+          <h1 className="text-4xl font-chewy tracking-[3px] md:text-5xl  text-gray-800 mb-4">
+            Welcome to Tulip Talks
           </h1>
           <div className="w-24 h-1 bg-pink-400 rounded-full mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-patrickHand">
             a warm corner of our world where we share stories, reflections,
             ideas, and gentle guidance for parents walking alongside their
             little ones. From classroom moments to parenting insights, this
@@ -108,7 +108,7 @@ const Blogs = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-fredoka">
           {blogs.map((blog, index) => (
             <Link
               to={blog.route}
