@@ -18,78 +18,87 @@ const Blogs = () => {
     {
       text: "Transitioning from Home to Playgroup: How to Make It Smooth and Happy",
       route: "/blog1",
-      image: image1,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog1.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2cxLnBuZyIsImlhdCI6MTc1MDU5MTM2NSwiZXhwIjoyMDY1OTUxMzY1fQ.csVZoGS6ipdwzpo0RswhAITU-EJGRAS5KX6uYoTKs2U",
     },
     {
       text: "Building Confidence in Toddlers Before They Start Nursery",
       route: "/blog2",
-      image: image2,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog2.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2cyLnBuZyIsImlhdCI6MTc1MDU5MTQ5MywiZXhwIjoyMDY1OTUxNDkzfQ.-gfT2gay1iCB7cDRwW78vQgvKm4E_yPDSLAdfGTt3QM",
     },
     {
       text: "The Magic of Open-Ended Toys: Why Less Is More in Early Childhood Play",
       route: "/blog3",
-      image: image3,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog3.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2czLnBuZyIsImlhdCI6MTc1MDU5MTUyNiwiZXhwIjoyMDY1OTUxNTI2fQ.qJMS1b3BeJnISBYoA_5jF14dniUl3_ZhCF2qzLej1wc",
     },
     {
       text: "From Sandbox to Boardroom: How Early Play Builds Leadership Skills",
       route: "/blog4",
-      image: image4,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog4.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2c0LnBuZyIsImlhdCI6MTc1MDU5MTU0NiwiZXhwIjoyMDY1OTUxNTQ2fQ.ydd4ii9WLwoKBSB1p-rPmA2hiz0S7T3DbQcoxteAcnM",
     },
     {
       text: "Roots Before Branches: Why Emotional Safety Comes Before Academic Success",
       route: "/blog5",
-      image: image5,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog5.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2c1LnBuZyIsImlhdCI6MTc1MDU5MTU4MCwiZXhwIjoyMDY1OTUxNTgwfQ.phs_b8SrTcJYLwENVrwIO5avmjHCE1xuqPKyaiTSoE4",
     },
     {
       text: "Tiny Scientists: How Messy Play Lays the Foundation for Scientific Thinking",
       route: "/blog6",
-      image: image6,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog6.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2c2LnBuZyIsImlhdCI6MTc1MDU5MTYwMCwiZXhwIjoyMDY1OTUxNjAwfQ.UU_P-dRbu1t0Nz7NEbgS_TC-VZcMVfyh6TXhK5-DFrU",
     },
     {
       text: "Building Bravery: How Pretend Play Grows Real-World Courage",
       route: "/blog7",
-      image: image7,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog7.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2c3LnBuZyIsImlhdCI6MTc1MDU5MTYxNiwiZXhwIjoyMDY1OTUxNjE2fQ.iAeBx2Hol3qgDbuvZggN_4clUlnE8C9f3ZWMomJmaQg",
     },
     {
       text: "How Risky Play Builds Safe Decision-Makers: The Surprising Link Between Adventure and Caution",
       route: "/blog8",
-      image: image8,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog8.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2c4LnBuZyIsImlhdCI6MTc1MDU5MTYzMSwiZXhwIjoyMDY1OTUxNjMxfQ.Su1NGYFpq0OJLbJXmNSn2f5WY4rzztpTw0sgvapMGT8",
     },
     {
       text: "How Free Play Builds Resilience for Life: The Power of Letting Children Lead",
       route: "/blog9",
-      image: image9,
+      image:
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog9.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2c5LnBuZyIsImlhdCI6MTc1MDU5MTY1MCwiZXhwIjoyMDY1OTUxNjUwfQ.P2skQTs6NvW5VbHu3oUOXNhJIpQ2d-i_JRRmfW0jeIk",
     },
     {
       text: "How Sensory Play Builds Strong Thinkers: Why Messy Hands Lead to Sharp Minds",
       route: "/blog10",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog10.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2cxMC5wbmciLCJpYXQiOjE3NTA1OTE2NjgsImV4cCI6MjA2NTk1MTY2OH0.pm7fQUHc9131_qLAiqmtmZl7W20PqAK0q0E6Pgee2MA",
     },
     {
       text: "Why Running, Climbing, and Hanging Are Secret Ingredients for Language Development",
       route: "/blog11",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog11.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2cxMS5wbmciLCJpYXQiOjE3NTA1OTE3MDMsImV4cCI6MjA2NTk1MTcwM30.aq0St_pL353xGP4_AxZuzbLvYPDUJiT9NoK54RUd51Y",
     },
     {
       text: "How Climbing Builds Early Math Skills: The Secret Link Between Play and Problem-Solving",
       route: "/blog12",
       image:
-        "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/blog12.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2Jsb2cxMi5wbmciLCJpYXQiOjE3NTA1OTE3MjMsImV4cCI6MjA2NTk1MTcyM30.4BXssnzMxIB94ckgFCbO7bJzxNp-ZRK7o1ziMSokMMo",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50 py-16 lg:pt-44 px-4 lg:px-12">
+    <div className="min-h-screen bg-[#fafafa] py-16 lg:pt-44 px-4 lg:px-12">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Tulip Talks Welcome to Tulip Talks
+          <h1 className="text-4xl font-chewy tracking-[3px] md:text-5xl  text-gray-800 mb-4">
+            Welcome to Tulip Talks
           </h1>
           <div className="w-24 h-1 bg-pink-400 rounded-full mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-patrickHand">
             a warm corner of our world where we share stories, reflections,
             ideas, and gentle guidance for parents walking alongside their
             little ones. From classroom moments to parenting insights, this
@@ -99,7 +108,7 @@ const Blogs = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-fredoka">
           {blogs.map((blog, index) => (
             <Link
               to={blog.route}

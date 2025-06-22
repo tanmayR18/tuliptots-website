@@ -66,7 +66,7 @@ const Footer = () => {
           {/* School Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-              Tulip Tots Preschool
+              Tulip Tots International
             </h3>
             <div className="space-y-3">
               <p className="text-gray-300 flex items-center gap-2">
@@ -199,7 +199,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-300 text-center md:text-left">
-              © {currentYear} Tulip Tots Preschool. All Rights Reserved.
+              © {currentYear} Tulip Tots International. All Rights Reserved.
             </p>
             <div className="flex gap-6">
               {/* <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">

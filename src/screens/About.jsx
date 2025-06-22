@@ -247,7 +247,7 @@ const About = () => {
   }
 
   return (
-    <div className=" bg-[#f7eee9]">
+    <div className=" bg-[#FAFAFA]">
       {/* Hero section */}
       <div className=" px-5 lg:px-12  ">
         <div className=" grid lg:grid-cols-2 items-center gap-10 pt-32 lg:pt-44 min-h-screen">
@@ -256,7 +256,7 @@ const About = () => {
               About Us
             </p>
             <div className="  lg:p-10 mt-6 lg:mt-5 rounded-4xl flex flex-col justify-center items-center">
-              <p className=" text-slate-800 font-semibold">
+              <p className=" text-slate-800   font-semibold">
                 Our tagline “Where Little Minds Bloom” beautifully reflects our
                 vision. We are dedicated to creating a free-flowing, nurturing
                 environment where young children are encouraged to explore,
@@ -329,11 +329,11 @@ const About = () => {
               <div key={index} className=" flex justify-center items-center">
                 <div
                   style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
-                  className=" w-32  md:w-36 md:h-36 xl:w-40  h-32 xl:h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-full flex justify-center items-center bg-white"
+                  className=" w-32  md:w-36 md:h-36 xl:w-40  h-32 xl:h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-3xl flex justify-center items-center bg-white"
                 >
-                  <div className=" absolute right-0 left-0 bottom-0 top-0">
+                  <div className=" absolute right-0 left-0 bottom-0 top-0 flex justify-center items-center">
                     <img src={item.image} />
-                    <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/50 w-full h-full" />
+                    <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/55 w-full h-full" />
                   </div>
                   <div className=" absolute right-0 left-0 bottom-0 top-0 flex p-1 justify-center items-center">
                     <p className=" text-center text-white  font-semibold text-base">

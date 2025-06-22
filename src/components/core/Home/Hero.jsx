@@ -37,7 +37,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-bold text-xl lg:text-4xl mt-1 text-green-700"
+          className="font-bold  text-xl lg:text-4xl mt-1 text-green-700"
         >
           where little minds bloom
         </motion.p>
