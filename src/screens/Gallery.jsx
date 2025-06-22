@@ -182,8 +182,8 @@ const Gallery = () => {
               </Swiper>
 
               {/* Custom Navigation Buttons */}
-              <div className="swiper-button-prev !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
-              <div className="swiper-button-next !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+              <div className="swiper-button-prev -translate-y-1/2 !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+              <div className="swiper-button-next -translate-y-1/2 !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
             </div>
           </motion.div>
         )}
