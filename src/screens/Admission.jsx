@@ -5,8 +5,8 @@ import image from "../assets/admission/admission.png";
 import hero from "../assets/admission/admissionHeroChild.png";
 import hero1 from "../assets/admission/admissionHeroChild1.png";
 // import hero2 from "../assets/admission/admissionHeroChild2.png";
-import child1 from "../assets/admission/child1.png";
-import child2 from "../assets/admission/child2.png";
+import child1 from "../assets/admission/boy.png";
+import child2 from "../assets/admission/girl.png";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 import {
@@ -232,7 +232,7 @@ const Admission = () => {
           src={hero1}
         /> */}
         <img
-          className=" absolute -top-[85px] lg:-top-[140px]  right-10 w-[100px] h-[100px] -rotate-3 lg:w-[250px] lg:h-[170px]"
+          className=" absolute -top-[85px] lg:-top-[140px]  right-14 w-[100px] h-[100px] -rotate-3 lg:w-[220px] lg:h-[170px]"
           src={child2}
         />
         <div className="  md:w-[80%] mx-auto">
