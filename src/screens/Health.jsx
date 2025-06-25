@@ -9,7 +9,10 @@ const Health = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="pt-32 lg:pt-44 px-4 bg-[#f7eee9]">
+    <div
+      ref={ref}
+      className="pt-32 lg:pt-44 px-4 bg-[#f7eee9] font-kgPrimaryPenmanship"
+    >
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -19,7 +22,7 @@ const Health = () => {
         Caring for Every Little One
       </motion.p>
 
-      <motion.img
+      {/* <motion.img
         initial={{ opacity: 0, scale: 0.95 }}
         animate={
           isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
@@ -27,7 +30,143 @@ const Health = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         src={image}
         className="mx-auto mt-5"
-      />
+      /> */}
+
+      <div
+        style={{ backgroundColor: "rgb(233, 116, 81)" }}
+        className="flex justify-between items-center gap-10 mx-auto w-10/12 p-4 rounded-2xl"
+      >
+        <video
+          //   ref={(el) => (videoRefs.current[index] = el)}
+          className=" w-[35%] max-h-full object-contain rounded-2xl"
+          // controls
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          controlsList="nodownload"
+          disablePictureInPicture
+        >
+          <source
+            src={
+              "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/1R.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoLzFSLm1wNCIsImlhdCI6MTc1MDcwNTM3NiwiZXhwIjoyMTI5MTM3Mzc2fQ.VB4NCnUZBQvtcDV7BtqD4q5A4aVCSapUWJzQ5F9-VnY"
+            }
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className=" text-black text-xl w-1/2">
+          <p>1. Safe & Spotless Spaces</p>
+          <p>
+            We take immense care in maintaining a clean, hygienic environment
+            where children can explore freely and safely.
+          </p>
+          <div>
+            <li>Daily cleaning of all classrooms, restrooms, and play areas</li>
+            <li>Regular deep-cleaning and sanitization protocols</li>
+            <li>Non-toxic, child-safe cleaning materials</li>
+            <li>
+              Organized, clutter-free spaces that support calm and focused play
+            </li>
+          </div>
+          <p>
+            Our classrooms and common areas are cared for with as much love as
+            the children inside them.
+          </p>
+        </div>
+      </div>
+      <div
+        style={{ backgroundColor: "rgb(59, 169, 156)" }}
+        className="flex flex-row-reverse mt-12 justify-between items-center gap-10 mx-auto w-10/12 p-4 rounded-2xl"
+      >
+        <video
+          //   ref={(el) => (videoRefs.current[index] = el)}
+          className=" w-[35%] max-h-full object-contain rounded-2xl"
+          // controls
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          controlsList="nodownload"
+          disablePictureInPicture
+        >
+          <source
+            src={
+              "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/Untitled%20video%20-%20Made%20with%20Clipchamp%20(3).mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL1VudGl0bGVkIHZpZGVvIC0gTWFkZSB3aXRoIENsaXBjaGFtcCAoMykubXA0IiwiaWF0IjoxNzUwNzA1NjI5LCJleHAiOjIwNjYwNjU2Mjl9.R-oGkr7DvACdbzlwaH1C7bhD6Ws3IAEOtlYZ4A03EyE"
+            }
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className=" w-1/2">
+          <p>2. Healthy Habits Begin Early</p>
+          <p>
+            At Tulip Tots, health and hygiene are not just maintained—they’re
+            modeled and taught with joy and gentleness.Children learn:
+          </p>
+          <div>
+            <li>
+              To wash hands after play, before meals, and after using the
+              restroom
+            </li>
+            <li>To keep their surroundings clean and organized</li>
+            <li>The importance of personal hygiene in daily routines</li>
+            <li>
+              Body awareness, nutrition, and rest through guided conversations
+              and play
+            </li>
+          </div>
+          <p>
+            We believe children thrive when they understand how to care for
+            themselves and their environment.
+          </p>
+        </div>
+      </div>
+      <div
+        style={{ backgroundColor: "rgb(128, 115, 163)" }}
+        className="flex mt-12 justify-between items-center gap-10 mx-auto w-10/12 p-4 rounded-2xl"
+      >
+        <video
+          //   ref={(el) => (videoRefs.current[index] = el)}
+          className=" w-[35%] max-h-full object-contain rounded-2xl"
+          // controls
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          controlsList="nodownload"
+          disablePictureInPicture
+        >
+          <source
+            src={
+              "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/public/video//1750497924040.mp4"
+            }
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <div>
+          <p>3. Health & Safety First</p>
+          <p>Your child’s safety is our top priority.</p>
+          <div>
+            <li>
+              We have an on-call pediatric doctor to assess any child who may
+              feel unwell
+            </li>
+            <li>
+              In case of emergencies, first aid is administered immediately
+            </li>
+            <li>Parents are informed promptly and guided with care</li>
+            <li>
+              We follow clear health policies to protect all children and staff
+            </li>
+          </div>
+          <p>
+            Our indoor and outdoor spaces are monitored through CCTV to help
+            ensure a secure, transparent environment
+          </p>
+        </div>
+      </div>
 
       <motion.p
         initial={{ opacity: 0, x: 0, y: 15 }}
