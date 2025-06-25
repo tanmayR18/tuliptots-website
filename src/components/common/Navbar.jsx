@@ -178,7 +178,7 @@ const Navbar = () => {
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Hygenie</p>
+                      <p className=" font-semibold">Hygiene</p>
                     </div>
                   </Link>
                 </div>

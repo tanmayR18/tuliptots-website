@@ -23,11 +23,21 @@
   src: url("../src/assets/fonts/Poppins-Regular.ttf");
 }
 
+@font-face {
+  font-family: "KGPrimaryPenmanship";
+  src: url("../src/assets/fonts/KGPrimaryPenmanship.ttf");
+}
+
+@font-face {
+  font-family: "Happy";
+  src: url("../src/assets/fonts/Happy\ Personal\ Use.otf");
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @theme {
-    /* Page heading */
+  /* Page heading */
   --font-chewy: "Chewy", sans-serif;
   /* Para */
   --font-fredoka: "Fredoka", sans-serif;
@@ -37,6 +47,10 @@
   --font-patrickHand: "Patrick Hand", sans-serif;
   /* Backup */
   --font-poppins: "Poppins", sans-serif;
+  /* Primary penmanship */
+  --font-kgPrimaryPenmanship: "KGPrimaryPenmanship", sans-serif;
+  /* Happy */
+  --font-happy: "Happy", sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
