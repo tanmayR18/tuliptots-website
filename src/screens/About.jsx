@@ -21,10 +21,11 @@ import image17 from "../assets/about/whychooseus/17.png";
 import image18 from "../assets/about/whychooseus/18.png";
 import image19 from "../assets/about/whychooseus/19.png";
 import image20 from "../assets/about/whychooseus/20.png";
-import image21 from "../assets/about/whychooseus/21.jpg";
+import image21 from "../assets/about/whychooseus/21.png";
 import image22 from "../assets/about/whychooseus/22.jpg";
 import image23 from "../assets/about/whychooseus/23.jpg";
 import image24 from "../assets/about/whychooseus/24.jpg";
+import image25 from "../assets/about/whychooseus/25.jpg";
 
 import bgImage from "../assets/about/philosopherBack.jpg";
 import Vision from "@/components/core/about/Vision";
@@ -235,6 +236,10 @@ const data3 = [
   {
     text: "Life size building structure",
     image: image24,
+  },
+  {
+    text: "Growth not grades",
+    image: image25,
   },
 ];
 
