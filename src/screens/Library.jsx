@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
-import image from "../assets/school/library/libraryHero.jpg";
+import image from "../assets/school/library/libraryHero.png";
+import image1 from "../assets/school/library/libraryHero2.png";
 
 const data = [
   {
@@ -25,7 +26,7 @@ const Card = ({ bgColor, text, index, isInView }) => {
       whileInView={{
         opacity: 1,
         translateX: 0,
-        transition: { duration: 2 - index * 0.6,  },
+        transition: { duration: 2 - index * 0.6 },
       }}
       viewport={{
         once: true,
@@ -44,6 +45,16 @@ const Library = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const [isFirst, setIsFirst] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFirst((prev) => !prev);
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
   return (
     <div ref={ref} className="pt-32 pb-16 lg:pt-44 px-4 bg-[#f7eee9]">
       <motion.p
@@ -52,31 +63,56 @@ const Library = () => {
         transition={{ duration: 0.6 }}
         className="text-black font-bold text-center text-xl md:text-2xl lg:text-3xl tracking-wide"
       >
-        Our In-House Library - Where Lifelong Readers Begin
+        Our In-House Library
       </motion.p>
 
-      <motion.img
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={
-          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
-        }
-        transition={{ duration: 0.8, delay: 0.2 }}
-        src={image}
-        className="mx-auto mt-12 scale-110"
-      />
+      <div className="flex flex-row mx-auto w-10/12 mt-5 lg:mt-8 items-center justify-between gap-10">
+        <div className=" w-[50%] ">
+          <p className="text-black font-bold text-xl md:text-2xl lg:text-2xl tracking-wide">
+            Lifelong Readers Begin Here
+          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className=" mx-auto  text-base lg:text-2xl text-slate-600 font-semibold mt-9"
+          >
+            At Tulip Tots International, we nurture the love for reading from
+            the very start. Our vibrant in-house library offers hundreds of
+            carefully chosen books across themes like nature, science, art,
+            emotions, cultures, and classic tales—ensuring there's something for
+            every curious mind.
+          </motion.p>
+        </div>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-base lg:text-lg text-slate-700 font-semibold text-center"
-      >
-        At Tulip Tots International, we nurture the love for reading from the
-        very start. Our vibrant in-house library offers hundreds of carefully
-        chosen books across themes like nature, science, art, emotions,
-        cultures, and classic tales—ensuring there's something for every curious
-        mind.
-      </motion.p>
+        <div>
+          {isFirst ? (
+            <motion.img
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={
+                isInView
+                  ? { opacity: 1, scale: 1 }
+                  : { opacity: 0, scale: 0.95 }
+              }
+              transition={{ duration: 0.8, delay: 0.2 }}
+              src={image}
+              className="mx-auto mt-12 scale-100"
+            />
+          ) : (
+            <motion.img
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={
+                isInView
+                  ? { opacity: 1, scale: 1 }
+                  : { opacity: 0, scale: 0.95 }
+              }
+              transition={{ duration: 0.8, delay: 0.2 }}
+              src={image1}
+              className="mx-auto mt-12 scale-100"
+            />
+          )}
+        </div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, translateY: 20, scale: 1.05 }}
