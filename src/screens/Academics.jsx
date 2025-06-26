@@ -5,7 +5,7 @@ import classroom from "../assets/school/classroom.jpg";
 import daycare from "../assets/school/daycare.jpg";
 import gardening from "../assets/school/gardening.jpg";
 import health from "../assets/school/health.jpg";
-import library from "../assets/school/library.jpg";
+import library from "../assets/school/library.png";
 import Activity from "@/components/core/school/Activity";
 
 const ProgramCard = ({
@@ -91,7 +91,7 @@ const SubSectionCard = ({
           transition={{ duration: 0.3 }}
           src={image}
         />
-        <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/50" />
+        <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/20" />
         <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/50 flex justify-center items-center">
           <p className="text-white text-center text-lg p-3 font-semibold tracking-wide">
             {facilityName}

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import heroImage from "../assets/about/aboutHero2.png";
 import image1 from "../assets/about/whychooseus/1.png";
@@ -27,6 +26,13 @@ import image23 from "../assets/about/whychooseus/23.jpg";
 import image24 from "../assets/about/whychooseus/24.jpg";
 import image25 from "../assets/about/whychooseus/25.jpg";
 
+import phi1 from "../assets/about/phy/1.png";
+import phi2 from "../assets/about/phy/2.png";
+import phi3 from "../assets/about/phy/3.png";
+import phi4 from "../assets/about/phy/4.jpeg";
+import phi5 from "../assets/about/phy/5.png";
+import phi6 from "../assets/about/phy/6.jpg";
+
 import bgImage from "../assets/about/philosopherBack.jpg";
 import Vision from "@/components/core/about/Vision";
 import Mission from "@/components/core/about/Mission";
@@ -49,6 +55,8 @@ const data = [
       "Child-led exploration in organized, inviting learning spaces.",
       "Mixed-age interactions to foster collaboration and leadership.",
     ],
+    image: phi1,
+    bgColor: "#FF5733",
   },
   {
     name: "Emmi Pikler",
@@ -62,6 +70,8 @@ const data = [
       "Calm, observant caregiving and unhurried transitions",
       "Trusting children’s pace and choices to guide their day.",
     ],
+    image: phi2,
+    bgColor: "#4CAF50 ",
   },
   {
     name: "Glenn Doman",
@@ -73,6 +83,8 @@ const data = [
       "Brief, exciting lessons based on interest—not pressure.",
       "A joyful environment that values knowledge and fun equally.",
     ],
+    image: phi3,
+    bgColor: "#E91E63 ",
   },
   {
     name: "Reggio Emilia",
@@ -85,9 +97,11 @@ const data = [
       "Curriculum that follows the child’s questions and interests",
       "Displays of children’s work and thoughts to honor their voices",
     ],
+    image: phi4,
+    bgColor: "#9C27B0 ",
   },
   {
-    name: "Howard Gardner's Multiple Intelligences",
+    name: "Howard Gardner's",
     country: "United States",
     quote:
       "intelligence is not a single, unified ability, but rather a collection of distinct, independent intelligences",
@@ -97,8 +111,10 @@ const data = [
       "Word Smart: Language play, phonics, storytelling",
       "Logic Smart: Math games, puzzles, cause-effect play",
       "Body Smart: Movement zones, obstacle courses, dance",
-      "Music Smart: Singing, rhythm games, instruments",
+    //   "Music Smart: Singing, rhythm games, instruments",
     ],
+    image: phi5,
+    bgColor: "#3F51B5 ",
   },
   {
     name: "Erin Kenny",
@@ -110,8 +126,10 @@ const data = [
       "Mud kitchen, sandpit, and gardening time",
       "Nature-based crafts using leaves, seeds, and sticks",
       "Gentle risk-taking with climbing, balancing, and exploring",
-      "Natural loose part play, weather journaling, and nature storytelling",
+    //   "Natural loose part play, weather journaling, and nature storytelling",
     ],
+    image: phi6,
+    bgColor: "#00BCD4 ",
   },
 ];
 
@@ -229,10 +247,10 @@ const data3 = [
     text: "Global best practices",
     image: image22,
   },
-//   {
-//     text: "Continuous assessment",
-//     image: image23,
-//   },
+  //   {
+  //     text: "Continuous assessment",
+  //     image: image23,
+  //   },
   {
     text: "Life size building structure",
     image: image24,
@@ -302,7 +320,7 @@ const About = () => {
           Our Core Philosophies
         </h1>
         <div
-          className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10
+          className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-20 mt-10
         "
         >
           {data.map((item, index) => (
@@ -315,12 +333,14 @@ const About = () => {
               quote={item.quote}
               howToApply={item.howToApply}
               mainIdea={item.mainIdea}
+              image={item?.image}
+              bgColor={item?.bgColor}
             />
           ))}
         </div>
       </div>
 
-      <Assessment />
+      {/* <Assessment /> */}
 
       {/* Why choose us */}
       <div className=" mt-12">
@@ -351,7 +371,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
@@ -366,67 +385,76 @@ const Card = ({
   howToApply,
   currentTapped,
   setCurrentTapped,
+  image,
+  bgColor,
 }) => {
   return (
-    <div
-      onClick={() => {
-        if (currentTapped === name) {
-          setCurrentTapped("");
-          return;
-        }
-        setCurrentTapped(name);
-      }}
-      style={{ perspective: 1000 }}
-      className="  w-full aspect-square bg-transparent cursor-pointer group rounded-3xl"
-    >
+    <div>
+      <p className=" text-2xl font-semibold text-black text-center">
+        {name} <span className=" text-lg">({country})</span>
+      </p>
       <div
-        style={{ transformStyle: "preserve-3d" }}
-        className={`${
-          currentTapped === name && " rotate-y-180"
-        } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
+        onClick={() => {
+          if (currentTapped === name) {
+            setCurrentTapped("");
+            return;
+          }
+          setCurrentTapped(name);
+        }}
+        style={{ perspective: 1000 }}
+        className="  w-full aspect-square bg-transparent cursor-pointer group rounded-3xl mt-3"
       >
         <div
-          className=" w-full h-full absolute rounded-3xl
-         flex flex-col justify-between items-center p-5 lg:p-7 bg-white border-3 border-amber-200 overflow-hidden"
+          style={{ transformStyle: "preserve-3d" }}
+          className={`${
+            currentTapped === name && " rotate-y-180"
+          } relative w-full h-full duration-700  group-hover:rotate-y-180 origin-center`}
         >
-          {/* front */}
-          <div className=" w-full">
-            <div className=" flex justify-end items-center w-full">
-              <p className=" uppercase font-semibold text-sm">{country}</p>
+          <div
+            className=" w-full h-full absolute rounded-3xl
+         flex flex-col justify-between  items-center p-5 lg:p-7 bg-white border-4 border-amber-200 overflow-hidden"
+          >
+            <img className=" absolute w-full h-full object-cover" src={image} />
+            {/* front */}
+            <div className=" w-full relative h-full flex flex-col justify-end">
+              {/* <div className=" flex justify-end items-center w-full">
+                <p className=" uppercase font-semibold text-sm">{country}</p>
+              </div>
+              <p className=" w-full font-semibold tracking-wide text-xl sm:text-2xl self-start mt-2 lg:mt-1">
+                {name}
+              </p> */}
+
+              {quote && (
+                <blockquote className=" italic text-center bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
+                  " {quote} "
+                </blockquote>
+              )}
             </div>
-            <p className=" w-full font-semibold tracking-wide text-xl sm:text-2xl self-start mt-2 lg:mt-1">
-              {name}
-            </p>
 
-            {quote && (
-              <blockquote className=" italic text-center bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
-                " {quote} "
-              </blockquote>
-            )}
+            {/* <p className=" text-slate-600 font-semibold">{mainIdea}</p> */}
           </div>
+          <div
+            style={{ backfaceVisibility: "hidden", backgroundColor: bgColor }}
+            className=" absolute w-full h-full rotate-y-180 rounded-3xl overflow-hidden p-4 flex flex-col justify-center items-center text-neutral-300 space-y-5"
+          >
+            {/* back */}
 
-          <p className=" text-slate-600 font-semibold">{mainIdea}</p>
-        </div>
-        <div
-          style={{ backfaceVisibility: "hidden" }}
-          className=" absolute w-full h-full  bg-[#fff] rotate-y-180 rounded-3xl overflow-hidden p-4 flex flex-col justify-center items-center text-neutral-300 space-y-5"
-        >
-          {/* back */}
-
-          <img
-            src={bgImage}
-            className=" absolute top-0 right-0 left-0 bottom-0 w-full h-full"
-          />
-          <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full bg-white/60" />
-          <div className=" absolute top-0 right-0 left-0 bottom-0 flex flex-col justify-center items-center  p-5 ">
-            <p className=" text-black text-xl tracking-wider font-semibold mb-5">
-              How To Apply
-            </p>
-            {howToApply?.map((point, index) => (
-              <li key={index} className=" text-slate-900">
-                {point}
-              </li>
-            ))}
+            {/* <img
+              src={bgImage}
+              className=" absolute top-0 right-0 left-0 bottom-0 w-full h-full"
+            /> */}
+            <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full bg-white/60" />
+            <div className=" absolute top-0 right-0 left-0 bottom-0 flex flex-col justify-center items-center  p-5 ">
+              <p className=" text-white text-xl tracking-wider font-semibold">
+                How We Apply
+              </p>
+              <div className=" h-px bg-slate-400 w-full my-3" />
+              {howToApply?.map((point, index) => (
+                <li key={index} className=" text-white font-bold mt-2">
+                  {point}
+                </li>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -2,6 +2,13 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 
 import image from "../assets/school/classroom/classroomHero.jpg";
+import image1 from "../assets/school/classroom/1.png";
+import image2 from "../assets/school/classroom/2.png";
+import image3 from "../assets/school/classroom/3.png";
+import image4 from "../assets/school/classroom/4.png";
+import image5 from "../assets/school/classroom/5.png";
+import image6 from "../assets/school/classroom/6.png";
+import image7 from "../assets/school/classroom/7.jpg";
 
 const data = [
   {
@@ -11,6 +18,7 @@ const data = [
       "Floor-based learning promotes healthy posture, sensory integration, and body awareness, allowing children to feel connected to the space around them.",
     ],
     bgColor: "#007BFF",
+    image: image1,
   },
   {
     title: "Climb, Slide, Swing, Explore",
@@ -19,6 +27,7 @@ const data = [
       "These versatile setups transform into bridges, ramps, tunnels—whatever a child imagines in the moment.",
     ],
     bgColor: "#FF5722",
+    image: image2,
   },
   {
     title: "Build Big, Dream Bigger",
@@ -27,6 +36,7 @@ const data = [
       "This kind of large-scale construction play enhances gross motor development, spatial awareness, collaboration, and confidence—proving that big ideas deserve big spaces",
     ],
     bgColor: "#1ABC9C",
+    image: image3,
   },
   {
     title: "Endless Play Possibilities",
@@ -35,6 +45,7 @@ const data = [
       "These dynamic spaces support both active movement and deep focus, blending gross motor development with imaginative storytelling and teamwork.",
     ],
     bgColor: "#E74C3C",
+    image: image4,
   },
   {
     title: "Vertical and Hands-On Learning Walls",
@@ -43,6 +54,7 @@ const data = [
       "Magnetic walls, vertical drawing boards, and logic-based puzzles engage both body and brain—making learning truly multi-sensory and fun.",
     ],
     bgColor: "#6610f2",
+    image: image5,
   },
   {
     title: "Calm Corners and Cozy Nooks",
@@ -51,6 +63,7 @@ const data = [
       "Thoughtfully designed calm corners offer emotional safety, sensory support, and space for quiet reflection or reset—because feeling secure is the foundation of learning.",
     ],
     bgColor: "#e91e63",
+    image: image6,
   },
   {
     title: "Montessori-Inspired Self-Access Areas",
@@ -59,53 +72,61 @@ const data = [
       "Every material is child-chosen, child-used, and child-loved, empowering children to lead their learning journey with joy and confidence.",
     ],
     bgColor: "#00BCD4",
+    image: image7,
   },
 ];
 
-const Card = ({ title, points, bgColor, index, isInView }) => {
+const Card = ({ title, points, bgColor, index, isInView, image }) => {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 30 }}
       whileInView={{
         opacity: 1,
         translateY: 0,
-        transition: { duration: 0.8 , delay: index * 0.1 },
+        transition: { duration: 0.8, delay: index * 0.1 },
       }}
       viewport={{
         once: true,
         margin: "-100px",
       }}
       style={{ backgroundColor: bgColor }}
-      className="p-5 rounded-3xl"
+      className={`p-10 rounded-3xl flex justify-between ${
+        index % 2 === 0 ? "flex-row" : " flex-row-reverse"
+      }`}
     >
-      <motion.p
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={
-          isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
-        }
-        transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
-        className="text-2xl font-bold text-center text-white"
-      >
-        {title}
-      </motion.p>
-
-      <div className="border-t border-dashed my-5" />
-
       <div>
-        {points.map((item, pointIndex) => (
-          <motion.li
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.1 + 0.3 + pointIndex * 0.1,
-            }}
-            className="mt-1 text-base text-white font-semibold"
-            key={pointIndex}
-          >
-            {item}
-          </motion.li>
-        ))}
+        <motion.p
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={
+            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+          }
+          transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+          className="text-2xl font-bold text-center text-white"
+        >
+          {title}
+        </motion.p>
+
+        <div className="border-t border-dashed my-5" />
+
+        <div>
+          {points.map((item, pointIndex) => (
+            <motion.li
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1 + 0.3 + pointIndex * 0.1,
+              }}
+              className="mt-1 text-base text-white font-semibold"
+              key={pointIndex}
+            >
+              {item}
+            </motion.li>
+          ))}
+        </div>
+      </div>
+      <div className=" w-[300px] aspect-square">
+        <img className=" w-full h-full object-cover rounded-2xl" src={image} />
       </div>
     </motion.div>
   );
@@ -150,7 +171,7 @@ const Classroom = () => {
         and flexible learning environment.
       </motion.p>
 
-      <div className="mt-16 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-16 pb-16 grid grid-cols-1 gap-6 w-10/12 mx-auto">
         {data.map((item, index) => (
           <Card
             key={index}
@@ -159,6 +180,7 @@ const Classroom = () => {
             bgColor={item.bgColor}
             index={index}
             isInView={isInView}
+            image={item?.image}
           />
         ))}
       </div>
