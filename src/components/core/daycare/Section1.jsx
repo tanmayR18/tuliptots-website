@@ -21,10 +21,10 @@ const Section1 = () => {
             <p className=" text-[#323a30] text-8xl text-center font-extrabold tracking-[10px] font-happy">
               Tulip <br /> Nest
             </p>
-            <img src={smile} className=" absolute w-[120px] h-[120px] -top-[100px] -left-[150px] z-10" />
-            <img src={hearts} className=" absolute w-[120px] h-[120px] -top-[120px] left-[100px] z-10" />
-            <img src={cloud} className=" absolute  h-[100px] top-[40px] -right-[200px] z-10" />
-            <img src={doddle4} className=" absolute  h-[140px] -bottom-[120px] -right-[250px] z-10" />
+            <img src={smile} className=" absolute w-[120px] h-[120px] -top-[80px] -left-[150px] z-10" />
+            <img src={hearts} className=" absolute w-[120px] h-[120px] -top-[80px] -right-[100px] z-10" />
+            <img src={cloud} className=" absolute  h-[100px] top-[100px] -right-[250px] z-10" />
+            <img src={doddle4} className=" absolute  h-[140px] -bottom-[200px] -left-[200px] z-10" />
 
           </div>
 
