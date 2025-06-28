@@ -5,7 +5,7 @@ import React from "react";
 
 const DayCare = () => {
   return (
-    <div className="py-26 bg-[#afe9e4]">
+    <div className="pt-26 bg-[#afe9e4]">
       <Section1 />
       <Section2 />
       <Section3 />
