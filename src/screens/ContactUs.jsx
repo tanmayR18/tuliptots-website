@@ -9,15 +9,15 @@ import { FiYoutube } from "react-icons/fi";
 const ContactUs = () => {
   return (
     <>
-      <div className=" pt-44 pb-12 lg:px-12 bg-[#FAFAFA] font-fredoka">
-        <h1 className=" text-2xl mx-3 font-chewy lg:text-4xl tracking-wider  text-center">
+      <div className=" pt-32 lg:pt-44 pb-12 px-4 lg:px-12 bg-[#FAFAFA] font-kgPrimaryPenmanship">
+        <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
           Need some more discussions ?
         </h1>
         <div className=" mt-16">
           {/* Map and Contact */}
-          <div className=" grid lg:grid-cols-2  gap-12">
+          <div className=" grid lg:grid-cols-2  lg:gap-12">
             <Link
-              className=" lg:rounded-[40px] border border-slate-300 overflow-hidden relative order-2 lg:order-1 "
+              className=" lg:rounded-[40px] rounded-b-[32px] border-t-white lg:border-t-slate-300 border border-slate-300 overflow-hidden relative order-2 lg:order-1 "
               to={
                 "https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"
               }
@@ -35,11 +35,11 @@ const ContactUs = () => {
                 </p>
               </div>
             </Link>
-            <div className=" bg-white border border-slate-200  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
-              <p className=" font-semibold font-patrickHand text-xl xl:text-3xl tracking-wider">
+            <div className=" bg-white border border-b-white lg:border-b-slate-300 border-slate-200  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
+              <p className=" font-semibold  text-2xl md:text-3xl tracking-wider">
                 Contact
               </p>
-              <p className="  mt-2 xl:mt-8 text-slate-600 font-fredoka">
+              <p className="  mt-2 xl:mt-8 text-slate-600 tracking-wider text-lg md:text-xl">
                 At Tulip Tots International, we embrace an open-door philosophy
                 and value every question. If you’d like to know more about our
                 programs, philosophy, or admissions, we’re always happy to
@@ -53,8 +53,8 @@ const ContactUs = () => {
                   <div className=" flex  bg-blue-100 w-20 h-20 lg:hidden justify-center items-center rounded-full">
                     <AiTwotoneMail size={30} />
                   </div>
-                  <p className=" text-lg font-semibold mt-5">Email Us</p>
-                  <p className=" text-slate-700">
+                  <p className=" text-xl font-semibold mt-5 tracking-wider">Email Us</p>
+                  <p className=" text-slate-700 tracking-wide text-lg">
                     tuliptotsinternational@gmail.com
                   </p>
                 </div>
@@ -66,17 +66,17 @@ const ContactUs = () => {
                   <div className="  bg-pink-100 w-20 h-20 flex lg:hidden justify-center items-center rounded-full">
                     <IoCallOutline size={30} />
                   </div>
-                  <p className=" text-lg font-semibold mt-5">Call Us</p>
-                  <p className=" text-slate-700">+91 93264 46240</p>
+                  <p className=" text-xl tracking-wider font-semibold mt-5">Call Us</p>
+                  <p className=" text-slate-700 tracking-wide text-lg">+91 93264 46240</p>
                 </div>
               </div>
 
               <div>
                 <div className=" flex items-center gap-3 mt-12 lg:mt-7 xl:mt-14">
                   <IoLocationSharp size={20} />
-                  <p className=" text-xl font-semibold">Address</p>
+                  <p className=" text-2xl tracking-wider font-semibold">Address</p>
                 </div>
-                <p className=" mt-3 text-gray-500 font-semibold tracking-wide">
+                <p className=" lg:mt-3 text-gray-500 font-semibold text-lg tracking-wide">
                   Punawala, Pune
                 </p>
               </div>
@@ -84,12 +84,12 @@ const ContactUs = () => {
           </div>
 
           {/* FOllow and Join */}
-          <div className=" grid lg:grid-cols-2 gap-12 mt-12 px-4">
-            <div className=" p-10 lg:p-12 rounded-[40px] bg-[#85e9e5]">
-              <p className=" text-black text-lg lg:text-3xl tracking-wider font-bold font-patrickHand">
+          <div className=" grid lg:grid-cols-2 gap-12 mt-12">
+            <div className=" p-8 lg:p-12 rounded-[40px] bg-[#85e9e5]">
+              <p className=" text-black text-2xl md:text-3xl lg:text-4xl tracking-wider font-bold">
                 Follow us on
               </p>
-              <div className=" mt-5 space-y-4 text-[#333333]">
+              <div className=" mt-5 space-y-4 text-lg md:text-xl lg:text-xl tracking-wider text-[#333333]">
                 <Link
                   to={"https://www.instagram.com/tuliptotsinternational/"}
                   className=" flex items-center gap-4 group"
@@ -105,7 +105,7 @@ const ContactUs = () => {
                   >
                     <FaInstagram size={24} />
                   </div>
-                  <p className=" lg:text-lg  font-semibold group-hover:text-pink-600 transition-all duration-300">
+                  <p className="  group-hover:text-pink-600 transition-all duration-300">
                     tuliptotsinternational
                   </p>
                 </Link>
@@ -126,7 +126,7 @@ const ContactUs = () => {
                   >
                     <FaFacebookSquare size={22} />
                   </div>
-                  <p className=" lg:text-lg  font-semibold group-hover:text-blue-600 transition-all duration-300">
+                  <p className="  group-hover:text-blue-600 transition-all duration-300">
                     Tulip Tots
                   </p>
                 </Link>
@@ -145,18 +145,18 @@ const ContactUs = () => {
                   >
                     <FiYoutube size={22} />
                   </div>
-                  <p className=" lg:text-lg  font-semibold group-hover:text-red-600 transition-all duration-300">
+                  <p className=" group-hover:text-red-600 transition-all duration-300">
                     Tulip Tots International
                   </p>
                 </Link>
               </div>
             </div>
             <div className=" p-10 lg:p-12 rounded-[40px] bg-green-300">
-              <p className=" text-black text-lg lg:text-3xl tracking-wider font-bold font-patrickHand">
+              <p className=" text-black text-2xl md:text-3xl lg:text-4xl tracking-wider font-bold">
                 Join Our Team
               </p>
 
-              <p className=" mt-5">
+              <p className=" mt-5 text-lg md:text-xl lg:text-xl tracking-wider">
                 At Tulip Tots International, we’re more than a school — we’re a
                 family of passionate educators. If you’re ready to inspire young
                 minds and grow your career, we’d love to hear from you!
@@ -166,7 +166,7 @@ const ContactUs = () => {
 
               <Link to={"/careers"}>
                 <button className=" bg-red-400 px-4 cursor-pointer py-3 rounded-xl mt-5">
-                  <p className=" text-white font-semibold">Apply Now</p>
+                  <p className=" text-white  tracking-wider">Apply Now</p>
                 </button>
               </Link>
             </div>
