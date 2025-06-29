@@ -10,6 +10,10 @@ import image5 from "../assets/school/classroom/5.png";
 import image6 from "../assets/school/classroom/6.png";
 import image7 from "../assets/school/classroom/7.jpg";
 
+import grow from "../assets/school/classroom/grow.png";
+import move from "../assets/school/classroom/move.png";
+import play from "../assets/school/classroom/play.png";
+
 const data = [
   {
     title: "Furniture-Free, Open Layout",
@@ -147,15 +151,20 @@ const Classroom = () => {
         A Living, Breathing Classroom
       </motion.p>
 
-      <motion.img
+      <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={
           isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
         }
         transition={{ duration: 0.8, delay: 0.2 }}
-        src={image}
-        className="mx-auto scale-105 mt-4"
-      />
+        className=" flex mx-auto justify-center items-center mt-10"
+      >
+        <img className=" w-[30%] rounded-bl-3xl rounded-tl-3xl " src={move} />
+        <img className=" w-[30%]" src={grow} />
+        <img className=" w-[30%] rounded-br-3xl rounded-tr-3xl" src={play} />
+      </motion.div>
+
+      {/* <motion.img src={image} className="mx-auto scale-105 mt-4" /> */}
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
