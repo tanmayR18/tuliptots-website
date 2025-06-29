@@ -3,13 +3,19 @@ import image1 from "../../../assets/about/mission/1.png";
 import image2 from "../../../assets/about/mission/2.png";
 import image3 from "../../../assets/about/mission/3.png";
 import image4 from "../../../assets/about/mission/4.png";
+import { Rocket } from "lucide-react";
 
 const Mission = () => {
   return (
     <div className=" bg-[#ccebfa] p-5 md:p-8 lg:p-12 flex   items-center lg:gap-8 rounded-4xl">
       <div className="">
         <div>
-          <p className=" text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center">MISSION</p>
+          <div className=" flex items-center justify-center gap-2">
+            <img className=" w-12 h-12" src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/About/mission.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQWJvdXQvbWlzc2lvbi5wbmciLCJpYXQiOjE3NTEyMDkzOTAsImV4cCI6MTc4Mjc0NTM5MH0.PTfnPWcYjhj8tqT_akUDRk9c0cqQTV0EqrX-s1W5DmU" />
+            <p className=" text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center">
+              MISSION
+            </p>
+          </div>
           <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6 lg:mt-12">
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image1} />
