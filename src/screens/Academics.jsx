@@ -224,7 +224,7 @@ const Academics = () => {
         </div>
       </div> */}
 
-      <div className=" py-24">
+      <div className=" py-32 bg-[#fafafa]">
         <motion.p
           initial={{ opacity: 0, translateY: 10 }}
           whileInView={{
