@@ -13,20 +13,36 @@ const CTA = () => {
         className="h-[70vh] md:h-[90vh] w-full relative flex items-end "
         ref={ref}
       >
-        <motion.img
+        <motion.div
           initial={{ opacity: 0, scale: 1 }}
           animate={
             isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1 }
           }
           transition={{ duration: 1 }}
-          className="w-full h-full object-cover"
-          src={image}
-        />
+        >
+          <video
+            className=" w-screen h-full absolute top-0 left-0 right-0 bottom-0 object-cover"
+            // controls
+            loop
+            autoPlay
+            muted
+            controlsList="nodownload"
+            disablePictureInPicture
+          >
+            <source
+              src={
+                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/homeLast.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ob21lTGFzdC5tcDQiLCJpYXQiOjE3NTEyMTM3MjEsImV4cCI6MTc4Mjc0OTcyMX0.Xfc4XZ14XdDkmMueR-9IMSapR05rDu3H1cEk59uLMVA"
+              }
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.8)] flex flex-col justify-center items-center"
+          className="absolute top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex flex-col justify-center items-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +59,9 @@ const CTA = () => {
             </p>
             <p className="self-end mt-5 text-xl text-right tracking-wide">
               - Sufiya Inamdar <br />{" "}
-              <span className="  text-base">Co-Founder, Tulip Tots International</span>
+              <span className="  text-base">
+                Co-Founder, Tulip Tots International
+              </span>
             </p>
           </motion.div>
         </motion.div>
