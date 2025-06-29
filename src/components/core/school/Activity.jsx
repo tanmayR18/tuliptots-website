@@ -1,46 +1,67 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 
+import image1 from "../../../assets/school/await/1.jpg";
+import image2 from "../../../assets/school/await/2.png";
+import image3 from "../../../assets/school/await/3.jpg";
+import image4 from "../../../assets/school/await/4.jpg";
+import image5 from "../../../assets/school/await/5.png";
+import image6 from "../../../assets/school/await/6.jpg";
+import image7 from "../../../assets/school/await/7.jpg";
+import image8 from "../../../assets/school/await/8.jpg";
+import image9 from "../../../assets/school/await/9.jpg";
+import image10 from "../../../assets/school/await/10.jpg";
+
 const data = [
   {
     text: "Baking & Cooking Adventures",
     bgColor: "#B3E5FC",
+    image: image1,
   },
   {
     text: "STEAM Discovery & Design Thinking",
     bgColor: "#E6F7A9",
+    image: image2,
   },
   {
     text: "Building & Construction Play",
     bgColor: "#E6D6FF",
+    image: image3,
   },
   {
     text: "Board Games & Brain Builders",
     bgColor: "#FFDAB9",
+    image: image4,
   },
   {
     text: "Nature Exploration & Outdoor Play",
     bgColor: "#FFD1DC",
+    image: image5,
   },
   {
     text: "Creative Expression & Sensory Arts",
     bgColor: "#D5FAD6",
+    image: image6,
   },
   {
     text: "Storytelling, Public Speaking & Performance",
     bgColor: "#FFFACD",
+    image: image7,
   },
   {
     text: "Mindfulness & Emotional Well-being",
     bgColor: "#CDEBFF",
+    image: image8,
   },
   {
     text: "Book Club & Library Access",
     bgColor: "#FFECB3",
+    image: image9,
   },
   {
     text: "A Space Where All Children Belong",
     bgColor: "#EBD6F5",
+    image: image10,
   },
 ];
 
@@ -94,12 +115,12 @@ const Activity = () => {
           once: true,
           margin: "-100px",
         }}
-        className="text-center font-bold text-2xl mt-20 lg:mt-44"
+        className="text-center font-bold text-2xl mt-20 "
       >
         What Awaits Your Child
       </motion.p>
 
-      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 mt-16 pb-16">
+      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 mt-10 pb-16">
         {data.map((item, index) => (
           <Card
             key={index}
@@ -107,6 +128,7 @@ const Activity = () => {
             text={item.text}
             index={index}
             isInView={isInView}
+            image={item.image}
           />
         ))}
       </div>
@@ -114,7 +136,7 @@ const Activity = () => {
   );
 };
 
-const Card = ({ bgColor, text, index, isInView }) => {
+const Card = ({ bgColor, text, index, isInView, image }) => {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 0, scale: 1.1 }}
@@ -128,7 +150,7 @@ const Card = ({ bgColor, text, index, isInView }) => {
         once: true,
         margin: "-100px",
       }}
-      className="p-3 rounded-lg border border-gray-300"
+      className="p-5 rounded-3xl border border-gray-300"
       style={{ backgroundColor: bgColor }}
     >
       <motion.p
@@ -142,10 +164,14 @@ const Card = ({ bgColor, text, index, isInView }) => {
           once: true,
           margin: "-100px",
         }}
-        className="text-black font-semibold text-center"
+        className="text-black font-semibold text-xl text-center"
       >
         {text}
       </motion.p>
+
+      <div className=" mt-10 aspect-square  overflow-hidden">
+        <img className=" w-full h-full object-cover" src={image} />
+      </div>
     </motion.div>
   );
 };

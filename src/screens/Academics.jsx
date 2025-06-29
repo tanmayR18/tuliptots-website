@@ -107,7 +107,7 @@ const Academics = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="pt-44 bg-[#f7eee9]" ref={ref}>
+    <div className="pt-44 bg-[#EAF4F5]" ref={ref}>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -117,7 +117,7 @@ const Academics = () => {
         Our Preschool Programs
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8 pb-24">
         <ProgramCard
           programName={"Playgroup"}
           programIdea={"Nurturing Early Explorers"}
@@ -172,22 +172,6 @@ const Academics = () => {
         />
       </div>
 
-      <motion.p
-        initial={{ opacity: 0, translateY: 10 }}
-        whileInView={{
-          opacity: 1,
-          translateY: 0,
-          transition: { duration: 0.8 },
-        }}
-        viewport={{
-          once: true,
-          margin: "-100px",
-        }}
-        className="mt-12 lg:mt-44 text-3xl font-bold text-center tracking-wide"
-      >
-        A Peek Into Our World
-      </motion.p>
-
       {/* <div className="hidden md:flex flex-col">
         <div className="flex justify-center mx-auto gap-8 mt-10">
           <SubSectionCard
@@ -240,43 +224,61 @@ const Academics = () => {
         </div>
       </div> */}
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 place-items-center gap-5 mt-12 w-10/12 mx-auto ">
-        <SubSectionCard
-          facilityName={"A Living, Breathing Classroom"}
-          bgColor={"#ccc"}
-          borderColor={"#007BFF"}
-          navigate={"/classroom"}
-          image={classroom}
-          index={0}
-          isInView={isInView}
-        />
-        <SubSectionCard
-          facilityName={"In-House Library"}
-          bgColor={"#ccc"}
-          borderColor={"#FFFF00"}
-          navigate={"/library"}
-          image={library}
-          index={1}
-          isInView={isInView}
-        />
-        <SubSectionCard
-          facilityName={"Our Gardeners of Growth"}
-          bgColor={"#ccc"}
-          borderColor={"#00BCD4"}
-          navigate={"/growth"}
-          image={gardening}
-          index={2}
-          isInView={isInView}
-        />
-        <SubSectionCard
-          facilityName={"Health, hygiene & Safety"}
-          bgColor={"#ccc"}
-          borderColor={"#2ecc71"}
-          navigate={"/health"}
-          image={health}
-          index={3}
-          isInView={isInView}
-        />
+      <div className=" py-24">
+        <motion.p
+          initial={{ opacity: 0, translateY: 10 }}
+          whileInView={{
+            opacity: 1,
+            translateY: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
+          className=" text-3xl font-bold text-center tracking-wide"
+        >
+          A Peek Into Our World
+        </motion.p>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 place-items-center gap-5 mt-12 w-10/12 mx-auto ">
+          <SubSectionCard
+            facilityName={"A Living, Breathing Classroom"}
+            bgColor={"#ccc"}
+            borderColor={"#007BFF"}
+            navigate={"/classroom"}
+            image={classroom}
+            index={0}
+            isInView={isInView}
+          />
+          <SubSectionCard
+            facilityName={"In-House Library"}
+            bgColor={"#ccc"}
+            borderColor={"#FFFF00"}
+            navigate={"/library"}
+            image={library}
+            index={1}
+            isInView={isInView}
+          />
+          <SubSectionCard
+            facilityName={"Our Gardeners of Growth"}
+            bgColor={"#ccc"}
+            borderColor={"#00BCD4"}
+            navigate={"/growth"}
+            image={gardening}
+            index={2}
+            isInView={isInView}
+          />
+          <SubSectionCard
+            facilityName={"Health, hygiene & Safety"}
+            bgColor={"#ccc"}
+            borderColor={"#2ecc71"}
+            navigate={"/health"}
+            image={health}
+            index={3}
+            isInView={isInView}
+          />
+        </div>
       </div>
 
       <Activity />

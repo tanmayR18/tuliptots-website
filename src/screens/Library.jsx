@@ -3,6 +3,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import image from "../assets/school/library/libraryHero.png";
 import image1 from "../assets/school/library/libraryHero2.png";
+import element1 from "../assets/school/library/element 1.png";
+import element2 from "../assets/school/library/element2.png";
+import element3 from "../assets/school/library/element6.png";
+import star from "../assets/school/library/star.png";
+import circle from "../assets/school/library/circle.png";
 
 const data = [
   {
@@ -126,54 +131,76 @@ const Library = () => {
           once: true,
           margin: "-100px",
         }}
-        className="bg-blue-200 mt-16  lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
+        className="bg-blue-200 relative mt-16 overflow-hidden z-20 lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
       >
-        <motion.p
-          initial={{ opacity: 0, translateY: 20 }}
-          whileInView={{
-            opacity: 1,
-            translateY: 0,
-            transition: { duration: 0.8 },
-          }}
-          viewport={{
-            once: true,
-            margin: "-100px",
-          }}
-          className="text-xl md:text-2xl font-bold tracking-wide text-slate-900 text-center"
-        >
-          Why It Matters ?
-        </motion.p>
+        <div className="relative z-20">
+          <motion.p
+            initial={{ opacity: 0, translateY: 20 }}
+            whileInView={{
+              opacity: 1,
+              translateY: 0,
+              transition: { duration: 0.8 },
+            }}
+            viewport={{
+              once: true,
+              margin: "-100px",
+            }}
+            className="text-xl md:text-2xl font-bold tracking-wide text-slate-900 text-center"
+          >
+            Why It Matters ?
+          </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mx-auto overflow-x-hidden">
-          {data.map((item, index) => (
-            <Card
-              key={index}
-              text={item.text}
-              bgColor={item.bgColor}
-              index={index}
-              isInView={isInView}
-            />
-          ))}
+          <div className=" flex flex-col justify-center items-center">
+            <div className=" relative w-fit">
+              <img className=" w-[250px]" src={element1} />
+              <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                <p className=" text-center">
+                  Stronger vocabulary and comprehension
+                </p>
+              </div>
+            </div>
+            <div className=" flex gap-48 -mt-26">
+              <div className=" relative w-fit">
+                <img className=" w-[250px]" src={element2} />
+                <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                  <p className=" text-center">Better focus and imagination</p>
+                </div>
+              </div>
+              <div className=" relative w-fit">
+                <img className=" w-[250px]" src={element3} />
+                <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                  <p className=" text-center">
+                    Empathy, curiosity, and lifelong learning
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="text-slate-800 text-center mt-6 text-base md:text-lg md:mt-12"
+          >
+            No matter what future path a child takes—science, art, sports, or
+            entrepreneurship—a reader today is a thinker tomorrow.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="text-slate-800 text-center text-base md:text-lg"
+          >
+            At Tulip Tots, we don't just build readers—we build joyful explorers
+            of stories, facts, and feelings.
+          </motion.p>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="text-slate-800 text-center mt-6 text-base md:text-lg md:mt-12"
-        >
-          No matter what future path a child takes—science, art, sports, or
-          entrepreneurship—a reader today is a thinker tomorrow.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          className="text-slate-800 text-center text-base md:text-lg"
-        >
-          At Tulip Tots, we don't just build readers—we build joyful explorers
-          of stories, facts, and feelings.
-        </motion.p>
+        <div className="  absolute -top-5 -left-5">
+            <img className=" w-[200px]" src={circle} />
+            <img className=" absolute bottom-0 -right-[120px] w-[100px]" src={star} />
+        </div>
       </motion.div>
     </div>
   );
