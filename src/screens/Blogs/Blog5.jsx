@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog5 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             Roots Before Branches: Why Emotional Safety Comes Before Academic Success
           </h1>
           <div className="mt-8 flex justify-center">
@@ -19,7 +19,7 @@ const Blog5 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             When we think about preparing children for school, we often picture
             flashcards, worksheets, and early reading skills. But true school
             readiness — and lifelong success — begins somewhere deeper. In emotional

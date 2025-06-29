@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog11 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             Why Running, Climbing, and Hanging Are Secret Ingredients for Language
             Development
           </h1>
@@ -20,18 +20,18 @@ const Blog11 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl text-gray-700 leading-relaxed mb-4">
             When parents think about preparing their child for preschool, they often
             imagine practicing ABCs, reading storybooks, or learning new words. Of
             course, language and literacy are important — but there's a hidden hero
             in the journey toward confident speaking and communication: movement
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl text-gray-700 leading-relaxed mb-4">
             Running, climbing, hanging, jumping — these aren't just playful
             activities. They are essential building blocks for developing strong
             speech, clear voice, and rich language skills.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             Let's explore how active play and physical strength support your child's
             ability to express themselves:
           </p>
@@ -238,7 +238,7 @@ const Blog11 = () => {
               they'll need to speak, sing, share stories, and shine — both
               inside and outside the classroom.
             </p>
-            <div className="space-y-2 text-lg font-semibold text-pink-600">
+            <div className="space-y-2 font-semibold text-pink-600">
               <p>Movement is learning.</p>
               <p>Movement is language</p>
               <p>And every playful leap is a leap toward their bright future.</p>

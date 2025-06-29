@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog3 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             The Magic of Open-Ended Toys: Why Less Is More in Early Childhood Play
           </h1>
           <div className="mt-8 flex justify-center">
@@ -19,7 +19,7 @@ const Blog3 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             When you step into a thoughtfully designed early childhood environment,
             you'll notice a different kind of play unfolding. Children aren't just
             pushing buttons or following preset instructions. They are building
@@ -87,7 +87,7 @@ const Blog3 = () => {
             The 90/10 Rule of Play: Child 90%, Toy 10%
           </h2>
 
-          <p className="text-lg text-gray-700 mb-6">
+          <p className=" text-gray-700 mb-6">
             At Tulip Tots International, we believe that{" "}
             <span className="font-semibold text-pink-600">
               90% of the play should come from the child, and only 10% from the toy.
@@ -135,7 +135,7 @@ const Blog3 = () => {
             </div>
           </div>
 
-          <p className="mt-6 text-lg text-gray-700">
+          <p className="mt-6  text-gray-700">
             In short:{" "}
             <span className="font-semibold text-pink-600">
               The simpler the toy, the richer the play.
@@ -164,7 +164,7 @@ const Blog3 = () => {
               designed with open-ended toys and materials that spark imagination and
               grow confident, capable thinkers.
             </p>
-            <p className="text-lg font-semibold text-pink-600">
+            <p className=" font-semibold text-pink-600">
               Because when little minds are free to bloom, the possibilities are
               endless.
             </p>

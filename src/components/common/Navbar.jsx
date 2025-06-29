@@ -53,7 +53,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className=" bg-[#fff] font-patrickHand tracking-wide text-lg w-11/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden lg:flex shadow-lg"
+        className=" bg-[#fff] font-patrickHand tracking-wide text-lg w-11/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden xl:flex shadow-lg"
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
@@ -287,7 +287,7 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`w-full ${
           showDropdown && "h-screen "
-        } left-1/2  -translate-x-1/2 top-0 fixed z-[1000] flex flex-col lg:hidden`}
+        } left-1/2  -translate-x-1/2 top-0 fixed z-[1000] flex flex-col xl:hidden`}
       >
         <div className="bg-[#fff]  w-full h-20 flex flex-row items-center  justify-between px-2 pr-3">
           <NavLink to={"/"}>

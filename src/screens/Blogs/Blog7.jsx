@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog7 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             Building Bravery: How Pretend Play Grows Real-World Courage
           </h1>
           <div className="mt-8 flex justify-center">
@@ -19,13 +19,13 @@ const Blog7 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl text-gray-700 leading-relaxed mb-4">
             When your child wraps a towel around their shoulders and declares
             themselves a superhero, it may seem like simple fun. But underneath that
             joyful play, something much deeper is happening: They are practicing
             bravery.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             Pretend play isn't just make-believe. It's real emotional work, helping
             children build the courage, confidence, and resilience they'll need for
             real life.
@@ -206,7 +206,7 @@ const Blog7 = () => {
               Through every pretend adventure, your child is practicing how to face
               the unknown with heart, hope, and resilience.
             </p>
-            <div className="space-y-2 text-lg font-semibold text-pink-600">
+            <div className="space-y-2 font-semibold text-pink-600">
               <p>Let them dream.</p>
               <p>Let them pretend.</p>
               <p>Let them become brave, one story at a time.</p>

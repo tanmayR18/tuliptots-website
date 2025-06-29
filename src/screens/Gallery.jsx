@@ -99,7 +99,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] py-20 pt-44 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#fafafa] py-20 font-kgPrimaryPenmanship pt-32 lg:pt-44 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -107,11 +107,11 @@ const Gallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-chewy tracking-[3px]  mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px]  mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
             Tulip Tales
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
-          <p className="mt-6 text-xl tracking-wider text-gray-600 font-patrickHand max-w-2xl mx-auto">
+          <p className="mt-6 text-xl md:text-2xl tracking-wider text-gray-600  max-w-2xl mx-auto">
             A window into our world—where learning is led by wonder, guided with
             love, and captured in the quiet beauty of everyday moments
           </p>

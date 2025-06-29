@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog9 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             How Free Play Builds Resilience for Life: The Power of Letting Children
             Lead
           </h1>
@@ -20,12 +20,12 @@ const Blog9 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl text-gray-700 leading-relaxed mb-4">
             As parents, we naturally want to guide, protect, and help our children
             succeed. It's tempting to step in and offer solutions, organize
             activities, or prevent mistakes.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             But sometimes the greatest gift we can give our children is space — the
             space to play freely, without constant adult direction. Because inside
             that free, unstructured playtime, children are building one of the most
@@ -238,7 +238,7 @@ const Blog9 = () => {
               They are practicing creativity, courage, and adaptability — the
               real superpowers they will carry into their future.
             </p>
-            <div className="space-y-2 text-lg font-semibold text-pink-600">
+            <div className="space-y-2 font-semibold text-pink-600">
               <p>Let them play.</p>
               <p>Let them lead.</p>
               <p>Let them grow strong from the inside out.</p>
