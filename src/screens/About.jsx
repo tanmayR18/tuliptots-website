@@ -111,7 +111,7 @@ const data = [
       "Word Smart: Language play, phonics, storytelling",
       "Logic Smart: Math games, puzzles, cause-effect play",
       "Body Smart: Movement zones, obstacle courses, dance",
-    //   "Music Smart: Singing, rhythm games, instruments",
+      //   "Music Smart: Singing, rhythm games, instruments",
     ],
     image: phi5,
     bgColor: "#3F51B5 ",
@@ -126,7 +126,7 @@ const data = [
       "Mud kitchen, sandpit, and gardening time",
       "Nature-based crafts using leaves, seeds, and sticks",
       "Gentle risk-taking with climbing, balancing, and exploring",
-    //   "Natural loose part play, weather journaling, and nature storytelling",
+      //   "Natural loose part play, weather journaling, and nature storytelling",
     ],
     image: phi6,
     bgColor: "#00BCD4 ",
@@ -272,36 +272,56 @@ const About = () => {
   return (
     <div className=" bg-[#FAFAFA]">
       {/* Hero section */}
-      <div className=" px-5 lg:px-12  ">
-        <div className=" grid lg:grid-cols-2 items-center gap-10 pt-32 lg:pt-44 min-h-screen">
-          <div>
-            <p className=" lg:ml-10  text-3xl lg:text-5xl tracking-wider font-black text-black">
-              About Us
-            </p>
-            <div className="  lg:p-10 mt-6 lg:mt-5 rounded-4xl flex flex-col justify-center items-center">
-              <p className=" text-slate-800   font-semibold">
-                Our tagline “Where Little Minds Bloom” beautifully reflects our
-                vision. We are dedicated to creating a free-flowing, nurturing
-                environment where young children are encouraged to explore,
-                imagine, and grow at their own natural pace.
+      <div className=" px-5 lg:px-12 pb-20  ">
+        <div className="   pt-32 lg:pt-44 min-h-screen">
+          <video
+            className=" w-screen h-full absolute top-0 left-0 right-0 bottom-0 object-cover"
+            // controls
+            muted
+            autoPlay
+            loop
+            controlsList="nodownload"
+            disablePictureInPicture
+          >
+            <source
+              src={
+                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/About/aboutHero.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQWJvdXQvYWJvdXRIZXJvLm1wNCIsImlhdCI6MTc1MTIwODM5MiwiZXhwIjoxNzgyNzQ0MzkyfQ.hOXX4e4CxZm_M4-1PpiirIxwzpa5HiOWK_CgHmN7sgs"
+              }
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div className=" absolute top-0 left-0 right-0 bottom-0 bg-black/70" />
+          <div className="grid lg:grid-cols-2 items-center gap-10 relative">
+            <div>
+              <p className=" lg:ml-10  text-3xl lg:text-5xl tracking-wider font-black text-white">
+                About Us
               </p>
+              <div className="  lg:p-10 mt-6 lg:mt-5 rounded-4xl flex flex-col justify-center items-center">
+                <p className=" text-slate-100   font-semibold">
+                  Our tagline “Where Little Minds Bloom” beautifully reflects
+                  our vision. We are dedicated to creating a free-flowing,
+                  nurturing environment where young children are encouraged to
+                  explore, imagine, and grow at their own natural pace.
+                </p>
 
-              <p className=" mt-8 text-slate-700 font-semibold">
-                By tending to their curiosity and planting deep, strong roots of
-                confidence, creativity, and love for learning, we help them
-                blossom into lifelong learners
-              </p>
-              <Link
-                to={"/story"}
-                className=" self-start border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md  mt-16"
-              >
-                <p>Our Story</p>
-              </Link>
+                <p className=" mt-8 text-slate-100 font-semibold">
+                  By tending to their curiosity and planting deep, strong roots
+                  of confidence, creativity, and love for learning, we help them
+                  blossom into lifelong learners
+                </p>
+                <Link
+                  to={"/story"}
+                  className=" self-start border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md  mt-16"
+                >
+                  <p>Our Story</p>
+                </Link>
+              </div>
             </div>
-          </div>
 
-          <div className=" flex justify-center">
-            <img className=" rounded-4xl w-[80%]" src={heroImage} />
+            {/* <div className=" flex justify-center">
+              <img className=" rounded-4xl w-[80%]" src={heroImage} />
+            </div> */}
           </div>
         </div>
 

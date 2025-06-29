@@ -3,6 +3,12 @@ import { IoMdAdd } from "react-icons/io";
 import { HiMinus } from "react-icons/hi";
 import image from "../../../assets/about/pedagogy2.png";
 
+import cric2 from "../../../assets/about/leap/cric2.png";
+import cric1 from "../../../assets/about/leap/cric1.png";
+import cric3 from "../../../assets/about/leap/cric3.png";
+import cric4 from "../../../assets/about/leap/cric4.png";
+import rocket from "../../../assets/about/leap/rocket.png";
+
 const data = [
   {
     skill: "Language and Communication Skills",
@@ -86,7 +92,7 @@ const data2 = [
 const Pedagogy = () => {
   const [currentSkill, setCurrentSkill] = useState("");
   return (
-    <div className="mt-26">
+    <div className="py-20 bg-[#EAF4F5]">
       <div className=" px-4 lg:w-[80%] mx-auto">
         <div className=" ">
           <p className=" text-2xl sm:text-3xl tracking-wide text-center font-bold text-black">
@@ -100,29 +106,64 @@ const Pedagogy = () => {
               child—combining global best practices with the play-based,
               child-led approach at the heart of early learning.
             </p>
-            <p className=" mt-4 font-semibold text-slate-800 text-lg">
-              Our curriculum is closely aligned with the{" "}
-              <strong>National Education Policy (NEP) 2020</strong>, with a
-              strong focus on the <strong>Foundational Stage (ages 3–8)</strong>
-              , and is guided by the{" "}
-              <strong>Early Childhood Care and Education (ECCE)</strong>
-              framework and{" "}
-              <strong>
-                the National Curriculum Framework for the Foundational Stage
-                (NCF-FS)
-              </strong>{" "}
-              developed by the{" "}
-              <strong>
-                National Council of Educational Research and Training (NCERT)
-              </strong>
-              , which together outline the principles for high-quality,
-              developmentally appropriate early education.
-            </p>
 
-            <p className=" mt-4 font-semibold text-slate-800 text-lg">
+            <div className=" relative">
+              <p className=" text-center font-semibold text-3xl mt-8">
+                Our Curriculum Aligned with
+              </p>
+
+              <div className=" flex justify-between relative">
+                <div className=" mt-8 flex-col pl-8">
+                  <div className=" flex items-center translate-x-14 gap-5">
+                    <div className=" relative w-fit">
+                      <img className=" w-[250px]" src={cric1} />
+                      <div className=" absolute top-0 left-0 right-0 bottom-0 -translate-y-3 flex justify-center items-center p-3">
+                        <p className=" text-center">
+                          NEP 2020 <br /> National <br /> Education Policy
+                        </p>
+                      </div>
+                    </div>
+                    <div className=" relative w-fit">
+                      <img className=" w-[250px]" src={cric2} />
+                      <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                        <p className=" text-center">
+                          Innovative 5x4
+                          <br /> Skill-based <br /> curriculum- Total 20 <br />{" "}
+                          skill curriculum
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" flex  items-center  gap-5">
+                    <div className=" relative w-fit">
+                      <img className=" w-[250px]" src={cric3} />
+                      <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                        <p className=" text-center">
+                          ECCE <br /> Early Childhood <br /> Care and Education
+                        </p>
+                      </div>
+                    </div>
+                    <div className=" relative w-fit">
+                      <img className=" w-[250px]" src={cric4} />
+                      <div className=" absolute top-0 left-0 right-0 bottom-0 -translate-y-4 flex justify-center items-center p-3">
+                        <p className=" text-center">
+                          NCERT <br /> National Council of <br /> Education
+                          Research and <br /> Training
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className=" absolute bottom-1/20 -right-[150px]">
+                <img className=" h-[350px] mt-20 " src={rocket} />
+              </div>
+            </div>
+
+            <p className=" mt-4 font-semibold text-slate-800 text-lg hidden lg:flex">
               These frameworks emphasize:
             </p>
-            <div className=" mt-2 font-semibold text-slate-800 text-lg">
+            <div className=" hidden lg:flex-col mt-2 font-semibold text-slate-800 text-lg">
               <li>A flexible, multi-level, activity-based learning model</li>
               <li>
                 A strong foundation in language, early numeracy,
@@ -138,7 +179,7 @@ const Pedagogy = () => {
               </li>
             </div>
 
-            <p className=" mt-4 font-semibold text-slate-800 text-lg">
+            <p className=" hidden lg:flex mt-4 font-semibold text-slate-800 text-lg">
               Every learning moment at Tulip Tots is filled with wonder,
               purpose, and joy. Whether indoors or outdoors, our children are
               encouraged to ask questions, explore freely, and express
