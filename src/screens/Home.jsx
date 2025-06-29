@@ -5,12 +5,14 @@ import Highlights from "../components/core/Home/Highlights";
 import CTA from "../components/core/Home/CTA";
 import { Phone } from "lucide-react";
 import { useNavigate } from "react-router";
+import NewHero from "@/components/core/Home/NewHero";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div className=" bg-[#fafafa]">
-      <Hero />
+      {/* <Hero /> */}
+      <NewHero />
       <BloomCards />
       <Highlights />
       <CTA />
