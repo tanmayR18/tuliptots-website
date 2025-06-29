@@ -19,7 +19,7 @@ const ContactUs = () => {
             <Link
               className=" lg:rounded-[40px] rounded-b-[32px] border-t-white lg:border-t-slate-300 border border-slate-300 overflow-hidden relative order-2 lg:order-1 "
               to={
-                "https://www.google.com/maps/search/?api=1&query=Punewala,+Pune"
+                "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
               }
               target="_blank"
             >

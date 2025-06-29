@@ -186,10 +186,17 @@ const Footer = () => {
             <h4 className="text-xl font-semibold text-gray-200">
               Our live location
             </h4>
-            <img
-              className=" rounded-xl"
-              src="https://www.independent-software.com/assets/gmap/gmap-tutorial-google-map-provider.jpg"
-            />
+            <Link
+              to={
+                "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
+              }
+              target="_blank"
+            >
+              <img
+                className=" rounded-xl"
+                src="https://www.independent-software.com/assets/gmap/gmap-tutorial-google-map-provider.jpg"
+              />
+            </Link>
           </div>
         </div>
       </div>

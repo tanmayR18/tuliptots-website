@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog1 = () => {
   return (
-    <div className="min-h-screen  font-fredoka tracking-wide">
+    <div className="min-h-screen font-kgPrimaryPenmanship text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl  text-center font-chewy tracking-[3px] text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl  text-center tracking-[3px] text-gray-800 font-semibold leading-tight">
             Transitioning from Home to Playgroup: How to Make It Smooth and Happy
           </h1>
           <div className="mt-8 flex justify-center">
@@ -19,7 +19,7 @@ const Blog1 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             Starting playgroup is a big step — not just for toddlers, but for
             parents too! It's the first time your little one will experience a
             world outside the comfort of home, and it's natural for both of you to
@@ -29,7 +29,7 @@ const Blog1 = () => {
           </p>
         </div>
 
-        <p className="text-xl font-semibold text-gray-800 mb-8">
+        <p className="text-2xl font-semibold text-gray-800 mb-8">
           Here's how you can gently prepare your child for this important
           milestone:
         </p>
