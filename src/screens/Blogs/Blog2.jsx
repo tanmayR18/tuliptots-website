@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog2 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 tracking-wider font-kgPrimaryPenmanship text-xl ">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold  tracking-[3px] text-center text-gray-800 leading-tight">
             Building Confidence in Toddlers Before They Start Nursery
           </h1>
           <div className="mt-8 flex justify-center">
@@ -19,7 +19,7 @@ const Blog2 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             Starting nursery is a huge milestone in your child's life — and yours!
             It's the beginning of new friendships, learning adventures, and a
             growing sense of independence. One of the best gifts you can give your
@@ -28,7 +28,7 @@ const Blog2 = () => {
           </p>
         </div>
 
-        <p className="text-xl font-semibold text-gray-800 mb-8">
+        <p className="text-2xl font-semibold text-gray-800 mb-8">
           Here are some simple, everyday ways to nurture your toddler's confidence
           before they take this exciting step:
         </p>

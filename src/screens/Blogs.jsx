@@ -90,15 +90,15 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafafa] py-16 lg:pt-44 px-4 lg:px-12">
+    <div className="min-h-screen font-kgPrimaryPenmanship bg-[#fafafa] py-16 pt-32 lg:pt-44 px-4 lg:px-12">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-chewy tracking-[3px] md:text-5xl  text-gray-800 mb-4">
+          <h1 className="text-4xl tracking-[3px] md:text-6xl font-semibold  text-[#333] mb-4">
             Welcome to Tulip Talks
           </h1>
           <div className="w-24 h-1 bg-pink-400 rounded-full mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-patrickHand">
+          <p className="text-2xl  text-gray-600 max-w-2xl mx-auto ">
             a warm corner of our world where we share stories, reflections,
             ideas, and gentle guidance for parents walking alongside their
             little ones. From classroom moments to parenting insights, this
@@ -108,7 +108,7 @@ const Blogs = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-fredoka">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog, index) => (
             <Link
               to={blog.route}
@@ -124,10 +124,10 @@ const Blogs = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-6">
-                <h2 className="text-lg font-semibold text-gray-800 line-clamp-3 group-hover:text-pink-600 transition-colors duration-300">
+                <h2 className="text-xl md:text-2xl tracking-widest md:tracking-wide  font-semibold text-gray-800 line-clamp-3 group-hover:text-pink-600 transition-colors duration-300">
                   {blog.text}
                 </h2>
-                <div className="mt-4 flex items-center text-sm text-gray-500">
+                <div className="mt-4 flex items-center text-base text-gray-500">
                   <span className="flex items-center">
                     <svg
                       className="w-4 h-4 mr-2"
