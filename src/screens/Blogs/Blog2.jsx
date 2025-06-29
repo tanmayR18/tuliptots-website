@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog2 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 tracking-wider font-kgPrimaryPenmanship text-xl ">
+    <div className="min-h-screen bg-gray-50 tracking-wide font-kgPrimaryPenmanship text-xl lg:text-2xl ">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">

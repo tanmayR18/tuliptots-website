@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog8 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             How Risky Play Builds Safe Decision-Makers: The Surprising Link Between
             Adventure and Caution
           </h1>
@@ -20,14 +20,14 @@ const Blog8 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl text-gray-700 leading-relaxed mb-4">
             When we imagine keeping our children safe, it's natural to think about
             minimizing risk — soft play surfaces, careful supervision, saying "Be
             careful!" a hundred times a day. But what if experiencing small risks in
             childhood is actually what makes children better at keeping themselves
             safe later in life?
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             It's true: Risky play is essential for teaching children how to assess
             danger, trust their instincts, and build real-world safety skills.
           </p>
@@ -208,7 +208,7 @@ const Blog8 = () => {
             <p>
               Today's little leap of faith is tomorrow's confident decision-maker
             </p>
-            <div className="space-y-2 text-lg font-semibold text-pink-600">
+            <div className="space-y-2 font-semibold text-pink-600">
               <p>Let them climb.</p>
               <p>Let them jump.</p>
               <p>Let them soar.</p>

@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog6 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 font-fredoka tracking-wide">
+    <div className="min-h-screen bg-gray-50 font-kgPrimaryPenmanship text-xl lg:text-2xl tracking-wide">
       {/* Hero Section */}
       <div className="bg-[#FFE6CC] py-32 lg:pt-44 px-4 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-chewy tracking-[3px] text-center text-gray-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px] text-center text-gray-800 leading-tight">
             Tiny Scientists: How Messy Play Lays the Foundation for Scientific Thinking
           </h1>
           <div className="mt-8 flex justify-center">
@@ -19,13 +19,13 @@ const Blog6 = () => {
       <div className="max-w-4xl mx-auto py-12 px-4 lg:px-8">
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8 transform hover:scale-[1.01] transition-transform duration-300">
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl text-gray-700 leading-relaxed mb-4">
             When your child splashes in puddles, mixes mud pies, or experiments with
             water and sand, it might seem like simple, delightful mess. But
             underneath the mud and giggles, something extraordinary is happening:
             They are thinking like scientists.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-700 leading-relaxed">
             Messy, sensory-rich play is actually early scientific exploration — and
             it builds powerful skills that children will use for a lifetime.
           </p>
@@ -184,7 +184,7 @@ const Blog6 = () => {
               Because every messy moment today is preparing them to explore, invent,
               and understand tomorrow.
             </p>
-            <div className="space-y-2 text-lg font-semibold text-pink-600">
+            <div className="space-y-2  font-semibold text-pink-600">
               <p>Let them dig.</p>
               <p>Let them wonder.</p>
               <p>Let them grow into fearless, curious, brilliant thinkers.</p>
