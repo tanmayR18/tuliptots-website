@@ -99,7 +99,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] py-20 font-kgPrimaryPenmanship  pt-44 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#fafafa] py-20 font-kgPrimaryPenmanship pt-32 lg:pt-44 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
