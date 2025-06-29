@@ -198,8 +198,8 @@ const Admission = () => {
   }
 
   return (
-    <div className=" bg-[#FFE6CC] font-fredoka">
-      <div className=" relative pb-20 pt-44 px-4  flex flex-col justify-center items-center">
+    <div className=" bg-[#FFE6CC] font-kgPrimaryPenmanship tracking-wide">
+      <div className=" relative pb-20 pt-32 lg:pt-44 px-4  flex flex-col justify-center items-center">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
             className=" w-full h-full"
@@ -210,15 +210,15 @@ const Admission = () => {
         <div className=" absolute top-0 right-0 left-0 bottom-0">
           <Navbar />
         </div> */}
-        <p className=" text-black font-chewy tracking-[3px] text-3xl text-center lg:text-5xl z-10">
+        <p className=" text-black text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px]  text-center  z-10">
           Admissions
         </p>
-        <p className=" text-gray-600 font-semibold text-lg text-center lg:text-2xl z-10 mt-4 lg:mt-7 lg:w-[60%]">
+        <p className=" text-gray-600 font-semibold text-xl  text-center lg:text-2xl z-10 mt-4 lg:mt-7 lg:w-[60%]">
           Admissions are open throughout the year for families who resonate with
           our joyful, child-led approach to early learning.
         </p>
       </div>
-      <div className="  bg-white pt-14 pb-32 lg:pb-44 md:pt-20  rounded-t-[32px] lg:rounded-t-[64px]  relative">
+      <div className="  bg-white pt-14 pb-32 lg:pb-44 md:pt-20 mt-5 rounded-t-[32px] lg:rounded-t-[64px]  relative">
         <img
           className=" absolute -top-[85px] lg:-top-[150px]  left-5 lg:left-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[170px]"
           src={child1}
@@ -232,13 +232,13 @@ const Admission = () => {
           src={hero1}
         /> */}
         <img
-          className=" absolute -top-[85px] lg:-top-[140px]  right-14 w-[100px] h-[100px] -rotate-3 lg:w-[220px] lg:h-[170px]"
+          className=" absolute -top-[85px] lg:-top-[140px]  right-8 lg:right-14 w-[100px] h-[100px] -rotate-3 lg:w-[220px] lg:h-[170px]"
           src={child2}
         />
         <div className="  md:w-[80%] mx-auto">
           <div className=" flex flex-col md:flex-row-reverse md:justify-evenly justify-center items-center gap-5">
-            <div className=" md:w-1/2 text-base lg:text-xl flex flex-col px-5 md:px-0 gap-3  md:gap-6">
-              <p className=" text-2xl md:text-4xl font-semibold tracking-wide font-patrickHand md:mb-7">
+            <div className=" md:w-1/2 text-xl lg:text-2xl flex flex-col px-5 md:px-0 gap-3  md:gap-6">
+              <p className=" text-2xl  md:text-4xl font-semibold tracking-wide font-patrickHand md:mb-7">
                 Here's how to begin:
               </p>
               <p>
@@ -315,7 +315,7 @@ const Admission = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                   Have Questions?
                 </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
                   We're here to help! Get in touch with us to learn more about our programs, 
                   schedule a visit, or discuss your child's educational journey.
                 </p>
@@ -324,9 +324,9 @@ const Admission = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/enquiry"
-                  className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+                  className="group relative overflow-hidden bg-gradient-to-r from-blue-400 to-pink-400 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
                 >
-                  <span className="relative z-10">Enquiry Now</span>
+                  <span className="relative z-10 text-xl tracking-wider">Enquiry Now</span>
                   <svg 
                     className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" 
                     fill="none" 
@@ -351,7 +351,7 @@ const Admission = () => {
                 </div> */}
               </div>
               
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xl md:text-2xl tracking-wide">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -360,17 +360,17 @@ const Admission = () => {
                     </svg>
                   </div>
                   <h3 className="font-semibold text-gray-800 mb-1">Visit Our Campus</h3>
-                  <p className="text-sm text-gray-600">Schedule a guided tour</p>
+                  <p className="text-lg lg:text-xl text-gray-600">Schedule a guided tour</p>
                 </div>
                 
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col  items-center">
                   <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-3">
                     <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
                   </div>
                   <h3 className="font-semibold text-gray-800 mb-1">Ask Questions</h3>
-                  <p className="text-sm text-gray-600">Get detailed answers</p>
+                  <p className="text-lg lg:text-xl text-gray-600">Get detailed answers</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -380,7 +380,7 @@ const Admission = () => {
                     </svg>
                   </div>
                   <h3 className="font-semibold text-gray-800 mb-1">Begin Journey</h3>
-                  <p className="text-sm text-gray-600">Start admission process</p>
+                  <p className="text-lg lg:text-xl text-gray-600">Start admission process</p>
                 </div>
               </div>
             </div>
