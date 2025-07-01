@@ -14,7 +14,7 @@ const Growth = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="pt-32 font-kgPrimaryPenmanship  px-4 lg:px-0 lg:pt-44  bg-gradient-to-b from-[#fafafa] to-[#CDE8EA] ">
+    <div ref={ref} className="pt-32 font-kgPrimaryPenmanship  px-4 lg:px-0 lg:pt-44  bg-[#fafafa]">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Growth = () => {
         <img className=" z-20 sm:h-[400px]" src={girl} />
       </div>
 
-      <div className="pb-12 pt-6 px-4">
+      <div className="pb-12 pt-6 px-4 bg-[#CDE8EA]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
