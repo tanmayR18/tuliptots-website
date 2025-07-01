@@ -14,12 +14,12 @@ const Growth = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="pt-32  lg:pt-44  bg-gradient-to-b from-[#fafafa] to-[#CDE8EA] ">
+    <div ref={ref} className="pt-32 font-kgPrimaryPenmanship  px-4 lg:px-0 lg:pt-44  bg-gradient-to-b from-[#fafafa] to-[#CDE8EA] ">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-black font-bold md:text-center text-xl md:text-2xl lg:text-3xl tracking-wide"
+        className="text-black font-bold text-center text-3xl md:text-4xl lg:text-5xl tracking-wide"
       >
         Our Gardeners of Growth – The Tulip Tots Team
       </motion.p>
@@ -28,7 +28,7 @@ const Growth = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-base lg:text-lg text-slate-700 font-semibold md:text-center"
+        className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-xl lg:text-2xl text-slate-700 font-semibold text-center"
       >
         At Tulip Tots International, we believe that early childhood educators
         are more than teachers—they are gentle guides, nurturers of wonder, and
@@ -37,20 +37,20 @@ const Growth = () => {
         respect for the individuality of every child
       </motion.p>
 
-      <div className=" p-8 rounded-[64px] flex relative mt-10 justify-between items-center w-10/12 mx-auto">
-        <img className=" absolute top-0 right-56" src={ninja} />
-        <div className="  flex flex-col justify-center items-center">
+      <div className=" p-9 px-0  md:p-8 rounded-[64px] flex flex-col-reverse md:flex-row relative mt-10 justify-between items-center lg:w-10/12 mx-auto">
+        <img className=" hidden lg:flex absolute top-0 right-56" src={ninja} />
+        <div className="  flex flex-col justify-center items-center mt-14 md:mt-0">
           <div className=" relative w-fit">
             <img className=" w-[300px]" src={circle1} />
             <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-              <p className=" text-center font-bold text-2xl">Unique</p>
+              <p className=" text-center font-bold text-2xl xl:text-3xl">Unique</p>
             </div>
           </div>
-          <div className=" flex gap-16 ">
+          <div className=" flex md:gap-6 ">
             <div className=" relative w-fit">
-              <img className=" w-[300px]" src={circle2} />
+              <img className="  w-[300px]" src={circle2} />
               <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                <p className=" text-center font-bold text-2xl">
+                <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
                   Ready to <br /> Blossom
                 </p>
               </div>
@@ -58,14 +58,14 @@ const Growth = () => {
             <div className=" relative w-fit flex justify-center items-center">
               <img className=" w-[300px]" src={circle3} />
               <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                <p className=" text-center font-bold text-2xl">
+                <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
                   Full of Potential
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <img className=" z-20 h-[400px]" src={girl} />
+        <img className=" z-20 sm:h-[400px]" src={girl} />
       </div>
 
       <div className="pb-12 pt-6 px-4">
@@ -73,7 +73,7 @@ const Growth = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="md:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-4 md:gap-10 justify-center items-center mt-8"
+          className="lg:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-4 md:gap-10 justify-center items-center mt-8"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -87,7 +87,7 @@ const Growth = () => {
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
               }
               transition={{ duration: 0.4, delay: 0.8 }}
-              className="text-xl md:text-2xl font-bold"
+              className="text-2xl md:text-3xl text-center md:text-left font-bold"
             >
               A Values-First Approach
             </motion.p>
@@ -95,7 +95,7 @@ const Growth = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 1.0 }}
-              className="text-slate-800 font-semibold tracking-wide mt-4 md:mt-8 text-base md:text-lg"
+              className="text-slate-800 font-semibold text-center md:text-left tracking-wide mt-4 md:mt-8 text-xl md:text-2xl"
             >
               We carefully select team members who radiate kindness, compassion,
               and curiosity—those who see teaching not as a job, but as a
@@ -112,7 +112,7 @@ const Growth = () => {
             }
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.02 }}
-            className="rounded-2xl md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]"
+            className="rounded-2xl w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]"
             src={image1}
           />
         </motion.div>
@@ -121,7 +121,7 @@ const Growth = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="md:w-10/12 mx-auto flex flex-col md:flex-row justify-between gap-4 md:gap-10 items-center mt-16"
+          className="lg:w-10/12 mx-auto flex flex-col md:flex-row justify-between gap-4 md:gap-10 items-center mt-16"
         >
           <motion.img
             initial={{ opacity: 0, x: -70, scale: 0.95 }}
@@ -135,7 +135,7 @@ const Growth = () => {
               once: true,
               margin: "-100px",
             }}
-            className="rounded-2xl md:w-[400px] md:h-[500px] w-[400px] h-[500px]"
+            className="rounded-2xl w-[250px] h-[320px] md:w-[400px] md:h-[500px] lg:w-[400px] lg:h-[500px]"
             src={image2}
           />
 
@@ -159,7 +159,7 @@ const Growth = () => {
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
               }
               transition={{ duration: 0.4, delay: 1.4 }}
-              className="text-xl md:text-2xl font-bold"
+              className="text-2xl md:text-3xl text-center md:text-left font-bold"
             >
               Mindful Recruitment Process
             </motion.p>
@@ -167,7 +167,7 @@ const Growth = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 1.6 }}
-              className="text-slate-800 font-semibold tracking-wide mt-4 md:mt-8 text-base md:text-lg"
+              className="text-slate-800 font-semibold tracking-wide mt-4 md:mt-8 text-xl md:text-2xl"
             >
               <p>
                 Every educator undergoes a thoughtful selection process
@@ -254,7 +254,7 @@ const Growth = () => {
             once: true,
             margin: "-100px",
           }}
-          className="p-6 bg-[#FECDD3] rounded-[32px] md:w-10/12 mx-auto mt-12"
+          className=" p-4 lg:p-6 bg-[#FECDD3] rounded-[32px] lg:w-10/12 mx-auto mt-12"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -269,7 +269,7 @@ const Growth = () => {
               once: true,
               margin: "-100px",
             }}
-            className="text-xl md:text-2xl font-bold tracking-wide text-center"
+            className="text-3xl  lg:text-4xl font-bold tracking-wide text-center"
           >
             Lifelong Learners at Heart
           </motion.p>
@@ -287,7 +287,7 @@ const Growth = () => {
               once: true,
               margin: "-100px",
             }}
-            className="text-slate-800 text-center text-base md:text-lg font-semibold mt-5"
+            className="text-slate-800 text-center text-xl md:text-2xl font-semibold mt-5"
           >
             Our educators are encouraged to continuously reflect, grow, and
             collaborate—just like the children they teach. Regular workshops,

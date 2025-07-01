@@ -285,9 +285,12 @@ const Health = () => {
                     {item.title}
                   </p>
                   <p>{item.subTitle}</p>
-                  <div>
+                  <div className=" pl-4">
                     {item.points.map((point, index) => (
-                      <li key={index}>{point}</li>
+                      <div key={index} className=" flex flex-row">
+                        <div className=" h-2 w-2 mt-2 mr-2 bg-black rounded-full" />
+                        <li className=" flex-1">{point}</li>
+                      </div>
                     ))}
                   </div>
                   <p>{item.conclusion}</p>
@@ -306,9 +309,9 @@ const Health = () => {
           ))}
         </Swiper>
         {/* Custom Navigation Buttons */}
-        <div ref={previousRef} className="swiper-button-prev" />
+        <div ref={previousRef} className="swiper-button-prev opacity-0 " />
         {/* <div className="swiper-button-next  !w-32 !h-full !top-0 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" /> */}
-        <div ref={nextRef} className="swiper-button-next" />
+        <div ref={nextRef} className="swiper-button-next opacity-0" />
       </div>
 
       <motion.p
@@ -420,7 +423,7 @@ const Health = () => {
               className="mt-5 h-full text-slate-800 font-semibold text-center"
             >
               <div>
-                <p className=" text-xl"> 
+                <p className=" text-xl">
                   CCTV monitoring in key areas for transparency,First aid kit
                   readily available at all times, In case of emergencies, first
                   aid is administered immediately, and our on-call doctor is
