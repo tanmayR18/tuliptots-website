@@ -62,7 +62,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-b from-[#333] to-[#222] text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* School Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
@@ -143,42 +143,44 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Important Links */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-gray-200">
-              Important Links
-            </h4>
-            <ul className="space-y-3">
-              {impLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.navigate.toLowerCase().replace(" ", "")}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 bg-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className=" flex justify-between">
+            {/* Important Links */}
+            <div className="space-y-6">
+              <h4 className="text-xl font-semibold text-gray-200">
+                Important Links
+              </h4>
+              <ul className="space-y-3">
+                {impLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.navigate.toLowerCase().replace(" ", "")}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Explore */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-gray-200">Explore</h4>
-            <ul className="space-y-3">
-              {explore.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.navigate.toLowerCase().replace(" ", "")}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Explore */}
+            <div className="space-y-6">
+              <h4 className="text-xl font-semibold text-gray-200">Explore</h4>
+              <ul className="space-y-3">
+                {explore.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.navigate.toLowerCase().replace(" ", "")}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Newsletter */}
