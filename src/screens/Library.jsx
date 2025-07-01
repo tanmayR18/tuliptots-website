@@ -136,7 +136,7 @@ const Library = () => {
             Why It Matters ?
           </motion.p>
 
-          <div className=" flex flex-col justify-center items-center">
+          <div className=" flex flex-col text-[#1d1b1b] font-semibold tracking-wider justify-center items-center">
             <div className=" relative w-fit">
               <img className=" w-[250px]" src={element1} />
               <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
@@ -167,7 +167,7 @@ const Library = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-slate-800 text-center mt-6 text-xl lg:text-2xl md:mt-12"
+            className="text-slate-800 text-center mt-6 text-xl tracking-wide lg:text-2xl md:mt-12"
           >
             No matter what future path a child takes—science, art, sports, or
             entrepreneurship—a reader today is a thinker tomorrow.
@@ -176,7 +176,7 @@ const Library = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-            className="text-slate-800 text-center text-xl lg:text-2xl"
+            className="text-slate-800 text-center  tracking-wide text-xl lg:text-2xl"
           >
             At Tulip Tots, we don't just build readers—we build joyful explorers
             of stories, facts, and feelings.
