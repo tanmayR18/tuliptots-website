@@ -25,7 +25,7 @@ const Section1 = () => {
             <img src={smile} className=" absolute w-[120px] h-[120px] -top-[80px] -left-[150px] z-10" />
             <img src={hearts} className=" absolute w-[120px] h-[120px] -top-[80px] -right-[100px] z-10" />
             <img src={cloud} className=" hidden xl:flex absolute  h-[100px] top-[100px] -right-[250px] z-10" />
-            <img src={doddle4} className=" absolute  h-[140px] -bottom-[200px] -left-[200px] z-10" />
+            <img src={doddle4} className=" absolute  h-[140px] -bottom-[200px] -left-[160px] sm:-left-[200px] z-10" />
 
           </div>
 
