@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import image from "../assets/school/classroom/classroomHero.jpg";
@@ -13,6 +13,12 @@ import image7 from "../assets/school/classroom/7.jpg";
 import grow from "../assets/school/classroom/grow.png";
 import move from "../assets/school/classroom/move.png";
 import play from "../assets/school/classroom/play.png";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const data = [
   {
@@ -94,18 +100,18 @@ const Card = ({ title, points, bgColor, index, isInView, image }) => {
         margin: "-100px",
       }}
       style={{ backgroundColor: bgColor }}
-      className={`p-10 rounded-3xl flex justify-between ${
+      className={` lg:p-8 xl:p-10 rounded-3xl gap-4 flex items-center justify-between ${
         index % 2 === 0 ? "flex-row" : " flex-row-reverse"
       }`}
     >
-      <div>
+      <div className=" w-1/2">
         <motion.p
           initial={{ opacity: 0, scale: 0.9 }}
           animate={
             isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
           }
           transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
-          className="text-2xl font-bold text-center text-white"
+          className="text-3xl tracking-wider font-bold text-center text-white"
         >
           {title}
         </motion.p>
@@ -121,7 +127,7 @@ const Card = ({ title, points, bgColor, index, isInView, image }) => {
                 duration: 0.4,
                 delay: index * 0.1 + 0.3 + pointIndex * 0.1,
               }}
-              className="mt-1 text-base text-white font-semibold"
+              className="mt-1 text-2xl  tracking-widest text-white font-semibold"
               key={pointIndex}
             >
               {item}
@@ -129,7 +135,7 @@ const Card = ({ title, points, bgColor, index, isInView, image }) => {
           ))}
         </div>
       </div>
-      <div className=" w-[300px] aspect-square">
+      <div className=" h-[300px] overflow-hidden aspect-square">
         <img className=" w-full h-full object-cover rounded-2xl" src={image} />
       </div>
     </motion.div>
@@ -140,13 +146,19 @@ const Classroom = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const nextRef = useRef(null);
+  const previousRef = useRef(null);
+
   return (
-    <div ref={ref} className="pt-32 lg:pt-44 px-5 bg-[#f7eee9]">
+    <div
+      ref={ref}
+      className="pt-32 lg:pt-44 px-5 bg-[#fafafa] font-kgPrimaryPenmanship"
+    >
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-black font-bold md:text-center text-3xl tracking-wide"
+        className="text-black font-bold text-center text-3xl md:text-4xl lg:text-5xl tracking-wide"
       >
         A Living, Breathing Classroom
       </motion.p>
@@ -157,11 +169,17 @@ const Classroom = () => {
           isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }
         }
         transition={{ duration: 0.8, delay: 0.2 }}
-        className=" flex mx-auto justify-center items-center mt-10"
+        className=" flex mx-auto justify-center max-w-3xl items-center mt-10"
       >
-        <img className=" w-[30%] rounded-bl-3xl rounded-tl-3xl " src={move} />
-        <img className=" w-[30%]" src={grow} />
-        <img className=" w-[30%] rounded-br-3xl rounded-tr-3xl" src={play} />
+        <img
+          className=" w-[33%] rounded-bl-xl rounded-tl-xl lg:rounded-bl-3xl lg:rounded-tl-3xl "
+          src={move}
+        />
+        <img className=" w-[33%]" src={grow} />
+        <img
+          className=" w-[33%] rounded-br-xl rounded-tr-xl lg:rounded-br-3xl lg:rounded-tr-3xl"
+          src={play}
+        />
       </motion.div>
 
       {/* <motion.img src={image} className="mx-auto scale-105 mt-4" /> */}
@@ -170,7 +188,7 @@ const Classroom = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="md:w-10/12 mx-auto mt-8 text-lg text-slate-700 font-semibold md:text-center"
+        className="md:w-10/12 mx-auto mt-8 text-xl lg:text-2xl tracking-wider text-slate-700 font-semibold md:text-center"
       >
         At Tulip Tots International, we believe the environment is the third
         teacher—a space designed not just to house, but to{" "}
@@ -180,7 +198,7 @@ const Classroom = () => {
         and flexible learning environment.
       </motion.p>
 
-      <div className="mt-16 pb-16 grid grid-cols-1 gap-6 w-10/12 mx-auto">
+      <div className="mt-16 pb-16 hidden lg:grid grid-cols-1 gap-6 lg:w-[90%] xl:w-10/12 mx-auto">
         {data.map((item, index) => (
           <Card
             key={index}
@@ -192,6 +210,68 @@ const Classroom = () => {
             image={item?.image}
           />
         ))}
+      </div>
+
+      <div className="relative mx-auto lg:hidden mt-16 pb-20 max-w-xl ">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          allowTouchMove={true}
+          autoplay={true}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          //   onSlideChange={handleSlideChange}
+          className="classroom-swiper pb-5"
+          style={{
+            "--swiper-navigation-color": "#8b5cf6",
+            "--swiper-pagination-color": "#8b5cf6",
+          }}
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div
+                style={{ backgroundColor: item.bgColor }}
+                className="flex flex-col h-full justify-between items-center gap-8 mx-auto p-4 sm:p-8 rounded-2xl relative "
+              >
+                <img src={item.image} className=" rounded-2xl w-full aspect-square" />
+
+                <div className=" text-black text-xl">
+                  <p className=" text-2xl font-semibold tracking-widest mb-2">
+                    {item.title}
+                  </p>
+                  <div className=" pl-4">
+                    {item.points.map((point, index) => (
+                      <div key={index} className=" flex flex-row">
+                        <div className=" h-2 w-2 mt-2 mr-2 bg-black rounded-full" />
+                        <li className=" flex-1">{point}</li>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div
+                  onClick={() => nextRef.current.click()}
+                  className=" absolute top-0 right-0 bottom-0  h-full w-32"
+                />
+                <div
+                  onClick={() => previousRef.current.click()}
+                  className=" absolute top-0 left-0 bottom-0  h-full w-32"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* Custom Navigation Buttons */}
+        <div ref={previousRef} className="swiper-button-prev !hidden" />
+        {/* <div className="swiper-button-next  !w-32 !h-full !top-0 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" /> */}
+        <div ref={nextRef} className="swiper-button-next !hidden" />
       </div>
     </div>
   );

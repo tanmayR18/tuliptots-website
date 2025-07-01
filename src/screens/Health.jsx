@@ -254,7 +254,7 @@ const Health = () => {
             dynamicBullets: true,
           }}
           //   onSlideChange={handleSlideChange}
-          className="video-swiper"
+          className="video-swiper pb-5"
           style={{
             "--swiper-navigation-color": "#8b5cf6",
             "--swiper-pagination-color": "#8b5cf6",
@@ -309,9 +309,9 @@ const Health = () => {
           ))}
         </Swiper>
         {/* Custom Navigation Buttons */}
-        <div ref={previousRef} className="swiper-button-prev opacity-0 " />
+        <div ref={previousRef} className="swiper-button-prev !hidden" />
         {/* <div className="swiper-button-next  !w-32 !h-full !top-0 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" /> */}
-        <div ref={nextRef} className="swiper-button-next opacity-0" />
+        <div ref={nextRef} className="swiper-button-next !hidden" />
       </div>
 
       <motion.p
