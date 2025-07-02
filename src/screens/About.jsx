@@ -270,7 +270,7 @@ const About = () => {
   }
 
   return (
-    <div className=" bg-[#FAFAFA]">
+    <div className=" bg-[#FAFAFA] font-kgPrimaryPenmanship">
       {/* Hero section */}
       <div className=" px-5 lg:px-12 pb-20  ">
         <div className="   pt-32 lg:pt-44 min-h-screen">
@@ -336,7 +336,7 @@ const About = () => {
 
       {/* philosophies */}
       <div className=" max-w-6xl mx-auto px-4">
-        <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold text-center mt-16">
+        <h1 className=" text-4xl font-semibold text-center mt-16">
           Our Core Philosophies
         </h1>
         <div
@@ -365,7 +365,7 @@ const About = () => {
       {/* Why choose us */}
       <div className=" mt-12">
         <div className=" bg-gray-700 py-12">
-          <h1 className=" text-3xl font-semibold text-center text-white">
+          <h1 className=" text-3xl md:text-4xl tracking-wider font-semibold text-center text-white">
             Why choose Tulip tots international?
           </h1>
 
@@ -381,7 +381,7 @@ const About = () => {
                     <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/55 w-full h-full" />
                   </div>
                   <div className=" absolute right-0 left-0 bottom-0 top-0 flex p-1 justify-center items-center">
-                    <p className=" text-center text-white  font-semibold text-base">
+                    <p className=" text-center text-white  font-semibold text-xl tracking-wider">
                       {item.text}
                     </p>
                   </div>
@@ -410,8 +410,8 @@ const Card = ({
 }) => {
   return (
     <div>
-      <p className=" text-2xl font-semibold text-black text-center">
-        {name} <span className=" text-lg">({country})</span>
+      <p className=" text-2xl sm:text-3xl tracking-wide font-semibold text-black text-center">
+        {name} <span className=" text-xl">({country})</span>
       </p>
       <div
         onClick={() => {
@@ -432,7 +432,7 @@ const Card = ({
         >
           <div
             className=" w-full h-full absolute rounded-3xl
-         flex flex-col justify-between  items-center p-5 lg:p-7 bg-white border-4 border-amber-200 overflow-hidden"
+         flex flex-col justify-between  items-center bg-white border-4 border-amber-200 overflow-hidden"
           >
             <img className=" absolute w-full h-full object-cover" src={image} />
             {/* front */}
@@ -445,7 +445,7 @@ const Card = ({
               </p> */}
 
               {quote && (
-                <blockquote className=" italic text-center bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
+                <blockquote className=" italic text-center text-xl tracking-wide bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
                   " {quote} "
                 </blockquote>
               )}
