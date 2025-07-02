@@ -156,7 +156,7 @@ const Pedagogy = () => {
                 </div>
               </div>
               <div className=" absolute bottom-1/20 -right-[150px]">
-                <img className=" h-[350px] mt-20 " src={rocket} />
+                {/* <img className=" h-[350px] mt-20 " src={rocket} /> */}
               </div>
             </div>
 
@@ -210,7 +210,7 @@ const Pedagogy = () => {
               </div>
             </div>
           </div>
-          <p className=" mt-10 text-slate-800 font-semibold text-center text-lg ">
+          <p className=" mt-10 text-slate-800 font-semibold text-center text-xl md:text-2xl tracking-wide ">
             Our LEAP Curriculum (Learn, Explore, Act, Play) brings our
             educational philosophy to life. It is a hands-on, experiential, and
             holistic framework designed especially for young children—supporting
@@ -234,10 +234,10 @@ const Card = ({ bgColor, setCurrentSkill, currentSkill, skill, subSkills }) => {
         setCurrentSkill(skill);
       }}
       className={`${
-        currentSkill === skill ? "h-50" : "h-16"
+        currentSkill === skill ? " h-60 sm:h-44 lg:h-60" : "h-16"
       } transition-all duration-500 bg-white overflow-hidden cursor-pointer shadow-sm`}
     >
-      <div className=" h-16 px-2 sm:px-4 flex items-center">
+      <div className=" h-16 px-2 sm:px-4  flex items-center">
         <div
           className=" h-6 w-6 sm:h-9 sm:w-9 rounded-full shrink-0 flex justify-center items-center"
           style={{ backgroundColor: bgColor }}
@@ -252,13 +252,13 @@ const Card = ({ bgColor, setCurrentSkill, currentSkill, skill, subSkills }) => {
         </div>
         <p
           style={{ color: currentSkill === skill ? bgColor : "#000" }}
-          className=" sm:text-lg ml-2 sm:ml-3 font-bold tracking-wide"
+          className=" text-xl sm:text-2xl ml-2 sm:ml-3 font-bold tracking-wider"
         >
           {skill}
         </p>
       </div>
       <div className="p-4 px-8 pt-2">
-        <p className=" text-slate-700 font-semibold">{subSkills}</p>
+        <p className=" text-slate-700 font-semibold text-xl leading-6 tracking-wider sm:text-2xl">{subSkills}</p>
       </div>
     </div>
   );
