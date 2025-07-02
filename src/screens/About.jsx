@@ -272,8 +272,8 @@ const About = () => {
   return (
     <div className=" bg-[#FAFAFA] font-kgPrimaryPenmanship">
       {/* Hero section */}
-      <div className=" px-5 lg:px-12 pb-20  ">
-        <div className="   pt-32 lg:pt-44 min-h-screen">
+      <div className="">
+        <div className="px-4 pb-10  pt-32 lg:pt-44 relative ">
           <video
             className=" w-screen h-full absolute top-0 left-0 right-0 bottom-0 object-cover"
             // controls
@@ -292,27 +292,27 @@ const About = () => {
             Your browser does not support the video tag.
           </video>
           <div className=" absolute top-0 left-0 right-0 bottom-0 bg-black/70" />
-          <div className="grid lg:grid-cols-2 items-center gap-10 relative">
+          <div className=" relative ">
             <div>
-              <p className=" lg:ml-10  text-3xl lg:text-5xl tracking-wider font-black text-white">
+              <p className=" lg:ml-10 text-4xl  md:text-5xl lg:text-6xl tracking-wider font-black text-white">
                 About Us
               </p>
-              <div className="  lg:p-10 mt-6 lg:mt-5 rounded-4xl flex flex-col justify-center items-center">
-                <p className=" text-slate-100   font-semibold">
+              <div className=" max-w-4xl  lg:p-10 mt-6 lg:mt-5 rounded-4xl flex flex-col justify-center items-center">
+                <p className=" text-slate-100 tracking-wider text-2xl  lg:text-3xl font-medium">
                   Our tagline “Where Little Minds Bloom” beautifully reflects
                   our vision. We are dedicated to creating a free-flowing,
                   nurturing environment where young children are encouraged to
                   explore, imagine, and grow at their own natural pace.
                 </p>
 
-                <p className=" mt-8 text-slate-100 font-semibold">
+                <p className=" mt-8 text-slate-100 tracking-wider text-2xl  lg:text-3xl font-medium">
                   By tending to their curiosity and planting deep, strong roots
                   of confidence, creativity, and love for learning, we help them
                   blossom into lifelong learners
                 </p>
                 <Link
                   to={"/story"}
-                  className=" self-start border-2 hover:scale-105 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md  mt-16"
+                  className=" self-start border-2 hover:scale-105 border-blue-500 text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md  mt-16"
                 >
                   <p>Our Story</p>
                 </Link>
@@ -326,68 +326,70 @@ const About = () => {
         </div>
 
         {/* Vision and Mission */}
-        <div className=" grid grid-cols-1 gap-10 mt-12">
+        <div className=" grid grid-cols-1 gap-10 mt-12 px-5 lg:px-12 ">
           <Vision />
           <Mission />
         </div>
       </div>
-      {/* Curriculum & Pedagogy */}
-      <Pedagogy />
+      <div className=" px-5 lg:px-12 pb-20">
+        {/* Curriculum & Pedagogy */}
+        <Pedagogy />
 
-      {/* philosophies */}
-      <div className=" max-w-6xl mx-auto px-4">
-        <h1 className=" text-4xl font-semibold text-center mt-16">
-          Our Core Philosophies
-        </h1>
-        <div
-          className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-20 mt-10
-        "
-        >
-          {data.map((item, index) => (
-            <Card
-              key={index}
-              setCurrentTapped={setCurrentTapped}
-              currentTapped={currentTapped}
-              name={item.name}
-              country={item.country}
-              quote={item.quote}
-              howToApply={item.howToApply}
-              mainIdea={item.mainIdea}
-              image={item?.image}
-              bgColor={item?.bgColor}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* <Assessment /> */}
-
-      {/* Why choose us */}
-      <div className=" mt-12">
-        <div className=" bg-gray-700 py-12">
-          <h1 className=" text-3xl md:text-4xl tracking-wider font-semibold text-center text-white">
-            Why choose Tulip tots international?
+        {/* philosophies */}
+        <div className=" max-w-6xl mx-auto px-4">
+          <h1 className=" text-4xl font-semibold text-center mt-16">
+            Our Core Philosophies
           </h1>
+          <div
+            className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-20 mt-10
+        "
+          >
+            {data.map((item, index) => (
+              <Card
+                key={index}
+                setCurrentTapped={setCurrentTapped}
+                currentTapped={currentTapped}
+                name={item.name}
+                country={item.country}
+                quote={item.quote}
+                howToApply={item.howToApply}
+                mainIdea={item.mainIdea}
+                image={item?.image}
+                bgColor={item?.bgColor}
+              />
+            ))}
+          </div>
+        </div>
 
-          <div className=" w-[90%] xl:w-[90%] mx-auto mt-12 grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-            {data3.map((item, index) => (
-              <div key={index} className=" flex justify-center items-center">
-                <div
-                  style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
-                  className=" w-32  md:w-36 md:h-36 xl:w-40  h-32 xl:h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-3xl flex justify-center items-center bg-white"
-                >
-                  <div className=" absolute right-0 left-0 bottom-0 top-0 flex justify-center items-center">
-                    <img src={item.image} />
-                    <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/55 w-full h-full" />
-                  </div>
-                  <div className=" absolute right-0 left-0 bottom-0 top-0 flex p-1 justify-center items-center">
-                    <p className=" text-center text-white  font-semibold text-xl tracking-wider">
-                      {item.text}
-                    </p>
+        {/* <Assessment /> */}
+
+        {/* Why choose us */}
+        <div className=" mt-12">
+          <div className=" bg-gray-700 py-12">
+            <h1 className=" text-3xl md:text-4xl tracking-wider font-semibold text-center text-white">
+              Why choose Tulip tots international?
+            </h1>
+
+            <div className=" w-[90%] xl:w-[90%] mx-auto mt-12 grid gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+              {data3.map((item, index) => (
+                <div key={index} className=" flex justify-center items-center">
+                  <div
+                    style={{ borderWidth: 4, borderColor: getRandomHexColor() }}
+                    className=" w-32  md:w-36 md:h-36 xl:w-40  h-32 xl:h-40 cursor-none relative overflow-hidden hover:scale-110 transition-all duration-500 rounded-3xl flex justify-center items-center bg-white"
+                  >
+                    <div className=" absolute right-0 left-0 bottom-0 top-0 flex justify-center items-center">
+                      <img src={item.image} />
+                      <div className=" absolute right-0 left-0 bottom-0 top-0 bg-black/55 w-full h-full" />
+                    </div>
+                    <div className=" absolute right-0 left-0 bottom-0 top-0 flex p-1 justify-center items-center">
+                      <p className=" text-center text-white  font-semibold text-xl tracking-wider">
+                        {item.text}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
