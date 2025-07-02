@@ -92,14 +92,14 @@ const data2 = [
 const Pedagogy = () => {
   const [currentSkill, setCurrentSkill] = useState("");
   return (
-    <div className="py-20 bg-[#EAF4F5]">
-      <div className=" px-4 lg:w-[80%] mx-auto">
+    <div className="py-20 bg-[#EAF4F5] overflow-x-hidden">
+      <div className=" px-4 lg:w-[85%] mx-auto">
         <div className=" ">
-          <p className=" text-2xl sm:text-3xl tracking-wide text-center font-bold text-black">
+          <p className=" text-3xl lg:text-4xl sm:text-3xl tracking-wide text-center font-bold text-black">
             How We Nurture young Minds
           </p>
           <div className=" bg-orange-200 p-5 sm:p-10 rounded-4xl mt-12">
-            <p className="  font-semibold text-slate-800 text-base sm:text-lg">
+            <p className="  font-semibold text-slate-800 text-xl tracking-wider lg:text-2xl">
               At Tulip Tots International, we believe the early years are a
               magical time of discovery, growth, and endless possibility. Our
               curriculum is thoughtfully designed to nurture the whole
@@ -108,13 +108,13 @@ const Pedagogy = () => {
             </p>
 
             <div className=" relative">
-              <p className=" text-center font-semibold text-3xl mt-8">
+              <p className=" text-center font-semibold  text-3xl lg:text-4xl mt-8">
                 Our Curriculum Aligned with
               </p>
 
-              <div className=" flex justify-between relative">
-                <div className=" mt-8 flex-col pl-8">
-                  <div className=" flex items-center translate-x-14 gap-5">
+              <div className=" flex justify-between relative z-20">
+                <div className=" text-xl  mt-8 z-40 relative flex-col mx-auto md:mx-0 pl-8">
+                  <div className=" flex flex-col sm:flex-row items-center  md:translate-x-14 gap-5">
                     <div className=" relative w-fit">
                       <img className=" w-[250px]" src={cric1} />
                       <div className=" absolute top-0 left-0 right-0 bottom-0 -translate-y-3 flex justify-center items-center p-3">
@@ -134,7 +134,7 @@ const Pedagogy = () => {
                       </div>
                     </div>
                   </div>
-                  <div className=" flex  items-center  gap-5">
+                  <div className=" flex flex-col sm:flex-row items-center  gap-5">
                     <div className=" relative w-fit">
                       <img className=" w-[250px]" src={cric3} />
                       <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
@@ -145,7 +145,7 @@ const Pedagogy = () => {
                     </div>
                     <div className=" relative w-fit">
                       <img className=" w-[250px]" src={cric4} />
-                      <div className=" absolute top-0 left-0 right-0 bottom-0 -translate-y-4 flex justify-center items-center p-3">
+                      <div className=" absolute top-0 left-0 right-0 bottom-0 -translate-y-0 flex justify-center items-center p-3">
                         <p className=" text-center">
                           NCERT <br /> National Council of <br /> Education
                           Research and <br /> Training
@@ -154,16 +154,19 @@ const Pedagogy = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className=" absolute bottom-1/20 -right-[150px]">
-                {/* <img className=" h-[350px] mt-20 " src={rocket} /> */}
+                <div className=" hidden z-20 md:flex absolute top-1/2 -translate-y-1/2 md:-right-[70px] lg:-right-[100px] xl:-right-[150px]">
+                  <img
+                    className=" md:h-[200px] lg:h-[260px] xl:h-[350px] mt-20 "
+                    src={rocket}
+                  />
+                </div>
               </div>
             </div>
 
-            <p className=" mt-4 font-semibold text-slate-800 text-lg hidden lg:flex">
+            <p className=" mt-4 font-semibold text-slate-800 tracking-wider text-2xl hidden lg:flex">
               These frameworks emphasize:
             </p>
-            <div className=" hidden lg:flex-col mt-2 font-semibold text-slate-800 text-lg">
+            <div className=" hidden lg:flex-col mt-2 font-semibold text-slate-800 tracking-wider">
               <li>A flexible, multi-level, activity-based learning model</li>
               <li>
                 A strong foundation in language, early numeracy,
@@ -179,7 +182,7 @@ const Pedagogy = () => {
               </li>
             </div>
 
-            <p className=" hidden lg:flex mt-4 font-semibold text-slate-800 text-lg">
+            <p className=" hidden lg:flex mt-4 font-semibold text-slate-800 tracking-wider text-2xl">
               Every learning moment at Tulip Tots is filled with wonder,
               purpose, and joy. Whether indoors or outdoors, our children are
               encouraged to ask questions, explore freely, and express
@@ -258,7 +261,9 @@ const Card = ({ bgColor, setCurrentSkill, currentSkill, skill, subSkills }) => {
         </p>
       </div>
       <div className="p-4 px-8 pt-2">
-        <p className=" text-slate-700 font-semibold text-xl leading-6 tracking-wider sm:text-2xl">{subSkills}</p>
+        <p className=" text-slate-700 font-semibold text-xl leading-6 tracking-wider sm:text-2xl">
+          {subSkills}
+        </p>
       </div>
     </div>
   );

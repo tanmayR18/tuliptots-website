@@ -12,40 +12,40 @@ const Mission = () => {
         <div>
           <div className=" flex items-center justify-center gap-2">
             <img className=" w-12 h-12" src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/About/mission.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQWJvdXQvbWlzc2lvbi5wbmciLCJpYXQiOjE3NTEyMDkzOTAsImV4cCI6MTc4Mjc0NTM5MH0.PTfnPWcYjhj8tqT_akUDRk9c0cqQTV0EqrX-s1W5DmU" />
-            <p className=" text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center">
+            <p className=" text-3xl lg:text-4xl font-bold text-black text-center">
               MISSION
             </p>
           </div>
           <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6 lg:mt-12">
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image1} />
-              <p className=" mt-3 text-center leading-5 tracking-wide text-lg font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Nurturing play <br /> based <br /> environment
               </p>
             </div>
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image2} />
-              <p className=" mt-3 text-center leading-5 tracking-wide text-lg font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Supporting <br /> Natural <br />
                 Development
               </p>
             </div>
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image4} />
-              <p className=" mt-3 text-center leading-5 tracking-wide text-lg font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Freedom to explore, <br />
                 discover, and <br /> express themselves
               </p>
             </div>
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image3} />
-              <p className=" mt-3 text-center leading-5 tracking-wide text-lg font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Innovation, <br /> researched global <br /> practices
               </p>
             </div>
           </div>
           <div className=" h-full flex justify-center items-center">
-            <p className=" mt-16 text-xl font-semibold text-center">
+            <p className=" mt-16 leading-6 tracking-wide text-xl xl:text-2xl text-slate-800 font-semibold text-center">
               Our mission is to create a nurturing environment where every child
               feels safe, cherished, and inspired to explore. At Tulip Tots
               International, we foster a joyful learning atmosphere, where
