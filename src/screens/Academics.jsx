@@ -25,33 +25,33 @@ const ProgramCard = ({
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ scale: 1.02 }}
-      className="bg-white flex flex-col rounded-2xl overflow-hidden"
+      className="bg-white flex flex-col rounded-2xl shadow-xl overflow-hidden"
     >
       <div className="p-2" style={{ backgroundColor: bgColor }}>
-        <p className="text-white text-lg font-bold text-center tracking-wider">
+        <p className="text-white text-2xl font-bold text-center tracking-wider">
           {programName}
         </p>
       </div>
-      <div className="grow p-4 flex flex-col justify-between">
+      <div className="grow p-4 flex  flex-col justify-between">
         <div>
-          <p className="text-center text-base text-slate-800 font-semibold">
+          <p className="text-center text-xl tracking-wide text-slate-800 font-semibold">
             {programIdea}
           </p>
 
           <div className="h-px w-full bg-slate-600 my-3" />
-          <p className="text-center text-gray-600 font-semibold">{content}</p>
+          <p className="text-center text-gray-600 tracking-wider text-xl leading-6">{content}</p>
         </div>
 
         <div>
           <div className="w-full border-t border-dashed border-black my-2" />
 
-          <p className="text-center text-black font-semibold">
+          <p className="text-center text-black text-xl font-medium tracking-wide">
             Eligibility - {eligibily}
           </p>
         </div>
       </div>
       <div style={{ backgroundColor: bgColor }}>
-        <p className="text-white font-bold text-center tracking-wider p-2">
+        <p className="text-white font-semibold text-xl text-center tracking-wider p-2">
           {programPetName}
         </p>
       </div>
@@ -83,7 +83,7 @@ const SubSectionCard = ({
     >
       <Link
         to={navigate}
-        className="flex justify-center border-4 relative overflow-hidden items-center w-[160px] sm:w-[200px] aspect-square rounded-full"
+        className="flex justify-center border-4 relative overflow-hidden items-center w-[150px] sm:w-[200px] aspect-square rounded-full"
         style={{ backgroundColor: bgColor, borderColor: borderColor }}
       >
         <motion.img
@@ -93,7 +93,7 @@ const SubSectionCard = ({
         />
         <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/20" />
         <div className="absolute top-0 right-0 left-0 bottom-0 bg-black/50 flex justify-center items-center">
-          <p className="text-white text-center text-lg p-3 font-semibold tracking-wide">
+          <p className="text-white text-center text-xl p-3 font-semibold tracking-widest">
             {facilityName}
           </p>
         </div>
@@ -107,12 +107,12 @@ const Academics = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="pt-44 bg-[#EAF4F5]" ref={ref}>
+    <div className="pt-44 bg-[#fafafa] font-kgPrimaryPenmanship" ref={ref}>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center tracking-wide"
+        className=" text-4xl lg:text-5xl font-bold text-center tracking-wide"
       >
         Our Preschool Programs
       </motion.p>
@@ -224,7 +224,7 @@ const Academics = () => {
         </div>
       </div> */}
 
-      <div className=" py-32 bg-[#fff]">
+      <div className=" py-32 bg-[#CDE8EA]">
         <motion.p
           initial={{ opacity: 0, translateY: 10 }}
           whileInView={{
@@ -236,7 +236,7 @@ const Academics = () => {
             once: true,
             margin: "-100px",
           }}
-          className=" text-3xl font-bold text-center tracking-wide"
+          className=" text-3xl lg:text-4xl font-bold text-center tracking-wide"
         >
           A Peek Into Our World
         </motion.p>

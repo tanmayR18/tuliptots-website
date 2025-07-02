@@ -75,7 +75,7 @@ const Activity = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="mt-16 lg:mt-32 text-3xl font-bold text-center"
+        className="mt-16 lg:mt-32 text-3xl px-4 md:px-0 md:text-4xl font-bold tracking-wider text-center"
       >
         Tulip Trail Activity Centre
       </motion.p>
@@ -84,7 +84,7 @@ const Activity = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-center font-semibold text-gray-700 mt-2"
+        className="text-center text-2xl px-4 md:px-0 md:text-3xl font-semibold text-gray-600 mt-2"
       >
         ( Where every child finds their own way to grow )
       </motion.p>
@@ -93,7 +93,7 @@ const Activity = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="bg-orange-200 mt-8 w-[90%] mx-auto p-10 text-black font-semibold text-lg rounded-[32px]"
+        className="bg-orange-200 mt-8 w-[90%] mx-auto p-10 text-black font-semibold text-xl md:text-2xl tracking-wide rounded-[32px]"
       >
         <p className="text-slate-800">
           At Tulip Tots International, we believe children bloom best when
@@ -115,7 +115,7 @@ const Activity = () => {
           once: true,
           margin: "-100px",
         }}
-        className="text-center font-bold text-2xl mt-20 "
+        className="text-center font-bold text-3xl px-4 md:px-0 md:text-4xl tracking-wider mt-20 "
       >
         What Awaits Your Child
       </motion.p>
@@ -164,12 +164,12 @@ const Card = ({ bgColor, text, index, isInView, image }) => {
           once: true,
           margin: "-100px",
         }}
-        className="text-black font-semibold text-xl text-center"
+        className="text-black font-semibold text-xl xl:text-2xl tracking-wider text-center"
       >
         {text}
       </motion.p>
 
-      <div className=" mt-10 aspect-square  overflow-hidden">
+      <div className=" mt-4 lg:mt-10 aspect-square rounded-2xl  overflow-hidden">
         <img className=" w-full h-full object-cover" src={image} />
       </div>
     </motion.div>
