@@ -10,7 +10,7 @@ const CTA = () => {
   return (
     <>
       <div
-        className="h-[70vh] md:h-[90vh] w-full relative flex items-end "
+        className="h-[90vh] w-full relative flex items-end "
         ref={ref}
       >
         <motion.div
@@ -48,18 +48,18 @@ const CTA = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-white flex flex-col px-10 -translate-y-8 w-9/12 mx-auto"
+            className="text-white flex flex-col px-4 lg:px-10 -translate-y-8 lg:w-9/12 mx-auto"
           >
-            <p className="text-xl   font-semibold italic">
+            <p className=" text-xl md:text-2xl lg:text-3xl tracking-wider   font-semibold italic">
               "We’ve been underestimating children for far too long. Every child
               holds immense potential—far greater than we imagine. When we stop
               trying to control their learning and start guiding with trust and
               respect, we see them soar beyond the limits we once believed
               existed."
             </p>
-            <p className="self-end mt-5 text-xl text-right tracking-wide">
+            <p className="self-end mt-5 text-xl md:text-2xl text-right tracking-wide">
               - Sufiya Inamdar <br />{" "}
-              <span className="  text-base">
+              <span className="  text-xl">
                 Co-Founder, Tulip Tots International
               </span>
             </p>
@@ -78,7 +78,7 @@ const CTA = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-white md:text-2xl text-lg lg:text-3xl font-semibold text-center mb-10"
+            className="text-white md:text-3xl text-xl tracking-wider lg:text-4xl font-semibold text-center mb-10"
           >
             From Little Seeds to Mighty Blossoms <br className="lg:hidden" /> —
             Join the Tulip Tots Family!
@@ -86,7 +86,7 @@ const CTA = () => {
           <NavLink to={"enquiry"}>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="px-4 py-2 border rounded-md border-white hover:bg-white transition-all duration-300 hover:scale-105 text-white hover:text-[#66a6ff] font-semibold"
+              className="px-4 py-2 border text-xl tracking-wider md:text-2xl rounded-md border-white hover:bg-white transition-all duration-300 hover:scale-105 text-white hover:text-[#66a6ff] font-semibold"
             >
               <p>Book a Visit</p>
             </motion.div>
