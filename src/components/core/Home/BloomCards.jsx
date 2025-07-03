@@ -51,15 +51,15 @@ const BloomCards = () => {
       />
       <img
         src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/bloomFlower.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ibG9vbUZsb3dlci5wbmciLCJpYXQiOjE3NTEyMTQ4NjYsImV4cCI6MTc4Mjc1MDg2Nn0.VtiX_j6pFjCOjKJcojY1eJ3t7nB2_bSp10GbwyC0c50"
-        className=" absolute h-[150px] -top-2 -left-7"
+        className=" absolute h-[100px] sm:h-[130px] lg:h-[150px] -top-2 -left-7"
       />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className=" flex justify-center relative z-20 text-2xl lg:text-3xl font-bold text-gray-700 text-center"
+        className=" flex justify-center relative z-20 text-3xl lg:text-4xl font-bold text-gray-700 text-center"
       >
-        <img className=" -rotate-45 -translate-y-7 translate-x-6 w-20" src={doddle13} />
+        <img className=" -rotate-45 -translate-y-6 lg:-translate-y-7 translate-x-4 lg:translate-x-6 w-12 h-7 lg:h-auto lg:w-20" src={doddle13} />
         <p>
           The{" "}
           <motion.span
@@ -293,11 +293,11 @@ const Card = ({
             transition={{ duration: 0.5 }}
             className="-translate-y-8 relative w-full"
           >
-            <p className=" text-5xl text-black font-bold text-center">
+            <p className=" text-6xl text-black font-bold text-center">
               {letter}
             </p>
             <div className=" absolute flex justify-center items-center w-full px-2">
-              <p className=" text-xl text-center mt-3 text-slate-900 font-semibold">
+              <p className=" text-2xl lg:text-xl xl:text-2xl text-center mt-3 text-slate-900 font-semibold">
                 {title}
               </p>
             </div>
@@ -324,7 +324,7 @@ const Card = ({
           >
             <div className="w-full h-full overflow-y-auto hide-scrollbar p-4">
               <div className="min-h-full flex items-center justify-center">
-                <p className="text-center text-white text-sm tracking-wider font-semibold">
+                <p className="text-center text-white text-2xl lg:text-lg xl:text-xl leading-5 sm:leading-6 lg:leading-5 lg:tracking-wide   xl:tracking-widest xl:font-semibold">
                   {description}
                 </p>
               </div>

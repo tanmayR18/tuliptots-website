@@ -55,7 +55,7 @@ const Highlights = () => {
           once: true,
           margin: "-100px",
         }}
-        className=" text-center text-2xl md:text-3xl text-gray-800 font-bold"
+        className=" text-center text-2xl sm:text-3xl md:text-4xl tracking-wider text-gray-800 font-bold"
       >
         What Makes Us Unique
       </motion.p>
@@ -82,7 +82,7 @@ const Highlights = () => {
               />
               <p
                 style={{ color: point.color }}
-                className=" md:absolute font-semibold tracking-wide text-lg leading-6 mt-6 text-center md:bottom-0 md:translate-y-full"
+                className=" md:absolute font-semibold tracking-wide text-2xl leading-6 mt-6 text-center md:bottom-0 md:translate-y-full"
               >
                 {point.text}
               </p>
@@ -110,7 +110,7 @@ const Highlights = () => {
             }
             to={"/aboutUs"}
           >
-            <p className="text-green-500 group-hover:text-white transition-all duration-300">
+            <p className="text-green-500 text-xl md:text-2xl tracking-wide group-hover:text-white transition-all duration-300">
               About
             </p>
           </NavLink>
@@ -122,7 +122,7 @@ const Highlights = () => {
             }
             to={"/blogs"}
           >
-            <p className="text-amber-700 group-hover:text-white transition-all duration-300 text-center">
+            <p className="text-amber-700 group-hover:text-white text-xl md:text-2xl tracking-wide transition-all duration-300 text-center">
               Blogs
             </p>
           </NavLink>
@@ -134,7 +134,7 @@ const Highlights = () => {
             }
             to={"/gallery"}
           >
-            <p className="text-blue-400 group-hover:text-white transition-all duration-300 text-center">
+            <p className="text-blue-400 group-hover:text-white text-xl md:text-2xl tracking-wide transition-all duration-300 text-center">
               Gallery
             </p>
           </NavLink>

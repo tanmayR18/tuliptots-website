@@ -10,7 +10,7 @@ import NewHero from "@/components/core/Home/NewHero";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className=" bg-[#fafafa]">
+    <div className=" bg-[#fafafa] font-kgPrimaryPenmanship">
       {/* <Hero /> */}
       <NewHero />
       <BloomCards />
