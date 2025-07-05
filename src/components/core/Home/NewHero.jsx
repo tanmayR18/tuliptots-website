@@ -10,7 +10,7 @@ import flower5 from "../../../assets/elements/flower5.png";
 
 const NewHero = () => {
   return (
-    <div className="pb-12 overflow-hidden min-h-screen relative bg-linear-to-br from-blue-300 to-blue-100  overflow-x-hidden pt-32 lg:pt-44">
+    <div className="pb-12 overflow-hidden min-h-screen relative flex justify-center items-center bg-linear-to-br from-blue-300 to-blue-100  overflow-x-hidden pt-32 lg:pt-44">
       <img
         src={doddle2}
         className=" absolute -bottom-16 lg:-bottom-[100px] -left-10 lg:-left-[100px] w-[200px] lg:w-[400px]"
@@ -39,7 +39,7 @@ const NewHero = () => {
               Tulip tots <br /> International
             </p>
 
-            <div className=" bg-[#f69222] py-3 px-14 rounded-[32px] mt-3">
+            <div className=" bg-[#f69222] py-3 px-8 sm:px-10 md:px-14 rounded-[32px] mt-3">
               <p className=" text-[#323a30] text-center font-semibold text-2xl ">
                 Where little minds BLOOM
               </p>

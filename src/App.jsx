@@ -41,6 +41,7 @@ import PrivateRoute from "./components/common/PrivateRoute";
 import GalleryUpload from "./screens/Auth/GalleryUpload";
 import BlogUpload from "./screens/Auth/ImageUpload";
 import VideoUpload from "./screens/Auth/VideoUpload";
+import ScrollToTopButton from "./components/common/ScrollToTopButton";
 
 function App() {
   const router = [
@@ -213,6 +214,7 @@ function App() {
                 <Route path={route.path} element={route.element} />
               ))}
             </Routes>
+            <ScrollToTopButton />
           </ScrollToTop>
           <Footer />
           <Toaster />

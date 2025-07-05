@@ -168,48 +168,40 @@ const data3 = [
     image: image2,
   },
   {
+    text: "Global best practices",
+    image: image22,
+  },
+  {
     text: "Personalized growth tracking",
     image: image3,
-  },
-  {
-    text: "Endless possibilities play zone",
-    image: image4,
-  },
-  {
-    text: "Cozy calm corner",
-    image: image5,
-  },
-  {
-    text: "Splash Play Pool",
-    image: image6,
-  },
-  {
-    text: "In-House Library",
-    image: image7,
-  },
-  {
-    text: "Child-Centric Spaces",
-    image: image8,
   },
   {
     text: "Interactive walls zones",
     image: image9,
   },
   {
-    text: "Sandpit & Mud Kitchen",
-    image: image10,
+    text: "In-House Library",
+    image: image7,
   },
   {
     text: "Imaginative Free Play",
     image: image11,
   },
   {
-    text: "Adventure Climbing Frames",
-    image: image12,
+    text: "Endless possibilities play zone",
+    image: image4,
   },
   {
-    text: "Obstacle courses",
-    image: image13,
+    text: "Sandpit & Mud Kitchen",
+    image: image10,
+  },
+  {
+    text: "Life size building structure",
+    image: image24,
+  },
+  {
+    text: "Cozy calm corner",
+    image: image5,
   },
   {
     text: "Practical Life Skills and Stem Explaination",
@@ -220,12 +212,24 @@ const data3 = [
     image: image15,
   },
   {
-    text: "Secure CCTV Monitoring",
-    image: image16,
+    text: "Growth not grades",
+    image: image25,
   },
   {
-    text: "On-Call Paediatric Support",
-    image: image17,
+    text: "Splash Play Pool",
+    image: image6,
+  },
+  {
+    text: "Obstacle courses",
+    image: image13,
+  },
+  {
+    text: "Adventure Climbing Frames",
+    image: image12,
+  },
+  {
+    text: "Child-Centric Spaces",
+    image: image8,
   },
   {
     text: "Gentle Transition",
@@ -240,25 +244,23 @@ const data3 = [
     image: image20,
   },
   {
+    text: "Secure CCTV Monitoring",
+    image: image16,
+  },
+
+  {
+    text: "On-Call Paediatric Support",
+    image: image17,
+  },
+
+  {
     text: "Fire Safety",
     image: image21,
-  },
-  {
-    text: "Global best practices",
-    image: image22,
   },
   //   {
   //     text: "Continuous assessment",
   //     image: image23,
   //   },
-  {
-    text: "Life size building structure",
-    image: image24,
-  },
-  {
-    text: "Growth not grades",
-    image: image25,
-  },
 ];
 
 const About = () => {
@@ -331,7 +333,7 @@ const About = () => {
           <Mission />
         </div>
       </div>
-      <div className=" px-5 lg:px-12 pb-20">
+      <div className=" lg:px-12  mt-20">
         {/* Curriculum & Pedagogy */}
         <Pedagogy />
 

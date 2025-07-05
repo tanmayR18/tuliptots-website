@@ -44,19 +44,19 @@ const JoinTeam = () => {
   };
 
   return (
-    <div className=" bg-[#f3f3f3]">
+    <div className=" bg-[#fafafa] font-kgPrimaryPenmanship">
       <div className=" flex justify-between items-center pt-32 lg:pt-40 px-4 md:px-0 md:w-[80%] mx-auto">
         <div className=" md:w-[50%]">
-          <h1 className=" text-4xl font-bold ">Join Our team</h1>
+          <h1 className=" text-4xl lg:text-5xl font-bold ">Join Our team</h1>
 
-          <h4 className=" text-base font-semibold mt-5 lg:mt-8">
+          <h4 className=" text-xl  tracking-wide text-slate-800  mt-5 lg:mt-8">
             At Tulip Tots, we believe that passionate educators shape lifelong
             learners. If you’re someone who finds joy in working with young
             children, values play-based and child-led learning, and wants to
             make a real difference in early childhood education—we’d love to
             hear from you!
           </h4>
-          <h4 className=" text-base font-semibold mt-2 lg:mt-4">
+          <h4 className=" text-xl  tracking-wide text-slate-800   mt-2 lg:mt-4">
             Whether you’re a seasoned teacher, a budding early years educator,
             or someone with unique skills to share, we welcome enthusiastic
             individuals who are aligned with our nurturing, joyful philosophy.
@@ -67,7 +67,7 @@ const JoinTeam = () => {
         </div>
       </div>
 
-      <div className=" w-[90%] md:w-10/12 mx-auto mt-12 pb-12">
+      <div className=" w-[90%] md:w-10/12 mx-auto mt-12 pb-12 text-lg tracking-wider">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Name and age */}
           <div className=" flex flex-col md:flex-row gap-5">
@@ -90,7 +90,7 @@ const JoinTeam = () => {
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {errors.name && (
-                <span className=" text-red-500 text-xs">
+                <span className=" text-red-500 text-sm">
                   {errors.name.message}
                 </span>
               )}
@@ -115,7 +115,7 @@ const JoinTeam = () => {
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {errors.age && (
-                <span className=" text-red-500 text-xs">
+                <span className=" text-red-500 text-sm">
                   {errors.age.message}
                 </span>
               )}
@@ -144,7 +144,7 @@ const JoinTeam = () => {
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {errors.role && (
-                <span className=" text-red-500 text-xs">
+                <span className=" text-red-500 text-sm">
                   {errors.role.message}
                 </span>
               )}
@@ -164,7 +164,7 @@ const JoinTeam = () => {
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {errors.education && (
-                <span className=" text-red-500 text-xs">
+                <span className=" text-red-500 text-sm">
                   {errors.education.message}
                 </span>
               )}
@@ -190,7 +190,7 @@ const JoinTeam = () => {
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {errors.email && (
-                <span className=" text-red-500 text-xs">
+                <span className=" text-red-500 text-sm">
                   {errors.email.message}
                 </span>
               )}
@@ -210,7 +210,7 @@ const JoinTeam = () => {
                 className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
               />
               {errors.contactNumber && (
-                <span className=" text-red-500 text-xs">
+                <span className=" text-red-500 text-sm">
                   {errors.contactNumber.message}
                 </span>
               )}

@@ -213,6 +213,7 @@ const Admission = () => {
         <p className=" text-black text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px]  text-center  z-10">
           Admissions
         </p>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
         <p className=" text-gray-600 font-semibold text-xl  text-center lg:text-2xl z-10 mt-4 lg:mt-7 lg:w-[60%]">
           Admissions are open throughout the year for families who resonate with
           our joyful, child-led approach to early learning.
@@ -291,7 +292,7 @@ const Admission = () => {
         </div>
 
         <div className=" mt-12 w-[95%] md:w-[80%] mx-auto h-0.5 bg-slate-400" />
-        
+
         {/* Enquiry Section */}
         <div className="mt-16 md:mt-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -316,33 +317,36 @@ const Admission = () => {
                   Have Questions?
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
-                  We're here to help! Get in touch with us to learn more about our programs, 
-                  schedule a visit, or discuss your child's educational journey.
+                  We're here to help! Get in touch with us to learn more about
+                  our programs, schedule a visit, or discuss your child's
+                  educational journey.
                 </p>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/enquiry"
                   className="group relative overflow-hidden bg-gradient-to-r from-blue-400 to-pink-400 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
                 >
-                  <span className="relative z-10 text-xl tracking-wider">Enquiry Now</span>
-                  <svg 
-                    className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <span className="relative z-10 text-xl tracking-wider">
+                    Enquiry Now
+                  </span>
+                  <svg
+                    className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
                     />
                   </svg>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
-                
+
                 {/* <div className="flex items-center gap-2 text-gray-500">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -350,37 +354,84 @@ const Admission = () => {
                   <span className="text-sm">Response within 24 hours</span>
                 </div> */}
               </div>
-              
+
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xl md:text-2xl tracking-wide">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <svg
+                      className="w-6 h-6 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Visit Our Campus</h3>
-                  <p className="text-lg lg:text-xl text-gray-600">Schedule a guided tour</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">
+                    Visit Our Campus
+                  </h3>
+                  <p className="text-lg lg:text-xl text-gray-600">
+                    Schedule a guided tour
+                  </p>
                 </div>
-                
+
                 <div className="flex flex-col  items-center">
                   <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-3">
-                    <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    <svg
+                      className="w-6 h-6 text-pink-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Ask Questions</h3>
-                  <p className="text-lg lg:text-xl text-gray-600">Get detailed answers</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">
+                    Ask Questions
+                  </h3>
+                  <p className="text-lg lg:text-xl text-gray-600">
+                    Get detailed answers
+                  </p>
                 </div>
-                
+
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-6 h-6 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Begin Journey</h3>
-                  <p className="text-lg lg:text-xl text-gray-600">Start admission process</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">
+                    Begin Journey
+                  </h3>
+                  <p className="text-lg lg:text-xl text-gray-600">
+                    Start admission process
+                  </p>
                 </div>
               </div>
             </div>
