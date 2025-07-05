@@ -59,13 +59,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-[#333] to-[#222] text-white">
+    <footer className="bg-gradient-to-b font-kgPrimaryPenmanship text-xl tracking-wider from-[#333] to-[#222] text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* School Info */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               Tulip Tots International
             </h3>
             <div className="space-y-3">
@@ -143,10 +143,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" flex justify-between">
+          <div className=" flex justify-between max-w-sm pr-6">
             {/* Important Links */}
             <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-gray-200">
+              <h4 className="text-2xl font-semibold text-gray-200">
                 Important Links
               </h4>
               <ul className="space-y-3">
@@ -166,7 +166,7 @@ const Footer = () => {
 
             {/* Explore */}
             <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-gray-200">Explore</h4>
+              <h4 className="text-2xl font-semibold text-gray-200">Explore</h4>
               <ul className="space-y-3">
                 {explore.map((link) => (
                   <li key={link.name}>
@@ -185,9 +185,14 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-gray-200">
-              Our live location
+            <h4 className="text-2xl font-semibold text-gray-200">
+              Our location
             </h4>
+
+            <p className="text-gray-300">
+              Shop No 1 & 2, Yash one infinite, Kate wasti, punawale,
+              pune 411033
+            </p>
             <Link
               to={
                 "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"

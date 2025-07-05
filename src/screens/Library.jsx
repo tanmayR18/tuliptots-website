@@ -72,7 +72,7 @@ const Library = () => {
       </motion.p>
 
       <div className="flex flex-col lg:flex-row mx-auto lg:w-10/12 mt-12 lg:mt-16 items-center justify-between">
-        <div className=" w-1/2">
+        <div className=" lg:w-1/2">
           <p className="text-[#333] text-center lg:text-start font-bold text-2xl lg:text-3xl tracking-wide">
             Lifelong Readers Begin Here
           </p>
@@ -80,7 +80,7 @@ const Library = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className=" mx-auto  text-xl lg:text-2xl text-slate-600 font-semibold text-center lg:text-start mt-4 lg:mt-9"
+            className=" mx-auto max-w-xl  text-xl lg:text-2xl text-slate-600 font-semibold text-center lg:text-start mt-4 lg:mt-9"
           >
             At Tulip Tots International, we nurture the love for reading from
             the very start. Our vibrant in-house library offers hundreds of

@@ -13,6 +13,15 @@ const ContactUs = () => {
         <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
           Need some more discussions ?
         </h1>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
+
+        <p className="  mt-6 xl:mt-8 text-slate-600 tracking-wider text-xl md:text-2xl leading-6 mx-auto text-center max-w-2xl">
+          At Tulip Tots International, we embrace an open-door philosophy and
+          value every question. If you’d like to know more about our programs,
+          philosophy, or admissions, we’re always happy to connect—feel free to
+          reach out anytime!
+        </p>
+
         <div className=" mt-16">
           {/* Map and Contact */}
           <div className=" grid lg:grid-cols-2  lg:gap-12">
@@ -39,12 +48,7 @@ const ContactUs = () => {
               <p className=" font-semibold  text-2xl md:text-3xl tracking-wider">
                 Contact
               </p>
-              <p className="  mt-2 xl:mt-8 text-slate-600 tracking-wider text-lg md:text-xl">
-                At Tulip Tots International, we embrace an open-door philosophy
-                and value every question. If you’d like to know more about our
-                programs, philosophy, or admissions, we’re always happy to
-                connect—feel free to reach out anytime!
-              </p>
+
               <div className=" flex flex-col sm:flex-row gap-8 mt-6 xl:mt-12 justify-evenly items-center">
                 <div className=" flex flex-col justify-center items-center w-1/2">
                   <div className=" hidden  bg-blue-100 w-24 h-24 lg:flex justify-center items-center rounded-full">
@@ -53,8 +57,10 @@ const ContactUs = () => {
                   <div className=" flex  bg-blue-100 w-20 h-20 lg:hidden justify-center items-center rounded-full">
                     <AiTwotoneMail size={30} />
                   </div>
-                  <p className=" text-xl font-semibold mt-5 tracking-wider">Email Us</p>
-                  <p className=" text-slate-700 tracking-wide text-lg">
+                  <p className=" text-xl font-semibold mt-5 tracking-wider">
+                    Email Us
+                  </p>
+                  <p className=" text-slate-700 tracking-wide text-xl">
                     tuliptotsinternational@gmail.com
                   </p>
                 </div>
@@ -66,18 +72,25 @@ const ContactUs = () => {
                   <div className="  bg-pink-100 w-20 h-20 flex lg:hidden justify-center items-center rounded-full">
                     <IoCallOutline size={30} />
                   </div>
-                  <p className=" text-xl tracking-wider font-semibold mt-5">Call Us</p>
-                  <p className=" text-slate-700 tracking-wide text-lg">+91 93264 46240</p>
+                  <p className=" text-xl tracking-wider font-semibold mt-5">
+                    Call Us
+                  </p>
+                  <p className=" text-slate-700 tracking-wide text-xl">
+                    +91 93264 46240
+                  </p>
                 </div>
               </div>
 
               <div>
                 <div className=" flex items-center gap-3 mt-12 lg:mt-7 xl:mt-14">
                   <IoLocationSharp size={20} />
-                  <p className=" text-2xl tracking-wider font-semibold">Address</p>
+                  <p className=" text-2xl tracking-wider font-semibold">
+                    Address
+                  </p>
                 </div>
-                <p className=" lg:mt-3 text-gray-500 font-semibold text-lg tracking-wide">
-                  Punawala, Pune
+                <p className=" lg:mt-3 text-gray-500 font-semibold text-xl tracking-wide">
+                  Shop No 1 & 2, Yash one infinite, Kate wasti, punawale, Pune
+                  411033
                 </p>
               </div>
             </div>

@@ -235,7 +235,7 @@ const Classroom = () => {
           }}
         >
           {data.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className=" pb-10" key={index}>
               <div
                 style={{ backgroundColor: item.bgColor }}
                 className="flex flex-col h-full justify-between items-center gap-8 mx-auto p-4 sm:p-8 rounded-2xl relative "
