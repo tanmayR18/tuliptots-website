@@ -52,7 +52,7 @@ const Highlights = () => {
   const previousRef = useRef(null);
 
   return (
-    <div className=" bg-blue-200 py-12 px-4 lg:px-20">
+    <div className=" bg-blue-200 py-20 px-4 lg:px-20">
       <motion.p
         initial={{ opacity: 0, translateY: 30 }}
         whileInView={{
@@ -64,11 +64,11 @@ const Highlights = () => {
           once: true,
           margin: "-100px",
         }}
-        className=" text-center text-2xl sm:text-3xl md:text-4xl tracking-wider text-gray-800 font-bold"
+        className=" text-center text-3xl md:text-4xl tracking-wider text-gray-800 font-bold"
       >
         What Makes Us Unique
       </motion.p>
-      <div className=" md:grid  hidden md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 md:w-[90%] xl:w-[80%] mx-auto">
+      <div className=" md:grid  hidden md:grid-cols-2 lg:grid-cols-3 gap-12 mt-0 md:w-[90%] xl:w-[80%] mx-auto">
         {points.map((point, index) => (
           <motion.div
             initial={{ opacity: 0, translateY: 30 }}
@@ -171,7 +171,7 @@ const Highlights = () => {
           once: true,
           margin: "-100px",
         }}
-        className=" flex mt-16 justify-center gap-10"
+        className=" flex mt-5 lg:mt-16 justify-center gap-10"
       >
         <div className=" border-2 border-green-500 hover:scale-105 group hover:bg-green-500 cursor-pointer transition-all duration-300   rounded-md py-1 w-32 flex justify-center items-center">
           <NavLink

@@ -296,7 +296,7 @@ const Admission = () => {
         {/* Enquiry Section */}
         <div className="mt-16 md:mt-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50  rounded-3xl p-8 md:p-12 shadow-xl  border border-purple-100">
+            <div className="bg-gradient-to-r from-[#f8e7d5] to-[#f3e8dc] rounded-3xl p-8 md:p-12 shadow-xl  border border-purple-100">
               <div className="text-center mb-8">
                 {/* <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6">
                   <svg 
@@ -326,7 +326,7 @@ const Admission = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/enquiry"
-                  className="group relative overflow-hidden bg-gradient-to-r from-blue-400 to-pink-400 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+                  className="group relative overflow-hidden bg-gradient-to-r bg-blue-400 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
                 >
                   <span className="relative z-10 text-xl tracking-wider">
                     Enquiry Now
@@ -344,7 +344,7 @@ const Admission = () => {
                       d="M13 7l5 5m0 0l-5 5m5-5H6"
                     />
                   </svg>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
 
                 {/* <div className="flex items-center gap-2 text-gray-500">

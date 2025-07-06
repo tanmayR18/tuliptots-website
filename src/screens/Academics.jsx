@@ -39,7 +39,9 @@ const ProgramCard = ({
           </p>
 
           <div className="h-px w-full bg-slate-600 my-3" />
-          <p className="text-center text-gray-600 tracking-wider text-xl leading-6">{content}</p>
+          <p className="text-center text-gray-600 tracking-wider text-xl leading-6">
+            {content}
+          </p>
         </div>
 
         <div>
@@ -116,7 +118,8 @@ const Academics = () => {
       >
         Our Preschool Programs
       </motion.p>
-      
+
+      <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8 pb-24">
         <ProgramCard
@@ -225,7 +228,7 @@ const Academics = () => {
         </div>
       </div> */}
 
-      <div className=" py-32 bg-[#CDE8EA]">
+      <div className=" py-20 bg-[#CDE8EA]">
         <motion.p
           initial={{ opacity: 0, translateY: 10 }}
           whileInView={{
@@ -237,7 +240,7 @@ const Academics = () => {
             once: true,
             margin: "-100px",
           }}
-          className=" text-3xl lg:text-4xl font-bold text-center tracking-wide"
+          className=" text-3xl lg:text-4xl font-bold text-center tracking-wide -translate-y-6"
         >
           A Peek Into Our World
         </motion.p>

@@ -61,7 +61,10 @@ const Library = () => {
   }, []);
 
   return (
-    <div ref={ref} className="pt-32 pb-16 lg:pt-44 px-4 bg-[#fafafa] font-kgPrimaryPenmanship">
+    <div
+      ref={ref}
+      className="pt-32 pb-16 lg:pt-44 px-4 bg-[#fafafa] font-kgPrimaryPenmanship"
+    >
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -70,10 +73,11 @@ const Library = () => {
       >
         Our In-House Library
       </motion.p>
+      <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-2 rounded-full"></div>
 
       <div className="flex flex-col lg:flex-row mx-auto lg:w-10/12 mt-12 lg:mt-16 items-center justify-between">
         <div className=" lg:w-1/2">
-          <p className="text-[#333] text-center lg:text-start font-bold text-2xl lg:text-3xl tracking-wide">
+          <p className="text-[#333] text-center lg:text-start font-bold text-3xl md:text-4xl lg:text-5xl tracking-wide">
             Lifelong Readers Begin Here
           </p>
           <motion.p
@@ -90,7 +94,7 @@ const Library = () => {
           </motion.p>
         </div>
 
-        <div className=" lg:w-1/3 max-w-md lg:max-w-2xl" >
+        <div className=" lg:w-[40%] max-w-md lg:max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.img
               key={isFirst ? "image1" : "image2"}
@@ -98,7 +102,7 @@ const Library = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration:  0.8}}
+              transition={{ duration: 0.8 }}
               className=""
             />
           </AnimatePresence>
@@ -149,13 +153,15 @@ const Library = () => {
               <div className=" relative w-fit">
                 <img className=" w-[250px]" src={element2} />
                 <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                  <p className=" text-center text-xl lg:text-2xl">Better focus and imagination</p>
+                  <p className=" text-center text-xl lg:text-2xl">
+                    Better focus and imagination
+                  </p>
                 </div>
               </div>
               <div className=" relative w-fit -mt-10 sm:mt-0">
                 <img className=" w-[250px]" src={element3} />
                 <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                  <p className=" text-center text-xl lg:text-2xl" >
+                  <p className=" text-center text-xl lg:text-2xl">
                     Empathy, curiosity, and lifelong learning
                   </p>
                 </div>
@@ -184,7 +190,10 @@ const Library = () => {
         </div>
 
         <div className="  absolute -top-5 -left-5">
-          <img className=" w-[28%] sm:w-[150px] md:w-[150px] lg:w-[200px]" src={circle} />
+          <img
+            className=" w-[28%] sm:w-[150px] md:w-[150px] lg:w-[200px]"
+            src={circle}
+          />
           <img
             className=" absolute bottom-0 -right-[10px] sm:-right-[40px] md:-right-[100px] lg:-right-[120px] w-[50px] lg:w-[100px]"
             src={star}
