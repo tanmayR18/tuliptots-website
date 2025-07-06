@@ -13,6 +13,23 @@ const Gallery = () => {
   const [videos, setVideos] = useState([]);
   const videoRefs = useRef({});
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleResize = () => {
+    setIsVisible(window.innerWidth >= 1020);
+  };
+
+  useEffect(() => {
+    // Check on initial load
+    handleResize();
+
+    // Add event listener on resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const fetchGalleryImages = async () => {
     const { data, error } = await supabase.storage
       .from("gallery")
@@ -182,8 +199,12 @@ const Gallery = () => {
               </Swiper>
 
               {/* Custom Navigation Buttons */}
-              <div className="swiper-button-prev !hidden -translate-y-1/2 !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
-              <div className="swiper-button-next !hidden -translate-y-1/2 !w-12 !h-12 !bg-white/80 !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+              {isVisible && (
+                <>
+                  <div className="swiper-button-prev -translate-x-20 -translate-y-1/2 !w-12 !h-12 !bg-[#ccc] !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+                  <div className="swiper-button-next translate-x-20  -translate-y-1/2 !w-12 !h-12 !bg-[#ccc] !rounded-full !shadow-lg hover:!bg-white transition-all duration-300 after:!text-lg after:!text-purple-600" />
+                </>
+              )}
             </div>
           </motion.div>
         )}

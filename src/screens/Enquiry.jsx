@@ -203,7 +203,7 @@ const Enquiry = () => {
   };
 
   return (
-    <div className="bg-[#F7EEE9]">
+    <div className="bg-[#fafafa] font-kgPrimaryPenmanship">
       <div className=" relative pt-44 pb-20 px-4  bg-[#F7EEE9]">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
@@ -212,10 +212,10 @@ const Enquiry = () => {
           />
         </div>
         <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" /> */}
-        <p className="   text-2xl text-center lg:text-4xl font-bold z-10 text-pink-500">
+        <p className="   text-4xl text-center md:text-5xl lg:text-6xl font-bold z-10 text-pink-500">
           Let’s Begin Your Journey with Tulip Tots
         </p>
-        <p className=" text-green-500 font-semibold text-lg text-center lg:text-2xl lg:font-bold z-10 mt-4 lg:mt-5">
+        <p className=" text-green-500 font-semibold text-xl md:text-2xl text-center lg:text-3xl lg:font-bold z-10 mt-4 lg:mt-5">
           Schedule a visit, meet our team, and explore the joyful world of early
           learning.
         </p>
@@ -227,8 +227,8 @@ const Enquiry = () => {
         />
         <div className=" w-[90%] md:w-[85%] mx-auto">
           <div className=" flex flex-col lg:flex-row gap-8  ">
-            <div className=" w-full">
-              <p className=" text-black font-semibold text-2xl">Details</p>
+            <div className=" w-full text-xl">
+              <p className=" text-black font-semibold tracking-wider text-2xl">Details</p>
 
               <div className=" mt-6">
                 <p>
@@ -248,7 +248,7 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.name && (
-                  <p className=" text-red-500 text-sm">{error.name}</p>
+                  <p className=" text-red-500 text-lg">{error.name}</p>
                 )}
               </div>
               <div className=" mt-3">
@@ -276,7 +276,7 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.dob && (
-                  <p className=" text-red-500 text-sm">{error.dob}</p>
+                  <p className=" text-red-500 text-lg">{error.dob}</p>
                 )}
               </div>
               <div className=" mt-3">
@@ -297,7 +297,7 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.parentName && (
-                  <p className=" text-red-500 text-sm">{error.parentName}</p>
+                  <p className=" text-red-500 text-lg">{error.parentName}</p>
                 )}
               </div>
               <div className=" mt-3">
@@ -318,12 +318,12 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.occupation && (
-                  <p className=" text-red-500 text-sm">{error.occupation}</p>
+                  <p className=" text-red-500 text-lg">{error.occupation}</p>
                 )}
               </div>
             </div>
-            <div className=" w-full">
-              <p className=" text-black font-semibold text-2xl">
+            <div className=" w-full text-xl">
+              <p className=" text-black font-semibold tracking-wider text-2xl">
                 Contact Details
               </p>
 
@@ -345,7 +345,7 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.email && (
-                  <p className=" text-red-500 text-sm">{error.email}</p>
+                  <p className=" text-red-500 text-lg">{error.email}</p>
                 )}
               </div>
               <div className=" mt-3">
@@ -369,7 +369,7 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.number && (
-                  <p className=" text-red-500 text-sm">{error.number}</p>
+                  <p className=" text-red-500 text-lg">{error.number}</p>
                 )}
               </div>
               <div className=" mt-3">
@@ -390,7 +390,7 @@ const Enquiry = () => {
                   className=" w-full glowing-border rounded-md focus:outline-blue-400 py-2 px-3 bg-blue-100"
                 />
                 {error.address && (
-                  <p className=" text-red-500 text-sm">{error.address}</p>
+                  <p className=" text-red-500 text-lg">{error.address}</p>
                 )}
               </div>
               <DropDown setData={setData} data={data} />
@@ -416,7 +416,7 @@ const Enquiry = () => {
             <button
               disabled={status === "loading"}
               onClick={submitHandler}
-              className=" mt-5 bg-blue-400 text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
+              className=" mt-5 bg-blue-400 text-xl tracking-wider text-white py-2 px-4 rounded-lg cursor-pointer w-fit"
             >
               <p>{status === "loading" ? "Sending..." : "Send"}</p>
             </button>

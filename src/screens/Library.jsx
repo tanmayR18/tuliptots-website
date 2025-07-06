@@ -131,12 +131,12 @@ const Library = () => {
               once: true,
               margin: "-100px",
             }}
-            className="text-3xl lg:text-4xl font-bold tracking-wide text-slate-900 text-center"
+            className="text-3xl lg:text-4xl mt-8 font-bold tracking-wide text-slate-900 text-center"
           >
             Why It Matters ?
           </motion.p>
 
-          <div className=" flex flex-col text-[#1d1b1b] font-semibold tracking-wider justify-center items-center">
+          <div className=" flex flex-col mt-8 text-[#1d1b1b] font-semibold tracking-wider justify-center items-center">
             <div className=" relative w-fit">
               <img className=" w-[250px]" src={element1} />
               <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
@@ -145,7 +145,7 @@ const Library = () => {
                 </p>
               </div>
             </div>
-            <div className=" flex flex-col sm:flex-row sm:gap-10 lg:gap-48 lg:-mt-26">
+            <div className=" flex flex-col mt-7 sm:flex-row sm:gap-10 lg:gap-48 lg:-mt-26">
               <div className=" relative w-fit">
                 <img className=" w-[250px]" src={element2} />
                 <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
@@ -184,7 +184,7 @@ const Library = () => {
         </div>
 
         <div className="  absolute -top-5 -left-5">
-          <img className=" w-[100px] sm:w-[120px] md:w-[150px] lg:w-[200px]" src={circle} />
+          <img className=" w-[28%] sm:w-[150px] md:w-[150px] lg:w-[200px]" src={circle} />
           <img
             className=" absolute bottom-0 -right-[10px] sm:-right-[40px] md:-right-[100px] lg:-right-[120px] w-[50px] lg:w-[100px]"
             src={star}

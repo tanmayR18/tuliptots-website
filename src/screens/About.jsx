@@ -139,7 +139,7 @@ const data2 = [
   "Hands-On Experiential Learning",
   "360° Holistic Learning",
   "Gardening & Nature Play",
-  "Sandpit & Mud Kitchen",
+  "Mud Kitchen",
   "Splash Play Pool",
   "Limitless Play Zones",
   "Adventure Climbing Frames",
@@ -192,7 +192,7 @@ const data3 = [
     image: image4,
   },
   {
-    text: "Sandpit & Mud Kitchen",
+    text: "Mud Kitchen",
     image: image10,
   },
   {
@@ -333,7 +333,7 @@ const About = () => {
           <Mission />
         </div>
       </div>
-      <div className=" lg:px-12  mt-20">
+      <div className="   mt-20">
         {/* Curriculum & Pedagogy */}
         <Pedagogy />
 
