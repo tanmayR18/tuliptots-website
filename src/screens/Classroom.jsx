@@ -160,8 +160,10 @@ const Classroom = () => {
         transition={{ duration: 0.6 }}
         className="text-black font-bold text-center text-3xl md:text-4xl lg:text-5xl tracking-wide"
       >
-        A Living, Breathing Classroom
+        A Living Breathing Classroom
       </motion.p>
+
+      <div className="w-24 mt-2 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -240,7 +242,10 @@ const Classroom = () => {
                 style={{ backgroundColor: item.bgColor }}
                 className="flex flex-col h-full justify-between items-center gap-8 mx-auto p-4 sm:p-8 rounded-2xl relative "
               >
-                <img src={item.image} className=" rounded-2xl w-full aspect-square" />
+                <img
+                  src={item.image}
+                  className=" rounded-2xl w-full aspect-square"
+                />
 
                 <div className=" text-black text-xl">
                   <p className=" text-2xl font-semibold tracking-widest mb-2">

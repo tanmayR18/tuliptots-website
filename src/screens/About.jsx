@@ -475,7 +475,7 @@ const Card = ({
               <div className=" h-px bg-slate-400 w-full my-3" />
               <div>
                 {howToApply?.map((point, index) => (
-                  <li key={index} className=" text-white font-bold mt-2">
+                  <li key={index} className=" tracking-wide text-white text-xl mt-2">
                     {point}
                   </li>
                 ))}
