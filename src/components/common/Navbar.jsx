@@ -320,9 +320,9 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <AnimatePresence>
+        {/* <AnimatePresence> */}
           {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
-        </AnimatePresence>
+        {/* </AnimatePresence> */}
       </motion.nav>
     </>
   );

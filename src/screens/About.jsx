@@ -473,11 +473,13 @@ const Card = ({
                 How We Apply
               </p>
               <div className=" h-px bg-slate-400 w-full my-3" />
-              {howToApply?.map((point, index) => (
-                <li key={index} className=" text-white font-bold mt-2">
-                  {point}
-                </li>
-              ))}
+              <div>
+                {howToApply?.map((point, index) => (
+                  <li key={index} className=" text-white font-bold mt-2">
+                    {point}
+                  </li>
+                ))}
+              </div>
             </div>
           </div>
         </div>
