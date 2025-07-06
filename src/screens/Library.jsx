@@ -9,6 +9,9 @@ import element3 from "../assets/school/library/element6.png";
 import star from "../assets/school/library/star.png";
 import circle from "../assets/school/library/circle.png";
 
+import flower from "../assets/elements/all elements/flower.png";
+import flower1 from "../assets/elements/flower4.png";
+
 const data = [
   {
     text: "Stronger vocabulary and comprehension",
@@ -63,19 +66,26 @@ const Library = () => {
   return (
     <div
       ref={ref}
-      className="pt-32 pb-16 lg:pt-44 px-4 bg-[#fafafa] font-kgPrimaryPenmanship"
+      className="pt-32 pb-16 lg:pt-44 px-4 relative bg-[#fafafa] font-kgPrimaryPenmanship"
     >
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
-        className="text-black font-bold text-center text-3xl md:text-4xl lg:text-5xl tracking-wide"
-      >
-        Our In-House Library
-      </motion.p>
+      <img
+        className=" absolute hidden lg:flex top-[150px] -left-[40px] w-[200px] "
+        src={flower}
+      />
+      <div className=" mx-auto relative w-fit">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="text-black font-bold text-center text-3xl md:text-4xl lg:text-5xl tracking-wide"
+        >
+          Our In-House Library
+        </motion.p>
+        <img className=" absolute -left-[150px] -top-1/2" src={flower1} />
+      </div>
       <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-2 rounded-full"></div>
 
-      <div className="flex flex-col lg:flex-row mx-auto lg:w-10/12 mt-12 lg:mt-16 items-center justify-between">
+      <div className="flex flex-col lg:flex-row mx-auto lg:w-10/12 mt-12 lg:mt-0 items-center justify-between">
         <div className=" lg:w-1/2">
           <p className="text-[#333] text-center lg:text-start font-bold text-3xl md:text-4xl lg:text-5xl tracking-wide">
             Lifelong Readers Begin Here

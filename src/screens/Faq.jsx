@@ -134,7 +134,8 @@ const Faq = () => {
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-gray-600 text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
+          <p className="text-gray-600 text-lg mt-5">
             Find answers to common questions about Tulip Tots
             Preschool
           </p>
