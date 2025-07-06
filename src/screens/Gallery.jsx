@@ -125,7 +125,7 @@ const Gallery = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-20"
           >
-            <div className="relative w-10/12 mx-auto aspect-video">
+            <div className="relative sm:w-10/12 mx-auto aspect-video">
               <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={30}
@@ -148,11 +148,11 @@ const Gallery = () => {
               >
                 {videos.map((video, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative group flex items-center justify-center">
-                      <div className="rounded-2xl overflow-hidden  w-full h-full flex justify-center items-center">
+                    <div className="relative group flex items-center justify-center border-2 border-black shadow-2xl">
+                      <div className="   w-full h-full flex justify-center items-center">
                         <video
                           ref={(el) => (videoRefs.current[index] = el)}
-                          className="max-w-full max-h-full object-contain"
+                          className="max-w-full max-h-full w-full h-full object-cover "
                           controls
                           controlsList="nodownload"
                           disablePictureInPicture
