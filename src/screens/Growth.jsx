@@ -27,12 +27,13 @@ const Growth = () => {
         >
           Our Gardeners of Growth – The Tulip Tots Team
         </motion.p>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-xl lg:text-2xl text-slate-700 font-semibold text-center"
+          className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-xl lg:text-2xl text-slate-700 font-semibold hidden md:flex text-center"
         >
           At Tulip Tots International, we believe that early childhood educators
           are more than teachers—they are gentle guides, nurturers of wonder,
@@ -41,35 +42,50 @@ const Growth = () => {
           deep respect for the individuality of every child
         </motion.p>
 
-        <div className=" p-9 px-0  md:p-8 rounded-[64px] flex flex-col-reverse md:flex-row relative mt-10 justify-between items-center lg:w-10/12 mx-auto">
+        <div className=" p-9 px-0  md:p-8 rounded-[64px] flex flex-col-reverse md:flex-row relative md:mt-10 justify-between items-center lg:w-10/12 mx-auto">
           <img
             className=" hidden lg:flex absolute top-0 right-56"
             src={ninja}
           />
-          <div className="  flex flex-col justify-center items-center mt-14 md:mt-0">
-            <div className=" relative w-fit">
-              <img className=" w-[300px]" src={circle1} />
-              <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                <p className=" text-center font-bold text-2xl xl:text-3xl">
-                  Unique
-                </p>
-              </div>
-            </div>
-            <div className=" flex md:gap-6 ">
+          <div className=" mt-10">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-xl lg:text-2xl text-slate-700 font-semibold text-center md:hidden"
+            >
+              At Tulip Tots International, we believe that early childhood
+              educators are more than teachers—they are gentle guides, nurturers
+              of wonder, and co-travelers in a child's magical journey. What
+              truly sets our team apart are the values they embody: patience,
+              empathy, joy, and a deep respect for the individuality of every
+              child
+            </motion.p>
+            <div className="  flex flex-col justify-center items-center  mt-5 md:mt-0">
               <div className=" relative w-fit">
-                <img className="  w-[300px]" src={circle2} />
+                <img className=" w-[300px]" src={circle1} />
                 <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                  <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
-                    Ready to <br /> Blossom
+                  <p className=" text-center font-bold text-2xl xl:text-3xl">
+                    Unique
                   </p>
                 </div>
               </div>
-              <div className=" relative w-fit flex justify-center items-center">
-                <img className=" w-[300px]" src={circle3} />
-                <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                  <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
-                    Full of Potential
-                  </p>
+              <div className=" flex md:gap-6 ">
+                <div className=" relative w-fit">
+                  <img className="  w-[300px]" src={circle2} />
+                  <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                    <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
+                      Ready to <br /> Blossom
+                    </p>
+                  </div>
+                </div>
+                <div className=" relative w-fit flex justify-center items-center">
+                  <img className=" w-[300px]" src={circle3} />
+                  <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
+                    <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
+                      Full of Potential
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -179,7 +195,7 @@ const Growth = () => {
               transition={{ duration: 0.6, delay: 1.6 }}
               className="text-slate-800 font-semibold tracking-wide mt-4 md:mt-8 text-xl md:text-2xl"
             >
-              <p>
+              <p className=" text-center md:text-start">
                 Every educator undergoes a thoughtful selection process
                 including:
               </p>
@@ -196,6 +212,7 @@ const Growth = () => {
                   once: true,
                   margin: "-100px",
                 }}
+                className=" mt-5"
               >
                 A values-aligned face-to-face conversation
               </motion.li>

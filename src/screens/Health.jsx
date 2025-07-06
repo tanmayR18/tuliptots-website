@@ -29,7 +29,7 @@ const data = [
   {
     title: "2. Healthy Habits Begin Early",
     subTitle:
-      "At Tulip Tots, health and hygiene are not just maintained—they’re modeled and taught with joy and gentleness.Children learn:",
+      "At Tulip Tots, health and hygiene are not just maintained—they’re modeled and taught with joy and gentleness.",
     points: [
       "To wash hands after play, before meals, and after using the restroom",
       "To keep their surroundings clean and organized",
@@ -80,6 +80,7 @@ const Health = () => {
       >
         Caring for Every Little One
       </motion.p>
+      <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
 
       {/* <motion.img
         initial={{ opacity: 0, scale: 0.95 }}
@@ -98,7 +99,7 @@ const Health = () => {
         >
           <video
             //   ref={(el) => (videoRefs.current[index] = el)}
-            className=" w-[45%] xl:w-[35%] max-h-full object-contain rounded-2xl"
+            className=" w-[45%] xl:w-[40%] max-h-full object-contain rounded-2xl"
             // controls
             autoPlay={true}
             loop={true}
@@ -146,7 +147,7 @@ const Health = () => {
         >
           <video
             //   ref={(el) => (videoRefs.current[index] = el)}
-            className="  w-[45%] xl:w-[35%] max-h-full object-contain rounded-2xl"
+            className="  w-[45%] xl:w-[40%] max-h-full object-contain rounded-2xl"
             // controls
             autoPlay={true}
             loop={true}
@@ -169,7 +170,7 @@ const Health = () => {
             </p>
             <p>
               At Tulip Tots, health and hygiene are not just maintained—they’re
-              modeled and taught with joy and gentleness.Children learn:
+              modeled and taught with joy and gentleness.
             </p>
             <div>
               <li>
@@ -195,7 +196,7 @@ const Health = () => {
         >
           <video
             //   ref={(el) => (videoRefs.current[index] = el)}
-            className=" w-[45%] xl:w-[35%] max-h-full object-contain rounded-2xl"
+            className=" w-[45%] xl:w-[40%] max-h-full object-contain rounded-2xl"
             // controls
             autoPlay={true}
             loop={true}

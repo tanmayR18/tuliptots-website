@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import motherChild1 from "../assets/story/motherChild1.jpg";
+import motherChild2 from "../assets/story/image2.png";
 import nurtureStory from "../assets/story/nurtureStory.jpeg";
 import logo from "../assets/bgremoved.png";
 
@@ -67,7 +68,7 @@ const OurStory = () => {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300"
             >
               <img
-                src={motherChild1}
+                src={motherChild2}
                 alt="Mother and child"
                 className="w-full h-full object-cover"
               />
@@ -92,7 +93,7 @@ const OurStory = () => {
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-300 to-blue-400"></div>
                 </div>
               </div> */}
-              <p className="text-xl  leading-7 tracking-wide text-gray-700">
+              <p className="text-2xl  leading-7 tracking-wide text-gray-700">
                 As we navigated the early years of parenting, we embarked on a
                 relentless journey—researching, building, and curating
                 meaningful learning experiences at home. From hands-on sensory
@@ -116,7 +117,7 @@ const OurStory = () => {
                     <p>Sharing What Works</p>
                   </div>
                 </div> */}
-                <p className="text-xl  leading-7 tracking-wide  text-gray-700">
+                <p className="text-2xl  leading-7 tracking-wide  text-gray-700">
                   Homeschooling became more than just a choice—it was a mission.
                   But it also revealed how challenging it can be for most
                   families to find the time, resources, and clarity to provide
@@ -129,7 +130,7 @@ const OurStory = () => {
                   <img className=" rounded-3xl" src={nurtureStory} />
                 </div>
                 <div className="md:w-2/3">
-                  <p className="text-xl  leading-7 tracking-wide font-semibold text-pink-700">
+                  <p className="text-2xl  leading-7 tracking-wide font-semibold text-pink-700">
                     That's when the vision for Tulip Tots was born: a warm,
                     thoughtfully designed preschool where every child gets the
                     benefit of the same love, intention, and excellence we
@@ -203,7 +204,7 @@ const OurStory = () => {
                   src="https://thumbs.dreamstime.com/b/happy-children-making-high-five-robotics-school-education-technology-science-people-concept-group-kids-building-robots-93175013.jpg"
                 />
               </div>
-              <p className="text-xl  leading-7 tracking-wide text-gray-800 font-medium text-center">
+              <p className="text-2xl  leading-7 tracking-wide text-gray-800 font-medium text-center">
                 We didn't just open a school—we opened our hearts and
                 experiences to support a generation of lifelong learners and
                 compassionate global citizens.

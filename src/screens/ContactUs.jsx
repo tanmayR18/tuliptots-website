@@ -11,7 +11,7 @@ const ContactUs = () => {
     <>
       <div className=" pt-32 lg:pt-44 pb-12 px-4 lg:px-12 bg-[#FAFAFA] font-kgPrimaryPenmanship">
         <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
-          Need some more discussions ?
+          Need some more discussions?
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
 
@@ -39,13 +39,13 @@ const ContactUs = () => {
                 />
               </div>
               <div className=" pb-12 flex items-end justify-center absolute  bottom-0 w-full z-20 bg-linear-to-t h-[30%]  from-[rgba(0,0,0,0.5)] to-transparent">
-                <p className=" text-center text-white font-semibold tracking-wide text-lg lg:text-2xl">
+                <p className=" text-center text-white font-semibold tracking-wider text-lg lg:text-3xl ">
                   Click to see live on Google Map
                 </p>
               </div>
             </Link>
-            <div className=" bg-white border border-b-white lg:border-b-slate-300 border-slate-200  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
-              <p className=" font-semibold  text-2xl md:text-3xl tracking-wider">
+            <div className=" bg-white border border-b-white lg:border-b-slate-300 border-slate-300  p-6 order-1 lg:order-2 lg:p-12 rounded-t-[32px] lg:rounded-[40px] ">
+              <p className=" font-semibold text-center lg:text-start   text-4xl tracking-wider">
                 Contact
               </p>
 

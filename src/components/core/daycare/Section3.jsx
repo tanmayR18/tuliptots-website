@@ -15,7 +15,7 @@ const Section3 = () => {
       <div className=" relative z-40 pt-16">
         <div className=" flex flex-row gap-2 justify-center items-center">
           <img
-            className=" w-[40px] h-[30px] sm:w-[60px] sm:h-[40px] xl:h-auto xl:w-[90px]"
+            className=" w-[45px] h-[30px] sm:w-[60px] sm:h-[40px] xl:h-auto xl:w-[90px]"
             src={doddle13}
           />
           <p className=" text-4xl xl:text-5xl text-[#323a30] tracking-wider text-center font-semibold">
@@ -26,13 +26,13 @@ const Section3 = () => {
           A 3 Step Child Centered Transition Process
         </p>
 
-        <div className=" relative z-20 flex flex-col md:flex-row items-center mx-auto gap-6 px-4 lg::w-10/12 ">
-          <div className=" absolute top-0 w-2/3 left-1/2 -translate-x-1/2 md:hidden">
+        <div className=" relative z-20 flex flex-col md:flex-row items-center mx-auto gap-6 px-4 lg:w-10/12 ">
+          <div className=" absolute top-0 w-[70%] left-1/2 -translate-x-1/2 md:hidden">
             <img className=" rotate-12" src={doddle6} />
           </div>
           <img src={image1} className=" relative w-10/12 md:w-1/2" />
 
-          <div className=" flex flex-col justify-start gap-8 w-full">
+          <div className=" mt-10 lg:mt-0  flex flex-col justify-start gap-8 w-full">
             <div className=" bg-[#edd7c2] px-4 md:px-6 xl:px-14 py-3 rounded-[32px]">
               <p className=" text-xl md:text-2xl text-center md:text-left font-semibold tracking-widest">
                 Getting to know your child
@@ -74,10 +74,10 @@ const Section3 = () => {
 
       <div className=" absolute hidden md:flex bottom-0 -left-[100px]">
         <img className=" w-[400px]" src={doddle6} />
-        <img
+        {/* <img
           className=" w-[100px] absolute bottom-20 left-[100px]"
           src={flower}
-        />
+        /> */}
       </div>
     </div>
   );
