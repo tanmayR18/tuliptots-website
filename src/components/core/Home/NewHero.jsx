@@ -34,7 +34,7 @@ const NewHero = () => {
       <div className="w-10/12 mx-auto ">
         <div className="  flex justify-center lg:justify-end">
           <div className=" relative flex flex-col  items-center xl:-translate-x-1/4">
-            <img src={flower5} className=" absolute -top-5 -left-5 sm:-left-20 w-[80px] sm:w-[100px]" />
+            <img src={flower5} className=" absolute -top-5 -left-5 sm:-left-20 w-[70px] sm:w-[100px]" />
             <p className=" font-happy font-semibold text-[#323a30] text-center text-6xl tracking-[3px]">
               Tulip tots <br /> International
             </p>
