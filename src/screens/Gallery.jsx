@@ -148,8 +148,8 @@ const Gallery = () => {
               >
                 {videos.map((video, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative group h-[600px] flex items-center justify-center">
-                      <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-900 w-full h-full flex justify-center items-center">
+                    <div className="relative group flex items-center justify-center">
+                      <div className="rounded-2xl overflow-hidden  w-full h-full flex justify-center items-center">
                         <video
                           ref={(el) => (videoRefs.current[index] = el)}
                           className="max-w-full max-h-full object-contain"

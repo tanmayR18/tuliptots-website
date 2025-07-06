@@ -39,7 +39,8 @@ const data = [
     conclusion:
       "We believe children thrive when they understand how to care for themselves and their environment.",
     image:
-      "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aC5tcDQiLCJpYXQiOjE3NTEyMDE4NzksImV4cCI6MTc4MjczNzg3OX0.dSsYLlvoa3JjvY0jHvNmdRoFBGAPE8v75z9TcLfLWvA",
+    //   "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aC5tcDQiLCJpYXQiOjE3NTEyMDE4NzksImV4cCI6MTc4MjczNzg3OX0.dSsYLlvoa3JjvY0jHvNmdRoFBGAPE8v75z9TcLfLWvA",
+    'https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health2.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aDIubXA0IiwiaWF0IjoxNzUxNzg3NzI3LCJleHAiOjE3ODMzMjM3Mjd9.6LA30KgbdtGKR6gOzeR0MwYK9KXAhPyAp83-tnpI2Vg',
     bgColor: "rgb(59, 169, 156)",
   },
   {
@@ -238,7 +239,7 @@ const Health = () => {
         </div>
       </div>
 
-      <div className="relative mx-auto lg:hidden mt-16 ">
+      <div className="relative mx-auto lg:hidden mt-16 max-w-lg">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={30}
@@ -261,14 +262,15 @@ const Health = () => {
           }}
         >
           {data.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className=" pb-10" key={index}>
               <div
                 style={{ backgroundColor: item.bgColor }}
                 className="flex flex-col justify-between items-center gap-8 mx-auto p-4 rounded-2xl relative "
               >
                 <video
                   //   ref={(el) => (videoRefs.current[index] = el)}
-                  className=" max-h-full object-contain rounded-2xl"
+                  style={{backgroundColor: item.bgColor}}
+                  className=" w-full rounded-2xl"
                   // controls
                   autoPlay={true}
                   loop={true}
