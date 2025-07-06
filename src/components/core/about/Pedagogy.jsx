@@ -3,10 +3,16 @@ import { IoMdAdd } from "react-icons/io";
 import { HiMinus } from "react-icons/hi";
 import image from "../../../assets/about/pedagogy2.png";
 
-import cric2 from "../../../assets/about/leap/cric2.png";
-import cric1 from "../../../assets/about/leap/cric1.png";
-import cric3 from "../../../assets/about/leap/cric3.png";
-import cric4 from "../../../assets/about/leap/cric4.png";
+// import cric2 from "../../../assets/about/leap/cric2.png";
+// import cric1 from "../../../assets/about/leap/cric1.png";
+// import cric3 from "../../../assets/about/leap/cric3.png";
+// import cric4 from "../../../assets/about/leap/cric4.png";
+
+import cric1 from "../../../assets/school/library/element 1.png";
+import cric2 from "../../../assets/school/library/element2.png";
+import cric3 from "../../../assets/school/library/element6.png";
+import cric4 from "../../../assets/about/leap/cric5.png";
+
 import rocket from "../../../assets/about/leap/rocket.png";
 
 const data = [

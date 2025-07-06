@@ -86,7 +86,7 @@ const Activity = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-center text-2xl px-4 md:px-0 md:text-3xl font-semibold text-gray-600 mt-2"
       >
-        ( Where every child finds their own way to grow )
+        (Where every child finds their own way to grow)
       </motion.p>
 
       <motion.div
