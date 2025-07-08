@@ -45,21 +45,25 @@ const BloomCards = () => {
       className="  relative py-20 pb-24 overflow-hidden"
       ref={ref}
     >
-      <img
+      {/* <img
         className=" absolute top-0 right-0 left-0 bottom-0 h-full object-cover"
         src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/bloomBg.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ibG9vbUJnLnBuZyIsImlhdCI6MTc1MTIxNDc2MCwiZXhwIjoxNzgyNzUwNzYwfQ.76VOR2P5anVP-edsIwfKaH_UbY6QSXUB-tGTHCCNfUU"
       />
-      <img
+      */}
+      {/* <img
         src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/bloomFlower.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ibG9vbUZsb3dlci5wbmciLCJpYXQiOjE3NTEyMTQ4NjYsImV4cCI6MTc4Mjc1MDg2Nn0.VtiX_j6pFjCOjKJcojY1eJ3t7nB2_bSp10GbwyC0c50"
         className=" absolute h-[100px] sm:h-[130px] lg:h-[150px] -top-2 -left-7"
-      />
+      /> */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
         className=" flex justify-center relative z-20 text-3xl lg:text-4xl font-bold text-gray-700 text-center"
       >
-        <img className=" -rotate-45 -translate-y-6 lg:-translate-y-7 translate-x-4 lg:translate-x-6 w-12 h-7 lg:h-auto lg:w-20" src={doddle13} />
+        <img
+          className=" -rotate-45 -translate-y-6 lg:-translate-y-7 translate-x-4 lg:translate-x-6 w-12 h-7 lg:h-auto lg:w-20"
+          src={doddle13}
+        />
         <p>
           The{" "}
           <motion.span

@@ -7,10 +7,11 @@ import hearts from "../../../assets/elements/hearts.png";
 import cloud from "../../../assets/elements/cloud.png";
 import leaves from "../../../assets/elements/leaves.png";
 import flower5 from "../../../assets/elements/flower5.png";
+import { Link } from "react-router";
 
 const NewHero = () => {
   return (
-    <div className="pb-12 overflow-hidden min-h-screen relative flex justify-center items-center bg-linear-to-br from-blue-300 to-blue-100  overflow-x-hidden pt-32 lg:pt-44">
+    <div className="pb-12 overflow-hidden min-h-screen relative flex justify-center items-center bg-linear-to-br from-[#afe9e4] to-[#daf0ee]  overflow-x-hidden pt-32 lg:pt-44">
       <img
         src={doddle2}
         className=" absolute -bottom-16 lg:-bottom-[100px] -left-10 lg:-left-[100px] w-[200px] lg:w-[400px]"
@@ -60,6 +61,13 @@ const NewHero = () => {
                 Where little minds BLOOM
               </p>
             </div>
+
+            <Link
+              to={"/story"}
+              className=" border-2 hover:scale-105 border-blue-500 text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer px-5 py-2 rounded-md  mt-5"
+            >
+              <p className=" text-2xl tracking-wider">Our Story</p>
+            </Link>
 
             <p className=" text-[#bb4207] text-center font-semibold tracking-wider text-xl xl:text-2xl 2xl:text-3xl mt-5">
               Preschool - Daycare - Children’s Library - Activity Centre

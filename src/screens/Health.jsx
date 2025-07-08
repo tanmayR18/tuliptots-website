@@ -27,7 +27,7 @@ const data = [
     bgColor: "rgb(233, 116, 81)",
   },
   {
-    title: "2. Healthy Habits Begin Early",
+    title: "2.  Tulip Tots International",
     subTitle:
       "At Tulip Tots, health and hygiene are not just maintained—they’re modeled and taught with joy and gentleness.",
     points: [
@@ -39,8 +39,8 @@ const data = [
     conclusion:
       "We believe children thrive when they understand how to care for themselves and their environment.",
     image:
-    //   "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aC5tcDQiLCJpYXQiOjE3NTEyMDE4NzksImV4cCI6MTc4MjczNzg3OX0.dSsYLlvoa3JjvY0jHvNmdRoFBGAPE8v75z9TcLfLWvA",
-    'https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health2.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aDIubXA0IiwiaWF0IjoxNzUxNzg3NzI3LCJleHAiOjE3ODMzMjM3Mjd9.6LA30KgbdtGKR6gOzeR0MwYK9KXAhPyAp83-tnpI2Vg',
+      //   "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aC5tcDQiLCJpYXQiOjE3NTEyMDE4NzksImV4cCI6MTc4MjczNzg3OX0.dSsYLlvoa3JjvY0jHvNmdRoFBGAPE8v75z9TcLfLWvA",
+      "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health2.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aDIubXA0IiwiaWF0IjoxNzUxNzg3NzI3LCJleHAiOjE3ODMzMjM3Mjd9.6LA30KgbdtGKR6gOzeR0MwYK9KXAhPyAp83-tnpI2Vg",
     bgColor: "rgb(59, 169, 156)",
   },
   {
@@ -51,6 +51,7 @@ const data = [
       "In case of emergencies, first aid is administered immediately",
       "Parents are informed promptly and guided with care",
       "We follow clear health policies to protect all children and staff",
+      "Fire extinguishers are installed and kept up to date to stay ready for any fire emergency",
     ],
     conclusion:
       "Our indoor and outdoor spaces are monitored through CCTV to help ensure a secure, transparent environment",
@@ -166,7 +167,7 @@ const Health = () => {
 
           <div className=" w-1/2">
             <p className=" text-2xl font-semibold tracking-widest mb-5 ">
-              2. Healthy Habits Begin Early
+              2.  Tulip Tots International
             </p>
             <p>
               At Tulip Tots, health and hygiene are not just maintained—they’re
@@ -231,6 +232,10 @@ const Health = () => {
                 We follow clear health policies to protect all children and
                 staff
               </li>
+              <li>
+                Fire extinguishers are installed and kept up to date to stay
+                ready for any fire emergency
+              </li>
             </div>
             <p>
               Our indoor and outdoor spaces are monitored through CCTV to help
@@ -270,7 +275,7 @@ const Health = () => {
               >
                 <video
                   //   ref={(el) => (videoRefs.current[index] = el)}
-                  style={{backgroundColor: item.bgColor}}
+                  style={{ backgroundColor: item.bgColor }}
                   className=" w-full rounded-2xl"
                   // controls
                   autoPlay={true}
@@ -340,7 +345,7 @@ const Health = () => {
         their peers.
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-10/12 mx-auto py-12">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-10/12 mx-auto py-12">
         <motion.div
           initial={{ opacity: 0, x: -20, y: 25 }}
           whileInView={{
@@ -533,7 +538,7 @@ const Health = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };

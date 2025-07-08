@@ -13,7 +13,7 @@ const OurStory = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center"
         >
           <h1 className=" text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
             Our Story
@@ -21,32 +21,19 @@ const OurStory = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
         </motion.div>
 
+        <p className="text-2xl mt-8 leading-8 text-center max-w-lg mx-auto text-gray-800 font-medium">
+          Tulip Tots International was born from the passion and persistence of
+          two mothers—deeply committed to giving their children the best start
+          in life.
+        </p>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="space-y-12"
         >
-          {/* First Card - The Beginning */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="relative bg-gradient-to-br from-pink-200 via-purple-50 to-white rounded-2xl p-8 shadow-lg overflow-hidden"
-          >
-            <div className="relative z-10 flex flex-col items-center md:flex-row gap-8">
-              <div className="md:w-1/3 flex items-center justify-center">
-                <img className=" w-32 h-32" src={logo} />
-              </div>
-              <div className="md:w-2/3">
-                <p className="text-2xl  leading-8 text-center md:text-start text-gray-800 font-medium">
-                  Tulip Tots International was born from the passion and
-                  persistence of two mothers—deeply committed to giving their
-                  children the best start in life.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16 mt-10">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}

@@ -62,6 +62,7 @@ const Growth = () => {
               child
             </motion.p>
             <div className="  flex flex-col justify-center items-center  mt-5 md:mt-0">
+              <p className=" text-4xl font-semibold tracking-wider mb-8 text-slate-800 text-center">We believe every child is</p>
               <div className=" relative w-fit">
                 <img className=" w-[300px]" src={circle1} />
                 <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
@@ -88,6 +89,7 @@ const Growth = () => {
                   </div>
                 </div>
               </div>
+              <p className=" text-4xl font-semibold tracking-wider mt-8 text-slate-700 text-center">With the right care and environment</p>
             </div>
           </div>
           <img className=" z-20 sm:h-[400px]" src={girl} />

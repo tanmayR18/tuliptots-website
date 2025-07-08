@@ -233,7 +233,7 @@ const Gallery = () => {
               className="relative group cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
-              <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg">
+              <div className=" aspect-square rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src={image}
                   alt={"gallery image"}

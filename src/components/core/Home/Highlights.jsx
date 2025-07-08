@@ -52,7 +52,7 @@ const Highlights = () => {
   const previousRef = useRef(null);
 
   return (
-    <div className=" bg-blue-200 py-20 px-4 lg:px-20">
+    <div className=" bg-[#afe9e4] py-20 px-4 lg:px-20">
       <motion.p
         initial={{ opacity: 0, translateY: 30 }}
         whileInView={{
