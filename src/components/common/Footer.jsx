@@ -82,7 +82,7 @@ const Footer = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                Punawala, Pune
+                Punawale, Pune
               </p>
               <p className="text-gray-300 flex items-center gap-2">
                 <svg
@@ -105,7 +105,11 @@ const Footer = () => {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                1234567890
+                <div className=" flex space-x-2">
+                  <p>7558300669</p>
+                  <p>/</p>
+                  <p>7558611669</p>
+                </div>
               </p>
             </div>
             {/* Social Media */}
@@ -190,8 +194,8 @@ const Footer = () => {
             </h4>
 
             <p className="text-gray-300">
-              Shop No 1 & 2, Yash one infinite, Kate wasti, punawale,
-              pune 411033
+              Shop No 1 & 2, Yash one infinite, Kate wasti, punawale, pune
+              411033
             </p>
             <Link
               to={

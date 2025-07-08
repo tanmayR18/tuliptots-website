@@ -133,9 +133,7 @@ const Pedagogy = () => {
                       <img className=" w-[250px]" src={cric2} />
                       <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
                         <p className=" text-center">
-                          Innovative 5x4
-                          <br /> Skill-based <br /> curriculum- Total 20 <br />{" "}
-                          skill curriculum
+                          LEAP <br /> Curriculum
                         </p>
                       </div>
                     </div>

@@ -26,7 +26,7 @@ import image23 from "../assets/about/whychooseus/23.jpg";
 import image24 from "../assets/about/whychooseus/24.jpg";
 import image25 from "../assets/about/whychooseus/25.jpg";
 
-import phi1 from "../assets/about/phy/1.png";
+import phi1 from "../assets/about/phy/1.jpg";
 import phi2 from "../assets/about/phy/2.png";
 import phi3 from "../assets/about/phy/3.png";
 import phi4 from "../assets/about/phy/4.jpeg";
@@ -204,7 +204,7 @@ const data3 = [
     image: image5,
   },
   {
-    text: "Practical Life Skills and Stem Explaination",
+    text: "Practical Life Skills and Stem Exploration",
     image: image14,
   },
   {
@@ -469,13 +469,13 @@ const Card = ({
             /> */}
             <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full bg-white/60" />
             <div className=" absolute top-0 right-0 left-0 bottom-0 flex flex-col justify-center items-center  p-5 ">
-              <p className=" text-white text-xl tracking-wider font-semibold">
+              <p className=" text-black text-xl tracking-wider font-semibold">
                 How We Apply
               </p>
               <div className=" h-px bg-slate-400 w-full my-3" />
               <div>
                 {howToApply?.map((point, index) => (
-                  <li key={index} className=" tracking-wide text-white text-xl mt-2">
+                  <li key={index} className=" tracking-wide text-black text-xl mt-2">
                     {point}
                   </li>
                 ))}

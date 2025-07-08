@@ -75,8 +75,12 @@ const ContactUs = () => {
                   <p className=" text-xl tracking-wider font-semibold mt-5">
                     Call Us
                   </p>
+
                   <p className=" text-slate-700 tracking-wide text-xl">
-                    +91 93264 46240
+                    +91 7558611669
+                  </p>
+                  <p className=" text-slate-700 tracking-wide text-xl">
+                    +91 7558300669
                   </p>
                 </div>
               </div>
@@ -89,7 +93,7 @@ const ContactUs = () => {
                   </p>
                 </div>
                 <p className=" lg:mt-3 text-gray-500 font-semibold text-xl tracking-wide">
-                  Shop No 1 & 2, Yash one infinite, Kate wasti, punawale, Pune
+                  Shop No 1 & 2, Yash one infinite, Kate wasti, Punawale, Pune
                   411033
                 </p>
               </div>

@@ -198,7 +198,7 @@ const Admission = () => {
   }
 
   return (
-    <div className=" bg-[#FFE6CC] font-kgPrimaryPenmanship tracking-wide">
+    <div className=" bg-[#afe9e4] font-kgPrimaryPenmanship tracking-wide">
       <div className=" relative pb-20 pt-32 lg:pt-44 px-4  flex flex-col justify-center items-center">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
@@ -210,20 +210,30 @@ const Admission = () => {
         <div className=" absolute top-0 right-0 left-0 bottom-0">
           <Navbar />
         </div> */}
-        <p className=" text-black text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px]  text-center  z-10">
+        {/* <p className=" text-black text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[3px]  text-center  z-10">
           Admissions
         </p>
         <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
         <p className=" text-gray-600 font-semibold text-xl  text-center lg:text-2xl z-10 mt-4 lg:mt-7 lg:w-[60%]">
           Admissions are open throughout the year for families who resonate with
           our joyful, child-led approach to early learning.
+        </p> */}
+
+        <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
+          Admissions
+        </h1>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
+
+        <p className="  mt-6 xl:mt-8 text-slate-600 tracking-wider text-xl md:text-2xl leading-6 mx-auto text-center max-w-2xl">
+          Admissions are open throughout the year for families who resonate with
+          our joyful, child-led approach to early learning.
         </p>
       </div>
-      <div className="  bg-white pt-14 pb-32 lg:pb-44 md:pt-20 mt-5 rounded-t-[32px] lg:rounded-t-[64px]  relative">
-        <img
+      <div className="  bg-white pt-14 pb-32 lg:pb-44 md:pt-20 mt-5  relative">
+        {/* <img
           className=" absolute -top-[85px] lg:-top-[150px]  left-5 lg:left-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[170px]"
           src={child1}
-        />
+        /> */}
         {/* <img
           className=" absolute -top-[85px] lg:-top-[180px]  left-5 lg:left-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]"
           src={hero}
@@ -232,10 +242,10 @@ const Admission = () => {
           className=" absolute -top-[85px] lg:-top-[170px]  right-10 w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]"
           src={hero1}
         /> */}
-        <img
+        {/* <img
           className=" absolute -top-[85px] lg:-top-[140px]  right-8 lg:right-14 w-[100px] h-[100px] -rotate-3 lg:w-[220px] lg:h-[170px]"
           src={child2}
-        />
+        /> */}
         <div className="  md:w-[80%] mx-auto">
           <div className=" flex flex-col md:flex-row-reverse md:justify-evenly justify-center items-center gap-5">
             <div className=" md:w-1/2 text-xl lg:text-2xl flex flex-col px-5 md:px-0 gap-3  md:gap-6">

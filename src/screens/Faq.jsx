@@ -29,11 +29,11 @@ const data = [
     answer:
       "Enrollment begins with an initial assessment and submission of required documents (birth certificate, photos, address proof, etc.). Please contact our admissions team for details on availability, fees, and next steps.",
   },
-  {
-    question: "What kind of meals and snacks do you provide?",
-    answer:
-      "We emphasize wholesome, balanced nutrition and work with families and nutritionists to encourage healthy eating habits. Processed snacks and sugary drinks are discouraged. Snack and meal times are social, positive experiences",
-  },
+//   {
+//     question: "What kind of meals and snacks do you provide?",
+//     answer:
+//       "We emphasize wholesome, balanced nutrition and work with families and nutritionists to encourage healthy eating habits. Processed snacks and sugary drinks are discouraged. Snack and meal times are social, positive experiences",
+//   },
   {
     question: "What is the teaching philosophy at Tulip Tots?",
     answer:

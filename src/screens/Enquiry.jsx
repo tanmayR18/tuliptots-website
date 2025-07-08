@@ -204,7 +204,7 @@ const Enquiry = () => {
 
   return (
     <div className="bg-[#fafafa] font-kgPrimaryPenmanship">
-      <div className=" relative pt-44 pb-20 px-4  bg-[#F7EEE9]">
+      <div className=" relative pt-44 pb-20 px-4  bg-[#afe9e4]">
         {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
           <img
             className=" w-full h-full"
@@ -212,23 +212,35 @@ const Enquiry = () => {
           />
         </div>
         <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" /> */}
-        <p className="   text-4xl text-center md:text-5xl lg:text-6xl font-bold z-10 text-pink-500">
+        {/* <p className="   text-4xl text-center md:text-5xl lg:text-6xl font-bold z-10 text-pink-500">
           Let’s Begin Your Journey with Tulip Tots
         </p>
         <p className=" text-green-500 font-semibold text-xl md:text-2xl text-center lg:text-3xl lg:font-bold z-10 mt-4 lg:mt-5">
           Schedule a visit, meet our team, and explore the joyful world of early
           learning.
+        </p> */}
+
+        <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
+          Let’s Begin Your Journey with Tulip Tots
+        </h1>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
+
+        <p className="  mt-6 xl:mt-8 text-slate-600 tracking-wider text-xl md:text-2xl leading-6 mx-auto text-center max-w-2xl">
+          Schedule a visit, meet our team, and explore the joyful world of early
+          learning.
         </p>
       </div>
       <form className="  py-10 rounded-t-[32px] lg:rounded-t-[64px] bg-white relative">
-        <img
+        {/* <img
           className=" absolute -top-[95px] md:-top-[195px] right-10 md:right-20 w-[100px] h-[100px] md:w-[200px] md:h-[200px]"
           src={hero1}
-        />
+        /> */}
         <div className=" w-[90%] md:w-[85%] mx-auto">
           <div className=" flex flex-col lg:flex-row gap-8  ">
             <div className=" w-full text-xl">
-              <p className=" text-black font-semibold tracking-wider text-2xl">Details</p>
+              <p className=" text-black font-semibold tracking-wider text-2xl">
+                Details
+              </p>
 
               <div className=" mt-6">
                 <p>
@@ -440,8 +452,8 @@ const Enquiry = () => {
                 Unable to send your enquiry at this point{" "}
               </p>
               <p className=" text-gray-500 text-center font-semibold w-1/2 mt-2">
-                Sorry for the inconvenience, please contact as 1234567890 for
-                the enquiry
+                Sorry for the inconvenience, please contact us on 7558300669 /
+                7558611669 for the enquiry
               </p>
             </div>
           )}

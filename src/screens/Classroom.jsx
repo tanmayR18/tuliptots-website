@@ -27,7 +27,7 @@ const data = [
       "We embrace a wide-open layout that encourages free movement, creativity, and natural exploration",
       "Floor-based learning promotes healthy posture, sensory integration, and body awareness, allowing children to feel connected to the space around them.",
     ],
-    bgColor: "#007BFF",
+    bgColor: "#AEDCFF",
     image: image1,
   },
   {
@@ -36,7 +36,7 @@ const data = [
       "Our climbing frames, swings, and balance boards are designed to build strength, courage, and coordination.",
       "These versatile setups transform into bridges, ramps, tunnels—whatever a child imagines in the moment.",
     ],
-    bgColor: "#FF5722",
+    bgColor: "#FFAB91",
     image: image2,
   },
   {
@@ -45,7 +45,7 @@ const data = [
       "With life-size building tools, children become the architects of their imagination—constructing walk-in forts, towers, and creative structures they can play inside, rebuild, and reimagine.",
       "This kind of large-scale construction play enhances gross motor development, spatial awareness, collaboration, and confidence—proving that big ideas deserve big spaces",
     ],
-    bgColor: "#1ABC9C",
+    bgColor: "#A1E8DC",
     image: image3,
   },
   {
@@ -54,7 +54,7 @@ const data = [
       "Our flexible play tools and modular furniture can be reimagined daily into obstacle courses, story stages, hideouts, or quiet corners—shaped entirely by the evolving interests of curious young minds.",
       "These dynamic spaces support both active movement and deep focus, blending gross motor development with imaginative storytelling and teamwork.",
     ],
-    bgColor: "#E74C3C",
+    bgColor: "#F5A5A0",
     image: image4,
   },
   {
@@ -63,7 +63,7 @@ const data = [
       "With our interactive wall zones, children explore a world of movement, magnets, puzzles, gears, and visual challenges—designed to develop fine motor skills, spatial logic, and creative confidence.",
       "Magnetic walls, vertical drawing boards, and logic-based puzzles engage both body and brain—making learning truly multi-sensory and fun.",
     ],
-    bgColor: "#6610f2",
+    bgColor: "#C3B4F8",
     image: image5,
   },
   {
@@ -72,7 +72,7 @@ const data = [
       "Soft spaces like the Nugget couch and cozy reading nooks encourage mindfulness, bonding, and emotional regulation, creating a calming balance to active play",
       "Thoughtfully designed calm corners offer emotional safety, sensory support, and space for quiet reflection or reset—because feeling secure is the foundation of learning.",
     ],
-    bgColor: "#e91e63",
+    bgColor: "#F8BBD0",
     image: image6,
   },
   {
@@ -81,7 +81,7 @@ const data = [
       "Open shelves filled with rotating toys, games, and hands-on materials invite children to make independent choices and engage in purposeful play",
       "Every material is child-chosen, child-used, and child-loved, empowering children to lead their learning journey with joy and confidence.",
     ],
-    bgColor: "#00BCD4",
+    bgColor: "#A5EAF2",
     image: image7,
   },
 ];
@@ -111,7 +111,7 @@ const Card = ({ title, points, bgColor, index, isInView, image }) => {
             isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
           }
           transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
-          className="text-3xl tracking-wider font-bold text-center text-white"
+          className="text-3xl tracking-wider font-bold text-center text-black"
         >
           {title}
         </motion.p>
@@ -127,7 +127,7 @@ const Card = ({ title, points, bgColor, index, isInView, image }) => {
                 duration: 0.4,
                 delay: index * 0.1 + 0.3 + pointIndex * 0.1,
               }}
-              className="mt-1 text-2xl  tracking-widest text-white font-semibold"
+              className="mt-1 text-2xl  tracking-widest text-slate-800 font-semibold"
               key={pointIndex}
             >
               {item}
