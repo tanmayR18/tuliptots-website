@@ -53,7 +53,7 @@ const NewHero = () => {
               className=" absolute -top-5 -left-5 sm:-left-20 w-[70px] sm:w-[100px]"
             />
             <p className=" font-happy font-semibold text-[#323a30] text-center text-6xl xl:text-7xl 2xl:text-8xl tracking-[3px]">
-              Tulip tots <br /> International
+              Tulip Tots <br /> International
             </p>
 
             <div className=" bg-[#f69222] py-3 px-8 sm:px-10 md:px-14 rounded-[32px] mt-3">

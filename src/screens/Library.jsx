@@ -107,8 +107,9 @@ const Library = () => {
         <div className=" lg:w-[40%] max-w-md lg:max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.img
-              key={isFirst ? "image1" : "image2"}
-              src={isFirst ? image : image1}
+              //   key={isFirst ? "image1" : "image2"}
+              //   src={isFirst ? image : image1}
+              src={image1}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -131,7 +132,7 @@ const Library = () => {
           once: true,
           margin: "-100px",
         }}
-        className="bg-blue-200 relative mt-16 overflow-hidden z-20 lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
+        className="bg-[#afe9e4] relative mt-16 overflow-hidden z-20 lg:w-[90%] mx-auto p-5 lg:p-10 text-black font-semibold text-lg rounded-[32px]"
       >
         <div className="relative z-20">
           <motion.p
@@ -194,8 +195,8 @@ const Library = () => {
             transition={{ duration: 0.6, delay: 1.4 }}
             className="text-slate-800 text-center  tracking-wide text-xl lg:text-2xl"
           >
-            At Tulip Tots, we don't just build readers—we build joyful explorers
-            of stories, facts, and feelings.
+            At Tulip Tots International, we don't just build readers—we build
+            joyful explorers of stories, facts, and feelings.
           </motion.p>
         </div>
 

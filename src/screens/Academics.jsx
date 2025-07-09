@@ -116,61 +116,91 @@ const Academics = () => {
         transition={{ duration: 0.6 }}
         className=" text-4xl lg:text-5xl font-bold text-center tracking-wide"
       >
-        Our Preschool Programs
+        Our Programs
       </motion.p>
 
       <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-[85rem] mt-8 lg:mt-20 mx-auto gap-8 pb-24">
+      <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 max-w-[80rem] mt-8 lg:mt-20 mx-auto gap-8 pb-24">
         <ProgramCard
-          programName={"Playgroup"}
-          programIdea={"Nurturing Early Explorers"}
-          programPetName={"Sprouts"}
+          programName={"🌱 Parent-Toddler Program"}
+          programIdea={"Nurturing Beginnings"}
+          programPetName={"Seedlings"}
           content={
-            "This is the beginning—where tiny steps lead to big discoveries. Just like a sprout breaking through the soil, our youngest learners explore the world with wide-eyed curiosity, building trust, comfort, and early independence through sensory play, music, and nurturing interactions."
+            "This is where the journey begins—side by side with a loving parent or caregiver. Designed to build early bonds and trust, this program focuses on sensory play, music, movement, and joyful routines. It gently introduces toddlers to a social setting and builds emotional security, communication, and curiosity—laying the roots for future independence."
           }
           bgColor={"#9B59B6"}
           borderColor={"#000"}
-          eligibily={"2 to 3 years"}
+          eligibily={"6 months to 2 years"}
           index={0}
           isInView={isInView}
         />
+
         <ProgramCard
-          programName={"Nursery"}
-          programIdea={"Building a Strong Foundation"}
-          programPetName={"Buds"}
+          programName={"🔢 Toddler Math Program"}
+          programIdea={"Early Math Explorers"}
+          programPetName={"Number Buds"}
           content={
-            "At this stage, children begin to form a solid sense of self—like buds gaining strength before they open. Through hands-on exploration, early language development, and meaningful social interactions, they grow confident, communicative, and deeply curious about the world around them."
+            "Rooted in the Glenn Doman and playful learning approach, this program introduces early mathematical thinking through engaging visual aids, quantity cards, rhythm patterns, sorting, and playful problem-solving. It supports children in developing logical reasoning, number sense, and early focus—all in a joyful, pressure-free environment."
           }
           bgColor={"#FF5722"}
           borderColor={"#000"}
-          eligibily={"3 to 4 years"}
+          eligibily={"6 months to 3 years"}
           index={1}
           isInView={isInView}
         />
+
         <ProgramCard
-          programName={"LKG"}
-          programIdea={"Inspiring Young Learners"}
-          programPetName={"Blossoms"}
+          programName={"🎨 Tulip Trail Activity Centre"}
+          programIdea={"Discover. Create. Thrive."}
+          programPetName={"Bloom & Play"}
           content={
-            "In this vibrant stage, children blossom with curiosity and creativity. They thrive on playful problem-solving, asking questions, and connecting deeply with peers. Through joyful, interest-led exploration, they build early literacy, numeracy, and a sense of independence"
+            "Our Activity Centre is a vibrant space where children unleash creativity and curiosity beyond the classroom. With thoughtfully designed sessions in art, music, sensory play, baking, pretend play, and hands-on science, children explore their interests while building confidence and fine motor skills. This is where imaginations soar and little hands learn big things."
           }
           bgColor={"#1ABC9C"}
           borderColor={"#000"}
-          eligibily={"4 to 5 years"}
+          eligibily={"2 to 14 years"}
           index={2}
           isInView={isInView}
         />
+
         <ProgramCard
-          programName={"UKG"}
-          programIdea={"Preparing for Primary School"}
-          programPetName={"Blooms"}
+          programName={"🌼 Tulip Nest Day Care"}
+          programIdea={"More than Care—A Place to Grow"}
+          programPetName={"Nestlings"}
           content={
-            "Fully bloomed and ready to face the world—our Bloomers demonstrate leadership, empathy, and advanced skills across literacy, numeracy, and life learning. This stage focuses on preparing them for the next leap, helping them carry the confidence and joy of learning into primary school and beyond"
+            "Tulip Nest Day Care blends warmth and wonder, offering a safe, nurturing space where each child feels at home. Our day is thoughtfully structured with active play, creative zones, restful routines, and responsive caregiving. More than just supervision, we support every child’s social, emotional, and developmental milestones—helping them grow in confidence, empathy, and joy."
           }
           bgColor={"#e91e63"}
           borderColor={"#000"}
-          eligibily={"5 to 6 years"}
+          eligibily={"5 to 6 years "}
+          index={3}
+          isInView={isInView}
+        />
+
+        <ProgramCard
+          programName={"📖 Storytelling Sessions"}
+          programIdea={"Where Words Weave Wonder"}
+          programPetName={"Story Sprouts"}
+          content={
+            "Step into a world where imagination soars and language comes alive. Our storytelling sessions are more than just tales—they’re immersive experiences that spark creativity, build vocabulary, and strengthen listening and comprehension. Through puppetry, picture books, rhythm and rhyme, and dramatic expression, children develop a lifelong love for stories and the confidence to tell their own."
+          }
+          bgColor={"#FFD54F"}
+          borderColor={"#000"}
+          eligibily={"all ages"}
+          index={3}
+          isInView={isInView}
+        />
+        <ProgramCard
+          programName={"📚 Tulip Tots Children’s Library"}
+          programIdea={"Where Words Weave Wonder"}
+          programPetName={"Story Sprouts"}
+          content={
+            "Step into a world where imagination soars and language comes alive. Our storytelling sessions are more than just tales—they’re immersive experiences that spark creativity, build vocabulary, and strengthen listening and comprehension. Through puppetry, picture books, rhythm and rhyme, and dramatic expression, children develop a lifelong love for stories and the confidence to tell their own."
+          }
+          bgColor={"#BA68C8"}
+          borderColor={"#000"}
+          eligibily={"all ages"}
           index={3}
           isInView={isInView}
         />
@@ -285,7 +315,7 @@ const Academics = () => {
         </div>
       </div>
 
-      <Activity />
+      {/* <Activity /> */}
     </div>
   );
 };

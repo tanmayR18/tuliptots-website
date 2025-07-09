@@ -98,7 +98,7 @@ const data2 = [
 const Pedagogy = () => {
   const [currentSkill, setCurrentSkill] = useState("");
   return (
-    <div className="py-20 bg-[#EAF4F5] overflow-x-hidden">
+    <div className="py-20 bg-[#afe9e4] overflow-x-hidden">
       <div className=" px-4 lg:w-[85%] mx-auto">
         <div className=" ">
           <p className=" text-3xl lg:text-4xl sm:text-3xl tracking-wide text-center font-bold text-black">

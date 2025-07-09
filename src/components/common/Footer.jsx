@@ -202,10 +202,11 @@ const Footer = () => {
                 "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
               }
               target="_blank"
+              className=" w-full aspect-[11/9] overflow-hidden"
             >
               <img
-                className=" rounded-xl"
-                src="https://www.independent-software.com/assets/gmap/gmap-tutorial-google-map-provider.jpg"
+                className=" rounded-xl aspect-video object-cover"
+                src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/draftMap2.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2RyYWZ0TWFwMi5wbmciLCJpYXQiOjE3NTIwNzU2NTgsImV4cCI6MTc4MzYxMTY1OH0.AdYnP_Z46VfcyoxUfNXe9lKoUshUnaSGzdoYh9o3WjI"
               />
             </Link>
           </div>

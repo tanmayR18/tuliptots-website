@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import motherChild1 from "../assets/story/motherChild1.jpg";
 import motherChild2 from "../assets/story/image2.png";
 import nurtureStory from "../assets/story/nurtureStory.jpeg";
+import story from "../assets/story/story.jpg";
 import logo from "../assets/bgremoved.png";
 
 const OurStory = () => {
@@ -188,7 +189,7 @@ const OurStory = () => {
               <div className="flex justify-center mb-6">
                 <img
                   className=" w-1/2 rounded-3xl"
-                  src="https://thumbs.dreamstime.com/b/happy-children-making-high-five-robotics-school-education-technology-science-people-concept-group-kids-building-robots-93175013.jpg"
+                  src={story}
                 />
               </div>
               <p className="text-2xl  leading-7 tracking-wide text-gray-800 font-medium text-center">

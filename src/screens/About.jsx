@@ -62,7 +62,7 @@ const data = [
     name: "Emmi Pikler",
     country: "Hungary",
     quote:
-      "Let the child be the scriptwriter, the director, and the actor in his own play.”",
+      "Let the child be the scriptwriter, the director, and the actor in his own play.",
     mainIdea:
       "Respectful care and free movement build trust and physical confidence",
     howToApply: [
@@ -104,7 +104,7 @@ const data = [
     name: "Howard Gardner's",
     country: "United States",
     quote:
-      "intelligence is not a single, unified ability, but rather a collection of distinct, independent intelligences",
+      "Children learn in different ways, and it’s our job to find the path that works for each one.",
     mainIdea:
       "We celebrate each child’s unique strengths and ways of learning.",
     howToApply: [
@@ -449,7 +449,7 @@ const Card = ({
               </p> */}
 
               {quote && (
-                <blockquote className=" italic text-center text-xl tracking-wide bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
+                <blockquote className=" italic leading-[22px] text-center text-xl tracking-wide bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
                   " {quote} "
                 </blockquote>
               )}
