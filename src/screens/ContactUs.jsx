@@ -35,7 +35,7 @@ const ContactUs = () => {
               <div className=" w-full h-full ">
                 <img
                   className=" w-full h-full aspect-square"
-                  src="https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png"
+                  src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/draftMap2.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2RyYWZ0TWFwMi5wbmciLCJpYXQiOjE3NTIwNzU2NTgsImV4cCI6MTc4MzYxMTY1OH0.AdYnP_Z46VfcyoxUfNXe9lKoUshUnaSGzdoYh9o3WjI"
                 />
               </div>
               <div className=" pb-12 flex items-end justify-center absolute  bottom-0 w-full z-20 bg-linear-to-t h-[30%]  from-[rgba(0,0,0,0.5)] to-transparent">
@@ -77,10 +77,10 @@ const ContactUs = () => {
                   </p>
 
                   <p className=" text-slate-700 tracking-wide text-xl">
-                    +91 7558611669
+                    +91 7558300669
                   </p>
                   <p className=" text-slate-700 tracking-wide text-xl">
-                    +91 7558300669
+                    +91 7558611669
                   </p>
                 </div>
               </div>

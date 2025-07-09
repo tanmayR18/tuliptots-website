@@ -14,52 +14,62 @@ import image10 from "../../../assets/school/await/10.jpg";
 
 const data = [
   {
-    text: "Baking & Cooking Adventures",
+    text1: `Baking & Cooking`,
+    text2: `Adventures`,
     bgColor: "#B3E5FC",
     image: image1,
   },
   {
-    text: "STEAM Discovery & Design Thinking",
+    text1: "STEAM Discovery &",
+    text2: "Design Thinking",
     bgColor: "#E6F7A9",
     image: image2,
   },
   {
-    text: "Building & Construction Play",
+    text1: "Building & ",
+    text2: "Construction Play",
     bgColor: "#E6D6FF",
     image: image3,
   },
   {
-    text: "Board Games & Brain Builders",
+    text1: "Board Games &",
+    text2: "Brain Builders",
     bgColor: "#FFDAB9",
     image: image4,
   },
   {
-    text: "Nature Exploration & Outdoor Play",
+    text1: "Nature Exploration",
+    text2: "& Outdoor Play",
     bgColor: "#FFD1DC",
     image: image5,
   },
   {
-    text: "Creative Expression & Sensory Arts",
+    text1: "Creative Expression",
+    text2: " & Sensory Arts",
     bgColor: "#D5FAD6",
     image: image6,
   },
   {
-    text: "Storytelling, Public Speaking & Performance",
+    text1: "Storytelling, Public ",
+    text2: "Speaking & Performance",
     bgColor: "#FFFACD",
     image: image7,
   },
   {
-    text: "Mindfulness & Emotional Well-being",
+    text1: "Mindfulness & Emotional",
+    text2: "Well-being",
     bgColor: "#CDEBFF",
     image: image8,
   },
   {
-    text: "Book Club & Library Access",
+    text1: "Book Club &",
+    text2: "Library Access",
     bgColor: "#FFECB3",
     image: image9,
   },
   {
-    text: "A Space Where All Children Belong",
+    text1: "A Space Where All",
+    text2: "Children Belong",
     bgColor: "#EBD6F5",
     image: image10,
   },
@@ -75,7 +85,7 @@ const Activity = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="mt-16 lg:mt-32 text-3xl px-4 md:px-0 md:text-4xl font-bold tracking-wider text-center"
+        className="text-3xl px-4 md:px-0 md:text-4xl font-bold tracking-wider text-center"
       >
         Tulip Trail Activity Centre
       </motion.p>
@@ -125,7 +135,8 @@ const Activity = () => {
           <Card
             key={index}
             bgColor={item.bgColor}
-            text={item.text}
+            text1={item.text1}
+            text2={item.text2}
             index={index}
             isInView={isInView}
             image={item.image}
@@ -136,7 +147,7 @@ const Activity = () => {
   );
 };
 
-const Card = ({ bgColor, text, index, isInView, image }) => {
+const Card = ({ bgColor, text1, text2, index, isInView, image }) => {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 0, scale: 1.1 }}
@@ -153,23 +164,40 @@ const Card = ({ bgColor, text, index, isInView, image }) => {
       className="p-5 rounded-3xl border border-gray-300"
       style={{ backgroundColor: bgColor }}
     >
-      <motion.p
-        initial={{ opacity: 0, translateY: 30 }}
-        whileInView={{
-          opacity: 1,
-          translateY: 0,
-          transition: { duration: 0.8 },
-        }}
-        viewport={{
-          once: true,
-          margin: "-100px",
-        }}
-        className="text-black font-semibold text-xl xl:text-2xl tracking-wider text-center"
-      >
-        {text}
-      </motion.p>
+      <div>
+        <motion.p
+          initial={{ opacity: 0, translateY: 30 }}
+          whileInView={{
+            opacity: 1,
+            translateY: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
+          className="text-black font-semibold text-xl xl:text-2xl tracking-wider text-center"
+        >
+          {text1}
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, translateY: 30 }}
+          whileInView={{
+            opacity: 1,
+            translateY: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
+          className="text-black font-semibold text-xl xl:text-2xl tracking-wider text-center"
+        >
+          {text2}
+        </motion.p>
+      </div>
 
-      <div className=" mt-4 lg:mt-10 aspect-square rounded-2xl  overflow-hidden">
+      <div className=" mt-4 lg:mt-7 aspect-square rounded-2xl  overflow-hidden">
         <img className=" w-full h-full object-cover" src={image} />
       </div>
     </motion.div>

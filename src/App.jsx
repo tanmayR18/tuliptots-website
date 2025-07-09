@@ -42,6 +42,7 @@ import GalleryUpload from "./screens/Auth/GalleryUpload";
 import BlogUpload from "./screens/Auth/ImageUpload";
 import VideoUpload from "./screens/Auth/VideoUpload";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
+import ActivityCenter from "./screens/ActivityCenter";
 
 function App() {
   const router = [
@@ -108,6 +109,10 @@ function App() {
     {
       path: "/daycare",
       element: <DayCare />,
+    },
+    {
+      path: "/activityCenter",
+      element: <ActivityCenter />,
     },
     {
       path: "/admissionPdf",

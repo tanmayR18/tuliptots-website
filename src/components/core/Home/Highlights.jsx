@@ -6,6 +6,14 @@ import image3 from "../../../assets/home/unique/yoga.jpg";
 import image4 from "../../../assets/home/unique/natureBasedLearning.jpg";
 import image5 from "../../../assets/home/unique/trainedEducator.jpg";
 import image6 from "../../../assets/home/unique/creative.jpg";
+
+import uni1 from "../../../assets/home/unique/uni1.png"
+import uni2 from "../../../assets/home/unique/uni2.png"
+import uni3 from "../../../assets/home/unique/uni3.png"
+import uni4 from "../../../assets/home/unique/uni4.png"
+import uni5 from "../../../assets/home/unique/uni5.jpg"
+import uni6 from "../../../assets/home/unique/uni6.jpg"
+
 import { motion } from "motion/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,32 +25,32 @@ import "swiper/css/pagination";
 const points = [
   {
     text: "LEAP curriculum (Learn, explore, act, play)",
-    image: image1,
+    image: uni2,
     color: "#f34f6a",
   },
   {
     text: "Global methodologies",
-    image: image2,
+    image: uni1,
     color: "#008000",
   },
   {
     text: "holistic child-led growth",
-    image: image3,
+    image: uni3,
     color: "#f34f6a",
   },
   {
     text: "Nature-based  learning",
-    image: image4,
+    image: uni3,
     color: "#008000",
   },
   {
     text: "In-house library",
-    image: image5,
+    image: uni6,
     color: "#f34f6a",
   },
   {
     text: "Emotional & creative spaces",
-    image: image6,
+    image: uni5,
     color: "#008000",
   },
 ];
@@ -68,7 +76,7 @@ const Highlights = () => {
       >
         What Makes Us Unique
       </motion.p>
-      <div className=" md:grid  hidden md:grid-cols-2 lg:grid-cols-3 gap-12 mt-0 md:w-[90%] xl:w-[80%] mx-auto">
+      <div className=" md:grid  hidden md:grid-cols-2 lg:grid-cols-3 gap-10 mt-0 md:w-[90%] xl:w-[80%] mx-auto">
         {points.map((point, index) => (
           <motion.div
             initial={{ opacity: 0, translateY: 30 }}
