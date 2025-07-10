@@ -11,7 +11,7 @@ const Section4 = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <div className=" py-20 bg-[#fafafa]">
+    <div className=" py-20 bg-[#fafafa] font-kgPrimaryPenmanship">
       <motion.p
         initial={{ opacity: 0, translateY: 10 }}
         whileInView={{
