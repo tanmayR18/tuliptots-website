@@ -439,7 +439,7 @@ const Enquiry = () => {
               <p className=" text-green-500 font-bold text-2xl">
                 Thank You for Reaching Out!{" "}
               </p>
-              <p className=" text-blue-500 text-center font-semibold w-1/2 mt-2">
+              <p className=" text-blue-500 text-center text-xl font-semibold md:w-1/2 mt-2">
                 Your enquiry has been received. We can’t wait to welcome you
                 into our Tulip Tots family, where little seeds grow into
                 confident blooms!{" "}
@@ -451,7 +451,7 @@ const Enquiry = () => {
               <p className=" text-red-500 font-bold text-2xl">
                 Unable to send your enquiry at this point{" "}
               </p>
-              <p className=" text-gray-500 text-center font-semibold w-1/2 mt-2">
+              <p className=" text-gray-500 text-xl text-center font-semibold md:w-1/2 mt-2">
                 Sorry for the inconvenience, please contact us on 7558300669 /
                 7558611669 for the enquiry
               </p>
