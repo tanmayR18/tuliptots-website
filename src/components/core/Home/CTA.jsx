@@ -51,11 +51,11 @@ const CTA = () => {
             className="text-white flex flex-col px-4 lg:px-10 -translate-y-8 lg:w-9/12 mx-auto"
           >
             <p className=" text-xl md:text-2xl lg:text-3xl tracking-wider   font-semibold italic">
-              "We’ve been underestimating children for far too long. Every child
+              ❝ We’ve been underestimating children for far too long. Every child
               holds immense potential—far greater than we imagine. When we stop
               trying to control their learning and start guiding with trust and
               respect, we see them soar beyond the limits we once believed
-              existed."
+              existed. ❞
             </p>
             <p className="self-end mt-5 text-xl md:text-2xl text-right tracking-wide">
               - Sufiya Inamdar <br />{" "}

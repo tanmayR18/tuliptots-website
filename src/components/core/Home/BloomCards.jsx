@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const SCREEN_WIDTH = window.innerWidth;
@@ -255,9 +255,28 @@ const Card = ({
   currentTapped,
   className,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: "-200px 0px -200px 0px", // top, right, bottom, left
+    once: true, // only trigger once
+  });
+
+  useEffect(() => {
+    if (isInView) {
+      console.log("canmed in to thw view", title);
+      setCurrentTapped(title);
+      if (title === "Meaningful connections") {
+        setTimeout(() => {
+          setCurrentTapped("");
+        }, 2000);
+      }
+    }
+  }, [isInView, setCurrentTapped, title]);
+
   return (
     <motion.div
       variants={itemVariants}
+      ref={ref}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.3 }}
       onClick={() => {

@@ -151,8 +151,9 @@ const Pedagogy = () => {
                       <img className=" w-[250px]" src={cric4} />
                       <div className=" absolute top-0 left-0 right-0 bottom-0 -translate-y-0 flex justify-center items-center p-3">
                         <p className=" text-center">
-                          NCERT <br /> National Council of <br /> Education
-                          Research and <br /> Training
+                          National Curriculum Framework <br /> for Foundational
+                          Stage <br />
+                          NCF-FS
                         </p>
                       </div>
                     </div>
