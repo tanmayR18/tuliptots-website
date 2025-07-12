@@ -49,7 +49,7 @@ const ContactUs = () => {
                 Contact
               </p>
 
-              <div className=" flex flex-col sm:flex-row gap-8 mt-6 xl:mt-12 justify-evenly items-center">
+              <div className=" flex flex-col sm:flex-row gap-8 mt-6 xl:mt-12 justify-evenly items-center sm:items-start">
                 <div className=" flex flex-col justify-center items-center w-1/2">
                   <div className=" hidden  bg-blue-100 w-24 h-24 lg:flex justify-center items-center rounded-full">
                     <AiTwotoneMail size={36} />
@@ -93,7 +93,7 @@ const ContactUs = () => {
                   </p>
                 </div>
                 <p className=" lg:mt-3 text-gray-500 font-semibold text-xl tracking-wide">
-                  Shop No 1 & 2, Yash one infinite, Kate wasti, Punawale, Pune
+                  Shop No 1 & 2, Yash one infinitee, Kate wasti, Punawale, Pune
                   411033
                 </p>
               </div>

@@ -188,7 +188,7 @@ const Pedagogy = () => {
             </div>
 
             <p className=" hidden lg:flex mt-4 font-semibold text-slate-800 tracking-wider text-2xl">
-              Every learning moment at Tulip Tots is filled with wonder,
+              Every learning moment at Tulip Tots International is filled with wonder,
               purpose, and joy. Whether indoors or outdoors, our children are
               encouraged to ask questions, explore freely, and express
               themselves—building not just knowledge, but also confidence,

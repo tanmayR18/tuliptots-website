@@ -99,7 +99,7 @@ const Blogs = () => {
           </h1>
           <div className="w-24 h-1 bg-pink-400 rounded-full mx-auto mb-6"></div>
           <p className="text-2xl  text-gray-600 max-w-2xl mx-auto ">
-            a warm corner of our world where we share stories, reflections,
+            A warm corner of our world where we share stories, reflections,
             ideas, and gentle guidance for parents walking alongside their
             little ones. From classroom moments to parenting insights, this
             space is a celebration of the beautiful journey we’re all

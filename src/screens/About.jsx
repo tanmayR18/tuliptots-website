@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import heroImage from "../assets/about/aboutHero2.png";
 import image1 from "../assets/about/whychooseus/1.png";
 import image2 from "../assets/about/whychooseus/2.png";
@@ -39,6 +39,7 @@ import Mission from "@/components/core/about/Mission";
 import Pedagogy from "@/components/core/about/Pedagogy";
 import { Link } from "react-router";
 import Assessment from "@/components/core/about/Assessment";
+import { useInView } from "framer-motion";
 
 const SCREEN_WIDTH = window.innerWidth;
 
@@ -412,8 +413,24 @@ const Card = ({
   image,
   bgColor,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: "-200px 0px -200px 0px", // top, right, bottom, left
+    once: true, // only trigger once
+  });
+
+  useEffect(() => {
+    if (isInView) {
+      console.log("canmed in to thw view", name);
+      console.log("window.screen.width", window.screen.width);
+      if (window.screen.width < 766) {
+        setCurrentTapped(name);
+      }
+    }
+  }, [isInView, setCurrentTapped, name]);
+
   return (
-    <div>
+    <div ref={ref}>
       <p className=" text-2xl sm:text-3xl tracking-wide font-semibold text-black text-center">
         {name} <span className=" text-xl">({country})</span>
       </p>
@@ -450,7 +467,7 @@ const Card = ({
 
               {quote && (
                 <blockquote className=" italic leading-[22px] text-center text-xl tracking-wide bg-[#f7ecdd] px-4 py-4 rounded-lg mt-7">
-                  " {quote} "
+                  ❝ {quote} ❞
                 </blockquote>
               )}
             </div>
@@ -475,7 +492,10 @@ const Card = ({
               <div className=" h-px bg-slate-400 w-full my-3" />
               <div>
                 {howToApply?.map((point, index) => (
-                  <li key={index} className=" tracking-wide text-black text-xl mt-2">
+                  <li
+                    key={index}
+                    className=" tracking-wide text-black text-xl mt-2"
+                  >
                     {point}
                   </li>
                 ))}
