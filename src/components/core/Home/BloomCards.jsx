@@ -264,12 +264,15 @@ const Card = ({
   useEffect(() => {
     if (isInView) {
       console.log("canmed in to thw view", title);
-      setCurrentTapped(title);
-      if (title === "Meaningful connections") {
-        setTimeout(() => {
-          setCurrentTapped("");
-        }, 2000);
+      console.log("window.screen.width", window.screen.width);
+      if (window.screen.width < 766) {
+        setCurrentTapped(title);
       }
+    //   if (title === "Meaningful connections") {
+    //     setTimeout(() => {
+    //       setCurrentTapped("");
+    //     }, 2000);
+    //   }
     }
   }, [isInView, setCurrentTapped, title]);
 

@@ -34,6 +34,7 @@ const Navbar = () => {
   const { session } = UserAuth();
   const [hidden, setHidden] = useState(false);
   const [showSchoolDropDown, setShowSchoolDropDown] = useState(false);
+  const [showSchoolDropDown2, setShowSchoolDropDown2] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const location = useLocation();
   console.log(location.pathname);
@@ -95,20 +96,15 @@ const Navbar = () => {
               </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "font-bold group relative"
-                  : "font-semibold group relative"
-              }
-              to="/school"
+            <div
+              className="font-semibold group relative"
               onMouseEnter={() => setShowSchoolDropDown(true)}
               onMouseLeave={() => setShowSchoolDropDown(false)}
             >
               <div className="flex gap-x-1.5 items-center">
                 <div className=" flex items-center gap-0.5">
                   <School color="#800080" size={18} />
-                  <p className="text-[#800080]">Pre School</p>
+                  <p className="text-[#800080]">Our Environment</p>
                 </div>
                 {showSchoolDropDown ? (
                   <button
@@ -144,7 +140,7 @@ const Navbar = () => {
                 onMouseLeave={() => setShowSchoolDropDown(false)}
                 className={`${
                   showSchoolDropDown ? "flex" : "hidden"
-                } absolute p-3 bg-white rounded-lg -bottom-0.5 translate-y-full shadow-lg z-50`}
+                } absolute p-3 bg-white rounded-lg -bottom-0.5 translate-y-full w-[200px] shadow-2xl shadow-lg z-50`}
               >
                 <div className=" p-2 px-2 bg-white rounded-lg flex flex-col">
                   <Link
@@ -155,18 +151,7 @@ const Navbar = () => {
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Classroom</p>
-                    </div>
-                  </Link>
-                  <Link
-                    className=" mt-1 border-b pb-1 border-b-gray-200"
-                    to={"/library"}
-                  >
-                    <div className="hover:text-orange-400 flex items-center group relative gap-x-1">
-                      <div className=" ">
-                        <IoIosArrowForward />
-                      </div>
-                      <p className=" font-semibold">Library</p>
+                      <p className=" font-semibold">Classroom & Learning Spaces</p>
                     </div>
                   </Link>
                   <Link
@@ -185,26 +170,93 @@ const Navbar = () => {
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Hygiene</p>
+                      <p className=" font-semibold">Health & Hygiene</p>
                     </div>
                   </Link>
                 </div>
               </div>
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? " font-bold group relative"
-                  : " font-semibold group relative"
-              }
-              to="/daycare"
+            </div>
+
+            <div
+              className="font-semibold group relative"
+              onMouseEnter={() => setShowSchoolDropDown2(true)}
+              onMouseLeave={() => setShowSchoolDropDown2(false)}
             >
-              <div className=" flex items-center gap-0.5">
-                <HandHeart color="#fb923c" size={22} />
-                <p className=" text-orange-400">Daycare</p>
+              <div className="flex gap-x-1.5 items-center">
+                <div className=" flex items-center gap-0.5">
+                  <HandHeart color="#fb923c" size={22} />
+                  <p className="text-[#fb923c]"> Our Programs</p>
+                </div>
+                {showSchoolDropDown2 ? (
+                  <button
+                    type="button"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent NavLink navigation
+                      e.stopPropagation();
+                      setShowSchoolDropDown2(false);
+                    }}
+                  >
+                    <MdArrowDropUp color="#fb923c" />
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent NavLink navigation
+                      e.stopPropagation();
+                      setShowSchoolDropDown2(true);
+                    }}
+                  >
+                    <MdArrowDropDown color="#fb923c" />
+                  </button>
+                )}
               </div>
+
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
-            </NavLink>
+
+              <div
+                onMouseEnter={() => setShowSchoolDropDown2(true)}
+                onMouseLeave={() => setShowSchoolDropDown2(false)}
+                className={`${
+                  showSchoolDropDown2 ? "flex" : "hidden"
+                } absolute p-3 bg-white rounded-lg -bottom-0.5 translate-y-full w-[200px] shadow-2xl shadow-lg z-50`}
+              >
+                <div className=" p-2 px-2 bg-white rounded-lg flex flex-col">
+                  <Link
+                    className=" border-b pb-1 border-b-gray-200"
+                    to={"/school"}
+                  >
+                    <div className=" flex items-center hover:text-[#800080] relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Preschool</p>
+                    </div>
+                  </Link>
+                  <Link
+                    className=" mt-1 border-b pb-1 border-b-gray-200"
+                    to={"/daycare"}
+                  >
+                    <div className="hover:text-[#800080] flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Day Care</p>
+                    </div>
+                  </Link>
+                  <Link className=" mt-1 " to={"/library"}>
+                    <div className="hover:text-[#800080] flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Children’s Library</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -321,7 +373,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* <AnimatePresence> */}
-          {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
+        {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
         {/* </AnimatePresence> */}
       </motion.nav>
     </>
@@ -330,6 +382,7 @@ const Navbar = () => {
 
 const DropDown = ({ setShowDropdown }) => {
   const [showSchoolDropDown, setShowSchoolDropDown] = useState(false);
+  const [showSchoolDropDown2, setShowSchoolDropDown2] = useState(false);
   return (
     <div
       onClick={() => setShowDropdown(false)}
@@ -378,24 +431,14 @@ const DropDown = ({ setShowDropdown }) => {
               <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
             )}
           </NavLink>
+
           <div>
-            <div style={{ marginBottom: location.pathname === "/school" ? 8 : 0}} className=" flex items-center gap-3">
-              <NavLink
-                onClick={() => setShowDropdown(false)}
-                className={({ isActive }) =>
-                  isActive
-                    ? " font-bold group relative"
-                    : " font-semibold group relative"
-                }
-                to="/school"
-              >
-                <p className=" text-2xl text-white tracking-widest">
-                  Pre School
+            <div className=" flex items-center gap-3">
+              <div>
+                <p className=" text-2xl font-semibold text-white tracking-widest">
+                  Our Programs
                 </p>
-                {location.pathname === "/school" && (
-                  <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
-                )}
-              </NavLink>
+              </div>
               {showSchoolDropDown ? (
                 <div
                   onClick={() => setShowSchoolDropDown(false)}
@@ -428,16 +471,117 @@ const DropDown = ({ setShowDropdown }) => {
                         ? " font-bold group relative"
                         : " font-semibold group relative"
                     }
+                    to="/school"
+                  >
+                    <p
+                      style={{
+                        marginBottom: location.pathname === "/school" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Preschool
+                    </p>
+                    {location.pathname === "/school" && (
+                      <div className=" w-full absolute bottom-1 bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
+                    to="/daycare"
+                  >
+                    <p className=" text-xl text-white tracking-widest">
+                      Day Care
+                    </p>
+                    {location.pathname === "/daycare" && (
+                      <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
+                    to="/library"
+                  >
+                    <p
+                      style={{
+                        marginBottom: location.pathname === "/library" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Children’s Library
+                    </p>
+                    {location.pathname === "/library" && (
+                      <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div>
+            <div className=" flex items-center gap-3">
+              <div>
+                <p className=" text-2xl font-semibold text-white tracking-widest">
+                  Our Environment
+                </p>
+              </div>
+              {showSchoolDropDown2 ? (
+                <div
+                  onClick={() => setShowSchoolDropDown2(false)}
+                  className=" bg-amber-100 cursor-pointer"
+                >
+                  <Minus />
+                </div>
+              ) : (
+                <div
+                  onClick={() => setShowSchoolDropDown2(true)}
+                  className=" bg-amber-100 cursor-pointer"
+                >
+                  <Plus />
+                </div>
+              )}
+            </div>
+
+            <AnimatePresence>
+              {showSchoolDropDown2 && (
+                <motion.div
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  className=" pl-3 flex flex-col  items-start"
+                >
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
                     to="/classroom"
                   >
-                    <p style={{ marginBottom: location.pathname === "/classroom" ? 5 : 0}} className=" text-xl text-white tracking-widest">
-                      Classroom
+                    <p
+                      style={{
+                        marginBottom:
+                          location.pathname === "/classroom" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Classroom & Learning Spaces
                     </p>
                     {location.pathname === "/classroom" && (
                       <div className=" w-full absolute bottom-1 bg-white h-1 rounded-2xl" />
                     )}
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     onClick={() => setShowDropdown(false)}
                     className={({ isActive }) =>
                       isActive
@@ -452,23 +596,7 @@ const DropDown = ({ setShowDropdown }) => {
                     {location.pathname === "/library" && (
                       <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
                     )}
-                  </NavLink>
-                  <NavLink
-                    onClick={() => setShowDropdown(false)}
-                    className={({ isActive }) =>
-                      isActive
-                        ? " font-bold group relative"
-                        : " font-semibold group relative"
-                    }
-                    to="/growth"
-                  >
-                    <p style={{ marginBottom: location.pathname === "/growth" ? 5 : 0}} className=" text-xl text-white tracking-widest">
-                      Our Team
-                    </p>
-                    {location.pathname === "/growth" && (
-                      <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
-                    )}
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
                     onClick={() => setShowDropdown(false)}
                     className={({ isActive }) =>
@@ -479,16 +607,38 @@ const DropDown = ({ setShowDropdown }) => {
                     to="/health"
                   >
                     <p className=" text-xl text-white tracking-widest">
-                      Health
+                      Health & Hygiene
                     </p>
                     {location.pathname === "/health" && (
                       <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
+                    to="/growth"
+                  >
+                    <p
+                      style={{
+                        marginBottom: location.pathname === "/growth" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Our Team
+                    </p>
+                    {location.pathname === "/growth" && (
+                      <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
                     )}
                   </NavLink>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
+
           <NavLink
             onClick={() => setShowDropdown(false)}
             className={({ isActive }) =>
