@@ -19,27 +19,27 @@ const Mission = () => {
           <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6 lg:mt-12">
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image1} />
-              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-7 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Nurturing play <br /> based <br /> environment
               </p>
             </div>
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image2} />
-              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-7 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Supporting <br /> Natural <br />
                 Development
               </p>
             </div>
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image4} />
-              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-7 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Freedom to explore, <br />
                 discover, and <br /> express themselves
               </p>
             </div>
             <div className=" flex flex-col items-center">
               <img className=" h-44 w-44 rounded-full" src={image3} />
-              <p className=" mt-3 text-center leading-5 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
+              <p className=" mt-3 text-center leading-7 tracking-wider text-xl sm:text-2xl xl:text-3xl font-bold text-slate-600">
                 Innovation, <br /> researched global <br /> practices
               </p>
             </div>

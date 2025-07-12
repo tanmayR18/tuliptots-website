@@ -265,14 +265,16 @@ const Card = ({
     if (isInView) {
       console.log("canmed in to thw view", title);
       console.log("window.screen.width", window.screen.width);
-      if (window.screen.width < 766) {
+      if (window.screen.width < 768) {
         setCurrentTapped(title);
+      } else if (window.screen.width >= 768 && window.screen.width < 1030) {
+        setCurrentTapped(title);
+        if (title === "Meaningful connections") {
+          setTimeout(() => {
+            setCurrentTapped("");
+          }, 2000);
+        }
       }
-    //   if (title === "Meaningful connections") {
-    //     setTimeout(() => {
-    //       setCurrentTapped("");
-    //     }, 2000);
-    //   }
     }
   }, [isInView, setCurrentTapped, title]);
 

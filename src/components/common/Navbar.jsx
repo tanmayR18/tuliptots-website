@@ -151,7 +151,9 @@ const Navbar = () => {
                       <div className=" ">
                         <IoIosArrowForward />
                       </div>
-                      <p className=" font-semibold">Classroom & Learning Spaces</p>
+                      <p className=" font-semibold">
+                        Classroom & Learning Spaces
+                      </p>
                     </div>
                   </Link>
                   <Link
@@ -433,22 +435,22 @@ const DropDown = ({ setShowDropdown }) => {
           </NavLink>
 
           <div>
-            <div className=" flex items-center gap-3">
+            <div onClick={() => setShowSchoolDropDown( prev => !prev)} className=" flex items-center gap-3">
               <div>
                 <p className=" text-2xl font-semibold text-white tracking-widest">
                   Our Programs
                 </p>
               </div>
-              {showSchoolDropDown ? (
+            {showSchoolDropDown ? (
                 <div
-                  onClick={() => setShowSchoolDropDown(false)}
+                //   onClick={() => setShowSchoolDropDown(false)}
                   className=" bg-amber-100 cursor-pointer"
                 >
                   <Minus />
                 </div>
               ) : (
                 <div
-                  onClick={() => setShowSchoolDropDown(true)}
+                //   onClick={() => setShowSchoolDropDown(true)}
                   className=" bg-amber-100 cursor-pointer"
                 >
                   <Plus />
@@ -462,7 +464,7 @@ const DropDown = ({ setShowDropdown }) => {
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -10, opacity: 0 }}
-                  className=" pl-3 flex flex-col  items-start"
+                  className=" pl-3 flex flex-col gap-2 pt-3  items-start"
                 >
                   <NavLink
                     onClick={() => setShowDropdown(false)}
@@ -528,7 +530,10 @@ const DropDown = ({ setShowDropdown }) => {
           </div>
 
           <div>
-            <div className=" flex items-center gap-3">
+            <div
+              onClick={() => setShowSchoolDropDown2((prev) => !prev)}
+              className=" flex items-center gap-3"
+            >
               <div>
                 <p className=" text-2xl font-semibold text-white tracking-widest">
                   Our Environment
@@ -536,14 +541,14 @@ const DropDown = ({ setShowDropdown }) => {
               </div>
               {showSchoolDropDown2 ? (
                 <div
-                  onClick={() => setShowSchoolDropDown2(false)}
+                //   onClick={() => setShowSchoolDropDown2(false)}
                   className=" bg-amber-100 cursor-pointer"
                 >
                   <Minus />
                 </div>
               ) : (
                 <div
-                  onClick={() => setShowSchoolDropDown2(true)}
+                //   onClick={() => setShowSchoolDropDown2(true)}
                   className=" bg-amber-100 cursor-pointer"
                 >
                   <Plus />
@@ -557,7 +562,7 @@ const DropDown = ({ setShowDropdown }) => {
                   initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -10, opacity: 0 }}
-                  className=" pl-3 flex flex-col  items-start"
+                  className=" pl-3 flex flex-col gap-2 pt-3 items-start"
                 >
                   <NavLink
                     onClick={() => setShowDropdown(false)}
@@ -639,20 +644,6 @@ const DropDown = ({ setShowDropdown }) => {
             </AnimatePresence>
           </div>
 
-          <NavLink
-            onClick={() => setShowDropdown(false)}
-            className={({ isActive }) =>
-              isActive
-                ? " font-bold group relative"
-                : " font-semibold group relative"
-            }
-            to="/daycare"
-          >
-            <p className=" text-2xl text-white tracking-widest">Daycare</p>
-            {location.pathname === "/daycare" && (
-              <div className=" w-full absolute bg-white h-1 rounded-2xl" />
-            )}
-          </NavLink>
           <NavLink
             onClick={() => setShowDropdown(false)}
             className={({ isActive }) =>

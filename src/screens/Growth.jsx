@@ -33,7 +33,7 @@ const Growth = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="lg:w-10/12 mx-auto mt-5 lg:mt-8 text-xl lg:text-2xl text-slate-700 font-semibold hidden md:flex text-center"
+          className="lg:w-10/12 mx-auto mt-5 lg:mt-12 text-xl lg:text-2xl text-slate-700 font-semibold hidden md:flex text-center"
         >
           At Tulip Tots International, we believe that early childhood educators
           are more than teachers—they are gentle guides, nurturers of wonder,
