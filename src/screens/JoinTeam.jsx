@@ -232,7 +232,7 @@ const JoinTeam = () => {
               <p className=" text-green-500 font-bold text-2xl">
                 Thank You for Showing Interest!
               </p>
-              <p className=" text-blue-500 text-center font-semibold w-1/2 mt-2">
+              <p className=" text-blue-500 text-center text-xl font-semibold md:w-1/2 mt-2">
                 We've received your application. We’re excited to connect with
                 passionate individuals like you who want to grow with the Tulip
                 Tots family. Stay tuned — your journey with us may be about to
@@ -245,7 +245,7 @@ const JoinTeam = () => {
               <p className=" text-red-500 font-bold text-2xl">
                 Unable to send your enquiry at this point{" "}
               </p>
-              <p className=" text-gray-500 text-center font-semibold w-1/2 mt-2">
+              <p className=" text-gray-500 text-center text-xl font-semibold md:w-1/2 mt-2">
                 Sorry for the inconvenience, please contact us on 7558300669 / 7558611669 or  for
                 the enquiry
               </p>
