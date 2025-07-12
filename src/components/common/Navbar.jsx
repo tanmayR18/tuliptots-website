@@ -321,7 +321,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* <AnimatePresence> */}
-          {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
+        {showDropdown && <DropDown setShowDropdown={setShowDropdown} />}
         {/* </AnimatePresence> */}
       </motion.nav>
     </>
@@ -330,6 +330,7 @@ const Navbar = () => {
 
 const DropDown = ({ setShowDropdown }) => {
   const [showSchoolDropDown, setShowSchoolDropDown] = useState(false);
+  const [showSchoolDropDown2, setShowSchoolDropDown2] = useState(false);
   return (
     <div
       onClick={() => setShowDropdown(false)}
@@ -378,24 +379,14 @@ const DropDown = ({ setShowDropdown }) => {
               <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
             )}
           </NavLink>
+
           <div>
-            <div style={{ marginBottom: location.pathname === "/school" ? 8 : 0}} className=" flex items-center gap-3">
-              <NavLink
-                onClick={() => setShowDropdown(false)}
-                className={({ isActive }) =>
-                  isActive
-                    ? " font-bold group relative"
-                    : " font-semibold group relative"
-                }
-                to="/school"
-              >
-                <p className=" text-2xl text-white tracking-widest">
-                  Pre School
+            <div className=" flex items-center gap-3">
+              <div>
+                <p className=" text-2xl font-semibold text-white tracking-widest">
+                  Our Programs
                 </p>
-                {location.pathname === "/school" && (
-                  <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
-                )}
-              </NavLink>
+              </div>
               {showSchoolDropDown ? (
                 <div
                   onClick={() => setShowSchoolDropDown(false)}
@@ -428,16 +419,117 @@ const DropDown = ({ setShowDropdown }) => {
                         ? " font-bold group relative"
                         : " font-semibold group relative"
                     }
+                    to="/school"
+                  >
+                    <p
+                      style={{
+                        marginBottom: location.pathname === "/school" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Preschool
+                    </p>
+                    {location.pathname === "/school" && (
+                      <div className=" w-full absolute bottom-1 bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
+                    to="/daycare"
+                  >
+                    <p className=" text-xl text-white tracking-widest">
+                      Day Care
+                    </p>
+                    {location.pathname === "/daycare" && (
+                      <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
+                    to="/library"
+                  >
+                    <p
+                      style={{
+                        marginBottom: location.pathname === "/library" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Children’s Library
+                    </p>
+                    {location.pathname === "/library" && (
+                      <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div>
+            <div className=" flex items-center gap-3">
+              <div>
+                <p className=" text-2xl font-semibold text-white tracking-widest">
+                  Our Environment
+                </p>
+              </div>
+              {showSchoolDropDown2 ? (
+                <div
+                  onClick={() => setShowSchoolDropDown2(false)}
+                  className=" bg-amber-100 cursor-pointer"
+                >
+                  <Minus />
+                </div>
+              ) : (
+                <div
+                  onClick={() => setShowSchoolDropDown2(true)}
+                  className=" bg-amber-100 cursor-pointer"
+                >
+                  <Plus />
+                </div>
+              )}
+            </div>
+
+            <AnimatePresence>
+              {showSchoolDropDown2 && (
+                <motion.div
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  className=" pl-3 flex flex-col  items-start"
+                >
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
                     to="/classroom"
                   >
-                    <p style={{ marginBottom: location.pathname === "/classroom" ? 5 : 0}} className=" text-xl text-white tracking-widest">
-                      Classroom
+                    <p
+                      style={{
+                        marginBottom:
+                          location.pathname === "/classroom" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Classroom & Learning Spaces
                     </p>
                     {location.pathname === "/classroom" && (
                       <div className=" w-full absolute bottom-1 bg-white h-1 rounded-2xl" />
                     )}
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     onClick={() => setShowDropdown(false)}
                     className={({ isActive }) =>
                       isActive
@@ -452,23 +544,7 @@ const DropDown = ({ setShowDropdown }) => {
                     {location.pathname === "/library" && (
                       <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
                     )}
-                  </NavLink>
-                  <NavLink
-                    onClick={() => setShowDropdown(false)}
-                    className={({ isActive }) =>
-                      isActive
-                        ? " font-bold group relative"
-                        : " font-semibold group relative"
-                    }
-                    to="/growth"
-                  >
-                    <p style={{ marginBottom: location.pathname === "/growth" ? 5 : 0}} className=" text-xl text-white tracking-widest">
-                      Our Team
-                    </p>
-                    {location.pathname === "/growth" && (
-                      <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
-                    )}
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
                     onClick={() => setShowDropdown(false)}
                     className={({ isActive }) =>
@@ -479,16 +555,38 @@ const DropDown = ({ setShowDropdown }) => {
                     to="/health"
                   >
                     <p className=" text-xl text-white tracking-widest">
-                      Health
+                      Health & Hygiene
                     </p>
                     {location.pathname === "/health" && (
                       <div className=" w-full absolute   bg-white h-1 rounded-2xl" />
+                    )}
+                  </NavLink>
+                  <NavLink
+                    onClick={() => setShowDropdown(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? " font-bold group relative"
+                        : " font-semibold group relative"
+                    }
+                    to="/growth"
+                  >
+                    <p
+                      style={{
+                        marginBottom: location.pathname === "/growth" ? 5 : 0,
+                      }}
+                      className=" text-xl text-white tracking-widest"
+                    >
+                      Our Team
+                    </p>
+                    {location.pathname === "/growth" && (
+                      <div className=" w-full absolute bottom-1  bg-white h-1 rounded-2xl" />
                     )}
                   </NavLink>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
+
           <NavLink
             onClick={() => setShowDropdown(false)}
             className={({ isActive }) =>
