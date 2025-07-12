@@ -335,7 +335,7 @@ const Health = () => {
           once: true,
           margin: "-100px",
         }}
-        className="lg:w-10/12 mx-auto mt-8 lg:mt-12 text-xl lg:text-2xl tracking-wider  text-slate-700 font-semibold text-center"
+        className="lg:w-10/12 mx-auto mt-8 mb-16 lg:mt-12 text-xl lg:text-2xl tracking-wider  text-slate-700 font-semibold text-center"
       >
         At Tulip Tots, your child's well-being is our highest priority. While
         minor illnesses are a part of childhood, we take thoughtful steps to

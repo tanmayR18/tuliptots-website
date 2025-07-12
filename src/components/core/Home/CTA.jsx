@@ -38,13 +38,13 @@ const CTA = () => {
             Your browser does not support the video tag.
           </video>
         </motion.div>
-        <motion.div
+        <div
         //   initial={{ opacity: 0 }}
         //   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         //   transition={{ duration: 0.8, delay: 0.2 }}
           className="absolute top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex flex-col justify-center items-center"
         >
-          <motion.div
+          <div
             // initial={{ opacity: 0, y: 20 }}
             // animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             // transition={{ duration: 0.6, delay: 0.4 }}
@@ -63,9 +63,9 @@ const CTA = () => {
                 Co-Founder, Tulip Tots International
               </span>
             </p>
-          </motion.div>
-        </motion.div>
-        <motion.div
+          </div>
+        </div>
+        <div
         //   initial={{ opacity: 0, y: 50 }}
         //   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         //   transition={{ duration: 0.8, delay: 0.6 }}
@@ -91,7 +91,7 @@ const CTA = () => {
               <p>Book a Visit</p>
             </motion.div>
           </NavLink>
-        </motion.div>
+        </div>
       </div>
       <div className="h-64 sm:h-80 w-full" />
     </>

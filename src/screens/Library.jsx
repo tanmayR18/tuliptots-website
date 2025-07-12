@@ -109,7 +109,7 @@ const Library = () => {
             <motion.img
               //   key={isFirst ? "image1" : "image2"}
               //   src={isFirst ? image : image1}
-              src={image1}
+              src={image}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
