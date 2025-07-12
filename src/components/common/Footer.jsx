@@ -194,7 +194,7 @@ const Footer = () => {
             </h4>
 
             <p className="text-gray-300">
-              Shop No 1 & 2, Yash one infinite, Kate wasti, punawale, pune
+              Shop No 1 & 2, Yash one infinitee, Kate wasti, Punawale, Pune
               411033
             </p>
             <Link

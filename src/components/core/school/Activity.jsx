@@ -85,7 +85,7 @@ const Activity = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl px-4 md:px-0 md:text-4xl font-bold tracking-wider text-center"
+        className="text-3xl px-4 md:px-0 md:text-4xl font-bold tracking-wider text-center mt-26"
       >
         Tulip Trail Activity Centre
       </motion.p>

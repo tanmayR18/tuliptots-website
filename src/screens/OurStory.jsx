@@ -183,12 +183,12 @@ const OurStory = () => {
           {/* Fifth Card - The Impact */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="relative bg-gradient-to-br from-violet-100 via-indigo-50 to-white rounded-2xl p-8 shadow-lg overflow-hidden"
+            className="relative bg-gradient-to-br from-violet-100 via-indigo-50 to-white rounded-2xl p-4 md:p-8 shadow-lg overflow-hidden"
           >
             <div className="relative z-10">
               <div className="flex justify-center mb-6">
                 <img
-                  className=" w-1/2 rounded-3xl"
+                  className=" md:w-1/2 rounded-3xl"
                   src={story}
                 />
               </div>

@@ -27,7 +27,7 @@ const ProgramCard = ({
       whileHover={{ scale: 1.02 }}
       className="bg-white flex flex-col rounded-2xl shadow-xl overflow-hidden"
     >
-      <div className="p-2" style={{ backgroundColor: bgColor }}>
+      <div className="p-2 py-3" style={{ backgroundColor: bgColor }}>
         <p className="text-white text-2xl font-bold text-center tracking-wider">
           {programName}
         </p>
@@ -121,7 +121,59 @@ const Academics = () => {
 
       <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full mt-2"></div>
 
-      <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 max-w-[80rem] mt-8 lg:mt-20 mx-auto gap-8 pb-24">
+      <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 max-w-[80rem] mt-8 lg:mt-20 mx-auto gap-8 pb-24 lg:pb-8">
+        <ProgramCard
+          programName={"Playgroup"}
+          programIdea={"Nurturing Early Explorers"}
+          programPetName={"Sprouts"}
+          content={
+            "This is the beginning—where tiny steps lead to big discoveries. Just like a sprout breaking through the soil, our youngest learners explore the world with wide-eyed curiosity, building trust, comfort, and early independence through sensory play, music, and nurturing interactions."
+          }
+          bgColor={"#9B59B6"}
+          borderColor={"#000"}
+          eligibily={"2 to 3 years"}
+          index={0}
+          isInView={isInView}
+        />
+        <ProgramCard
+          programName={"Nursery"}
+          programIdea={"Building a Strong Foundation"}
+          programPetName={"Buds"}
+          content={
+            "At this stage, children begin to form a solid sense of self—like buds gaining strength before they open. Through hands-on exploration, early language development, and meaningful social interactions, they grow confident, communicative, and deeply curious about the world around them."
+          }
+          bgColor={"#FF5722"}
+          borderColor={"#000"}
+          eligibily={"3 to 4 years"}
+          index={1}
+          isInView={isInView}
+        />
+        <ProgramCard
+          programName={"LKG"}
+          programIdea={"Inspiring Young Learners"}
+          programPetName={"Blossoms"}
+          content={
+            "In this vibrant stage, children blossom with curiosity and creativity. They thrive on playful problem-solving, asking questions, and connecting deeply with peers. Through joyful, interest-led exploration, they build early literacy, numeracy, and a sense of independence"
+          }
+          bgColor={"#1ABC9C"}
+          borderColor={"#000"}
+          eligibily={"4 to 5 years"}
+          index={2}
+          isInView={isInView}
+        />
+        <ProgramCard
+          programName={"UKG"}
+          programIdea={"Preparing for Primary School"}
+          programPetName={"Blooms"}
+          content={
+            "Fully bloomed and ready to face the world—our Bloomers demonstrate leadership, empathy, and advanced skills across literacy, numeracy, and life learning. This stage focuses on preparing them for the next leap, helping them carry the confidence and joy of learning into primary school and beyond"
+          }
+          bgColor={"#e91e63"}
+          borderColor={"#000"}
+          eligibily={"5 to 6 years"}
+          index={3}
+          isInView={isInView}
+        />
         <ProgramCard
           programName={"🌱 Parent-Toddler Program"}
           programIdea={"Nurturing Beginnings"}
@@ -191,6 +243,24 @@ const Academics = () => {
           index={3}
           isInView={isInView}
         />
+        <div className=" lg:hidden ">
+          <ProgramCard
+            programName={"📚 Tulip Tots Children’s Library"}
+            programIdea={"Where Words Weave Wonder"}
+            programPetName={"Story Sprouts"}
+            content={
+              "Step into a world where imagination soars and language comes alive. Our storytelling sessions are more than just tales—they’re immersive experiences that spark creativity, build vocabulary, and strengthen listening and comprehension. Through puppetry, picture books, rhythm and rhyme, and dramatic expression, children develop a lifelong love for stories and the confidence to tell their own."
+            }
+            bgColor={"#BA68C8"}
+            borderColor={"#000"}
+            eligibily={"all ages"}
+            index={3}
+            isInView={isInView}
+          />
+        </div>
+      </div>
+
+      <div className=" hidden lg:flex max-w-[80rem] w-[calc(33%-55px)] mx-auto mb-24">
         <ProgramCard
           programName={"📚 Tulip Tots Children’s Library"}
           programIdea={"Where Words Weave Wonder"}
@@ -315,7 +385,7 @@ const Academics = () => {
         </div>
       </div>
 
-      {/* <Activity /> */}
+      <Activity />
     </div>
   );
 };

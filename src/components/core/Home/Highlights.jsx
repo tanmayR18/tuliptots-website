@@ -34,8 +34,8 @@ const points = [
     color: "#008000",
   },
   {
-    text: "holistic child-led growth",
-    image: uni3,
+    text: "Holistic child-led growth",
+    image: uni4,
     color: "#f34f6a",
   },
   {

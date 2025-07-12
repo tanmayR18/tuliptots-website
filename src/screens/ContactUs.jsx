@@ -35,7 +35,7 @@ const ContactUs = () => {
               <div className=" w-full h-full ">
                 <img
                   className=" w-full h-full aspect-square"
-                  src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/draftMap2.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2RyYWZ0TWFwMi5wbmciLCJpYXQiOjE3NTIwNzU2NTgsImV4cCI6MTc4MzYxMTY1OH0.AdYnP_Z46VfcyoxUfNXe9lKoUshUnaSGzdoYh9o3WjI"
+                  src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/draftMap3.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2RyYWZ0TWFwMy5wbmciLCJpYXQiOjE3NTIzMDIyNTEsImV4cCI6MTc4MzgzODI1MX0.uBZMro01qSWu44DDC4NjsifqBEs2ffgg72KQ6zqA_kU"
                 />
               </div>
               <div className=" pb-12 flex items-end justify-center absolute  bottom-0 w-full z-20 bg-linear-to-t h-[30%]  from-[rgba(0,0,0,0.5)] to-transparent">

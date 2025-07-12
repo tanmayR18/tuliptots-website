@@ -86,7 +86,7 @@ const Section5 = () => {
         </div>
       </div>
 
-      <div className=" md:hidden">
+      <div className=" md:hidden mt-5">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={30}

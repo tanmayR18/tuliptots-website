@@ -50,7 +50,7 @@ const NewHero = () => {
           <div className=" relative flex flex-col  items-center xl:-translate-x-1/4 2xl:-translate-x-[20%] ">
             <img
               src={flower5}
-              className=" absolute -top-5 -left-5 sm:-left-20 w-[70px] sm:w-[100px]"
+              className=" absolute -top-5 -left-8 sm:-left-20 w-[60px] sm:w-[100px]"
             />
             <p className=" font-happy font-semibold text-[#323a30] text-center text-6xl xl:text-7xl 2xl:text-8xl tracking-[3px]">
               Tulip Tots <br /> International

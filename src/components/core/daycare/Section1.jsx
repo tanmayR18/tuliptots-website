@@ -36,7 +36,7 @@ const Section1 = () => {
           </div>
 
           <p className=" text-3xl mt-5 text-center">
-            A Gentle Day Care by <br /> Tulip Tots international
+            A Gentle Day Care by <br /> Tulip Tots International
           </p>
         </div>
       </div>

@@ -43,11 +43,11 @@ const Growth = () => {
         </motion.p>
 
         <div className=" p-9 px-0  md:p-8 rounded-[64px] flex flex-col-reverse md:flex-row relative md:mt-10 justify-between items-center lg:w-10/12 mx-auto">
-          <img
+          {/* <img
             className=" hidden lg:flex absolute top-0 right-56"
             src={ninja}
-          />
-          <div className=" mt-10">
+          /> */}
+          <div className=" mt-0">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const Growth = () => {
               empathy, joy, and a deep respect for the individuality of every
               child
             </motion.p>
-            <div className="  flex flex-col justify-center items-center  mt-5 md:mt-0">
+            {/* <div className="  flex flex-col justify-center items-center  mt-5 md:mt-0">
               <p className=" text-4xl font-semibold tracking-wider mb-8 text-slate-800 text-center">We believe every child is</p>
               <div className=" relative w-fit">
                 <img className=" w-[300px]" src={circle1} />
@@ -90,9 +90,9 @@ const Growth = () => {
                 </div>
               </div>
               <p className=" text-4xl font-semibold tracking-wider mt-8 text-slate-700 text-center">With the right care and environment</p>
-            </div>
+            </div> */}
           </div>
-          <img className=" z-20 sm:h-[400px]" src={girl} />
+          {/* <img className=" z-20 sm:h-[400px]" src={girl} /> */}
         </div>
       </div>
 
