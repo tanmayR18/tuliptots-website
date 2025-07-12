@@ -61,7 +61,7 @@ const Navbar = () => {
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className=" bg-[#fff] font-patrickHand tracking-wide text-lg w-11/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden xl:flex shadow-lg"
+        className=" bg-[#fff] font-patrickHand tracking-wide text-lg w-[95%] 2xl:w-10/12 left-1/2 -translate-x-1/2 py-1 top-8  fixed  rounded-2xl z-[1000] hidden xl:flex shadow-lg"
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
@@ -96,6 +96,88 @@ const Navbar = () => {
               </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
+
+              <div
+              className="font-semibold group relative"
+              onMouseEnter={() => setShowSchoolDropDown2(true)}
+              onMouseLeave={() => setShowSchoolDropDown2(false)}
+            >
+              <div className="flex gap-x-1.5 items-center">
+                <div className=" flex items-center gap-0.5">
+                  <HandHeart color="#fb923c" size={22} />
+                  <p className="text-[#fb923c]"> Our Programs</p>
+                </div>
+                {showSchoolDropDown2 ? (
+                  <button
+                    type="button"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent NavLink navigation
+                      e.stopPropagation();
+                      setShowSchoolDropDown2(false);
+                    }}
+                  >
+                    <MdArrowDropUp color="#fb923c" />
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent NavLink navigation
+                      e.stopPropagation();
+                      setShowSchoolDropDown2(true);
+                    }}
+                  >
+                    <MdArrowDropDown color="#fb923c" />
+                  </button>
+                )}
+              </div>
+
+              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
+
+              <div
+                onMouseEnter={() => setShowSchoolDropDown2(true)}
+                onMouseLeave={() => setShowSchoolDropDown2(false)}
+                className={`${
+                  showSchoolDropDown2 ? "flex" : "hidden"
+                } absolute p-3 bg-white rounded-lg -bottom-0.5 translate-y-full w-[200px] shadow-2xl shadow-lg z-50`}
+              >
+                <div className=" p-2 px-2 bg-white rounded-lg flex flex-col">
+                  <Link
+                    className=" border-b pb-1 border-b-gray-200"
+                    to={"/school"}
+                  >
+                    <div className=" flex items-center hover:text-[#800080] relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Preschool</p>
+                    </div>
+                  </Link>
+                  <Link
+                    className=" mt-1 border-b pb-1 border-b-gray-200"
+                    to={"/daycare"}
+                  >
+                    <div className="hover:text-[#800080] flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Day Care</p>
+                    </div>
+                  </Link>
+                  <Link className=" mt-1 " to={"/library"}>
+                    <div className="hover:text-[#800080] flex items-center group relative gap-x-1">
+                      <div className=" ">
+                        <IoIosArrowForward />
+                      </div>
+                      <p className=" font-semibold">Children’s Library</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <div
               className="font-semibold group relative"
               onMouseEnter={() => setShowSchoolDropDown(true)}
@@ -178,87 +260,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
-            <div
-              className="font-semibold group relative"
-              onMouseEnter={() => setShowSchoolDropDown2(true)}
-              onMouseLeave={() => setShowSchoolDropDown2(false)}
-            >
-              <div className="flex gap-x-1.5 items-center">
-                <div className=" flex items-center gap-0.5">
-                  <HandHeart color="#fb923c" size={22} />
-                  <p className="text-[#fb923c]"> Our Programs</p>
-                </div>
-                {showSchoolDropDown2 ? (
-                  <button
-                    type="button"
-                    className="cursor-pointer"
-                    onClick={(e) => {
-                      e.preventDefault(); // Prevent NavLink navigation
-                      e.stopPropagation();
-                      setShowSchoolDropDown2(false);
-                    }}
-                  >
-                    <MdArrowDropUp color="#fb923c" />
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    className="cursor-pointer"
-                    onClick={(e) => {
-                      e.preventDefault(); // Prevent NavLink navigation
-                      e.stopPropagation();
-                      setShowSchoolDropDown2(true);
-                    }}
-                  >
-                    <MdArrowDropDown color="#fb923c" />
-                  </button>
-                )}
-              </div>
-
-              <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
-
-              <div
-                onMouseEnter={() => setShowSchoolDropDown2(true)}
-                onMouseLeave={() => setShowSchoolDropDown2(false)}
-                className={`${
-                  showSchoolDropDown2 ? "flex" : "hidden"
-                } absolute p-3 bg-white rounded-lg -bottom-0.5 translate-y-full w-[200px] shadow-2xl shadow-lg z-50`}
-              >
-                <div className=" p-2 px-2 bg-white rounded-lg flex flex-col">
-                  <Link
-                    className=" border-b pb-1 border-b-gray-200"
-                    to={"/school"}
-                  >
-                    <div className=" flex items-center hover:text-[#800080] relative gap-x-1">
-                      <div className=" ">
-                        <IoIosArrowForward />
-                      </div>
-                      <p className=" font-semibold">Preschool</p>
-                    </div>
-                  </Link>
-                  <Link
-                    className=" mt-1 border-b pb-1 border-b-gray-200"
-                    to={"/daycare"}
-                  >
-                    <div className="hover:text-[#800080] flex items-center group relative gap-x-1">
-                      <div className=" ">
-                        <IoIosArrowForward />
-                      </div>
-                      <p className=" font-semibold">Day Care</p>
-                    </div>
-                  </Link>
-                  <Link className=" mt-1 " to={"/library"}>
-                    <div className="hover:text-[#800080] flex items-center group relative gap-x-1">
-                      <div className=" ">
-                        <IoIosArrowForward />
-                      </div>
-                      <p className=" font-semibold">Children’s Library</p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -434,7 +436,7 @@ const DropDown = ({ setShowDropdown }) => {
             )}
           </NavLink>
 
-          <div>
+           <div>
             <div onClick={() => setShowSchoolDropDown( prev => !prev)} className=" flex items-center gap-3">
               <div>
                 <p className=" text-2xl font-semibold text-white tracking-widest">
@@ -642,7 +644,7 @@ const DropDown = ({ setShowDropdown }) => {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </div> 
 
           <NavLink
             onClick={() => setShowDropdown(false)}
