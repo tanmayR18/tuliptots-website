@@ -11,7 +11,7 @@ import doddle11 from "../../../assets/daycare/elements/doddle11.png";
 
 const Section2 = () => {
   return (
-    <div className=" relative min-h-screen overflow-hidden z-20 font-kgPrimaryPenmanship bg-[#fafafa] pb-32 pt-20 md:py-20">
+    <div className=" relative  overflow-hidden z-20 font-kgPrimaryPenmanship bg-[#fafafa] pb-32 pt-20 md:py-20">
       <div className="relative flex flex-col justify-center items-center z-40">
         <div className=" flex flex-col justify-center items-center">
           <img className=" w-20 h-10  xl:w-28 xl:h-14" src={doddle13} />

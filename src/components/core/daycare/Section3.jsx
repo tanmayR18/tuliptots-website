@@ -11,7 +11,7 @@ import flower from "../../../assets/daycare/elements/flower.png";
 
 const Section3 = () => {
   return (
-    <div className=" min-h-screen relative overflow-hidden bg-[#afe9e4] z-20 py-20 font-kgPrimaryPenmanship">
+    <div className="  relative overflow-hidden bg-[#afe9e4] z-20 py-20 font-kgPrimaryPenmanship">
       <div className=" relative z-40 pt-16">
         <div className=" flex flex-row gap-2 justify-center items-center">
           <img
