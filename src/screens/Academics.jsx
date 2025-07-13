@@ -225,7 +225,7 @@ const Academics = () => {
           }
           bgColor={"#4CAF50"}
           borderColor={"#000"}
-          eligibily={"5 to 6 years "}
+          eligibily={"9 months to 12 years"}
           index={3}
           isInView={isInView}
         />
@@ -243,38 +243,37 @@ const Academics = () => {
           index={3}
           isInView={isInView}
         />
-        <div className=" lg:hidden ">
-          <ProgramCard
-            programName={"📚 Tulip Tots Children’s Library"}
-            programIdea={"Where Words Weave Wonder"}
-            programPetName={"Story Sprouts"}
-            content={
-              "Step into a world where imagination soars and language comes alive. Our storytelling sessions are more than just tales—they’re immersive experiences that spark creativity, build vocabulary, and strengthen listening and comprehension. Through puppetry, picture books, rhythm and rhyme, and dramatic expression, children develop a lifelong love for stories and the confidence to tell their own."
-            }
-            bgColor={"#F06292"}
-            borderColor={"#000"}
-            eligibily={"all ages"}
-            index={3}
-            isInView={isInView}
-          />
-        </div>
-      </div>
 
-      <div className=" hidden lg:flex max-w-[80rem] w-[calc(33%-55px)] mx-auto mb-24">
         <ProgramCard
-          programName={"📚 Tulip Tots Children’s Library"}
-          programIdea={"Where Words Weave Wonder"}
+          programName={"📚 The  Tulip Tots Children’s Library"}
+          programIdea={"Beyond Stories. Into a World of Wonder."}
           programPetName={"Story Sprouts"}
           content={
-            "Step into a world where imagination soars and language comes alive. Our storytelling sessions are more than just tales—they’re immersive experiences that spark creativity, build vocabulary, and strengthen listening and comprehension. Through puppetry, picture books, rhythm and rhyme, and dramatic expression, children develop a lifelong love for stories and the confidence to tell their own."
+            "Our library is more than shelves and stories — it’s a vibrant, multi-sensory space designed to spark a love for reading in every child. With a thoughtfully curated collection of books on values, general knowledge, emotions, nature, science, and more, children are invited to explore big ideas in ways that feel joyful and personal."
           }
           bgColor={"#F06292"}
           borderColor={"#000"}
-          eligibily={"all ages"}
+          eligibily={"0 months to 14 years"}
+          index={3}
+          isInView={isInView}
+        />
+
+        <ProgramCard
+          programName={"⚽ Tulip Tots Play Zone"}
+          programIdea={"Where Play is the Plan"}
+          programPetName={"Play Patch"}
+          content={
+            "Our Play Zone is a joyful, open-ended space created for children to move freely, explore deeply, and play wholeheartedly. Designed with developmentally rich equipment and sensory elements, it offers opportunities for climbing, balancing, building, and pretending—fueling both body and imagination."
+          }
+          bgColor={"#faa443"}
+          borderColor={"#000"}
+          eligibily={"1 year & above"}
           index={3}
           isInView={isInView}
         />
       </div>
+
+ 
 
       {/* <div className="hidden md:flex flex-col">
         <div className="flex justify-center mx-auto gap-8 mt-10">

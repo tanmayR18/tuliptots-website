@@ -7,7 +7,7 @@ import image2 from "../assets/school/classroom/2.png";
 import image3 from "../assets/school/classroom/3.png";
 import image4 from "../assets/school/classroom/4.png";
 import image5 from "../assets/school/classroom/5.jpg";
-import image6 from "../assets/school/classroom/6.png";
+import image6 from "../assets/school/classroom/6.jpg";
 import image7 from "../assets/school/classroom/7.jpg";
 
 import grow from "../assets/school/classroom/grow.png";
