@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiTwotoneMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { IoLocationSharp } from "react-icons/io5";
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 
 const ContactUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const phoneNumber = "+917558300669"; // Replace with your number
+  const message =
+    "Hello, I would like more information about Tulip Tots Internationl.";
+  const encodedMessage = encodeURIComponent(message);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 400); // Show after 300px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className=" pt-32 lg:pt-44 pb-12 px-4 lg:px-12 bg-[#FAFAFA] font-kgPrimaryPenmanship">
+      <div className=" relative pt-32 lg:pt-44 pb-12 px-4 lg:px-12 bg-[#FAFAFA] font-kgPrimaryPenmanship">
         <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
           Need some more discussions?
         </h1>
@@ -189,6 +206,24 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
+
+        <a
+          href={`https://wa.me/${phoneNumber}?text=${encodedMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`fixed bottom-5 right-5 animate-pulse cursor-pointer transition-all ${
+            isVisible && "-translate-y-20"
+          }`}
+        >
+          <div className="group z-20">
+            <div className=" z-30 bg-green-600 relative text-white w-14 h-14 flex justify-center items-center rounded-full border-5 border-white">
+              <FaWhatsapp size={27} />
+            </div>
+            <div className=" z-20 absolute tracking-wider top-1/2 translate-x-10 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-800 -translate-y-1/2 right-20 py-2 rounded-2xl bg-white text-[#333] font-semibold w-32 text-center">
+              <p>What's app</p>
+            </div>
+          </div>
+        </a>
       </div>
     </>
   );
