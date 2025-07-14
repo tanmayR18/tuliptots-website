@@ -216,7 +216,7 @@ const ContactUs = () => {
           }`}
         >
           <div className="group z-20">
-            <div className=" z-30 bg-green-600 relative text-white w-14 h-14 flex justify-center items-center rounded-full border-5 border-white">
+            <div className=" z-30 bg-green-600 relative text-white w-14 h-14 flex justify-center items-center rounded-full ">
               <FaWhatsapp size={27} />
             </div>
             <div className=" z-20 absolute tracking-wider top-1/2 translate-x-10 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-800 -translate-y-1/2 right-20 py-2 rounded-2xl bg-white text-[#333] font-semibold w-32 text-center">

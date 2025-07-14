@@ -9,10 +9,7 @@ const CTA = () => {
 
   return (
     <>
-      <div
-        className="h-[90vh] w-full relative flex items-end "
-        ref={ref}
-      >
+      <div className="h-[90vh] w-full relative flex items-end " ref={ref}>
         <motion.div
         //   initial={{ opacity: 0, scale: 1 }}
         //   animate={
@@ -39,10 +36,11 @@ const CTA = () => {
           </video>
         </motion.div>
         <div
-        //   initial={{ opacity: 0 }}
-        //   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        //   transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.6)] flex flex-col justify-center items-center"
+          //   initial={{ opacity: 0 }}
+          //   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          //   transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+          className="absolute top-0 right-0 left-0 bottom-0  flex flex-col justify-center items-center"
         >
           <div
             // initial={{ opacity: 0, y: 20 }}
@@ -51,10 +49,10 @@ const CTA = () => {
             className="text-white flex flex-col px-4 lg:px-10 -translate-y-8 lg:w-9/12 mx-auto"
           >
             <p className=" text-xl md:text-2xl lg:text-3xl tracking-wider   font-semibold italic">
-              ❝ We’ve been underestimating children for far too long. Every child
-              holds immense potential—far greater than we imagine. When we stop
-              trying to control their learning and start guiding with trust and
-              respect, we see them soar beyond the limits we once believed
+              ❝ We’ve been underestimating children for far too long. Every
+              child holds immense potential—far greater than we imagine. When we
+              stop trying to control their learning and start guiding with trust
+              and respect, we see them soar beyond the limits we once believed
               existed. ❞
             </p>
             <p className="self-end mt-5 text-xl md:text-2xl text-right tracking-wide">
@@ -66,9 +64,9 @@ const CTA = () => {
           </div>
         </div>
         <div
-        //   initial={{ opacity: 0, y: 50 }}
-        //   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        //   transition={{ duration: 0.8, delay: 0.6 }}
+          //   initial={{ opacity: 0, y: 50 }}
+          //   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          //   transition={{ duration: 0.8, delay: 0.6 }}
           style={{
             boxShadow: "4 20px 20px rgba(0, 0, 0, 0.6)",
           }}
