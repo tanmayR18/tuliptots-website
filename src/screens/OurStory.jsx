@@ -4,7 +4,6 @@ import motherChild1 from "../assets/story/motherChild1.jpg";
 import motherChild2 from "../assets/story/image2.png";
 import nurtureStory from "../assets/story/nurtureStory.jpeg";
 import story from "../assets/story/story.jpg";
-import logo from "../assets/bgremoved.png";
 
 const OurStory = () => {
   return (
@@ -70,17 +69,6 @@ const OurStory = () => {
             className="relative bg-gradient-to-br from-blue-100 via-teal-50 to-white rounded-2xl p-8 shadow-lg overflow-hidden"
           >
             <div className="relative z-10">
-              {/* <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-300 to-blue-400"></div>
-                </div>
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-200 to-teal-300 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-300 to-teal-400"></div>
-                </div>
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-200 to-blue-300 flex items-center justify-center">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-300 to-blue-400"></div>
-                </div>
-              </div> */}
               <p className="text-2xl  leading-7 tracking-wide text-gray-700">
                 As we navigated the early years of parenting, we embarked on a
                 relentless journey—researching, building, and curating
@@ -128,57 +116,6 @@ const OurStory = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Third Card - The Challenge */}
-          {/* <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="relative bg-white rounded-2xl p-8 shadow-lg overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 w-full h-1/2 "></div>
-            <div className="relative z-10">
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="h-24  flex justify-center items-center font-semibold text-xl bg-amber-100 rounded-lg">
-                  <p>Purpose-Driven Learning</p>
-                </div>
-                <div className="h-24 flex justify-center items-center font-semibold text-xl bg-orange-100 rounded-lg">
-                  <p>Support for Families</p>
-                </div>
-                <div className="h-24 flex justify-center items-center font-semibold text-xl bg-orange-100 rounded-lg">
-                  <p>Clarity in Early Education</p>
-                </div>
-                <div className="h-24 flex justify-center items-center font-semibold text-xl bg-amber-100 rounded-lg">
-                  <p>Sharing What Works</p>
-                </div>
-              </div>
-              <p className="text-lg leading-relaxed font-semibold text-gray-700">
-                Homeschooling became more than just a choice—it was a mission.
-                But it also revealed how challenging it can be for most families
-                to find the time, resources, and clarity to provide this level
-                of depth in early learning. We knew we had something special—and
-                we couldn't keep it to ourselves.
-              </p>
-            </div>
-          </motion.div> */}
-
-          {/* Fourth Card - The Vision */}
-          {/* <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="relative bg-gradient-to-br from-green-100 via-emerald-50 to-white rounded-2xl p-8 shadow-lg overflow-hidden"
-          >
-            <div className="relative z-10 flex flex-col items-center md:flex-row-reverse gap-8">
-              <div className="md:w-1/3 flex items-center justify-center">
-                <img className=" rounded-3xl" src={nurtureStory} />
-              </div>
-              <div className="md:w-2/3">
-                <p className="text-lg leading-relaxed font-semibold text-pink-700">
-                  That's when the vision for Tulip Tots was born: a warm,
-                  thoughtfully designed preschool where every child gets the
-                  benefit of the same love, intention, and excellence we wanted
-                  for our own.
-                </p>
-              </div>
-            </div>
-          </motion.div> */}
 
           {/* Fifth Card - The Impact */}
           <motion.div

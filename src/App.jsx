@@ -24,14 +24,12 @@ import Blog12 from "./screens/Blogs/Blog12";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Faq from "./screens/Faq";
 import JoinTeam from "./screens/JoinTeam";
-import AdmissionForm from "./screens/AdmissionForm";
 import Health from "./screens/Health";
 import Growth from "./screens/Growth";
 import Library from "./screens/Library";
 import Classroom from "./screens/Classroom";
 import DayCare from "./screens/DayCare";
 import Footer from "./components/common/Footer";
-import AddmissionPdf from "./screens/AddmissionPdf";
 import OurStory from "./screens/OurStory";
 import Signin from "./screens/Auth/Signin";
 import Signup from "./screens/Auth/Signup";
@@ -42,7 +40,6 @@ import GalleryUpload from "./screens/Auth/GalleryUpload";
 import BlogUpload from "./screens/Auth/ImageUpload";
 import VideoUpload from "./screens/Auth/VideoUpload";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
-import ActivityCenter from "./screens/ActivityCenter";
 
 function App() {
   const router = [
@@ -61,10 +58,6 @@ function App() {
     {
       path: "/admission",
       element: <Admission />,
-    },
-    {
-      path: "/admissionForm",
-      element: <AdmissionForm />,
     },
     {
       path: "/blogs",
@@ -109,14 +102,6 @@ function App() {
     {
       path: "/daycare",
       element: <DayCare />,
-    },
-    {
-      path: "/activityCenter",
-      element: <ActivityCenter />,
-    },
-    {
-      path: "/admissionPdf",
-      element: <AddmissionPdf />,
     },
     {
       path: "/blog1",

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import heroImage from "../assets/about/aboutHero2.png";
 import image1 from "../assets/about/whychooseus/1.png";
 import image2 from "../assets/about/whychooseus/2.png";
 import image3 from "../assets/about/whychooseus/3.png";
@@ -33,7 +32,6 @@ import phi4 from "../assets/about/phy/4.jpeg";
 import phi5 from "../assets/about/phy/5.png";
 import phi6 from "../assets/about/phy/6.jpg";
 
-import bgImage from "../assets/about/philosopherBack.jpg";
 import Vision from "@/components/core/about/Vision";
 import Mission from "@/components/core/about/Mission";
 import Pedagogy from "@/components/core/about/Pedagogy";

@@ -1,17 +1,5 @@
 import React from "react";
 import { Link } from "react-router";
-import image1 from "../assets/blogs/1.avif";
-import image2 from "../assets/blogs/2.jpg";
-import image3 from "../assets/blogs/3.jpg";
-import image4 from "../assets/blogs/4.jpg";
-import image5 from "../assets/blogs/5.jpg";
-import image6 from "../assets/blogs/6.jpg";
-import image7 from "../assets/blogs/7.jpg";
-import image8 from "../assets/blogs/8.jpg";
-import image9 from "../assets/blogs/9.jpg";
-// import image10 from "../assets/blogs/10.jpg";
-// import image11 from "../assets/blogs/11.jpg";
-// import image12 from "../assets/blogs/12.jpg";
 
 const Blogs = () => {
   const blogs = [
