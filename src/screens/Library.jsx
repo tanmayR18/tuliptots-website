@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import image from "../assets/school/library/libraryHero11.png";
-import image1 from "../assets/school/library/libraryHero21.png";
 import element1 from "../assets/school/library/element 1.png";
 import element2 from "../assets/school/library/element2.png";
 import element3 from "../assets/school/library/element6.png";
