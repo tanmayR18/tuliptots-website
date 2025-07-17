@@ -3,11 +3,6 @@ import { IoMdAdd } from "react-icons/io";
 import { HiMinus } from "react-icons/hi";
 import image from "../../../assets/about/pedagogy2.png";
 
-// import cric2 from "../../../assets/about/leap/cric2.png";
-// import cric1 from "../../../assets/about/leap/cric1.png";
-// import cric3 from "../../../assets/about/leap/cric3.png";
-// import cric4 from "../../../assets/about/leap/cric4.png";
-
 import cric1 from "../../../assets/school/library/element 1.png";
 import cric2 from "../../../assets/school/library/element2.png";
 import cric3 from "../../../assets/school/library/element6.png";
@@ -15,58 +10,6 @@ import cric4 from "../../../assets/about/leap/cric5.png";
 
 import rocket from "../../../assets/about/leap/rocket.png";
 
-const data = [
-  {
-    skill: "Language and Communication Skills",
-    subSkills: [
-      "Listening and following instructions",
-      "Expressing thoughts and feelings",
-      "Building vocabulary through play",
-      "Storytelling and picture reading",
-    ],
-    bgColor: "#1E3A8A",
-  },
-  {
-    skill: "Cognitive Skills",
-    subSkills: [
-      "Matching, sorting, and patterns",
-      "Problem-solving through activities",
-      "Early math and number sense",
-      "Memory games and recall tasks",
-    ],
-    bgColor: "#047857",
-  },
-  {
-    skill: "Social and Emotional Skills",
-    subSkills: [
-      "Sharing and taking turns",
-      "Identifying emotions in self/others",
-      "Group activities and cooperation",
-      "Developing empathy and kindness",
-    ],
-    bgColor: "#7C3AED",
-  },
-  {
-    skill: "Environmental Awareness",
-    subSkills: [
-      "Caring for plants and animals",
-      "Understanding seasons and weather",
-      "Exploring nature and surroundings",
-      "Clean-up and recycling habits",
-    ],
-    bgColor: "#B91C1C",
-  },
-  {
-    skill: "Physical skills (Gross motor and fine motor skills)",
-    subSkills: [
-      "Jumping, running, and balancing",
-      "Catching and throwing balls",
-      "Drawing and cutting practice",
-      "Building with blocks and clay",
-    ],
-    bgColor: "#D97706",
-  },
-];
 
 const data2 = [
   {

@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { motion, useInView } from "framer-motion";
-import image from "../../../assets/home/homeCta.jpg";
 
 const CTA = () => {
   const ref = React.useRef(null);

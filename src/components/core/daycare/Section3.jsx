@@ -7,7 +7,6 @@ import cloud from "../../../assets/daycare/elements/cloud.png";
 import doddle5 from "../../../assets/daycare/elements/doddle5.png";
 import doddle6 from "../../../assets/daycare/elements/doddle6.png";
 import spring from "../../../assets/daycare/elements/spring.png";
-import flower from "../../../assets/daycare/elements/flower.png";
 
 const Section3 = () => {
   return (
