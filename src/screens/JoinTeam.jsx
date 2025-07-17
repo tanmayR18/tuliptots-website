@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import image from "../assets/joinOurTeam/joinOurTeam.jpg";
-import hero1 from "../assets/joinOurTeam/joinHeroChild.png";
 
 const JoinTeam = () => {
   const {

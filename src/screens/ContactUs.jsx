@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AiTwotoneMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
@@ -22,7 +22,6 @@ const ContactUs = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigate = useNavigate();
 
   return (
     <>

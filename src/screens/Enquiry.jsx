@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../components/common/Navbar";
-import emailjs from "@emailjs/browser";
 import axios from "axios";
-import hero1 from "../assets/enquiry/enquiryHeroChild.png";
 
 const Enquiry = () => {
   const date = new Date();
@@ -205,20 +202,6 @@ const Enquiry = () => {
   return (
     <div className="bg-[#fafafa] font-kgPrimaryPenmanship">
       <div className=" relative pt-44 pb-20 px-4  bg-[#afe9e4]">
-        {/* <div className=" absolute top-0 bottom-0 left-0 right-0 ">
-          <img
-            className=" w-full h-full"
-            src="https://www.humanium.org/en/wp-content/uploads/2020/02/pic5-830x554.jpg"
-          />
-        </div>
-        <div className=" absolute top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.75)]" /> */}
-        {/* <p className="   text-4xl text-center md:text-5xl lg:text-6xl font-bold z-10 text-pink-500">
-          Let’s Begin Your Journey with Tulip Tots
-        </p>
-        <p className=" text-green-500 font-semibold text-xl md:text-2xl text-center lg:text-3xl lg:font-bold z-10 mt-4 lg:mt-5">
-          Schedule a visit, meet our team, and explore the joyful world of early
-          learning.
-        </p> */}
 
         <h1 className=" text-3xl mx-3  md:text-5xl font-semibold text-[#333] tracking-wider  text-center">
           Let’s Begin Your Journey with Tulip Tots

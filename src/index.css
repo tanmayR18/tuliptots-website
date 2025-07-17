@@ -1,29 +1,4 @@
 @font-face {
-  font-family: "Chewy";
-  src: url("../src/assets/fonts/Chewy-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Fredoka";
-  src: url("../src/assets/fonts/Fredoka-VariableFont_wdth,wght.ttf");
-}
-
-@font-face {
-  font-family: "Pacifico";
-  src: url("../src/assets/fonts/Pacifico-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Patrick Hand";
-  src: url("../src/assets/fonts/PatrickHand-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../src/assets/fonts/Poppins-Regular.ttf");
-}
-
-@font-face {
   font-family: "KGPrimaryPenmanship";
   src: url("../src/assets/fonts/KGPrimaryPenmanship.ttf");
 }

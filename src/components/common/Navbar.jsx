@@ -319,17 +319,6 @@ const Navbar = () => {
               </div>
               <div className="scale-x-0 group-hover:scale-x-100 origin-left w-full absolute transition-transform duration-500 bg-blue-400 h-0.5 rounded-2xl" />
             </NavLink>
-            {/* <NavLink
-              target="_blank"
-              className={" hover:scale-110 transition-transform duration-300"}
-              to="https://www.instagram.com/tuliptotsinternational/"
-            >
-              <img
-                height={30}
-                width={30}
-                src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/instagramIcon.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2luc3RhZ3JhbUljb24uc3ZnIiwiaWF0IjoxNzUwNTc0MDk0LCJleHAiOjIwNjU5MzQwOTR9.6zs481B0_ScUqgJmaYISHVazGaD2BPOsbbMdWtaZqLs"
-              />
-            </NavLink> */}
 
             {session && (
               <NavLink to={"/dashboard"}>

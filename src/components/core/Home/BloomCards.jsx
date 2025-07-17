@@ -2,13 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const SCREEN_WIDTH = window.innerWidth;
-// import image2 from "../../../assets/home/homeHero2.png";
 import image1 from "../../../assets/home/bloom/b.png";
 import image2 from "../../../assets/home/bloom/l.png";
 import image3 from "../../../assets/home/bloom/o.png";
 import image4 from "../../../assets/home/bloom/o2.png";
 import image5 from "../../../assets/home/bloom/m.png";
-import bgImage from "../../../assets/home/bloom/bloomBgImage.jpg";
 import doddle13 from "../../../assets/home/bloom/doddle13.png";
 
 const containerVariants = {
@@ -45,15 +43,6 @@ const BloomCards = () => {
       className="  relative py-20 pb-24 overflow-hidden"
       ref={ref}
     >
-      {/* <img
-        className=" absolute top-0 right-0 left-0 bottom-0 h-full object-cover"
-        src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/bloomBg.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ibG9vbUJnLnBuZyIsImlhdCI6MTc1MTIxNDc2MCwiZXhwIjoxNzgyNzUwNzYwfQ.76VOR2P5anVP-edsIwfKaH_UbY6QSXUB-tGTHCCNfUU"
-      />
-      */}
-      {/* <img
-        src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/bloomFlower.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ibG9vbUZsb3dlci5wbmciLCJpYXQiOjE3NTEyMTQ4NjYsImV4cCI6MTc4Mjc1MDg2Nn0.VtiX_j6pFjCOjKJcojY1eJ3t7nB2_bSp10GbwyC0c50"
-        className=" absolute h-[100px] sm:h-[130px] lg:h-[150px] -top-2 -left-7"
-      /> */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -310,10 +299,6 @@ const Card = ({
           }}
           className=" w-full h-full  absolute rounded-3xl flex flex-col justify-center items-center overflow-hidden"
         >
-          {/* <img
-              className=" h-full w-full"
-              src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-            /> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

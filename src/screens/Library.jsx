@@ -12,22 +12,8 @@ import circle from "../assets/school/library/circle.png";
 import flower from "../assets/elements/all elements/flower.png";
 import flower1 from "../assets/elements/flower4.png";
 
-const data = [
-  {
-    text: "Stronger vocabulary and comprehension",
-    bgColor: "#E74C3C",
-  },
-  {
-    text: "Better focus and imagination",
-    bgColor: "#2ecc71",
-  },
-  {
-    text: "Empathy, curiosity, and lifelong learning",
-    bgColor: "#FF5722",
-  },
-];
 
-const Card = ({ bgColor, text, index, isInView }) => {
+const Card = ({ bgColor, text, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, translateX: -200 }}
@@ -52,16 +38,6 @@ const Card = ({ bgColor, text, index, isInView }) => {
 const Library = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const [isFirst, setIsFirst] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsFirst((prev) => !prev);
-    }, 5000); // 5 seconds
-
-    return () => clearInterval(interval); // cleanup on unmount
-  }, []);
 
   return (
     <div
@@ -107,8 +83,6 @@ const Library = () => {
         <div className=" lg:w-[40%] max-w-md lg:max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.img
-              //   key={isFirst ? "image1" : "image2"}
-              //   src={isFirst ? image : image1}
               src={image}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

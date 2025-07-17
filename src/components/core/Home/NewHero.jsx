@@ -1,6 +1,5 @@
 import React from "react";
 import doddle2 from "../../../assets/elements/doddle2.png";
-import doddle3 from "../../../assets/elements/doddle3.png";
 import doddle11 from "../../../assets/elements/doddle11.png";
 import doddle8 from "../../../assets/elements/doddle8.png";
 import hearts from "../../../assets/elements/hearts.png";

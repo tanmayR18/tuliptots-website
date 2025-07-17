@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
-import image from "../assets/school/classroom/classroomHero.jpg";
 import image1 from "../assets/school/classroom/1.jpg";
 import image2 from "../assets/school/classroom/2.png";
 import image3 from "../assets/school/classroom/3.png";

@@ -3,12 +3,6 @@ import { motion, useInView } from "framer-motion";
 import image1 from "../assets/school/ourTeam/ourTeam.png";
 import image2 from "../assets/school/ourTeam/ourTeam2.png";
 
-import girl from "../assets/school/ourTeam/girl.png";
-import circle1 from "../assets/school/ourTeam/circle1.png";
-import circle2 from "../assets/school/ourTeam/circle2.png";
-import circle3 from "../assets/school/ourTeam/circle3.png";
-import ninja from "../assets/school/ourTeam/ninja.png";
-
 const Growth = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -43,10 +37,6 @@ const Growth = () => {
         </motion.p>
 
         <div className=" p-9 px-0  md:p-8 rounded-[64px] flex flex-col-reverse md:flex-row relative md:mt-10 justify-between items-center lg:w-10/12 mx-auto">
-          {/* <img
-            className=" hidden lg:flex absolute top-0 right-56"
-            src={ninja}
-          /> */}
           <div className=" mt-0">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -61,38 +51,7 @@ const Growth = () => {
               empathy, joy, and a deep respect for the individuality of every
               child
             </motion.p>
-            {/* <div className="  flex flex-col justify-center items-center  mt-5 md:mt-0">
-              <p className=" text-4xl font-semibold tracking-wider mb-8 text-slate-800 text-center">We believe every child is</p>
-              <div className=" relative w-fit">
-                <img className=" w-[300px]" src={circle1} />
-                <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                  <p className=" text-center font-bold text-2xl xl:text-3xl">
-                    Unique
-                  </p>
-                </div>
-              </div>
-              <div className=" flex md:gap-6 ">
-                <div className=" relative w-fit">
-                  <img className="  w-[300px]" src={circle2} />
-                  <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                    <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
-                      Ready to <br /> Blossom
-                    </p>
-                  </div>
-                </div>
-                <div className=" relative w-fit flex justify-center items-center">
-                  <img className=" w-[300px]" src={circle3} />
-                  <div className=" absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center p-3">
-                    <p className=" text-center font-bold text-2xl lg:text-3xl xl:text-4xl">
-                      Full of Potential
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <p className=" text-4xl font-semibold tracking-wider mt-8 text-slate-700 text-center">With the right care and environment</p>
-            </div> */}
           </div>
-          {/* <img className=" z-20 sm:h-[400px]" src={girl} /> */}
         </div>
       </div>
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Hero from "../components/core/Home/Hero";
 import BloomCards from "../components/core/Home/BloomCards";
 import Highlights from "../components/core/Home/Highlights";
 import CTA from "../components/core/Home/CTA";
@@ -22,7 +21,6 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div className=" bg-[#fafafa] font-kgPrimaryPenmanship">
-      {/* <Hero /> */}
       <NewHero />
       <BloomCards />
       <Highlights />

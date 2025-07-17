@@ -1,11 +1,5 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router";
-import image1 from "../../../assets/home/unique/leap.jpg";
-import image2 from "../../../assets/home/unique/globalMethodology.jpg";
-import image3 from "../../../assets/home/unique/yoga.jpg";
-import image4 from "../../../assets/home/unique/natureBasedLearning.jpg";
-import image5 from "../../../assets/home/unique/trainedEducator.jpg";
-import image6 from "../../../assets/home/unique/creative.jpg";
 
 import uni1 from "../../../assets/home/unique/uni1.png"
 import uni2 from "../../../assets/home/unique/uni2.png"

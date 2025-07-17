@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router";
 import { motion, useInView } from "framer-motion";
 import classroom from "../assets/school/classroom.jpg";
-import daycare from "../assets/school/daycare.jpg";
 import gardening from "../assets/school/gardening.jpg";
 import health from "../assets/school/health.jpg";
 import library from "../assets/school/library.png";
