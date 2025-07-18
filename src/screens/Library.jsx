@@ -12,28 +12,6 @@ import flower from "../assets/elements/all elements/flower.png";
 import flower1 from "../assets/elements/flower4.png";
 
 
-const Card = ({ bgColor, text, index }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, translateX: -200 }}
-      whileInView={{
-        opacity: 1,
-        translateX: 0,
-        transition: { duration: 2 - index * 0.6 },
-      }}
-      viewport={{
-        once: true,
-        margin: "-100px",
-      }}
-      className="p-2 md:p-3 gap-3 rounded-lg flex items-center"
-      style={{ backgroundColor: bgColor }}
-    >
-      <FaCheckCircle size={20} color="#fff" />
-      <p className="text-white text-base font-semibold text-center">{text}</p>
-    </motion.div>
-  );
-};
-
 const Library = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
