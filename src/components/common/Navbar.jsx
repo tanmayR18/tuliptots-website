@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import image from "../../assets/bgremoved.png";
-import Logo from "../../assets/tuliptotsOgLogo.jpg";
 import {
   motion,
   useScroll,
@@ -14,7 +13,6 @@ import { RxCross2 } from "react-icons/rx";
 import { UserAuth } from "@/context/AuthContext";
 import { MdOutlineDashboard } from "react-icons/md";
 import {
-  Contact,
   HandHeart,
   Home,
   Images,

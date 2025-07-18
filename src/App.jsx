@@ -40,6 +40,10 @@ import GalleryUpload from "./screens/Auth/GalleryUpload";
 import BlogUpload from "./screens/Auth/ImageUpload";
 import VideoUpload from "./screens/Auth/VideoUpload";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
+import SignIn from "./screens/Auth/Sign-in";
+import NewDashboard from "./screens/Auth/NewDashboard";
+import NewImageUpload from "./screens/Auth/NewImageUpload";
+import NewVideoUpload from "./screens/Auth/NewVideoUpload";
 
 function App() {
   const router = [
@@ -158,6 +162,22 @@ function App() {
     {
       path: "/admin",
       element: <Signin />,
+    },
+    {
+      path: "/sign-in",
+      element: <SignIn />,
+    },
+    {
+      path: "/admin-dashboard",
+      element: <NewDashboard />,
+    },
+    {
+      path: "/image-upload",
+      element: <NewImageUpload />,
+    },
+    {
+      path: "/video-upload",
+      element: <NewVideoUpload />,
     },
     {
       path: "/dashboard",
