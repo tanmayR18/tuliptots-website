@@ -16,7 +16,6 @@ const NewImageUpload = () => {
   const [uploading, setUploading] = useState(false);
   const [images, setImages] = useState([]);
   const [previewUrl, setPreviewUrl] = useState(null);
-  const queryClient = useQueryClient();
 
   const navigate = useNavigate();
 

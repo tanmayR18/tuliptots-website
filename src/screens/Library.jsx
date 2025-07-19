@@ -8,7 +8,7 @@ import element3 from "../assets/school/library/element6.png";
 import star from "../assets/school/library/star.png";
 import circle from "../assets/school/library/circle.png";
 
-import flower from "../assets/elements/all elements/flower.png";
+import flower from "../assets/elements/flower6.png";
 import flower1 from "../assets/elements/flower4.png";
 
 

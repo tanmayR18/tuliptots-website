@@ -1,12 +1,12 @@
 import React from "react";
 import image1 from "../../../assets/daycare/daycare2.png";
-import doddle13 from "../../../assets/daycare/elements/doddle13.png";
-import doddle7 from "../../../assets/daycare/elements/doddle7.png";
-import doddle9 from "../../../assets/daycare/elements/doddle9.png";
-import cloud from "../../../assets/daycare/elements/cloud.png";
-import doddle5 from "../../../assets/daycare/elements/doddle5.png";
-import doddle6 from "../../../assets/daycare/elements/doddle6.png";
-import spring from "../../../assets/daycare/elements/spring.png";
+import doddle13 from "../../../assets/elements/doddle13.png";
+import doddle7 from "../../../assets/elements/doddle7.png";
+import doddle9 from "../../../assets/elements/doddle9.png";
+import cloud from "../../../assets/elements/cloud.png";
+import doddle5 from "../../../assets/elements/doddle5.png";
+import doddle6 from "../../../assets/elements/doddle6.png";
+import spring from "../../../assets/elements/spring.png";
 
 const Section3 = () => {
   return (

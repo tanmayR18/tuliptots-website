@@ -6,6 +6,8 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 
+import map from "../assets/common/draftMap3.png";
+
 const ContactUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const phoneNumber = "+917558300669"; // Replace with your number
@@ -21,7 +23,6 @@ const ContactUs = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   return (
     <>
@@ -49,10 +50,7 @@ const ContactUs = () => {
               target="_blank"
             >
               <div className=" w-full h-full ">
-                <img
-                  className=" w-full h-full aspect-square"
-                  src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/draftMap3.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2RyYWZ0TWFwMy5wbmciLCJpYXQiOjE3NTIzMDIyNTEsImV4cCI6MTc4MzgzODI1MX0.uBZMro01qSWu44DDC4NjsifqBEs2ffgg72KQ6zqA_kU"
-                />
+                <img className=" w-full h-full aspect-square" src={map} />
               </div>
               <div className=" pb-12 flex items-end justify-center absolute  bottom-0 w-full z-20 bg-linear-to-t h-[30%]  from-[rgba(0,0,0,0.5)] to-transparent">
                 <p className=" text-center text-white font-semibold tracking-wider text-lg lg:text-3xl ">

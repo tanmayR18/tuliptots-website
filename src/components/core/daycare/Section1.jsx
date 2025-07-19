@@ -1,12 +1,12 @@
 import React from "react";
 import image1 from "../../../assets/daycare/daycare1.png";
 
-import doddle1 from "../../../assets/daycare/elements/doddle1.png";
-import flower3 from "../../../assets/daycare/elements/flower3.png";
-import hearts from "../../../assets/daycare/elements/hearts.png";
-import smile from "../../../assets/daycare/elements/smile.png";
-import cloud from "../../../assets/daycare/elements/cloud.png";
-import doddle4 from "../../../assets/daycare/elements/doddle4.png";
+import doddle1 from "../../../assets/elements/doddle1.png";
+import flower3 from "../../../assets/elements/flower3.png";
+import hearts from "../../../assets/elements/hearts.png";
+import smile from "../../../assets/elements/smile.png";
+import cloud from "../../../assets/elements/cloud.png";
+import doddle4 from "../../../assets/elements/doddle4.png";
 
 const Section1 = () => {
   return (
