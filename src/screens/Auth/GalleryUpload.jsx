@@ -147,7 +147,7 @@ const GalleryUpload = () => {
           <div
             key={index}
             className="relative "
-            onClick={() => setSelectedImage(image)}
+            // onClick={() => setSelectedImage(image)}
           >
             <div className="aspect-w-4 aspect-h-3 relative rounded-2xl overflow-hidden shadow-lg">
               <img
