@@ -5,6 +5,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FaFacebookSquare } from "react-icons/fa";
 
+import map from "../../assets/common/draftMap3.png";
+
 const explore = [
   {
     name: "Gallery",
@@ -206,7 +208,7 @@ const Footer = () => {
             >
               <img
                 className=" rounded-xl aspect-video object-cover"
-                src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Common/draftMap2.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQ29tbW9uL2RyYWZ0TWFwMi5wbmciLCJpYXQiOjE3NTIwNzU2NTgsImV4cCI6MTc4MzYxMTY1OH0.AdYnP_Z46VfcyoxUfNXe9lKoUshUnaSGzdoYh9o3WjI"
+                src={map}
               />
             </Link>
           </div>

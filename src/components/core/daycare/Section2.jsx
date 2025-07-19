@@ -1,11 +1,11 @@
 import React from "react";
-import doddle13 from "../../../assets/daycare/elements/doddle13.png";
-import doddle10 from "../../../assets/daycare/elements/doddle10.png";
-import flower2 from "../../../assets/daycare/elements/flower2.png";
-import hearts from "../../../assets/daycare/elements/hearts.png";
+import doddle13 from "../../../assets/elements/doddle13.png";
+import doddle10 from "../../../assets/elements/doddle10.png";
+import flower2 from "../../../assets/elements/flower2.png";
+import hearts from "../../../assets/elements/hearts.png";
 
-import doddle12 from "../../../assets/daycare/elements/doddle12.png";
-import doddle11 from "../../../assets/daycare/elements/doddle11.png";
+import doddle12 from "../../../assets/elements/doddle12.png";
+import doddle11 from "../../../assets/elements/doddle11.png";
 
 
 

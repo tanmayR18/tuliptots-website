@@ -32,6 +32,8 @@ import phi4 from "../assets/about/phy/4.jpeg";
 import phi5 from "../assets/about/phy/5.png";
 import phi6 from "../assets/about/phy/6.jpg";
 
+import aboutHero from "../assets/about/aboutHero.mp4";
+
 import Vision from "@/components/core/about/Vision";
 import Mission from "@/components/core/about/Mission";
 import Pedagogy from "@/components/core/about/Pedagogy";
@@ -284,12 +286,7 @@ const About = () => {
             controlsList="nodownload"
             disablePictureInPicture
           >
-            <source
-              src={
-                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/About/aboutHero.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQWJvdXQvYWJvdXRIZXJvLm1wNCIsImlhdCI6MTc1MTIwODM5MiwiZXhwIjoxNzgyNzQ0MzkyfQ.hOXX4e4CxZm_M4-1PpiirIxwzpa5HiOWK_CgHmN7sgs"
-              }
-              type="video/mp4"
-            />
+            <source src={aboutHero} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className=" absolute top-0 left-0 right-0 bottom-0 bg-black/70" />

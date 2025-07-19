@@ -5,13 +5,15 @@ import image3 from "../../../assets/about/mission/3.png";
 import image4 from "../../../assets/about/mission/4.png";
 import { Rocket } from "lucide-react";
 
+import image from "../../../assets/about/mission.png";
+
 const Mission = () => {
   return (
     <div className=" bg-[#ccebfa] p-5 md:p-8 lg:p-12 flex   items-center lg:gap-8 rounded-4xl">
       <div className="">
         <div>
           <div className=" -translate-x-4 flex items-center justify-center gap-2">
-            <img className=" w-10 h-10" src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/About/mission.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvQWJvdXQvbWlzc2lvbi5wbmciLCJpYXQiOjE3NTEyMDkzOTAsImV4cCI6MTc4Mjc0NTM5MH0.PTfnPWcYjhj8tqT_akUDRk9c0cqQTV0EqrX-s1W5DmU" />
+            <img className=" w-10 h-10" src={image} />
             <p className=" text-3xl lg:text-4xl font-bold text-black text-center">
               MISSION
             </p>

@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router";
 import { motion, useInView } from "framer-motion";
 
+import videoUrl from "../../../assets/home/homelast.mp4";
+
 const CTA = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -25,12 +27,7 @@ const CTA = () => {
             controlsList="nodownload"
             disablePictureInPicture
           >
-            <source
-              src={
-                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/homeLast.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ob21lTGFzdC5tcDQiLCJpYXQiOjE3NTEyMTM3MjEsImV4cCI6MTc4Mjc0OTcyMX0.Xfc4XZ14XdDkmMueR-9IMSapR05rDu3H1cEk59uLMVA"
-              }
-              type="video/mp4"
-            />
+            <source src={videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>

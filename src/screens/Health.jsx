@@ -6,6 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import video1 from "../assets/health/safe.mp4";
+import video2 from "../assets/health/health2.mp4";
+import video3 from "../assets/health/safety.mp4";
+
 const data = [
   {
     title: "1. Safe & Spotless Spaces",
@@ -19,8 +23,7 @@ const data = [
     ],
     conclusion:
       "Our classrooms and common areas are cared for with as much love as the children inside them.",
-    image:
-      "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/safe.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL3NhZmUubXA0IiwiaWF0IjoxNzUxMjAxNzgyLCJleHAiOjE3ODI3Mzc3ODJ9.D6F17FeusFSzoEhPRk7yhRpObZqN_Z4RnKBrsOpT5nM",
+    image: video1,
     bgColor: "rgb(233, 116, 81)",
   },
   {
@@ -35,9 +38,7 @@ const data = [
     ],
     conclusion:
       "We believe children thrive when they understand how to care for themselves and their environment.",
-    image:
-      //   "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aC5tcDQiLCJpYXQiOjE3NTEyMDE4NzksImV4cCI6MTc4MjczNzg3OX0.dSsYLlvoa3JjvY0jHvNmdRoFBGAPE8v75z9TcLfLWvA",
-      "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health2.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aDIubXA0IiwiaWF0IjoxNzUxNzg3NzI3LCJleHAiOjE3ODMzMjM3Mjd9.6LA30KgbdtGKR6gOzeR0MwYK9KXAhPyAp83-tnpI2Vg",
+    image: video2,
     bgColor: "rgb(59, 169, 156)",
   },
   {
@@ -52,8 +53,7 @@ const data = [
     ],
     conclusion:
       "Our indoor and outdoor spaces are monitored through CCTV to help ensure a secure, transparent environment",
-    image:
-      "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/safety.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL3NhZmV0eS5tcDQiLCJpYXQiOjE3NTEyMDE5NzEsImV4cCI6MTc4MjczNzk3MX0.DEOeSOAM-NGywS7FMO353HYTnPjcoefj6yRw2Ueeab4",
+    image: video3,
     bgColor: "rgb(128, 115, 163)",
   },
 ];
@@ -95,12 +95,7 @@ const Health = () => {
             controlsList="nodownload"
             disablePictureInPicture
           >
-            <source
-              src={
-                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/safe.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL3NhZmUubXA0IiwiaWF0IjoxNzUxMTk5NDMxLCJleHAiOjE3ODI3MzU0MzF9.m3Ghfsz5ixSvtmn_G3Uqu31RoWd9AfvitgtRjWS2lIU"
-              }
-              type="video/mp4"
-            />
+            <source src={video1} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -143,18 +138,13 @@ const Health = () => {
             controlsList="nodownload"
             disablePictureInPicture
           >
-            <source
-              src={
-                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/health2.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL2hlYWx0aDIubXA0IiwiaWF0IjoxNzUxMjA4OTE0LCJleHAiOjE3ODI3NDQ5MTR9.PPKMExAMT76S9W6pFa_TWwYULbXbqO-Gblpd23p69n0"
-              }
-              type="video/mp4"
-            />
+            <source src={video2} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
           <div className=" w-1/2">
             <p className=" text-2xl font-semibold tracking-widest mb-5 ">
-              2.  Tulip Tots International
+              2. Tulip Tots International
             </p>
             <p>
               At Tulip Tots, health and hygiene are not just maintained—they’re
@@ -192,12 +182,7 @@ const Health = () => {
             controlsList="nodownload"
             disablePictureInPicture
           >
-            <source
-              src={
-                "https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Health/safety.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSGVhbHRoL3NhZmV0eS5tcDQiLCJpYXQiOjE3NTExOTk0OTQsImV4cCI6MTc4MjczNTQ5NH0.-gr5LjWOON6s--fPcEaeZe13LPXdQnzUP8xmKj84ofk"
-              }
-              type="video/mp4"
-            />
+            <source src={video3} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -331,7 +316,6 @@ const Health = () => {
         to the pediatrician when needed—protecting both their health and that of
         their peers.
       </motion.p>
-
     </div>
   );
 };

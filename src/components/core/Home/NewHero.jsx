@@ -6,6 +6,8 @@ import hearts from "../../../assets/elements/hearts.png";
 import cloud from "../../../assets/elements/cloud.png";
 import leaves from "../../../assets/elements/leaves.png";
 import flower5 from "../../../assets/elements/flower5.png";
+
+import child from "../../../assets/home/homepage1.png";
 import { Link } from "react-router";
 
 const NewHero = () => {
@@ -80,13 +82,13 @@ const NewHero = () => {
             </p>
             <img
               className=" hidden xl:flex   absolute -top-10 left-10 2xl:left-10 -translate-x-full"
-              src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/homepage1.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ob21lcGFnZTEucG5nIiwiaWF0IjoxNzUxMjIwNzYwLCJleHAiOjE3ODI3NTY3NjB9.ZHkSQvoeRw_nDU0v6_zcgD0lHRAfO1C7w-WPxRh8RDI"
+              src={child}
             />
           </div>
         </div>
         <img
           className=" hidden lg:flex xl:hidden w-[42%] max-w-[600px] absolute bottom-[50px] -translate-x-5 xl:translate-x-0"
-          src="https://amrzbohhxaqtdpalmvoo.supabase.co/storage/v1/object/sign/assets/Home/homepage1.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jOTQwM2I4My0wMjE0LTRmZWQtOWY5NC04Y2M4NDlmNGIyYWQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhc3NldHMvSG9tZS9ob21lcGFnZTEucG5nIiwiaWF0IjoxNzUxMjIwNzYwLCJleHAiOjE3ODI3NTY3NjB9.ZHkSQvoeRw_nDU0v6_zcgD0lHRAfO1C7w-WPxRh8RDI"
+          src={child}
         />
       </div>
     </div>
