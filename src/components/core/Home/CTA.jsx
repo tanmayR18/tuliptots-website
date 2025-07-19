@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router";
 import { motion, useInView } from "framer-motion";
 
-import videoUrl from "../../../assets/home/homelast.mp4";
+import videoUrl from "../../../assets/home/homeLast.mp4";
 
 const CTA = () => {
   const ref = React.useRef(null);
