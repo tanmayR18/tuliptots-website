@@ -44,6 +44,7 @@ import SignIn from "./screens/Auth/Sign-in";
 import NewDashboard from "./screens/Auth/NewDashboard";
 import NewImageUpload from "./screens/Auth/NewImageUpload";
 import NewVideoUpload from "./screens/Auth/NewVideoUpload";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   const router = [
@@ -213,22 +214,26 @@ function App() {
     },
   ];
 
+  const queryClient = new QueryClient();
+
   return (
     <div>
       <AuthContextProvider>
-        <BrowserRouter>
-          <Navbar />
-          <ScrollToTop>
-            <Routes>
-              {router.map((route) => (
-                <Route path={route.path} element={route.element} />
-              ))}
-            </Routes>
-            <ScrollToTopButton />
-          </ScrollToTop>
-          <Footer />
-          <Toaster />
-        </BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <Navbar />
+            <ScrollToTop>
+              <Routes>
+                {router.map((route) => (
+                  <Route path={route.path} element={route.element} />
+                ))}
+              </Routes>
+              <ScrollToTopButton />
+            </ScrollToTop>
+            <Footer />
+            <Toaster />
+          </BrowserRouter>
+        </QueryClientProvider>
       </AuthContextProvider>
     </div>
   );

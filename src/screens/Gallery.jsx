@@ -1,18 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { supabase } from "@/supabaseClient";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [images, setImages] = useState([]);
-  const [videos, setVideos] = useState([]);
+  // const [images, setImages] = useState([]);
+  // const [videos, setVideos] = useState([]);
   const videoRefs = useRef({});
 
   const [isVisible, setIsVisible] = useState(true);
@@ -20,6 +20,34 @@ const Gallery = () => {
   const handleResize = () => {
     setIsVisible(window.innerWidth >= 1020);
   };
+
+  const {
+    data: images,
+    // isLoading: loadingImages,
+    // error: imagesError,
+  } = useQuery({
+    queryKey: ["galleryImages"],
+    queryFn: async () => {
+      const res = await axios.get(`${BASE_URL}/upload/getImage`);
+      return res.data.data;
+    },
+    staleTime: 5 * 60 * 1000, // 5 minutes
+    cacheTime: 10 * 60 * 1000, // 10 minutes
+  });
+
+  const {
+    data: videos,
+    // isLoading: loadingVideos,
+    // error: videosError,
+  } = useQuery({
+    queryKey: ["videos"],
+    queryFn: async () => {
+      const res = await axios.get(`${BASE_URL}/upload/getVideo`);
+      return res.data.data;
+    },
+    staleTime: 5 * 60 * 1000,
+    cacheTime: 10 * 60 * 1000,
+  });
 
   useEffect(() => {
     // Check on initial load
@@ -32,30 +60,30 @@ const Gallery = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const fetchGalleryImages = async () => {
-    try {
-      const response = await axios.get(`${BASE_URL}/upload/getImage`);
-      setImages(response?.data?.data);
-    } catch (error) {
-      console.error("Error fetching images:", error.message);
-      return [];
-    }
-  };
+  //   const fetchGalleryImages = async () => {
+  //     try {
+  //       const response = await axios.get(`${BASE_URL}/upload/getImage`);
+  //       setImages(response?.data?.data);
+  //     } catch (error) {
+  //       console.error("Error fetching images:", error.message);
+  //       return [];
+  //     }
+  //   };
 
-  const fetchVideos = async () => {
-    try {
-      const response = await axios.get(`${BASE_URL}/upload/getVideo`);
-      setVideos(response?.data?.data);
-    } catch (error) {
-      console.error("Error fetching images:", error.message);
-      return [];
-    }
-  };
+  //   const fetchVideos = async () => {
+  //     try {
+  //       const response = await axios.get(`${BASE_URL}/upload/getVideo`);
+  //       setVideos(response?.data?.data);
+  //     } catch (error) {
+  //       console.error("Error fetching images:", error.message);
+  //       return [];
+  //     }
+  //   };
 
-  useEffect(() => {
-    fetchGalleryImages();
-    fetchVideos();
-  }, []);
+  //   useEffect(() => {
+  //     fetchGalleryImages();
+  //     fetchVideos();
+  //   }, []);
 
   const handleSlideChange = (swiper) => {
     // Pause all videos
@@ -84,17 +112,6 @@ const Gallery = () => {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-[#fafafa] py-20 font-kgPrimaryPenmanship pt-32 lg:pt-44 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -115,7 +132,7 @@ const Gallery = () => {
         </motion.div>
 
         {/* Video Carousel Section */}
-        {videos.length > 0 && (
+        {videos?.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,7 +160,7 @@ const Gallery = () => {
                   "--swiper-pagination-color": "#8b5cf6",
                 }}
               >
-                {videos.map((video, index) => (
+                {(videos || []).map((video, index) => (
                   <SwiperSlide key={index}>
                     <div className="relative group flex items-center justify-center border-2 border-black shadow-2xl">
                       <div className="   w-full h-full flex justify-center items-center">
@@ -196,7 +213,7 @@ const Gallery = () => {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {images.map((image, index) => (
+          {(images || []).map((image, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, translateY: 0, scale: 1 }}
