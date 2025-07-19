@@ -2,6 +2,7 @@ import { useUser } from "@clerk/clerk-react";
 import axios from "axios";
 import { Trash2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -30,6 +31,8 @@ function NewVideoUpload() {
     if (!videoFile) return alert("Please select a video");
 
     setUploading(true);
+    toast.remove();
+    toast.loading("Uploading Video...");
 
     const formData = new FormData();
     formData.append("file", videoFile);
@@ -49,10 +52,12 @@ function NewVideoUpload() {
         setVideos((prev) => [...prev, newVideo]);
         setVideoFile("");
         setVideoURL("");
+        toast.remove();
+        toast.success("Video Uploaded");
       }
-    } catch (err) {
-      console.error("Error uploading video:", err);
-      alert("Something went wrong");
+    } catch {
+      toast.remove();
+      toast.error("Error Occured");
     }
 
     setUploading(false);
@@ -70,15 +75,18 @@ function NewVideoUpload() {
 
   const fetchVideos = async () => {
     setLoading(true);
-
+    toast.remove();
+    toast.loading("Loading Videos...");
     try {
       const response = await axios.get(`${BASE_URL}/upload/getVideo`);
       setVideos(response?.data?.data);
-    } catch (error) {
-      console.error("Error fetching images:", error.message);
-      return [];
+    } catch {
+      toast.remove();
+      toast.error("Error Occured");
+    } finally {
+      toast.remove();
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const deleteVideo = async (videoToDelete) => {
@@ -86,6 +94,9 @@ function NewVideoUpload() {
       `Are you sure you want to delete this video?`
     );
     if (!confirm) return;
+
+    toast.remove();
+    toast.loading("Deleting Video...");
 
     try {
       const response = await axios.delete(`${BASE_URL}/upload/deleteVideo`, {
@@ -96,15 +107,14 @@ function NewVideoUpload() {
         setVideos((prev) =>
           prev.filter((item) => item?._id !== response?.data?.id)
         );
+        toast.remove();
+        toast.success("Video Deleted");
       }
 
       return response.data;
-    } catch (error) {
-      console.error(
-        "Error deleting image:",
-        error.response?.data || error.message
-      );
-      throw error;
+    } catch {
+      toast.remove();
+      toast.error("Error Occured");
     }
   };
 

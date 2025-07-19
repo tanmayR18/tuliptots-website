@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import axios from "axios";
 import { useUser } from "@clerk/clerk-react";
+import { useQueryClient } from "@tanstack/react-query";
 
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -15,6 +16,7 @@ const NewImageUpload = () => {
   const [uploading, setUploading] = useState(false);
   const [images, setImages] = useState([]);
   const [previewUrl, setPreviewUrl] = useState(null);
+  const queryClient = useQueryClient();
 
   const navigate = useNavigate();
 
@@ -23,6 +25,8 @@ const NewImageUpload = () => {
     if (!file) return;
 
     setUploading(true);
+    toast.remove();
+    toast.loading("Uploading Images...");
     try {
       const formData = new FormData();
       formData.append("file", file); // Key must match `upload.single("file")` on backend
@@ -42,12 +46,14 @@ const NewImageUpload = () => {
         setImages((prev) => [...prev, response?.data?.data]);
         setPreviewUrl("");
         ref.current.value = "";
+        toast.remove();
+        toast.success("Image Uploaded");
       }
 
       return response.data;
-    } catch (error) {
-      console.error("Upload failed:", error.response?.data || error.message);
-      throw error;
+    } catch {
+      toast.remove();
+      toast.error("Error Occured");
     } finally {
       setUploading(false);
     }
@@ -55,6 +61,8 @@ const NewImageUpload = () => {
 
   // Function to delete image
   const deleteImage = async (imageToDelete) => {
+    toast.remove();
+    toast.loading("Deleting Images...");
     try {
       const response = await axios.delete(`${BASE_URL}/upload/deleteImage`, {
         data: { id: imageToDelete?._id, email: verificationId }, // Send id in request body
@@ -64,25 +72,29 @@ const NewImageUpload = () => {
         setImages((prev) =>
           prev.filter((item) => item?._id !== response?.data?.id)
         );
+        toast.remove();
+        toast.success("Image Deleted");
       }
 
       return response.data;
-    } catch (error) {
-      console.error(
-        "Error deleting image:",
-        error.response?.data || error.message
-      );
-      throw error;
+    } catch {
+      toast.remove();
+      toast.error("Error occured");
     }
   };
 
   const fetchGalleryImages = async () => {
+    toast.remove();
+    toast.loading("Loading Images...");
     try {
       const response = await axios.get(`${BASE_URL}/upload/getImage`);
       setImages(response?.data?.data);
-    } catch (error) {
-      console.error("Error fetching images:", error.message);
+    } catch {
+      toast.remove();
+      toast.error("Error Occured");
       return [];
+    } finally {
+      toast.remove();
     }
   };
 
