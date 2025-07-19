@@ -6,6 +6,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import axios from "axios";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -31,45 +33,23 @@ const Gallery = () => {
   }, []);
 
   const fetchGalleryImages = async () => {
-    const { data, error } = await supabase.storage
-      .from("gallery")
-      .list("", { limit: 100 });
-
-    if (error) {
-      console.error("Error listing gallery files:", error);
+    try {
+      const response = await axios.get(`${BASE_URL}/upload/getImage`);
+      setImages(response?.data?.data);
+    } catch (error) {
+      console.error("Error fetching images:", error.message);
       return [];
     }
-
-    // Replace this with your actual Supabase project ID
-    const projectID = import.meta.env.VITE_PROJECT_ID;
-    const publicBaseUrl = `https://${projectID}.supabase.co/storage/v1/object/public/gallery`;
-
-    const urls = data.map(
-      (file) => `${publicBaseUrl}/${encodeURIComponent(file.name)}`
-    );
-
-    setImages(urls);
   };
 
   const fetchVideos = async () => {
-    const { data, error } = await supabase.storage.from("video").list("", {
-      limit: 100,
-      offset: 0,
-      sortBy: { column: "created_at", order: "desc" },
-    });
-
-    if (error) {
-      console.error("Error listing videos:", error.message);
-      return;
+    try {
+      const response = await axios.get(`${BASE_URL}/upload/getVideo`);
+      setVideos(response?.data?.data);
+    } catch (error) {
+      console.error("Error fetching images:", error.message);
+      return [];
     }
-
-    const videosWithUrls = data.map((file) => ({
-      name: file.name,
-      url: supabase.storage.from("video").getPublicUrl(file.name).data
-        .publicUrl,
-    }));
-
-    setVideos(videosWithUrls);
   };
 
   useEffect(() => {
@@ -231,11 +211,11 @@ const Gallery = () => {
                 margin: "-100px",
               }}
               className="relative group cursor-pointer"
-              onClick={() => setSelectedImage(image)}
+              onClick={() => setSelectedImage(image?.url)}
             >
               <div className=" aspect-square rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={image}
+                  src={image?.url}
                   alt={"gallery image"}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
