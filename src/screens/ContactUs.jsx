@@ -12,7 +12,7 @@ const ContactUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const phoneNumber = "+917558300669"; // Replace with your number
   const message =
-    "Hello, I would like more information about Tulip Tots Internationl";
+    "Hello, I would like more information about Tulip Tots International";
   const encodedMessage = encodeURIComponent(message);
 
   useEffect(() => {
