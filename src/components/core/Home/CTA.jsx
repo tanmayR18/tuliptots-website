@@ -52,10 +52,7 @@ const CTA = () => {
               existed. ❞
             </p>
             <p className="self-end mt-5 text-xl md:text-2xl text-right tracking-wide">
-              - Sufiya Inamdar <br />{" "}
-              <span className="  text-xl">
-                Co-Founder, Tulip Tots International
-              </span>
+              - Tulip Tots International
             </p>
           </div>
         </div>
