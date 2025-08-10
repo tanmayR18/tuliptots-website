@@ -29,7 +29,7 @@ const JoinTeam = () => {
     setStatus("loading");
     const url = import.meta.env.VITE_BACKEND_URL;
     try {
-      const response = await axios.post(`${url}/joinTeam`, data);
+      const response = await axios.post(`${url}/email/joinTeam`, data);
       if (response.status === 200) {
         setStatus("success");
         reset();
@@ -199,6 +199,7 @@ const JoinTeam = () => {
                 Contact Number<span className=" text-red-500"> *</span>
               </p>
               <input
+              maxLength={10}
                 {...register("contactNumber", {
                   required: { value: true, message: "Number is required" },
                   pattern: {
