@@ -143,7 +143,7 @@ const Enquiry = () => {
 
       const url = import.meta.env.VITE_BACKEND_URL;
 
-      const response = await axios.post(`${url}/enquiry`, {
+      const response = await axios.post(`${url}/email/enquiry`, {
         parentName: data.parentName,
         childName: data.name,
         dob: data.dob,
