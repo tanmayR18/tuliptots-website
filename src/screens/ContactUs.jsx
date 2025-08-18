@@ -107,7 +107,7 @@ const ContactUs = () => {
                   </p>
                 </div>
                 <p className=" lg:mt-3 text-gray-500 font-semibold text-xl tracking-wide">
-                  Shop No 1 & 2, Yash one infinitee, Kate wasti, Punawale, Pune
+                  Shop No 1 & 2, YashOne infinitee, Kate wasti, Punawale, Pune
                   411033
                 </p>
               </div>
