@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import image from "../../assets/bgremoved.png";
+import newLogo from "../../assets/newLogo.png";
+
 import {
   motion,
   useScroll,
@@ -63,7 +65,7 @@ const Navbar = () => {
       >
         <div className=" w-full h-full px-8 flex justify-between items-center">
           <Link to={"/"}>
-            <img src={image} height={90} width={90} />
+            <img src={newLogo} height={90} width={90} />
           </Link>
           <div className=" flex items-center gap-10">
             <NavLink
@@ -341,7 +343,7 @@ const Navbar = () => {
       >
         <div className="bg-[#fff]  w-full h-20 flex flex-row items-center  justify-between px-2 pr-3">
           <NavLink to={"/"}>
-            <img src={image} height={70} width={70} />
+            <img src={newLogo} height={70} width={70} />
           </NavLink>
 
           <div className=" flex items-center gap-8">

@@ -196,12 +196,13 @@ const Footer = () => {
             </h4>
 
             <p className="text-gray-300">
-              Shop No 1 & 2, Yash one infinitee, Kate wasti, Punawale, Pune
+              Shop No 1 & 2, YashOne Infinitee, Kate wasti, Punawale, Pune
               411033
             </p>
             <Link
               to={
-                "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
+                // "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
+                'https://maps.app.goo.gl/mnNU38TsXJUfpnd67'
               }
               target="_blank"
               className=" w-full aspect-[11/9] overflow-hidden"
