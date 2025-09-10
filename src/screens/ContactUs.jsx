@@ -45,7 +45,8 @@ const ContactUs = () => {
             <Link
               className=" lg:rounded-[40px] rounded-b-[32px] border-t-white lg:border-t-slate-300 border border-slate-300 overflow-hidden relative order-2 lg:order-1 "
               to={
-                "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
+                // "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
+                "https://maps.app.goo.gl/mnNU38TsXJUfpnd67"
               }
               target="_blank"
             >
@@ -107,7 +108,7 @@ const ContactUs = () => {
                   </p>
                 </div>
                 <p className=" lg:mt-3 text-gray-500 font-semibold text-xl tracking-wide">
-                  Shop No 1 & 2, YashOne infinitee, Kate wasti, Punawale, Pune
+                  Shop No 1 & 2, YashOne Infinitee, Kate wasti, Punawale, Pune
                   411033
                 </p>
               </div>
