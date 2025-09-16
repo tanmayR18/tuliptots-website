@@ -32,7 +32,7 @@ const OurStory = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="space-y-12"
         >
-          <div className="grid grid-cols-1 w-1/2 mx-auto gap-8 items-center mb-16 mt-10">
+          <div className="grid grid-cols-1 md:w-1/2 mx-auto gap-8 items-center mb-16 mt-10">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -125,7 +125,7 @@ const OurStory = () => {
                     or children’s library. It is a heartfelt extension of my
                     journey as a mother, an educator, and a lifelong learner.
                     Here, curiosity is celebrated, individuality is respected,
-                    and every child is empowered to blossom into their best self
+                    and every child is empowered to blossom into their best self.
 
                     <br/>
                     We invite you to join our Tulip Tots family—where learning
