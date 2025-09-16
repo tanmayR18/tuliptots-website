@@ -108,9 +108,9 @@ const Footer = () => {
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
                 <div className=" flex space-x-2">
-                  <p>7558300669</p>
-                  <p>/</p>
                   <p>7558611669</p>
+                  <p>/</p>
+                  <p>7558300669</p>
                 </div>
               </p>
             </div>
@@ -202,7 +202,7 @@ const Footer = () => {
             <Link
               to={
                 // "https://www.google.com/maps/search/?api=1&query=18%C2%B037'14.1%22N+73%C2%B044'15.4%22E"
-                'https://maps.app.goo.gl/mnNU38TsXJUfpnd67'
+                "https://maps.app.goo.gl/mnNU38TsXJUfpnd67"
               }
               target="_blank"
               className=" w-full aspect-[11/9] overflow-hidden"
