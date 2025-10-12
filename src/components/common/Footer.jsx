@@ -109,8 +109,6 @@ const Footer = () => {
                 </svg>
                 <div className=" flex space-x-2">
                   <p>7558611669</p>
-                  <p>/</p>
-                  <p>7558300669</p>
                 </div>
               </p>
             </div>
