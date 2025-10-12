@@ -246,7 +246,7 @@ const JoinTeam = () => {
                 Unable to send your enquiry at this point{" "}
               </p>
               <p className=" text-gray-500 text-center text-xl font-semibold md:w-1/2 mt-2">
-                Sorry for the inconvenience, please contact us on 7558300669 / 7558611669 or  for
+                Sorry for the inconvenience, please contact us on 7558611669 or  for
                 the enquiry
               </p>
             </div>

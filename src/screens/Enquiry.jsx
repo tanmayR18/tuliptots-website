@@ -435,7 +435,7 @@ const Enquiry = () => {
                 Unable to send your enquiry at this point{" "}
               </p>
               <p className=" text-gray-500 text-xl text-center font-semibold md:w-1/2 mt-2">
-                Sorry for the inconvenience, please contact us on 7558300669 /
+                Sorry for the inconvenience, please contact us on
                 7558611669 for the enquiry
               </p>
             </div>

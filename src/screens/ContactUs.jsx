@@ -94,9 +94,6 @@ const ContactUs = () => {
                   <p className=" text-slate-700 tracking-wide text-xl">
                     +91 7558611669
                   </p>
-                  <p className=" text-slate-700 tracking-wide text-xl">
-                    +91 7558300669
-                  </p>
                 </div>
               </div>
 
