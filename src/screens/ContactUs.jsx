@@ -10,7 +10,7 @@ import map from "../assets/common/draftMap3.png";
 
 const ContactUs = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const phoneNumber = "+917558300669"; // Replace with your number
+  const phoneNumber = "+917558611669"; // Replace with your number
   const message =
     "Hello, I would like more information about Tulip Tots International";
   const encodedMessage = encodeURIComponent(message);
