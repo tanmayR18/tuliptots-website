@@ -30,7 +30,7 @@ import phi2 from "../assets/about/phy/2.png";
 import phi3 from "../assets/about/phy/3.png";
 import phi4 from "../assets/about/phy/4.jpeg";
 import phi5 from "../assets/about/phy/5.png";
-import phi6 from "../assets/about/phy/6.jpg";
+import phi6 from "../assets/about/phy/6.png";
 
 import aboutHero from "../assets/about/aboutHero.mp4";
 
@@ -118,15 +118,15 @@ const data = [
     bgColor: "#3F51B5 ",
   },
   {
-    name: "Erin Kenny",
-    country: "United Kingdom",
-    quote: "Children cannot bounce off the walls if we take away the walls",
+    name: "Friedrich Froebel",
+    country: "Germany",
+    quote: "Play is the highest expression of human development in childhood.",
     mainIdea:
       "Nature is a teacher, a classroom, and a friend. Outdoor play fosters resilience, confidence, and a deep bond with the earth",
     howToApply: [
-      "Mud kitchen, sandpit, and gardening time",
-      "Nature-based crafts using leaves, seeds, and sticks",
-      "Gentle risk-taking with climbing, balancing, and exploring",
+      "Open-ended play that encourages creativity, imagination, and self-expression",
+      "Hands-on materials like blocks, manipulatives, and natural objects for exploration",
+      "Movement-based play that supports coordination, confidence, and learning through action",
       //   "Natural loose part play, weather journaling, and nature storytelling",
     ],
     image: phi6,
@@ -425,7 +425,7 @@ const Card = ({
   }, [isInView, setCurrentTapped, name]);
 
   return (
-    <div ref={ref}>
+    <div  ref={ref}>
       <p className=" text-2xl sm:text-3xl tracking-wide font-semibold text-black text-center">
         {name} <span className=" text-xl">({country})</span>
       </p>
@@ -485,7 +485,7 @@ const Card = ({
                 How We Apply
               </p>
               <div className=" h-px bg-slate-400 w-full my-3" />
-              <div>
+              <div className="pl-5">
                 {howToApply?.map((point, index) => (
                   <li
                     key={index}
