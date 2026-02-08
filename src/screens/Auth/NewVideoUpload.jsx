@@ -67,11 +67,11 @@ function NewVideoUpload() {
     fetchVideos();
   }, []);
 
-  useEffect(() => {
-    if (!isSignedIn) {
-      navigate("/");
-    }
-  }, [isSignedIn, navigate]);
+    useEffect(() => {
+      if (!isSignedIn) {
+        navigate("/");
+      }
+    }, [isSignedIn, navigate]);
 
   const fetchVideos = async () => {
     setLoading(true);
@@ -91,7 +91,7 @@ function NewVideoUpload() {
 
   const deleteVideo = async (videoToDelete) => {
     const confirm = window.confirm(
-      `Are you sure you want to delete this video?`
+      `Are you sure you want to delete this video?`,
     );
     if (!confirm) return;
 
@@ -105,7 +105,7 @@ function NewVideoUpload() {
 
       if (response?.status === 200) {
         setVideos((prev) =>
-          prev.filter((item) => item?._id !== response?.data?.id)
+          prev.filter((item) => item?._id !== response?.data?.id),
         );
         toast.remove();
         toast.success("Video Deleted");
@@ -120,6 +120,14 @@ function NewVideoUpload() {
 
   return (
     <div className="p-6 py-44 bg-[#f7eee9]">
+      <div className=" w-[90%] mx-auto ">
+        <div
+          className=" border w-fit px-3 py-1 rounded-xl cursor-pointer"
+          onClick={() => navigate(-1)}
+        >
+          <h1 className=" text-xl">Back</h1>
+        </div>
+      </div>
       <div className="flex flex-col items-center gap-4 w-full max-w-md mx-auto">
         {/* Custom File Upload Button */}
         <label

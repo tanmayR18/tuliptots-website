@@ -38,7 +38,7 @@ const NewImageUpload = () => {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        }
+        },
       );
 
       if (response?.status === 200) {
@@ -69,7 +69,7 @@ const NewImageUpload = () => {
 
       if (response?.status === 200) {
         setImages((prev) =>
-          prev.filter((item) => item?._id !== response?.data?.id)
+          prev.filter((item) => item?._id !== response?.data?.id),
         );
         toast.remove();
         toast.success("Image Deleted");
@@ -101,14 +101,22 @@ const NewImageUpload = () => {
     fetchGalleryImages();
   }, []);
 
-  useEffect(() => {
-    if (!isSignedIn) {
-      navigate("/");
-    }
-  }, [isSignedIn, navigate]);
+    useEffect(() => {
+      if (!isSignedIn) {
+        navigate("/");
+      }
+    }, [isSignedIn, navigate]);
 
   return (
     <div className=" py-44 bg-[#f7eee9]">
+      <div className=" w-[90%] mx-auto ">
+        <div
+          className=" border w-fit px-3 py-1 rounded-xl cursor-pointer"
+          onClick={() => navigate(-1)}
+        >
+          <h1 className=" text-xl">Back</h1>
+        </div>
+      </div>
       <h2 className=" text-3xl font-semibold text-center">
         Upload Profile Image
       </h2>
