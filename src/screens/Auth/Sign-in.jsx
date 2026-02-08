@@ -26,11 +26,11 @@ const SignIn = () => {
 
       <p className=" text-2xl mt-12 text-center md:w-10/12 mx-auto max-w-2xl">
         The admin registeration will be done by the developer manually to prevent
-        unauthorized / unnecessary sign ups. Before try to sign in, contact the
+        unauthorized / unnecessary sign ups. Before trying to sign in, contact the
         developemnt team to add your account. Peace✌🏼
       </p>
 
-      <div className=" text-2xl tracking-widest  bg-blue-400 flex w-fit px-6 font-semibold rounded-[32px] py-3 mx-auto mt-8">
+      <div className=" text-2xl tracking-widest cursor-pointer  bg-blue-400 flex w-fit px-6 font-semibold rounded-[32px] py-3 mx-auto mt-8">
         <SignedOut>
           <SignInButton />
         </SignedOut>
